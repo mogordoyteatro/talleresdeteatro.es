@@ -103,7 +103,7 @@
     "email": "info@talleresdeteatro.com",
     "description": "Talleres de teatro en Barcelona: principiantes, intermedios y avanzados. Improvisación dirigida, formación actoral, cuerpo y presencia escénica. En el barrio de Gracia, Barcelona. Coord. Sebastián Mogordoy y Candelaria Sesín.",
     "image": "https://talleresdeteatro.es/imagenes_optimizadas/actores-taller-barcelona-0451.jpg",
-    "logo": "imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg",
+    "logo": "https://talleresdeteatro.es/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Carrer de Roger de Flor, 253, Local 2 y 3",
@@ -197,8 +197,8 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;700&family=Dancing+Script:wght@700&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <!-- Preload recursos críticos para LCP -->
-  <link rel="preload" as="image" href="imagenes_optimizadas/hero-principiantes-poster.jpg" fetchpriority="high" />
-  <link rel="preload" as="image" href="imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg" />
+  <link rel="preload" as="image" href="/imagenes_optimizadas/hero-principiantes-poster.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -856,7 +856,7 @@
       padding: var(--pad-y) 0;
       background-color: var(--bg-3);
       /* Parallax background */
-      background-image: url('imagenes_optimizadas/entrenamiento actoral.jpg');
+      background-image: url('/imagenes_optimizadas/entrenamiento actoral.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -1466,7 +1466,7 @@
     }
     .cta-bg {
       position: absolute; inset: 0;
-      background-image: url('imagenes_optimizadas/imagen final.jpg');
+      background-image: url('/imagenes_optimizadas/imagen final.jpg');
       background-size: cover; background-position: center 40%;
       filter: contrast(1.08) saturate(0.7) brightness(0.55);
     }
@@ -1909,7 +1909,7 @@
         <div class="nav-left">
           <a href="/" class="logo" aria-label="talleresdeteatro.es — inicio">
             <img
-              src="imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg"
+              src="/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg"
               alt="talleresdeteatro.es"
               width="180" height="32"
               loading="eager"
@@ -1954,9 +1954,9 @@
     <section class="hero" aria-label="Taller de Teatro Principiantes, Clases de teatro en Barcelona sin experiencia previa">
 
       <video class="hero-video" autoplay muted loop playsinline
-             poster="imagenes_optimizadas/hero-principiantes-poster.jpg"
+             poster="/imagenes_optimizadas/hero-principiantes-poster.jpg"
              aria-hidden="true" preload="metadata">
-        <source src="imagenes_optimizadas/hero-principiantes-2025.mp4" type="video/mp4">
+        <source src="/imagenes_optimizadas/hero-principiantes-2025.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-accent-line" aria-hidden="true"></div>
@@ -2059,7 +2059,7 @@
 
   <!-- ═══ STRIP IMAGEN INTERMEDIA ══════════════════════════════ -->
   <div class="mid-strip" role="img" aria-label="Entrenamiento actoral en Barcelona, Talleres de Teatro Mogordoy">
-    <img src="imagenes_optimizadas/clase-teatro-barcelona-principiantes-grupo-fin-de-ano.jpg"
+    <img src="/imagenes_optimizadas/clase-teatro-barcelona-principiantes-grupo-fin-de-ano.jpg"
          alt="Grupo de principiantes en clase de teatro, Talleres de Teatro Barcelona"
          width="1400" height="1050" loading="lazy" decoding="async">
     <div class="mid-strip-overlay"></div>
@@ -2123,7 +2123,7 @@
 
   <!-- ═══ FOTO EDITORIAL ════════════════════════════════════════ -->
   <div class="editorial-strip" role="img" aria-label="Cuerpos en escena, Talleres de Teatro Barcelona">
-    <img src="imagenes_optimizadas/CUERPOS.jpg"
+    <img src="/imagenes_optimizadas/CUERPOS.jpg"
          alt="Cuerpos en escena, Taller de teatro principiantes Barcelona"
          loading="lazy" decoding="async">
     <div class="editorial-strip-overlay"></div>
@@ -2159,7 +2159,7 @@
           <video id="hacerVideo"
                  autoplay muted loop playsinline
                  aria-label="Video de clase de teatro para principiantes, Barcelona 2026" preload="metadata">
-            <source src="imagenes_optimizadas/clase-teatro-principiantes-2026.mp4" type="video/mp4">
+            <source src="/imagenes_optimizadas/clase-teatro-principiantes-2026.mp4" type="video/mp4">
           </video>
           <button class="hacer-video-sound" id="hacerSoundBtn" aria-label="Activar sonido del video">
             <!-- muted -->
@@ -2431,7 +2431,7 @@
 
   <!-- ═══ STRIP GRUPO ══════════════════════════════════════════ -->
   <div class="group-strip" role="img" aria-label="Grupo de alumnos del taller de teatro para principiantes, Barcelona">
-    <img src="imagenes_optimizadas/grupo-principiantes-taller-teatro-barcelona.jpg"
+    <img src="/imagenes_optimizadas/grupo-principiantes-taller-teatro-barcelona.jpg"
          alt="Grupo de alumnos del taller de teatro para principiantes, Espacio La Mansión, Barcelona"
          width="1400" height="788" loading="lazy" decoding="async">
     <div class="group-strip-overlay"></div>
@@ -2449,7 +2449,7 @@
           <span class="descarga-tag">PDF · Bienvenida</span>
           <p class="descarga-title">Carta de bienvenida<br>al taller</p>
           <p class="descarga-desc">Todo lo que necesitas saber antes de la primera clase. Espacio, dinámica y forma de trabajo.</p>
-          <a href="taller-bienvenida.pdf" class="btn-download" download="taller-bienvenida.pdf" target="_blank" rel="noopener">
+          <a href="/taller-bienvenida.pdf" class="btn-download" download="taller-bienvenida.pdf" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 4h14v-2H5v2z"/></svg>
             Descargar PDF
           </a>
@@ -2636,49 +2636,49 @@
         <div class="carousel-track" id="carTrack">
 
           <div class="carousel-slide">
-            <img src="imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-001.jpg"
+            <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-001.jpg"
                  alt="Clase de teatro principiantes, sesión final Barcelona 2025 — Talleres de Teatro" loading="lazy">
             <div class="carousel-slide-overlay"></div>
           </div>
 
           <div class="carousel-slide">
-            <img src="imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-003.jpg"
+            <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-003.jpg"
                  alt="Entrenamiento actoral para principiantes en Barcelona — Espacio La Mansión, Gracia" loading="lazy">
             <div class="carousel-slide-overlay"></div>
           </div>
 
           <div class="carousel-slide">
-            <img src="imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-005.jpg"
+            <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-005.jpg"
                  alt="Improvisación teatral en clases de teatro Barcelona — Talleres de Teatro Mogordoy" loading="lazy">
             <div class="carousel-slide-overlay"></div>
           </div>
 
           <div class="carousel-slide">
-            <img src="imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-008.jpg"
+            <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-008.jpg"
                  alt="Trabajo de escena en taller de teatro para principiantes, Barcelona" loading="lazy">
             <div class="carousel-slide-overlay"></div>
           </div>
 
           <div class="carousel-slide">
-            <img src="imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-010.jpg"
+            <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-010.jpg"
                  alt="Grupo de principiantes en clase de teatro, Espacio La Mansión, Gracia Barcelona" loading="lazy">
             <div class="carousel-slide-overlay"></div>
           </div>
 
           <div class="carousel-slide">
-            <img src="imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-013.jpg"
+            <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-013.jpg"
                  alt="Muestra de fin de ciclo teatro — alumnos principiantes, Barcelona 2025" loading="lazy">
             <div class="carousel-slide-overlay"></div>
           </div>
 
           <div class="carousel-slide">
-            <img src="imagenes_optimizadas/clase-teatro-barcelona-foto-estudio-01.jpg"
+            <img src="/imagenes_optimizadas/clase-teatro-barcelona-foto-estudio-01.jpg"
                  alt="Alumnos en clase de teatro para principiantes — Talleres de Teatro Barcelona" loading="lazy">
             <div class="carousel-slide-overlay"></div>
           </div>
 
           <div class="carousel-slide">
-            <img src="imagenes_optimizadas/clase-teatro-barcelona-foto-estudio-02.jpg"
+            <img src="/imagenes_optimizadas/clase-teatro-barcelona-foto-estudio-02.jpg"
                  alt="Improvisación dirigida en taller de teatro principiantes, Gracia Barcelona" loading="lazy">
             <div class="carousel-slide-overlay"></div>
           </div>
@@ -2834,51 +2834,51 @@
           </a>
           <div class="ig-thumb-grid">
             <a href="https://www.instagram.com/reel/DYJ-So9uHAQ/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/clase-teatro-barcelona-octubre-2023-sesion-1-008.jpg" alt="Clase de teatro Barcelona — principiantes" loading="lazy">
+              <img src="/imagenes_optimizadas/clase-teatro-barcelona-octubre-2023-sesion-1-008.jpg" alt="Clase de teatro Barcelona — principiantes" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/p/DYCmEwOAfaL/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/nivel-avanzados-entrenamiento-actoral-teatro-barcelona.jpg" alt="Entrenamiento actoral avanzado — Teatro Barcelona" loading="lazy">
+              <img src="/imagenes_optimizadas/nivel-avanzados-entrenamiento-actoral-teatro-barcelona.jpg" alt="Entrenamiento actoral avanzado — Teatro Barcelona" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/p/DX9VdHxlxEb/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/clase-teatro-intermedios-barcelona-ensayo-01.jpg" alt="Ensayo teatro intermedios Barcelona" loading="lazy">
+              <img src="/imagenes_optimizadas/clase-teatro-intermedios-barcelona-ensayo-01.jpg" alt="Ensayo teatro intermedios Barcelona" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/reel/DX9TbxTBc1f/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/clase-teatro-barcelona-mayo-2023-sesion-4-007.jpg" alt="Taller de teatro Barcelona — improvisación en escena" loading="lazy">
+              <img src="/imagenes_optimizadas/clase-teatro-barcelona-mayo-2023-sesion-4-007.jpg" alt="Taller de teatro Barcelona — improvisación en escena" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/reel/DXzNoWuhRQV/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-010.jpg" alt="Sesión final de teatro Barcelona" loading="lazy">
+              <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-010.jpg" alt="Sesión final de teatro Barcelona" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/reel/DXxtzE3oNjt/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/clase-teatro-barcelona-mayo-2023-sesion-2-010.jpg" alt="Clases de teatro Barcelona — trabajo de escena" loading="lazy">
+              <img src="/imagenes_optimizadas/clase-teatro-barcelona-mayo-2023-sesion-2-010.jpg" alt="Clases de teatro Barcelona — trabajo de escena" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/p/DXwtB9AF9xJ/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/sebastian-mogordoy-director-actor-teatro-barcelona.jpg" alt="Sebastián Mogordoy — Director Talleres de Teatro" loading="lazy">
+              <img src="/imagenes_optimizadas/sebastian-mogordoy-director-actor-teatro-barcelona.jpg" alt="Sebastián Mogordoy — Director Talleres de Teatro" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/reel/DXuMEC4ChKn/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/clase-teatro-intermedios-barcelona-ensayo-02.jpg" alt="Teatro intermedios Barcelona — ensayo de escena" loading="lazy">
+              <img src="/imagenes_optimizadas/clase-teatro-intermedios-barcelona-ensayo-02.jpg" alt="Teatro intermedios Barcelona — ensayo de escena" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/p/DXiMLD-CMzh/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/candelaria-sesin-actriz-profesora-teatro-barcelona.jpg" alt="Candelaria Sesín — Actriz y Profesora Teatro" loading="lazy">
+              <img src="/imagenes_optimizadas/candelaria-sesin-actriz-profesora-teatro-barcelona.jpg" alt="Candelaria Sesín — Actriz y Profesora Teatro" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/reel/DYJ-So9uHAQ/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-025.jpg" alt="Presentación final alumnos — Escuela de Teatro" loading="lazy">
+              <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-025.jpg" alt="Presentación final alumnos — Escuela de Teatro" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/p/DYCmEwOAfaL/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/clase-teatro-barcelona-foto-estudio-01.jpg" alt="Estudio de teatro Barcelona — Espacio La Mansión" loading="lazy">
+              <img src="/imagenes_optimizadas/clase-teatro-barcelona-foto-estudio-01.jpg" alt="Estudio de teatro Barcelona — Espacio La Mansión" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
             <a href="https://www.instagram.com/p/DX9VdHxlxEb/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="imagenes_optimizadas/clase-teatro-barcelona-octubre-2023-sesion-1-020.jpg" alt="Taller de teatro Barcelona — improvisación dirigida" loading="lazy">
+              <img src="/imagenes_optimizadas/clase-teatro-barcelona-octubre-2023-sesion-1-020.jpg" alt="Taller de teatro Barcelona — improvisación dirigida" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
           </div>
@@ -2887,36 +2887,36 @@
         <!-- ── TAB: Fotos ── -->
         <div class="gallery-panel" id="panel-fotos" role="tabpanel">
           <div class="photos-grid" id="galeryFotosGrid">
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/principiantes-clase-2025.jpg" alt="Clase de teatro Barcelona 2025" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatro-barcelona-0575.jpg" alt="Improvisación teatral Barcelona" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/avanzados-clase-2025.jpg" alt="Entrenamiento actoral Espacio La Mansión" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/intermedios-clase-2025.jpg" alt="Ensayo de teatro Gracia Barcelona" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatro-barcelona-0607.jpg" alt="Taller de teatro — trabajo de escena" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0096.jpg" alt="Actuación alumnos teatro Barcelona" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-barcelona-0497.jpg" alt="Teatro principiantes Barcelona 2025" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-gracia-barcelona-0662.jpg" alt="Clase actoral Talleres Mogordoy" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/actuacion-teatro-barcelona-0592.jpg" alt="Improvisación colectiva teatro Barcelona" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-gracia-barcelona-0034.jpg" alt="Escena de entrenamiento actoral" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatro-barcelona-0775.jpg" alt="Grupo teatro Barcelona — Espacio La Mansión" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/ensayo-teatro-barcelona-0394.jpg" alt="Clase teatro Barcelona proceso creativo" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-barcelona-0393.jpg" alt="Taller teatro Gracia — entrenamiento físico" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0104.jpg" alt="Actuación en escena Barcelona 2025" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-barcelona-principiantes-0310.jpg" alt="Teatro Barcelona — trabajo de presencia" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/actuacion-teatro-barcelona-0119.jpg" alt="Ensayo final taller teatro Barcelona" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/actuacion-teatro-barcelona-0576.jpg" alt="Principiantes en escena — teatro Barcelona" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-barcelona-principiantes-0161.jpg" alt="Clase actoral improvisación 2025" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0741.jpg" alt="Entrenamiento vocal y corporal Barcelona" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0629.jpg" alt="Teatro Barcelona — dinámica de grupo" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0296.jpg" alt="Escena teatro — Espacio La Mansión Gracia" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-barcelona-principiantes-0065.jpg" alt="Alumnos teatro Barcelona en función" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-principiantes-barcelona-0037.jpg" alt="Improvisación teatral — Talleres Mogordoy" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0195.jpg" alt="Clase teatro Barcelona trabajo escénico" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatral-barcelona-0156.jpg" alt="Entrenamiento actoral Barcelona 2025" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-gracia-barcelona-0362.jpg" alt="Teatro Barcelona — investigación escénica" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0091.jpg" alt="Taller teatro Barcelona — creación colectiva" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-gracia-barcelona-0178.jpg" alt="Actuación teatro Gracia Barcelona" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatro-barcelona-1063.jpg" alt="Clase teatro Barcelona — escucha activa" loading="lazy"></div>
-            <div class="photos-grid-item"><img src="imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0347.jpg" alt="Teatro Barcelona — proceso de creación" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/principiantes-clase-2025.jpg" alt="Clase de teatro Barcelona 2025" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/improvisacion-teatro-barcelona-0575.jpg" alt="Improvisación teatral Barcelona" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/avanzados-clase-2025.jpg" alt="Entrenamiento actoral Espacio La Mansión" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/intermedios-clase-2025.jpg" alt="Ensayo de teatro Gracia Barcelona" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/improvisacion-teatro-barcelona-0607.jpg" alt="Taller de teatro — trabajo de escena" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0096.jpg" alt="Actuación alumnos teatro Barcelona" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-barcelona-0497.jpg" alt="Teatro principiantes Barcelona 2025" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/taller-teatro-gracia-barcelona-0662.jpg" alt="Clase actoral Talleres Mogordoy" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/actuacion-teatro-barcelona-0592.jpg" alt="Improvisación colectiva teatro Barcelona" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/taller-teatro-gracia-barcelona-0034.jpg" alt="Escena de entrenamiento actoral" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/improvisacion-teatro-barcelona-0775.jpg" alt="Grupo teatro Barcelona — Espacio La Mansión" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/ensayo-teatro-barcelona-0394.jpg" alt="Clase teatro Barcelona proceso creativo" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-barcelona-0393.jpg" alt="Taller teatro Gracia — entrenamiento físico" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0104.jpg" alt="Actuación en escena Barcelona 2025" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/taller-teatro-barcelona-principiantes-0310.jpg" alt="Teatro Barcelona — trabajo de presencia" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/actuacion-teatro-barcelona-0119.jpg" alt="Ensayo final taller teatro Barcelona" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/actuacion-teatro-barcelona-0576.jpg" alt="Principiantes en escena — teatro Barcelona" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-barcelona-principiantes-0161.jpg" alt="Clase actoral improvisación 2025" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0741.jpg" alt="Entrenamiento vocal y corporal Barcelona" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0629.jpg" alt="Teatro Barcelona — dinámica de grupo" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0296.jpg" alt="Escena teatro — Espacio La Mansión Gracia" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-barcelona-principiantes-0065.jpg" alt="Alumnos teatro Barcelona en función" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/clase-teatro-principiantes-barcelona-0037.jpg" alt="Improvisación teatral — Talleres Mogordoy" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0195.jpg" alt="Clase teatro Barcelona trabajo escénico" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/improvisacion-teatral-barcelona-0156.jpg" alt="Entrenamiento actoral Barcelona 2025" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/taller-teatro-gracia-barcelona-0362.jpg" alt="Teatro Barcelona — investigación escénica" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0091.jpg" alt="Taller teatro Barcelona — creación colectiva" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/taller-teatro-gracia-barcelona-0178.jpg" alt="Actuación teatro Gracia Barcelona" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/improvisacion-teatro-barcelona-1063.jpg" alt="Clase teatro Barcelona — escucha activa" loading="lazy"></div>
+            <div class="photos-grid-item"><img src="/imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0347.jpg" alt="Teatro Barcelona — proceso de creación" loading="lazy"></div>
           </div>
         </div>
 
@@ -2927,7 +2927,7 @@
             <div class="video-card">
               <div class="video-card-label">Presentación</div>
               <div class="video-embed-wrap">
-                <video controls preload="metadata" poster="imagenes_optimizadas/sebastian-mogordoy-candelaria-sesin-profesores-teatro-barcelona.jpg">                </video>
+                <video controls preload="metadata" poster="/imagenes_optimizadas/sebastian-mogordoy-candelaria-sesin-profesores-teatro-barcelona.jpg">                </video>
               </div>
             </div>
 
