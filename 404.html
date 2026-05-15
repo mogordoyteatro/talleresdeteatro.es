@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0;url=/">
+  <link rel="canonical" href="https://talleresdeteatro.es/">
+  <title>Talleres de Teatro Barcelona</title>
+</head>
+<body>
+  <script>
+    // Redirigir URLs antiguas de WordPress
+    var path = window.location.pathname;
+    var redirects = {
+      '/contacto-html/': '/contacto/',
+      '/contacto-html': '/contacto/',
+      '/argetina/': '/',
+      '/argentina/': '/',
+      '/feed/': '/',
+    };
+    var dest = redirects[path];
+    if (dest) {
+      window.location.replace(dest);
+    } else {
+      window.location.replace('/');
+    }
+  </script>
+</body>
+</html>

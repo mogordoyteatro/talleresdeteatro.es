@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://talleresdeteatro.es/sitemap.xml
+
+# Directorios a no indexar
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-json/
+Disallow: /feed/
+Disallow: /?s=
+Disallow: /search/
+Disallow: /info.html

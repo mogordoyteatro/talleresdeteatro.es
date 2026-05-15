@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Taller de Teatro Principiantes Barcelona · Sin experiencia previa | talleresdeteatro.es</title>
+  <meta name="description" content="Taller de teatro para principiantes en Barcelona. Sin experiencia previa. Improvisación, cuerpo y juego escénico. Espacio La Mansión, Gracia. Sebastián Mogordoy y Candelaria Sesín." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://talleresdeteatro.es/principiantes/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://talleresdeteatro.es/principiantes/" />
+  <meta property="og:title" content="Taller de Teatro Principiantes · Barcelona · Sin experiencia previa" />
+  <meta property="og:description" content="Clases de teatro para principiantes en Gracia, Barcelona. Improvisación dirigida. Sebastián Mogordoy y Candelaria Sesín. 88 reseñas ★★★★★ en Google." />
+  <meta property="og:image" content="https://talleresdeteatro.es/imagenes_optimizadas/principiantes-clase-2025.jpg" />
+
+  <!-- Schema Course -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Taller de Teatro Principiantes Barcelona",
+    "description": "Clases de teatro para principiantes en Barcelona. Improvisación, cuerpo, escucha y primeras herramientas actorales para entrar en la ficción desde la acción.",
+    "url": "https://talleresdeteatro.es/principiantes/",
+    "image": "https://talleresdeteatro.es/imagenes_optimizadas/principiantes-clase-2025.jpg",
+    "provider": {
+      "@type": "Organization",
+      "name": "Talleres de Teatro Barcelona",
+      "url": "https://talleresdeteatro.es",
+      "sameAs": "https://www.instagram.com/tallerdeteatro.mogordoy/"
+    },
+    "educationalLevel": "Beginner",
+    "teaches": "Actuación, improvisación teatral, expresión corporal, herramientas actorales",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "courseWorkload": "PT3H",
+      "startDate": "2026-06-01",
+      "location": {
+        "@type": "Place",
+        "name": "Espacio La Mansión",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Roger de Flor",
+          "addressLocality": "Barcelona",
+          "addressRegion": "Gracia",
+          "postalCode": "08025",
+          "addressCountry": "ES"
+        }
+      },
+      "instructor": [
+        { "@type": "Person", "name": "Sebastián Mogordoy" },
+        { "@type": "Person", "name": "Candelaria Sesín" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg:     #0C0C0C;
+      --bg-2:   #161616;
+      --white:  #FFFFFF;
+      --g100:   #E0E0E0;
+      --g300:   #909090;
+      --g500:   #505050;
+      --g700:   #282828;
+      --g800:   #181818;
+      --accent: #E50914;
+      --gold:   #FFD700;
+      --pad-x:  clamp(24px, 5vw, 72px);
+      --pad-y:  clamp(72px, 9vw, 120px);
+      --max-w:  1280px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%; max-width: var(--max-w);
+      margin: 0 auto; padding: 0 var(--pad-x);
+    }
+
+    .overline {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .overline::after {
+      content: ''; display: block;
+      width: 28px; height: 1px; background: var(--gold); flex-shrink: 0;
+    }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: var(--accent); color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      text-decoration: none;
+      padding: 20px 40px;
+      transition: filter .2s, transform .2s;
+      white-space: nowrap;
+    }
+    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-primary .arrow { transition: transform .2s; }
+    .btn-primary:hover .arrow { transform: translateX(3px); }
+
+    /* ─── NAV ─────────────────────────────────── */
+    .site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 var(--pad-x); height: 68px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(16px);
+    }
+    .nav-logo {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em;
+      color: var(--white); text-decoration: none;
+    }
+    .nav-links {
+      display: flex; align-items: center;
+      gap: clamp(16px, 2.5vw, 32px); list-style: none;
+    }
+    .nav-links a {
+      font-size: clamp(11px, 1vw, 13px); font-weight: 400;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--white); text-decoration: none; transition: opacity .2s;
+    }
+    .nav-links a:hover { opacity: 0.65; }
+    .nav-links .active a { font-weight: 700; color: var(--gold); }
+    .nav-links .nav-cta a { color: var(--accent); font-weight: 700; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* ─── HERO ─────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      position: relative; overflow: hidden;
+      padding-top: 68px;
+    }
+
+    /* Imagen de fondo */
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('imagenes_optimizadas/principiantes-clase-2025.jpg');
+      background-size: cover; background-position: center 30%;
+      filter: contrast(1.05) saturate(0.85);
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(0,0,0,0.3) 0%,
+        rgba(0,0,0,0.2) 35%,
+        rgba(0,0,0,0.75) 100%
+      );
+    }
+    /* Grain */
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      pointer-events: none; z-index: 3; opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 180px;
+    }
+    .hero-fade {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 260px; z-index: 2; pointer-events: none;
+      background: linear-gradient(to bottom, transparent 0%, var(--bg) 100%);
+    }
+
+    /* Etiqueta SEO visible en esquina */
+    .hero-label {
+      position: absolute; top: calc(68px + 20px); left: var(--pad-x);
+      z-index: 10;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(8px, 0.75vw, 11px); font-weight: 400;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* Número de nivel — esquina superior derecha */
+    .hero-num {
+      position: absolute; top: calc(68px + 24px); right: var(--pad-x);
+      z-index: 10;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(80px, 14vw, 180px);
+      line-height: 1; letter-spacing: -0.04em;
+      color: rgba(255,255,255,0.05);
+      pointer-events: none; user-select: none;
+    }
+
+    .hero-body {
+      position: relative; z-index: 10;
+      padding: 0 var(--pad-x) clamp(56px, 7vw, 96px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: clamp(24px, 4vw, 64px);
+      align-items: end;
+    }
+
+    .hero-tag {
+      font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-tag::after {
+      content: ''; display: block; width: 24px; height: 1px; background: var(--accent);
+    }
+
+    .hero-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(56px, 11vw, 148px);
+      font-weight: 400; text-transform: uppercase;
+      letter-spacing: -0.03em; line-height: 0.88;
+      color: var(--white);
+    }
+    .hero-subtitle {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(18px, 2.5vw, 34px);
+      font-weight: 400; text-transform: uppercase;
+      letter-spacing: -0.01em; line-height: 1;
+      color: rgba(255,255,255,0.45);
+      margin-top: 10px;
+    }
+
+    .hero-right {
+      display: flex; flex-direction: column;
+      align-items: flex-end; gap: 24px;
+      flex-shrink: 0;
+    }
+    .hero-meta {
+      display: flex; flex-direction: column;
+      align-items: flex-end; gap: 6px; text-align: right;
+    }
+    .hero-meta-item {
+      font-size: clamp(11px, 1.1vw, 13px); font-weight: 400;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+    .hero-meta-item strong { color: var(--white); font-weight: 700; }
+
+    @media (max-width: 768px) {
+      .hero-body { grid-template-columns: 1fr; }
+      .hero-right { align-items: flex-start; }
+      .hero-meta { align-items: flex-start; text-align: left; }
+      .hero-num { font-size: clamp(80px, 30vw, 140px); }
+    }
+
+    /* ─── INTRO / PARA QUIÉN ───────────────────── */
+    .intro-section {
+      padding: clamp(72px, 9vw, 120px) 0;
+      background: var(--bg);
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 96px);
+      align-items: center;
+    }
+    .intro-statement {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(28px, 4vw, 54px);
+      font-weight: 400; text-transform: uppercase;
+      letter-spacing: -0.02em; line-height: 0.95;
+      color: var(--white); margin-top: 16px;
+    }
+    .intro-statement .highlight { color: var(--accent); }
+    .intro-right { display: flex; flex-direction: column; gap: 20px; }
+    .intro-p {
+      font-size: clamp(15px, 1.6vw, 19px);
+      font-weight: 300; line-height: 1.7;
+      color: rgba(255,255,255,0.82);
+    }
+    .intro-p strong { color: var(--white); font-weight: 500; }
+    @media (max-width: 760px) {
+      .intro-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── FOTO EDITORIAL ───────────────────────── */
+    .editorial-strip {
+      width: 100%; position: relative; overflow: hidden;
+      aspect-ratio: 21/7; background: var(--g800);
+    }
+    @media (max-width: 768px) { .editorial-strip { aspect-ratio: 4/3; } }
+    .editorial-strip img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center 40%;
+      filter: contrast(1.06) saturate(0.88);
+      display: block;
+    }
+    .editorial-strip-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.0) 40%,
+        rgba(0,0,0,0.65) 100%
+      );
+    }
+    .editorial-strip-caption {
+      position: absolute; bottom: clamp(20px, 3vw, 40px);
+      right: clamp(20px, 4vw, 56px);
+      text-align: right;
+    }
+    .editorial-strip-caption p {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(16px, 2.2vw, 28px);
+      text-transform: uppercase; letter-spacing: -0.01em;
+      color: var(--white); line-height: 1.05;
+    }
+    .editorial-strip-caption span {
+      font-size: clamp(10px, 1vw, 13px); font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    /* ─── MANIFESTO ─────────────────────────────── */
+    .manifesto-section {
+      background: var(--bg);
+      padding: clamp(56px, 7vw, 96px) 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .manifesto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      column-gap: clamp(48px, 8vw, 120px);
+    }
+    .manifesto-line {
+      display: flex; align-items: baseline; gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(14px, 1.5vw, 17px);
+      font-weight: 300; line-height: 1.5;
+      color: rgba(255,255,255,0.78);
+    }
+    .manifesto-line::before {
+      content: attr(data-n);
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(10px, 0.9vw, 12px);
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      flex-shrink: 0; min-width: 18px;
+    }
+    @media (max-width: 720px) {
+      .manifesto-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── QUÉ PASA EN CADA CLASE ───────────────── */
+    .proceso-section {
+      background: var(--bg-2);
+      padding: clamp(72px, 9vw, 120px) 0;
+    }
+    .proceso-header { margin-bottom: clamp(48px, 6vw, 72px); }
+    .proceso-h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(36px, 5vw, 68px);
+      font-weight: 400; text-transform: uppercase;
+      letter-spacing: -0.02em; line-height: 0.9;
+      color: var(--white); margin-top: 14px; max-width: 18ch;
+    }
+    .proceso-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .proceso-item {
+      padding: clamp(28px, 3.5vw, 44px) clamp(20px, 3vw, 36px);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      border-right: 1px solid rgba(255,255,255,0.07);
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .proceso-item:nth-child(3n) { border-right: none; }
+    .proceso-item:nth-child(n+4) { border-top: none; }
+    .proceso-num {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(36px, 5vw, 56px);
+      letter-spacing: -0.03em; line-height: 1;
+      color: rgba(255,255,255,0.07);
+    }
+    .proceso-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(17px, 2vw, 24px);
+      text-transform: uppercase; letter-spacing: -0.01em;
+      color: var(--white); line-height: 1.05;
+    }
+    .proceso-title .acc { color: var(--accent); }
+    .proceso-text {
+      font-size: clamp(14px, 1.4vw, 16px);
+      font-weight: 300; line-height: 1.75;
+      color: rgba(255,255,255,0.7);
+    }
+    @media (max-width: 960px) {
+      .proceso-grid { grid-template-columns: 1fr 1fr; }
+      .proceso-item:nth-child(3n) { border-right: 1px solid rgba(255,255,255,0.07); }
+      .proceso-item:nth-child(2n) { border-right: none; }
+    }
+    @media (max-width: 600px) {
+      .proceso-grid { grid-template-columns: 1fr; }
+      .proceso-item { border-right: none !important; border-top: 1px solid rgba(255,255,255,0.07) !important; }
+    }
+
+    /* ─── VIDEO ────────────────────────────────── */
+    .video-section {
+      background: var(--bg);
+      padding: clamp(72px, 9vw, 120px) 0;
+    }
+    .video-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+    .video-embed {
+      position: relative; width: 100%;
+      padding-bottom: 56.25%;
+      background: var(--g800); overflow: hidden;
+      outline: 3px solid var(--accent); outline-offset: 0;
+    }
+    .video-embed .yt-facade {
+      position: absolute; inset: 0;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .video-embed .yt-facade img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .yt-play {
+      position: absolute;
+      width: 68px; height: 68px; border-radius: 50%;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .2s;
+      box-shadow: 0 4px 24px rgba(229,9,20,0.5);
+    }
+    .yt-facade:hover .yt-play { transform: scale(1.1); }
+    .yt-play svg { width: 26px; height: 26px; fill: #fff; margin-left: 4px; }
+    .video-embed iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: none; display: none;
+    }
+    .video-embed.is-loaded iframe { display: block; }
+    .video-embed.is-loaded .yt-facade { display: none; }
+
+    .video-copy { display: flex; flex-direction: column; gap: 20px; }
+    .video-h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(28px, 3.5vw, 48px);
+      text-transform: uppercase; letter-spacing: -0.02em;
+      line-height: 0.95; color: var(--white); margin-top: 14px;
+    }
+    .video-p {
+      font-size: clamp(15px, 1.5vw, 18px);
+      font-weight: 300; line-height: 1.75;
+      color: rgba(255,255,255,0.78);
+    }
+    @media (max-width: 768px) {
+      .video-inner { grid-template-columns: 1fr; }
+    }
+
+    /* ─── TESTIMONIOS (solo principiantes) ─────── */
+    .testimonios-section {
+      background: var(--bg-2);
+      padding: clamp(72px, 9vw, 120px) 0;
+      border-top: 1px solid var(--g700);
+    }
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px; margin-top: clamp(40px, 5vw, 64px);
+    }
+    .testimonio-card {
+      background: var(--bg);
+      border: 1px solid var(--g700);
+      padding: clamp(24px, 3vw, 36px);
+      display: flex; flex-direction: column; gap: 16px;
+      transition: border-color .25s;
+    }
+    .testimonio-card:hover { border-color: var(--accent); }
+    .testimonio-stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; }
+    .testimonio-text {
+      font-size: clamp(15px, 1.5vw, 18px);
+      font-weight: 300; line-height: 1.65;
+      color: var(--white); flex: 1;
+    }
+    .testimonio-text::before {
+      content: '"';
+      font-family: Georgia, serif; font-size: 2.5em;
+      line-height: 0; vertical-align: -0.5em;
+      color: var(--accent); opacity: 0.6; margin-right: 2px;
+    }
+    .testimonio-name {
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--g300);
+    }
+    @media (max-width: 768px) {
+      .testimonios-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─── INFO PRÁCTICA ─────────────────────────── */
+    .info-section {
+      background: var(--bg);
+      padding: clamp(72px, 9vw, 120px) 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0; margin-top: clamp(40px, 5vw, 64px);
+    }
+    .info-col {
+      padding: clamp(32px, 4vw, 56px);
+      border: 1px solid rgba(255,255,255,0.07);
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .info-col:first-child { border-right: none; }
+    .info-col-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(20px, 2.5vw, 32px);
+      text-transform: uppercase; letter-spacing: -0.01em;
+      color: var(--white); line-height: 1;
+    }
+    .info-row {
+      display: flex; flex-direction: column; gap: 4px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .info-label {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .info-value {
+      font-size: clamp(14px, 1.5vw, 17px);
+      font-weight: 300; line-height: 1.5;
+      color: rgba(255,255,255,0.85);
+    }
+    .info-value strong { color: var(--white); font-weight: 600; }
+    .info-precio-note {
+      font-size: 13px; font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      font-style: italic; margin-top: 4px;
+    }
+    @media (max-width: 768px) {
+      .info-grid { grid-template-columns: 1fr; }
+      .info-col:first-child { border-right: 1px solid rgba(255,255,255,0.07); border-bottom: none; }
+    }
+
+    /* ─── CTA FINAL ─────────────────────────────── */
+    .cta-section {
+      background: var(--bg-2);
+      padding: clamp(80px, 10vw, 140px) 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      text-align: center;
+    }
+    .cta-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(40px, 7vw, 96px);
+      text-transform: uppercase; letter-spacing: -0.03em;
+      line-height: 0.9; color: var(--white);
+      max-width: 18ch; margin: 16px auto 0;
+    }
+    .cta-title .acc { color: var(--accent); }
+    .cta-sub {
+      font-size: clamp(15px, 1.6vw, 19px);
+      font-weight: 300; line-height: 1.65;
+      color: rgba(255,255,255,0.65);
+      max-width: 52ch; margin: 24px auto 0;
+    }
+    .cta-buttons {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; flex-wrap: wrap;
+      margin-top: clamp(32px, 4vw, 48px);
+    }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 12px;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      text-decoration: none; padding: 20px 40px;
+      transition: border-color .2s, color .2s;
+    }
+    .btn-ghost:hover { border-color: var(--white); }
+    .cta-nota {
+      font-size: 12px; color: rgba(255,255,255,0.35);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-top: 20px;
+    }
+
+    /* ─── FOOTER MINIMAL ─────────────────────────── */
+    .mini-footer {
+      background: #080808;
+      padding: clamp(28px, 3vw, 40px) 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .mini-footer-inner {
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .mini-footer-brand {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 12px; text-transform: uppercase;
+      letter-spacing: 0.06em; color: rgba(255,255,255,0.5);
+      text-decoration: none;
+    }
+    .mini-footer-back {
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); text-decoration: none;
+      transition: color .2s;
+    }
+    .mini-footer-back:hover { color: var(--white); }
+
+    /* WhatsApp sticky */
+    .wa {
+      position: fixed; bottom: 28px; right: 24px; z-index: 900;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.55);
+      transition: transform .2s;
+    }
+    .wa:hover { transform: scale(1.08); }
+    .wa svg { width: 26px; height: 26px; fill: white; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-1 { opacity: 0; animation: fadeUp .8s ease forwards .2s; }
+    .fade-in-2 { opacity: 0; animation: fadeUp .8s ease forwards .45s; }
+    .fade-in-3 { opacity: 0; animation: fadeUp .8s ease forwards .7s; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" aria-label="Navegación principal">
+    <a href="https://talleresdeteatro.es" class="nav-logo">Talleres de Teatro</a>
+    <ul class="nav-links" role="list">
+      <li><a href="https://talleresdeteatro.es/">Inicio</a></li>
+      <li class="active"><a href="https://talleresdeteatro.es/principiantes/">Principiantes</a></li>
+      <li><a href="https://talleresdeteatro.es/intermedios/">Con experiencia</a></li>
+      <li><a href="https://talleresdeteatro.es/avanzados/">Cuerpo al texto</a></li>
+      <li><a href="https://talleresdeteatro.es/quienes-somos/">Nosotros</a></li>
+      <li class="nav-cta"><a href="https://api.whatsapp.com/send/?phone=34676694958">Escríbenos</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ═══ HERO ═══════════════════════════════════════════════ -->
+  <header>
+    <section class="hero" aria-label="Taller de Teatro Principiantes — Barcelona">
+
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-fade" aria-hidden="true"></div>
+
+      <!-- H1 visible integrado -->
+      <h1 class="hero-label">Clases de teatro para principiantes en Barcelona</h1>
+
+      <!-- Número decorativo -->
+      <span class="hero-num" aria-hidden="true">01</span>
+
+      <div class="hero-body">
+
+        <div class="fade-in-1">
+          <p class="hero-tag">Taller 01 · Nivel inicio</p>
+          <div class="hero-title">Prin&shy;ci&shy;piantes.</div>
+          <div class="hero-subtitle">La creación del artificio</div>
+        </div>
+
+        <div class="hero-right fade-in-2">
+          <div class="hero-meta">
+            <span class="hero-meta-item"><strong>Coord.</strong> Sebastián Mogordoy</span>
+            <span class="hero-meta-item"><strong>y</strong> Candelaria Sesín</span>
+            <span class="hero-meta-item" style="margin-top:8px;"><strong>Lunes · Martes · Jueves</strong></span>
+            <span class="hero-meta-item">19:00 — 22:00 h</span>
+            <span class="hero-meta-item" style="margin-top:8px; color:var(--gold);font-weight:700;">Nuevo grupo · Junio 2026</span>
+          </div>
+          <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+reservar+una+plaza+en+el+taller+de+principiantes."
+             class="btn-primary">
+            Reservar plaza <span class="arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </header>
+
+
+  <!-- ═══ PARA QUIÉN ES ═══════════════════════════════════════ -->
+  <section class="intro-section" aria-label="Para quién es el taller">
+    <div class="container">
+
+      <div class="intro-grid">
+        <div>
+          <span class="overline">Para quién</span>
+          <h2 class="intro-statement">
+            No necesitás<br>
+            haber actuado<br>
+            <span class="highlight">nunca.</span>
+          </h2>
+        </div>
+        <div class="intro-right">
+          <p class="intro-p">
+            Este taller está pensado para personas que se acercan al teatro <strong>por primera vez</strong>, o para quienes quieren volver a conectar con el juego, la imaginación y el cuerpo después de años de no hacerlo.
+          </p>
+          <p class="intro-p">
+            No se actúa "bien" ni "mal". Se entra en un territorio diferente al cotidiano, con otras reglas y otras posibilidades. El punto de partida es la curiosidad — y las ganas de animarse.
+          </p>
+          <p class="intro-p">
+            Conviven personas de <strong>distintas edades, profesiones y orígenes</strong>. Eso es parte de lo que hace que el grupo sea tan rico.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══ FOTO EDITORIAL ══════════════════════════════════════ -->
+  <div class="editorial-strip">
+    <img src="imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-010.jpg"
+         alt="Grupo de principiantes en escena — Talleres de Teatro Barcelona"
+         loading="lazy">
+    <div class="editorial-strip-overlay"></div>
+    <div class="editorial-strip-caption">
+      <span>Espacio La Mansión · Gracia</span>
+      <p>Primer año.<br>Primer escenario.</p>
+    </div>
+  </div>
+
+
+  <!-- ═══ MANIFESTO ══════════════════════════════════════════ -->
+  <section class="manifesto-section" aria-label="Lo que te espera">
+    <div class="container">
+      <div class="manifesto-grid">
+        <p class="manifesto-line" data-n="01">Volver a jugar, creer, abrirte sin juzgarte</p>
+        <p class="manifesto-line" data-n="02">Fracturar lo real, alterando el cotidiano</p>
+        <p class="manifesto-line" data-n="03">Abrirte a un universo con otras reglas y otras posibilidades</p>
+        <p class="manifesto-line" data-n="04">Reconocer tu cuerpo como una herramienta de expresión</p>
+        <p class="manifesto-line" data-n="05">Investigar en tu propio universo asociativo</p>
+        <p class="manifesto-line" data-n="06">Usar tu cuerpo «poéticamente» desde el primer día</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ QUÉ PASA EN CADA CLASE ══════════════════════════════ -->
+  <section class="proceso-section" aria-label="Qué pasa en cada clase">
+    <div class="container">
+      <header class="proceso-header">
+        <span class="overline">El entrenamiento</span>
+        <h2 class="proceso-h2">Qué pasa<br>en cada clase.</h2>
+      </header>
+
+      <div class="proceso-grid">
+
+        <div class="proceso-item">
+          <span class="proceso-num" aria-hidden="true">01</span>
+          <h3 class="proceso-title">Cuerpo<br><span class="acc">y presencia</span></h3>
+          <p class="proceso-text">Cada clase empieza con el cuerpo. Ejercicios de disponibilidad, escucha y activación del presente escénico. No yoga, no stretching — entrenamiento para actuar.</p>
+        </div>
+
+        <div class="proceso-item">
+          <span class="proceso-num" aria-hidden="true">02</span>
+          <h3 class="proceso-title">Improvisación<br><span class="acc">dirigida</span></h3>
+          <p class="proceso-text">El eje central del trabajo. Escenas breves que aparecen sin guion previo. Se aprende a escuchar, a reaccionar, a sostener la ficción desde la acción y no desde la idea.</p>
+        </div>
+
+        <div class="proceso-item">
+          <span class="proceso-num" aria-hidden="true">03</span>
+          <h3 class="proceso-title">Juego<br><span class="acc">y ficción</span></h3>
+          <p class="proceso-text">Disfraz, objetos, situaciones imposibles. Se activa el campo imaginario — ese territorio donde todo lo que te imagines puede pasar. Sin vergüenza, sin juicio.</p>
+        </div>
+
+        <div class="proceso-item">
+          <span class="proceso-num" aria-hidden="true">04</span>
+          <h3 class="proceso-title">Vínculo<br><span class="acc">con el otro</span></h3>
+          <p class="proceso-text">Teatro es relación. Trabajamos la escucha real, el contacto, la afectación mutua. No se actúa solo: se actúa con el otro. Eso lo cambia todo.</p>
+        </div>
+
+        <div class="proceso-item">
+          <span class="proceso-num" aria-hidden="true">05</span>
+          <h3 class="proceso-title">Grupo<br><span class="acc">y confianza</span></h3>
+          <p class="proceso-text">El grupo es la condición del trabajo. Se construye un espacio donde equivocarse es bienvenido, donde el error no paraliza sino que abre posibilidades nuevas.</p>
+        </div>
+
+        <div class="proceso-item">
+          <span class="proceso-num" aria-hidden="true">06</span>
+          <h3 class="proceso-title">Muestra<br><span class="acc">de fin de ciclo</span></h3>
+          <p class="proceso-text">Al cierre del año, el grupo crea y presenta una muestra para amigos y familiares. No es una obra de teatro — es un encuentro. El primero de muchos.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ VIDEO ════════════════════════════════════════════════ -->
+  <section class="video-section" aria-label="Video del taller de principiantes">
+    <div class="container">
+      <div class="video-inner">
+
+        <div class="video-embed" id="videoWrap">
+          <div class="yt-facade" data-ytid="_DD2o8RWFzI">
+            <img src="https://img.youtube.com/vi/_DD2o8RWFzI/hqdefault.jpg"
+                 alt="Video taller de teatro principiantes Barcelona"
+                 loading="lazy">
+            <div class="yt-play">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <iframe data-src="https://www.youtube.com/embed/_DD2o8RWFzI?autoplay=1"
+                  title="Taller de teatro principiantes — Talleres de Teatro Barcelona"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-copy">
+          <span class="overline">El taller en video</span>
+          <h2 class="video-h2">Mirá cómo<br>trabajamos.</h2>
+          <p class="video-p">
+            Tres horas por semana. Un grupo reducido. Un espacio pensado para que algo real ocurra. Este video muestra cómo es un encuentro de principiantes desde adentro — sin edición de lo que no funcionó.
+          </p>
+          <p class="video-p">
+            Coord. <strong>Sebastián Mogordoy</strong> — <strong>Candelaria Sesín</strong><br>
+            Espacio La Mansión · Gracia, Barcelona
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ TESTIMONIOS ══════════════════════════════════════════ -->
+  <section class="testimonios-section" aria-label="Qué dicen los alumnos">
+    <div class="container">
+      <span class="overline">Lo que dicen</span>
+      <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.9;color:var(--white);margin-top:14px;max-width:20ch;">
+        Alumnos que llegaron<br>sin experiencia.
+      </h2>
+
+      <div class="testimonios-grid">
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-text">Llegué sin experiencia y con mucho miedo. Desde la primera clase sentí que podía probar, equivocarme y descubrir algo propio. No es solo una clase de teatro: es un espacio para animarse.</p>
+          <span class="testimonio-name">Laura M. · Principiante</span>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-text">Buscaba un taller para perder la vergüenza y terminé encontrando mucho más. El trabajo con el cuerpo, la improvisación y el grupo te llevan a lugares que no esperabas.</p>
+          <span class="testimonio-name">Marc P. · Principiante</span>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-text">Nunca imaginé que podría subirme a un escenario y disfrutarlo. Seba y Cande crean un ambiente donde uno se anima a todo. Recomiendo esta experiencia a cualquier persona.</p>
+          <span class="testimonio-name">Clara R. · Principiante</span>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-text">No tenía ni idea de teatro y me animé. Desde la primera clase entendí que no se trata de actuar "bien", sino de estar presente y ser honesta. Transformador.</p>
+          <span class="testimonio-name">Marta L. · Principiante</span>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-text">Llegué solo queriendo probar algo nuevo y me enganchó completamente. Cada clase es diferente, sorprendente. El grupo que se forma es increíble.</p>
+          <span class="testimonio-name">David M. · Principiante</span>
+        </div>
+
+        <div class="testimonio-card">
+          <div class="testimonio-stars">★★★★★</div>
+          <p class="testimonio-text">Hay algo muy especial en la forma en que se construye el grupo. Cada clase abre una puerta distinta: al juego, a la imaginación, al cuerpo y a la escena.</p>
+          <span class="testimonio-name">Ana G. · Alumna primer año</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ INFO PRÁCTICA ════════════════════════════════════════ -->
+  <section class="info-section" aria-label="Información práctica del taller">
+    <div class="container">
+      <span class="overline">Info práctica</span>
+      <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.9;color:var(--white);margin-top:14px;">
+        Todo lo que<br>necesitás saber.
+      </h2>
+
+      <div class="info-grid">
+
+        <div class="info-col">
+          <h3 class="info-col-title">El taller</h3>
+          <div class="info-row">
+            <span class="info-label">Nivel</span>
+            <span class="info-value">Principiantes — sin experiencia previa</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Días</span>
+            <span class="info-value"><strong>Lunes · Martes · Jueves</strong><br>Elegís un día al inscribirte</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Horario</span>
+            <span class="info-value">19:00 — 22:00 h · 3 horas por clase</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Próximo grupo</span>
+            <span class="info-value" style="color:var(--gold);font-weight:600;">Junio 2026 · Plazas limitadas</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Lugar</span>
+            <span class="info-value">Espacio La Mansión · Roger de Flor · Gracia, Barcelona</span>
+          </div>
+        </div>
+
+        <div class="info-col">
+          <h3 class="info-col-title">La inscripción</h3>
+          <div class="info-row">
+            <span class="info-label">Clase de prueba</span>
+            <div>
+              <span class="info-value"><strong>Sin cargo.</strong> Para grupos ya iniciados, podés probar antes de comprometerte.</span>
+              <span class="info-precio-note" style="display:block;margin-top:6px;color:rgba(255,255,255,0.4);font-size:12px;letter-spacing:0.03em;">Para grupos nuevos te recomendamos reservar plaza directamente — las vacantes son limitadas.</span>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Precio</span>
+            <span class="info-value">Consultar por WhatsApp o mail.</span>
+            <span class="info-precio-note">Enviamos la info completa de precios y horarios al consultar.</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Incorporación</span>
+            <span class="info-value">Podés sumarte en cualquier momento del año</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Grupo</span>
+            <span class="info-value">Reducido · máximo 12 personas</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Coordinan</span>
+            <span class="info-value">Sebastián Mogordoy · Candelaria Sesín</span>
+          </div>
+          <div style="margin-top: 24px;">
+            <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+info+sobre+el+taller+de+principiantes."
+               class="btn-primary" target="_blank" rel="noopener">
+              Consultar por WhatsApp <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CTA FINAL ════════════════════════════════════════════ -->
+  <section class="cta-section" aria-label="Reservar plaza en el taller">
+    <div class="container">
+      <span class="overline" style="justify-content:center;">Próximo grupo · Junio 2026</span>
+      <h2 class="cta-title">
+        ¿Te animás<br>a <span class="acc">probar?</span>
+      </h2>
+      <p class="cta-sub">
+        La primera clase es sin cargo. Vení a conocer el espacio, el grupo y la forma de trabajar. Sin compromiso.
+      </p>
+      <div class="cta-buttons">
+        <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+reservar+una+clase+de+prueba+de+principiantes."
+           class="btn-primary" target="_blank" rel="noopener">
+          Reservar clase de prueba <span class="arrow">→</span>
+        </a>
+        <a href="mailto:info@talleresdeteatro.com" class="btn-ghost">
+          Escribir por mail
+        </a>
+      </div>
+      <p class="cta-nota">Plazas limitadas · Espacio La Mansión · Gracia, Barcelona</p>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER MINIMAL ═══════════════════════════════════════ -->
+  <footer class="mini-footer">
+    <div class="container">
+      <div class="mini-footer-inner">
+        <a href="https://talleresdeteatro.es" class="mini-footer-brand">← Talleres de Teatro Barcelona</a>
+        <span style="font-size:12px;color:rgba(255,255,255,0.25);">© 2026 talleresdeteatro.es · info@talleresdeteatro.com</span>
+        <a href="https://talleresdeteatro.es/intermedios/" class="mini-footer-back">Con experiencia →</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp sticky -->
+  <a href="https://api.whatsapp.com/send/?phone=34676694958" class="wa" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+    // Video facade
+    document.querySelectorAll('.yt-facade').forEach(function(facade) {
+      facade.addEventListener('click', function() {
+        var wrap = facade.closest('.video-embed');
+        var iframe = wrap.querySelector('iframe');
+        iframe.src = iframe.dataset.src;
+        wrap.classList.add('is-loaded');
+      });
+    });
+
+    // Nav scroll
+    window.addEventListener('scroll', function() {
+      document.querySelector('.site-nav').style.background =
+        window.scrollY > 40 ? 'rgba(8,8,8,0.98)' : 'rgba(8,8,8,0.92)';
+    });
+  </script>
+
+</body>
+</html>
