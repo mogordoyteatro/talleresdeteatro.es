@@ -38,56 +38,64 @@
 
   <!-- Schema Course -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Inscribir lo Propio, Taller de Teatro con Experiencia",
-    "description": "Taller de teatro para actores con experiencia en Barcelona. Improvisación dirigida, trabajo sobre la escena, poética personal y creación de material propio. Un encuentro semanal de 3 horas en Gracia, Barcelona.",
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Inscribir lo Propio, Taller de Teatro con Experiencia",
+  "description": "Taller de teatro para actores con experiencia en Barcelona. Improvisación dirigida, trabajo sobre la escena, poética personal y creación de material propio. Un encuentro semanal de 3 horas en Gracia, Barcelona.",
+  "url": "https://talleresdeteatro.es/intermedios/",
+  "image": "https://talleresdeteatro.es/imagenes_optimizadas/actores-taller-barcelona-0467.jpg",
+  "provider": {
+    "@type": "Organization",
+    "name": "Talleres de Teatro Barcelona",
+    "url": "https://talleresdeteatro.es",
+    "sameAs": "https://www.instagram.com/tallerdeteatro.mogordoy/"
+  },
+  "educationalLevel": "Intermediate",
+  "teaches": "Actuación teatral avanzada, improvisación dirigida, poética personal, creación de escenas, formación actoral con experiencia",
+  "offers": {
+    "@type": "Offer",
+    "category": "Cuota mensual",
+    "description": "Primera clase de prueba sin cargo. Consultar cuotas mensuales.",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2025-09-01",
     "url": "https://talleresdeteatro.es/intermedios/",
-    "image": "https://talleresdeteatro.es/imagenes_optimizadas/actores-taller-barcelona-0467.jpg",
-    "provider": {
+    "seller": {
       "@type": "Organization",
-      "name": "Talleres de Teatro Barcelona",
-      "url": "https://talleresdeteatro.es",
-      "sameAs": "https://www.instagram.com/tallerdeteatro.mogordoy/"
+      "name": "Talleres de Teatro Barcelona"
+    }
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "onsite",
+    "courseWorkload": "PT3H",
+    "eventSchedule": {
+      "@type": "Schedule",
+      "byDay": "https://schema.org/Wednesday",
+      "startTime": "19:00",
+      "endTime": "22:00",
+      "repeatFrequency": "P1W",
+      "scheduleTimezone": "Europe/Madrid"
     },
-    "educationalLevel": "Intermediate",
-    "teaches": "Actuación teatral avanzada, improvisación dirigida, poética personal, creación de escenas, formación actoral con experiencia",
-    "offers": {
-      "@type": "Offer",
-      "category": "Cuota mensual",
-      "description": "Primera clase de prueba sin cargo. Consultar cuotas mensuales.",
-      "availability": "https://schema.org/InStock",
-      "validFrom": "2025-09-01",
-      "url": "https://talleresdeteatro.es/intermedios/",
-      "seller": {
-        "@type": "Organization",
-        "name": "Talleres de Teatro Barcelona"
+    "location": {
+      "@type": "Place",
+      "name": "Espacio La Mansión",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Carrer de Roger de Flor, 253, Local 2 y 3",
+        "addressLocality": "Barcelona",
+        "addressRegion": "Gracia",
+        "postalCode": "08025",
+        "addressCountry": "ES"
       }
     },
-    "hasCourseInstance": {
-      "@type": "CourseInstance",
-      "courseMode": "onsite",
-      "courseWorkload": "PT3H",
-      "location": {
-        "@type": "Place",
-        "name": "Espacio La Mansión",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Carrer de Roger de Flor, 253, Local 2 y 3",
-          "addressLocality": "Barcelona",
-          "addressRegion": "Gracia",
-          "postalCode": "08025",
-          "addressCountry": "ES"
-        }
-      },
-      "instructor": [
-        { "@type": "Person", "name": "Sebastián Mogordoy" },
-        { "@type": "Person", "name": "Candelaria Sesín" }
-      ]
+    "instructor": {
+      "@type": "Person",
+      "name": "Sebastián Mogordoy"
     }
   }
-  </script>
+}
+</script>
   <script>
     // Nav dropdown móvil (click)
     document.querySelectorAll('.nav-has-dropdown > a').forEach(a => {
@@ -1511,9 +1519,9 @@
           <li class="nav-has-dropdown">
             <a href="/#galeria">Fotos &amp; Videos <span class="nav-chevron">&#9662;</span></a>
             <ul class="nav-dropdown" role="menu">
-              <li><a href="/#galeria" data-tab="instagram">Instagram</a></li>
-              <li><a href="/#galeria" data-tab="fotos">Fotos</a></li>
-              <li><a href="/#galeria" data-tab="videos">Videos</a></li>
+              <li><a href="/#galeria-instagram">Instagram</a></li>
+              <li><a href="/#galeria-fotos">Fotos</a></li>
+              <li><a href="/#galeria-videos">Videos</a></li>
             </ul>
           </li>
           <li class="nav-cta"><a href="/contacto/">Escríbenos</a></li>
@@ -1883,7 +1891,7 @@
 
           <div class="info-row">
             <span class="info-label">Horarios</span>
-            <span class="info-value">Consultar disponibilidad de grupos. Escribenos por WhatsApp y te informamos de los horarios actuales.</span>
+            <span class="info-value"><strong>Miércoles · 19 a 22 h.</strong><br><span class="info-note">Sin vacantes. Inscripción abierta para septiembre.</span></span>
           </div>
 
           <div class="info-row">

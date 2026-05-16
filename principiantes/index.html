@@ -36,30 +36,39 @@
 
   <!-- Schema Course -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "La Creación del Artificio, Taller de Teatro para Principiantes",
-    "description": "Clases de teatro para principiantes en Barcelona. Improvisación dirigida, cuerpo, presencia escénica y primeras herramientas actorales. Un encuentro semanal de 3 horas en Gracia, Barcelona.",
-    "url": "https://talleresdeteatro.es/principiantes/",
-    "image": "https://talleresdeteatro.es/imagenes_optimizadas/actores-taller-barcelona-0451.jpg",
-    "provider": {
-      "@type": "Organization",
-      "name": "Talleres de Teatro Barcelona",
-      "url": "https://talleresdeteatro.es",
-      "sameAs": "https://www.instagram.com/tallerdeteatro.mogordoy/"
-    },
-    "educationalLevel": "Beginner",
-    "offers": {
-      "@type": "Offer",
-      "description": "Cuota mensual. Sin matrícula. Primera clase sin cargo.",
-      "availability": "https://schema.org/InStock"
-    },
-    "teaches": "Actuación teatral, improvisación, expresión corporal, presencia escénica, formación actoral desde cero",
-    "hasCourseInstance": {
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "La Creación del Artificio, Taller de Teatro para Principiantes",
+  "description": "Clases de teatro para principiantes en Barcelona. Improvisación dirigida, cuerpo, presencia escénica y primeras herramientas actorales. Un encuentro semanal de 3 horas en Gracia, Barcelona.",
+  "url": "https://talleresdeteatro.es/principiantes/",
+  "image": "https://talleresdeteatro.es/imagenes_optimizadas/actores-taller-barcelona-0451.jpg",
+  "provider": {
+    "@type": "Organization",
+    "name": "Talleres de Teatro Barcelona",
+    "url": "https://talleresdeteatro.es",
+    "sameAs": "https://www.instagram.com/tallerdeteatro.mogordoy/"
+  },
+  "educationalLevel": "Beginner",
+  "offers": {
+    "@type": "Offer",
+    "description": "Cuota mensual. Sin matrícula. Primera clase sin cargo.",
+    "availability": "https://schema.org/InStock"
+  },
+  "teaches": "Actuación teatral, improvisación, expresión corporal, presencia escénica, formación actoral desde cero",
+  "hasCourseInstance": [
+    {
       "@type": "CourseInstance",
       "courseMode": "onsite",
       "courseWorkload": "PT3H",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": "https://schema.org/Monday",
+        "startTime": "19:00",
+        "endTime": "22:00",
+        "repeatFrequency": "P1W",
+        "scheduleTimezone": "Europe/Madrid"
+      },
       "location": {
         "@type": "Place",
         "name": "Espacio La Mansión",
@@ -72,13 +81,72 @@
           "addressCountry": "ES"
         }
       },
-      "instructor": [
-        { "@type": "Person", "name": "Sebastián Mogordoy" },
-        { "@type": "Person", "name": "Candelaria Sesín" }
-      ]
+      "instructor": {
+        "@type": "Person",
+        "name": "Candelaria Sesín"
+      }
+    },
+    {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "courseWorkload": "PT3H",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": "https://schema.org/Tuesday",
+        "startTime": "19:00",
+        "endTime": "22:00",
+        "repeatFrequency": "P1W",
+        "scheduleTimezone": "Europe/Madrid"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Espacio La Mansión",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Carrer de Roger de Flor, 253, Local 2 y 3",
+          "addressLocality": "Barcelona",
+          "addressRegion": "Gracia",
+          "postalCode": "08025",
+          "addressCountry": "ES"
+        }
+      },
+      "instructor": {
+        "@type": "Person",
+        "name": "Sebastián Mogordoy"
+      }
+    },
+    {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "courseWorkload": "PT3H",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": "https://schema.org/Thursday",
+        "startTime": "19:00",
+        "endTime": "22:00",
+        "repeatFrequency": "P1W",
+        "scheduleTimezone": "Europe/Madrid"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Espacio La Mansión",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Carrer de Roger de Flor, 253, Local 2 y 3",
+          "addressLocality": "Barcelona",
+          "addressRegion": "Gracia",
+          "postalCode": "08025",
+          "addressCountry": "ES"
+        }
+      },
+      "instructor": {
+        "@type": "Person",
+        "name": "Sebastián Mogordoy"
+      }
     }
-  }
-  </script>
+  ]
+}
+</script>
   <script>
     // Nav dropdown móvil (click)
     document.querySelectorAll('.nav-has-dropdown > a').forEach(a => {
@@ -1390,7 +1458,7 @@
     .ubicacion-data-value a:hover { color: var(--white); }
 
     /* Map facade */
-    .ubicacion-mapa { position: relative; }
+    .ubicacion-mapa { min-height: clamp(360px, 50vw, 560px); position: relative; overflow: hidden; }
     .ubicacion-mapa-facade {
       position: relative;
       aspect-ratio: 4/3;
@@ -1926,9 +1994,9 @@
           <li class="nav-has-dropdown">
             <a href="/#galeria">Fotos &amp; Videos <span class="nav-chevron">&#9662;</span></a>
             <ul class="nav-dropdown" role="menu">
-              <li><a href="/#galeria" data-tab="instagram">Instagram</a></li>
-              <li><a href="/#galeria" data-tab="fotos">Fotos</a></li>
-              <li><a href="/#galeria" data-tab="videos">Videos</a></li>
+              <li><a href="/#galeria-instagram">Instagram</a></li>
+              <li><a href="/#galeria-fotos">Fotos</a></li>
+              <li><a href="/#galeria-videos">Videos</a></li>
             </ul>
           </li>
           <li class="nav-cta"><a href="/contacto/">Escríbenos</a></li>
@@ -2482,9 +2550,14 @@
             <span class="info-value">1 encuentro semanal · <strong>3 horas por clase</strong></span>
           </div>
           <div class="info-row">
-            <span class="info-label">Días</span>
-            <span class="info-value"><strong>Lunes · Martes · Jueves</strong><br>
-              <span class="info-note">Elegís el día al inscribirte. Consultar disponibilidad.</span>
+            <span class="info-label">Días y grupos</span>
+            <span class="info-value">
+              <strong>Lunes · 19 a 22 h</strong> — Coord. Candelaria Sesín.<br>
+              <span class="info-note">Sin vacantes. Inscripción abierta para septiembre.</span><br><br>
+              <strong>Martes · 19 a 22 h</strong> — Coord. Sebastián Mogordoy.<br>
+              <span class="info-note">Inicio junio · Seminario junio y julio. Inscripción abierta.</span><br><br>
+              <strong>Jueves · 19 a 22 h</strong> — Coord. Sebastián Mogordoy.<br>
+              <span class="info-note">Sin vacantes. Inscripción abierta para septiembre.</span>
             </span>
           </div>
           <div class="info-row">
@@ -2734,7 +2807,7 @@
         </div>
 
         <div class="ubicacion-mapa">
-          <div class="ubicacion-mapa-facade" id="mapaFacade" role="button" tabindex="0" aria-label="Abrir mapa de Espacio La Mansión">
+          <div class="ubicacion-mapa-facade" id="mapaFacade" style="display:none">
             <div class="mapa-grid-bg"></div>
             <div class="mapa-pin">
               <div class="mapa-pin-dot"></div>
@@ -2744,7 +2817,7 @@
               <span class="mapa-cta-text">↙ Toca para abrir el mapa</span>
             </div>
             <iframe
-              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.666434772456!2d2.1641315767850844!3d41.40304987129801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a349a67d3c45%3A0xb2fb31647f5d9316!2sCoworking%20Creativo%20-%20La%20Mansion!5e0!3m2!1ses-419!2ses!4v1740831137765!5m2!1ses-419!2ses"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.666434772456!2d2.1641315767850844!3d41.40304987129801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a349a67d3c45%3A0xb2fb31647f5d9316!2sCoworking%20Creativo%20-%20La%20Mansion!5e0!3m2!1ses-419!2ses!4v1740831137765!5m2!1ses-419!2ses"
               title="Mapa Espacio La Mansión, Talleres de Teatro Barcelona"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"

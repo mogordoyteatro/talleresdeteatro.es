@@ -38,37 +38,46 @@
 
   <!-- Schema Course -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Course",
-    "name": "Cuerpo al Texto · Taller de Teatro con Escenas y Monólogos",
-    "description": "Taller de teatro avanzado en Barcelona orientado a actores y estudiantes con experiencia escénica que quieren profundizar el trabajo sobre escenas, monólogos, voz y actuación con texto. Coordinación: Sebastián Mogordoy.",
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Cuerpo al Texto · Taller de Teatro con Escenas y Monólogos",
+  "description": "Taller de teatro avanzado en Barcelona orientado a actores y estudiantes con experiencia escénica que quieren profundizar el trabajo sobre escenas, monólogos, voz y actuación con texto. Coordinación: Sebastián Mogordoy.",
+  "url": "https://talleresdeteatro.es/avanzados/",
+  "image": "https://talleresdeteatro.es/imagenes_optimizadas/taller-teatro-gracia-barcelona-1094.jpg",
+  "provider": {
+    "@type": "Organization",
+    "name": "Talleres de Teatro Barcelona",
+    "url": "https://talleresdeteatro.es",
+    "sameAs": "https://www.instagram.com/tallerdeteatro.mogordoy/"
+  },
+  "educationalLevel": "Advanced",
+  "teaches": "Actuación con texto, escenas teatrales, monólogos, voz y actuación, técnica actoral avanzada, interpretación teatral, entrenamiento actoral Barcelona",
+  "offers": {
+    "@type": "Offer",
+    "category": "Cuota mensual",
+    "description": "Incorporación por entrevista o experiencia previa. Vacantes limitadas. Consultar cuotas.",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2025-09-01",
     "url": "https://talleresdeteatro.es/avanzados/",
-    "image": "https://talleresdeteatro.es/imagenes_optimizadas/taller-teatro-gracia-barcelona-1094.jpg",
-    "provider": {
+    "seller": {
       "@type": "Organization",
-      "name": "Talleres de Teatro Barcelona",
-      "url": "https://talleresdeteatro.es",
-      "sameAs": "https://www.instagram.com/tallerdeteatro.mogordoy/"
-    },
-    "educationalLevel": "Advanced",
-    "teaches": "Actuación con texto, escenas teatrales, monólogos, voz y actuación, técnica actoral avanzada, interpretación teatral, entrenamiento actoral Barcelona",
-    "offers": {
-      "@type": "Offer",
-      "category": "Cuota mensual",
-      "description": "Incorporación por entrevista o experiencia previa. Vacantes limitadas. Consultar cuotas.",
-      "availability": "https://schema.org/InStock",
-      "validFrom": "2025-09-01",
-      "url": "https://talleresdeteatro.es/avanzados/",
-      "seller": {
-        "@type": "Organization",
-        "name": "Talleres de Teatro Barcelona"
-      }
-    },
-    "hasCourseInstance": {
+      "name": "Talleres de Teatro Barcelona"
+    }
+  },
+  "hasCourseInstance": [
+    {
       "@type": "CourseInstance",
       "courseMode": "onsite",
       "courseWorkload": "PT3H",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": "https://schema.org/Monday",
+        "startTime": "10:00",
+        "endTime": "13:00",
+        "repeatFrequency": "P1W",
+        "scheduleTimezone": "Europe/Madrid"
+      },
       "location": {
         "@type": "Place",
         "name": "Espacio La Mansión",
@@ -81,12 +90,72 @@
           "addressCountry": "ES"
         }
       },
-      "instructor": [
-        { "@type": "Person", "name": "Sebastián Mogordoy" }
-      ]
+      "instructor": {
+        "@type": "Person",
+        "name": "Sebastián Mogordoy"
+      }
+    },
+    {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "courseWorkload": "PT3H",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": "https://schema.org/Monday",
+        "startTime": "19:00",
+        "endTime": "22:00",
+        "repeatFrequency": "P1W",
+        "scheduleTimezone": "Europe/Madrid"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Espacio La Mansión",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Carrer de Roger de Flor, 253, Local 2 y 3",
+          "addressLocality": "Barcelona",
+          "addressRegion": "Gracia",
+          "postalCode": "08025",
+          "addressCountry": "ES"
+        }
+      },
+      "instructor": {
+        "@type": "Person",
+        "name": "Sebastián Mogordoy"
+      }
+    },
+    {
+      "@type": "CourseInstance",
+      "courseMode": "onsite",
+      "courseWorkload": "PT3H",
+      "eventSchedule": {
+        "@type": "Schedule",
+        "byDay": "https://schema.org/Tuesday",
+        "startTime": "19:00",
+        "endTime": "22:00",
+        "repeatFrequency": "P1W",
+        "scheduleTimezone": "Europe/Madrid"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Espacio La Mansión",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Carrer de Roger de Flor, 253, Local 2 y 3",
+          "addressLocality": "Barcelona",
+          "addressRegion": "Gracia",
+          "postalCode": "08025",
+          "addressCountry": "ES"
+        }
+      },
+      "instructor": {
+        "@type": "Person",
+        "name": "Sebastián Mogordoy"
+      }
     }
-  }
-  </script>
+  ]
+}
+</script>
   <script>
     // Nav dropdown móvil (click)
     document.querySelectorAll('.nav-has-dropdown > a').forEach(a => {
@@ -1310,9 +1379,9 @@
           <li class="nav-has-dropdown">
             <a href="/#galeria">Fotos &amp; Videos <span class="nav-chevron">&#9662;</span></a>
             <ul class="nav-dropdown" role="menu">
-              <li><a href="/#galeria" data-tab="instagram">Instagram</a></li>
-              <li><a href="/#galeria" data-tab="fotos">Fotos</a></li>
-              <li><a href="/#galeria" data-tab="videos">Videos</a></li>
+              <li><a href="/#galeria-instagram">Instagram</a></li>
+              <li><a href="/#galeria-fotos">Fotos</a></li>
+              <li><a href="/#galeria-videos">Videos</a></li>
             </ul>
           </li>
           <li class="nav-cta"><a href="/contacto/">Escríbenos</a></li>
@@ -1655,7 +1724,7 @@
 
           <div class="info-row">
             <span class="info-label">Horarios</span>
-            <span class="info-value"><strong>Lunes · 10 a 13 h</strong> o <strong>19 a 22 h</strong>. Inscripción abierta, inicio septiembre.</span>
+            <span class="info-value"><strong>Lunes · 10 a 13 h</strong> o <strong>19 a 22 h</strong> · <strong>Martes · 19 a 22 h.</strong><br><span class="info-note">Inscripción abierta para septiembre.</span></span>
           </div>
 
           <div class="info-row">
