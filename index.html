@@ -538,7 +538,7 @@
       display: none; background: none; border: none; cursor: pointer;
       flex-direction: column; gap: 5px; padding: 4px;
     }
-    .hamburger span { display: block; width: 20px; height: 1px; background: var(--white); }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 1px; }
 
     /* Cuerpo del hero */
     .hero-body {
@@ -2372,7 +2372,79 @@
       font-weight: 500;
     }
 
-  </style>
+  
+    /* ══════════════════════════════════════════════
+       MOBILE MENU OVERLAY
+    ══════════════════════════════════════════════ */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #0c0c0c;
+      z-index: 9999;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .mobile-menu.is-open { display: flex; }
+    .mobile-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-shrink: 0;
+    }
+    .mobile-menu-header .logo img { height: 28px; width: auto; display: block; }
+    .mobile-menu-close {
+      background: none; border: none; cursor: pointer; padding: 8px; color: white; line-height: 0;
+    }
+    .mobile-menu-close svg { display: block; }
+    .mobile-menu-nav {
+      display: flex; flex-direction: column;
+      padding: 28px 28px 20px;
+      gap: 0;
+      flex: 1;
+    }
+    .mobile-menu-nav a {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(26px, 9vw, 40px);
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: color 0.15s;
+      letter-spacing: -0.01em;
+    }
+    .mobile-menu-nav a:hover { color: #E50914; }
+    .mobile-menu-nav a.mm-cta {
+      color: #facc15;
+      margin-top: 20px;
+      border-bottom: none;
+      font-size: clamp(22px, 7vw, 34px);
+    }
+    .mobile-menu-footer {
+      padding: 20px 28px;
+      flex-shrink: 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .mobile-menu-footer a {
+      color: rgba(255,255,255,0.4); font-size: 12px; text-decoration: none;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+
+    
+    @media (max-width: 768px) {
+      .btn-primary, .btn-ghost {
+        width: 100%; max-width: 320px; justify-content: center;
+      }
+      .hero-cta-block { gap: 10px; flex-direction: column; align-items: flex-start; }
+      .levels-announce-cta, .level-card-cta { width: auto; }
+    }
+    @media (max-width: 480px) {
+      .hero-h1 { font-size: clamp(46px, 16vw, 80px); }
+    }
+    </style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */
@@ -2514,6 +2586,33 @@
           <span></span><span></span><span></span>
         </button>
       </nav>
+      <!-- ══ MOBILE MENU OVERLAY ══ -->
+      <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación" id="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="/" class="logo" aria-label="Inicio">
+            <img src="/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg"
+                 alt="talleresdeteatro.es" width="160" height="28" />
+          </a>
+          <button class="mobile-menu-close" aria-label="Cerrar menú" id="mobile-menu-close">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-menu-nav" aria-label="Menú principal">
+          <a href="/">Bienvenidos</a>
+          <a href="/principiantes/">Principiantes</a>
+          <a href="/intermedios/">Con experiencia</a>
+          <a href="/avanzados/">Cuerpo al texto</a>
+          <a href="/quienes-somos/">Nosotros</a>
+          <a href="/contacto/" class="mm-cta">Escríbenos →</a>
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="https://www.instagram.com/tallerdeteatro.mogordoy/" target="_blank" rel="noopener">
+            @tallerdeteatro.mogordoy
+          </a>
+        </div>
+      </div>
 
       <!-- H1 real visible — integrado como etiqueta editorial en esquina superior izquierda -->
       <h1 class="hero-h1-seo">Talleres de Teatro en Barcelona</h1>
@@ -4554,5 +4653,34 @@
     })();
   </script>
 
+  <script>
+
+    // ── Mobile menu ────────────────────────────────
+    (function() {
+      const ham    = document.querySelector('.hamburger');
+      const menu   = document.getElementById('mobile-menu');
+      const close  = document.getElementById('mobile-menu-close');
+      if (!ham || !menu) return;
+
+      function openMenu() {
+        menu.classList.add('is-open');
+        ham.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        menu.classList.remove('is-open');
+        ham.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      ham.addEventListener('click', openMenu);
+      if (close) close.addEventListener('click', closeMenu);
+      // cerrar al tocar un enlace
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      // cerrar con Escape
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    })();
+    // ── Fin mobile menu ─────────────────────────────
+
+  </script>
 </body>
 </html>
