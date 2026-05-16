@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Apúntate · Primera Clase de Teatro Gratis Barcelona | talleresdeteatro.es</title>
-  <meta name="description" content="Primera clase de teatro gratis y sin compromiso. Escríbenos por WhatsApp (+34 676 69 49 58) o email. Talleres en Gràcia, Barcelona. €100/mes, sin matrícula." />
+  <title>Apúntate · Primera Clase de Teatro Gratis en Barcelona · Gràcia | talleresdeteatro.es</title>
+  <meta name="description" content="Primera clase de teatro gratis y sin compromiso en Barcelona · Gràcia. WhatsApp +34 676 694 958 o email. €100/mes, sin matrícula. Plazas abiertas 2025/26." />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="sitemap" type="application/xml" href="sitemap.xml" />
   <link rel="canonical" href="https://talleresdeteatro.es/contacto/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://talleresdeteatro.es/contacto/" />
-  <meta property="og:title" content="Contacto · Talleres de Teatro Barcelona" />
+  <meta property="og:title" content="Primera Clase Gratis · Apúntate a los Talleres de Teatro Barcelona" />
   <meta property="og:description" content="Primera clase de prueba gratis. Escríbenos por WhatsApp o email. Espacio La Mansión, Gracia, Barcelona." />
   <meta property="og:image" content="https://talleresdeteatro.es/imagenes_optimizadas/sebastian-mogordoy-candelaria-sesin-profesores-teatro-barcelona.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -852,18 +852,17 @@
         box-sizing: border-box;
         text-align: center !important;
       }
-      /* Texto centrado en secciones internas */
-      section h2,
-      section h3,
-      .overline,
-      .eyebrow,
-      .section-lead,
-      .section-eyebrow,
+      /* Texto alineado a la izquierda — consistente en mobile */
+      h1, h2, h3, h4, h5, h6,
+      p, .overline, .eyebrow,
+      .section-lead, .section-eyebrow,
       .intro-body p,
       .proceso-header > p,
       .proceso-header > .overline,
-      .cta-eyebrow,
-      .cta-title { text-align: center; }
+      .cta-eyebrow, .cta-title,
+      .hero-overline, .hero-tag, .hero-tagline,
+      .level-card-title, .nivel-title,
+      .section-title, .section-subtitle { text-align: left !important; }
     }
 
     /* ── contacto: form-submit full-width en mobile ────────────── */
@@ -875,7 +874,24 @@
         text-align: center !important;
       }
     }
-</style>
+
+    /* ══ MOBILE FINAL: todo alineado a la izquierda ═══════════════════ */
+    @media (max-width: 768px) {
+      h1, h2, h3, h4, h5, h6,
+      p, li, .overline, .eyebrow, .label,
+      .section-lead, .section-eyebrow, .section-subtitle,
+      .hero-overline, .hero-tag, .hero-tagline, .hero-label,
+      .intro-text, .intro-lead, .intro-body,
+      .nivel-tag, .nivel-title, .nivel-desc,
+      .proceso-header, .proceso-h2, .proceso-nota,
+      .cta-eyebrow, .cta-title, .cta-body,
+      .faq-q, .faq-a,
+      .testimonio-text, .testimonio-name,
+      .info-label, .info-value,
+      .banda-title, .banda-subtitle, .banda-p { text-align: left !important; }
+    }
+
+  </style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */

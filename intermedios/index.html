@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Taller de Teatro con Experiencia en Barcelona | talleresdeteatro.es</title>
-  <meta name="description" content="Taller de teatro con experiencia en Barcelona. Improvisación dirigida, poética personal y creación de escenas. La Mansión, Gracia. Primera clase sin cargo." />
+  <title>Taller de Teatro para Actores con Experiencia en Barcelona · Gràcia | talleresdeteatro.es</title>
+  <meta name="description" content="Taller de teatro para actores con experiencia en Barcelona · Gràcia. Improvisación dirigida, poética personal y creación de escenas propias. Primera clase sin cargo." />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="sitemap" type="application/xml" href="sitemap.xml" />
   <link rel="canonical" href="https://talleresdeteatro.es/intermedios/" />
@@ -1543,20 +1543,36 @@
         box-sizing: border-box;
         text-align: center !important;
       }
-      /* Texto centrado en secciones internas */
-      section h2,
-      section h3,
-      .overline,
-      .eyebrow,
-      .section-lead,
-      .section-eyebrow,
+      /* Texto alineado a la izquierda — consistente en mobile */
+      h1, h2, h3, h4, h5, h6,
+      p, .overline, .eyebrow,
+      .section-lead, .section-eyebrow,
       .intro-body p,
       .proceso-header > p,
       .proceso-header > .overline,
-      .cta-eyebrow,
-      .cta-title { text-align: center; }
+      .cta-eyebrow, .cta-title,
+      .hero-overline, .hero-tag, .hero-tagline,
+      .level-card-title, .nivel-title,
+      .section-title, .section-subtitle { text-align: left !important; }
     }
-</style>
+
+    /* ══ MOBILE FINAL: todo alineado a la izquierda ═══════════════════ */
+    @media (max-width: 768px) {
+      h1, h2, h3, h4, h5, h6,
+      p, li, .overline, .eyebrow, .label,
+      .section-lead, .section-eyebrow, .section-subtitle,
+      .hero-overline, .hero-tag, .hero-tagline, .hero-label,
+      .intro-text, .intro-lead, .intro-body,
+      .nivel-tag, .nivel-title, .nivel-desc,
+      .proceso-header, .proceso-h2, .proceso-nota,
+      .cta-eyebrow, .cta-title, .cta-body,
+      .faq-q, .faq-a,
+      .testimonio-text, .testimonio-name,
+      .info-label, .info-value,
+      .banda-title, .banda-subtitle, .banda-p { text-align: left !important; }
+    }
+
+  </style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */
