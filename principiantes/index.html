@@ -924,7 +924,7 @@
       padding: var(--pad-y) 0;
       background-color: var(--bg-3);
       /* Parallax background */
-      background-image: url('/imagenes_optimizadas/entrenamiento actoral.jpg');
+      background-image: url('/imagenes_optimizadas/entrenamiento%20actoral.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -2033,7 +2033,37 @@
     @media (max-width: 480px) {
       .hero-h1 { font-size: clamp(46px, 16vw, 80px); }
     }
-    </style>
+    
+    /* ══ GLOBAL MOBILE: botones full-width + texto centrado ══════════ */
+    @media (max-width: 768px) {
+      /* Botones ocupan todo el ancho con margen implícito del container */
+      .btn-primary, .btn-ghost, .btn-outline {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: center !important;
+      }
+      /* Texto centrado en secciones internas */
+      section h2,
+      section h3,
+      .overline,
+      .eyebrow,
+      .section-lead,
+      .section-eyebrow,
+      .intro-body p,
+      .proceso-header > p,
+      .proceso-header > .overline,
+      .cta-eyebrow,
+      .cta-title { text-align: center; }
+    }
+
+    /* ── proceso-section: ver foto en mobile ───────────── */
+    @media (max-width: 768px) {
+      .proceso-section::before {
+        background: rgba(12,12,12,0.55) !important;
+      }
+    }
+</style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */

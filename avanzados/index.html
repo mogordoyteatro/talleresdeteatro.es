@@ -1390,7 +1390,30 @@
     @media (max-width: 480px) {
       .hero-h1 { font-size: clamp(46px, 16vw, 80px); }
     }
-    </style>
+    
+    /* ══ GLOBAL MOBILE: botones full-width + texto centrado ══════════ */
+    @media (max-width: 768px) {
+      /* Botones ocupan todo el ancho con margen implícito del container */
+      .btn-primary, .btn-ghost, .btn-outline {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: center !important;
+      }
+      /* Texto centrado en secciones internas */
+      section h2,
+      section h3,
+      .overline,
+      .eyebrow,
+      .section-lead,
+      .section-eyebrow,
+      .intro-body p,
+      .proceso-header > p,
+      .proceso-header > .overline,
+      .cta-eyebrow,
+      .cta-title { text-align: center; }
+    }
+</style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */
@@ -1536,7 +1559,7 @@
         </svg>
       </button>
 
-      <h1 class="hero-label">Clases de teatro con texto y escenas en Barcelona — Cuerpo al texto</h1>
+      <h1 class="hero-label">Entrenamiento y trabajo con texto</h1>
       <span class="hero-num" aria-hidden="true">03</span>
 
       <div class="hero-body">

@@ -882,7 +882,7 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-h1 { font-size: clamp(52px, 15vw, 88px); }
+      .hero-h1 { font-size: clamp(38px, 12vw, 60px); }
 
       .hero-footer { grid-template-columns: 1fr; }
       .hero-cta-block {
@@ -2442,7 +2442,7 @@
       .levels-announce-cta, .level-card-cta { width: auto; }
     }
     @media (max-width: 480px) {
-      .hero-h1 { font-size: clamp(46px, 16vw, 80px); }
+      .hero-h1 { font-size: clamp(32px, 10.5vw, 46px); }
     }
     
     /* ══ HERO MOBILE OVERRIDES ══════════════════════ */
@@ -2454,11 +2454,11 @@
       /* Badge limpio bajo el logo */
       .hero-mobile-badge {
         display: block;
-        font-size: 11px; font-weight: 700;
-        letter-spacing: 0.12em; text-transform: uppercase;
-        color: rgba(255,255,255,0.55);
+        font-size: clamp(13px, 3.8vw, 16px); font-weight: 700;
+        letter-spacing: 0.06em; text-transform: uppercase;
+        color: rgba(255,255,255,0.92);
         margin-bottom: 28px;
-        line-height: 1.6;
+        line-height: 1.7;
       }
     }
 
@@ -2576,7 +2576,30 @@
       .nosotros-portrait-item { margin-bottom: 0; }
     }
 
-    </style>
+    
+    /* ══ GLOBAL MOBILE: botones full-width + texto centrado ══════════ */
+    @media (max-width: 768px) {
+      /* Botones ocupan todo el ancho con margen implícito del container */
+      .btn-primary, .btn-ghost, .btn-outline {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: center !important;
+      }
+      /* Texto centrado en secciones internas */
+      section h2,
+      section h3,
+      .overline,
+      .eyebrow,
+      .section-lead,
+      .section-eyebrow,
+      .intro-body p,
+      .proceso-header > p,
+      .proceso-header > .overline,
+      .cta-eyebrow,
+      .cta-title { text-align: center; }
+    }
+</style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */

@@ -264,11 +264,11 @@
     .contact-hero-bg::after {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(12,12,12,0.6) 0%, rgba(12,12,12,0.92) 100%);
+      background: linear-gradient(180deg, rgba(12,12,12,0.25) 0%, rgba(12,12,12,0.55) 100%);
     }
     .contact-hero-bg img {
       width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
-      opacity: 0.55;
+      opacity: 0.85;
     }
     /* Watermark */
     .contact-watermark {
@@ -842,7 +842,40 @@
     @media (max-width: 480px) {
       .hero-h1 { font-size: clamp(46px, 16vw, 80px); }
     }
-    </style>
+    
+    /* ══ GLOBAL MOBILE: botones full-width + texto centrado ══════════ */
+    @media (max-width: 768px) {
+      /* Botones ocupan todo el ancho con margen implícito del container */
+      .btn-primary, .btn-ghost, .btn-outline {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: center !important;
+      }
+      /* Texto centrado en secciones internas */
+      section h2,
+      section h3,
+      .overline,
+      .eyebrow,
+      .section-lead,
+      .section-eyebrow,
+      .intro-body p,
+      .proceso-header > p,
+      .proceso-header > .overline,
+      .cta-eyebrow,
+      .cta-title { text-align: center; }
+    }
+
+    /* ── contacto: form-submit full-width en mobile ────────────── */
+    @media (max-width: 768px) {
+      .form-submit {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: center !important;
+      }
+    }
+</style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */

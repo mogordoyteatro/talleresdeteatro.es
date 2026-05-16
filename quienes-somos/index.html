@@ -1087,7 +1087,30 @@
     @media (max-width: 480px) {
       .hero-h1 { font-size: clamp(46px, 16vw, 80px); }
     }
-    </style>
+    
+    /* ══ GLOBAL MOBILE: botones full-width + texto centrado ══════════ */
+    @media (max-width: 768px) {
+      /* Botones ocupan todo el ancho con margen implícito del container */
+      .btn-primary, .btn-ghost, .btn-outline {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: center !important;
+      }
+      /* Texto centrado en secciones internas */
+      section h2,
+      section h3,
+      .overline,
+      .eyebrow,
+      .section-lead,
+      .section-eyebrow,
+      .intro-body p,
+      .proceso-header > p,
+      .proceso-header > .overline,
+      .cta-eyebrow,
+      .cta-title { text-align: center; }
+    }
+</style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */
@@ -1203,10 +1226,14 @@
   <header>
     <section class="hero" aria-label="Quiénes somos — Talleres de Teatro Barcelona">
 
-      <img class="hero-img-bg"
-           src="/imagenes_optimizadas/VALENTIA.png"
-           alt="Sebastián Mogordoy y Candelaria Sesín — directores Talleres de Teatro Barcelona"
-           width="1400" height="933" loading="eager" decoding="async">
+      <picture>
+        <source media="(max-width: 768px)"
+                srcset="/imagenes_optimizadas/nosotros-candelaria-sebastian-directores-talleres-teatro-barcelona.jpg">
+        <img class="hero-img-bg"
+             src="/imagenes_optimizadas/VALENTIA.png"
+             alt="Sebastián Mogordoy y Candelaria Sesín — directores Talleres de Teatro Barcelona"
+             width="1400" height="933" loading="eager" decoding="async">
+      </picture>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-accent-line" aria-hidden="true"></div>
       <div class="hero-fade" aria-hidden="true"></div>
