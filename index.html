@@ -2444,6 +2444,138 @@
     @media (max-width: 480px) {
       .hero-h1 { font-size: clamp(46px, 16vw, 80px); }
     }
+    
+    /* ══ HERO MOBILE OVERRIDES ══════════════════════ */
+    .hero-mobile-badge { display: none; }
+    @media (max-width: 768px) {
+      /* Ocultar texto decorativo cortado + overline verbose */
+      .hero-h1-seo      { display: none !important; }
+      .hero-overline    { display: none; }
+      /* Badge limpio bajo el logo */
+      .hero-mobile-badge {
+        display: block;
+        font-size: 11px; font-weight: 700;
+        letter-spacing: 0.12em; text-transform: uppercase;
+        color: rgba(255,255,255,0.55);
+        margin-bottom: 28px;
+        line-height: 1.6;
+      }
+    }
+
+    /* ══ LEVELS ANNOUNCE TITLE — evitar overflow mobile ════════ */
+    @media (max-width: 520px) {
+      .levels-announce-title {
+        font-size: clamp(30px, 10vw, 44px) !important;
+      }
+      .levels-announce-panel { overflow: hidden; max-width: 90vw; }
+    }
+
+    /* ══ LEVEL CARDS — coord label (todos los dispositivos) ════ */
+    .level-card-coord-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--gold);
+      display: block;
+      padding-top: 10px;
+    }
+
+    /* ══ LEVEL CARDS — mobile extras (video + desplegable) ═════ */
+    .level-card-mobile-extra { display: none; }
+
+    @media (max-width: 760px) {
+      /* Ocultar la sección expandida de abajo */
+      .levels-info-grid { display: none !important; }
+      /* Mostrar extras dentro de cada card */
+      .level-card-mobile-extra {
+        display: flex; flex-direction: column; gap: 16px;
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .level-card-mobile-video {
+        position: relative; width: 100%;
+        padding-bottom: 56.25%; background: #000;
+        overflow: hidden; cursor: pointer;
+        outline: 3px solid var(--accent); outline-offset: 0;
+      }
+      .level-card-mobile-video img {
+        position: absolute; inset: 0;
+        width: 100%; height: 100%; object-fit: cover; display: block;
+      }
+      .level-card-mobile-video .play-icon {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        width: 52px; height: 52px;
+        background: var(--accent); border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        pointer-events: none;
+      }
+      .level-card-mobile-video .play-icon svg {
+        width: 20px; height: 20px; fill: white; margin-left: 3px;
+      }
+      .level-card-mobile-video iframe {
+        position: absolute; inset: 0;
+        width: 100%; height: 100%; border: none;
+      }
+      /* Desplegable descripción completa */
+      .level-card-details {
+        border: none;
+      }
+      .level-card-details summary {
+        font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+        text-transform: uppercase; color: rgba(255,255,255,0.45);
+        cursor: pointer; list-style: none;
+        display: flex; align-items: center; gap: 8px;
+        padding: 4px 0 10px;
+      }
+      .level-card-details summary::-webkit-details-marker { display: none; }
+      .level-card-details .dets-arrow { display: inline-block; transition: transform .2s; }
+      .level-card-details[open] .dets-arrow { transform: rotate(180deg); }
+      .level-card-details-body {
+        font-size: 14px; font-weight: 300; line-height: 1.7;
+        color: rgba(255,255,255,0.75); padding-bottom: 8px;
+      }
+      .level-card-details-body p { margin: 0 0 12px; }
+      .level-card-details-body p:last-child { margin-bottom: 0; }
+    }
+
+    /* ══ PROFESORES MOBILE — foto + bio combinados ══════════════ */
+    .nosotros-portrait-caption-mobile { display: none; }
+    @media (max-width: 600px) {
+      /* Ocultar el grid de bios separado */
+      .nosotros-section .nosotros-grid { display: none !important; }
+      /* Mostrar bio inline bajo cada foto */
+      .nosotros-portrait-caption-mobile {
+        display: block;
+        padding: 20px 20px 28px;
+        background: var(--bg-2);
+      }
+      .nosotros-portrait-caption-mobile .prof-role {
+        font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+        text-transform: uppercase; color: var(--gold); margin-bottom: 4px;
+      }
+      .nosotros-portrait-caption-mobile .prof-name {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: clamp(22px,7vw,32px); text-transform: uppercase;
+        letter-spacing: -0.02em; color: var(--white);
+        margin: 0 0 10px;
+      }
+      .nosotros-portrait-caption-mobile .prof-ig {
+        display: inline-flex; align-items: center; gap: 8px;
+        color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none;
+        letter-spacing: 0.02em; margin-bottom: 14px;
+      }
+      .nosotros-portrait-caption-mobile .prof-ig svg {
+        width: 14px; height: 14px; fill: currentColor; flex-shrink: 0;
+      }
+      .nosotros-portrait-caption-mobile .prof-bio {
+        font-size: 14px; font-weight: 300; line-height: 1.65;
+        color: rgba(255,255,255,0.65);
+      }
+      /* Quitar separación entre foto y bio mobile */
+      .nosotros-portraits { gap: 0; }
+      .nosotros-portrait-item { margin-bottom: 0; }
+    }
+
     </style>
 
   <style>
@@ -2620,6 +2752,7 @@
       <!-- Cuerpo del hero -->
       <div class="hero-body">
         <div class="hero-title-block">
+          <p class="hero-mobile-badge">Estudio de teatro<br>Dir. Sebastián Mogordoy · Candelaria Sesín</p>
           <p class="hero-overline fade-in-1">Desde 2010 en Buenos Aires — Desde 2020 en Barcelona · Gracia</p>
           <!-- Texto poético — div, no H1 -->
           <div class="hero-h1 fade-in-2">
@@ -2962,11 +3095,29 @@
             <p class="level-card-text">
               Para personas sin experiencia previa o con ganas de volver a jugar. Improvisación, cuerpo, escucha y primeras herramientas actorales para entrar en la ficción sin miedo.
             </p>
+            <span class="level-card-coord-label">Coord. Sebastián Mogordoy · Candelaria Sesín</span>
             <p class="level-card-schedule">Lunes / Martes / Jueves &nbsp;·&nbsp; 19 a 22h</p>
-            <a href="#info-principiantes"
+            <a href="/principiantes/"
                class="level-card-cta">
               Más info e inscripción — Principiantes →
             </a>
+            <!-- Mobile: video + descripción desplegable -->
+            <div class="level-card-mobile-extra">
+              <div class="level-card-mobile-video" data-vid="_DD2o8RWFzI">
+                <img src="https://img.youtube.com/vi/_DD2o8RWFzI/hqdefault.jpg"
+                     alt="Taller principiantes — Barcelona" loading="lazy">
+                <div class="play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <details class="level-card-details">
+                <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
+                <div class="level-card-details-body">
+                  <p>¿Quieres estudiar por primera vez? En esta primera etapa los participantes formarán parte de un espacio diferente a los de su vida cotidiana, con otras reglas y otras posibilidades, junto a un grupo de personas de distintas edades.</p>
+                  <p>Un espacio para quienes desean comenzar a actuar o volver a conectar con el juego, la imaginación y la presencia. Trabajaremos improvisación, escucha, disponibilidad, cuerpo, vínculo y primeras herramientas actorales para entrar en la ficción desde la acción y no desde la idea.</p>
+                </div>
+              </details>
+            </div>
           </div>
         </article>
 
@@ -2984,11 +3135,28 @@
             <p class="level-card-text">
               Para quienes ya tienen experiencia y quieren profundizar y entrenar actuación. Personaje, presencia, deseo, conflicto y poética personal.
             </p>
+            <span class="level-card-coord-label">Coord. Sebastián Mogordoy · Candelaria Sesín</span>
             <p class="level-card-schedule">Miércoles &nbsp;·&nbsp; 19 a 22h</p>
-            <a href="#info-intermedios"
+            <a href="/intermedios/"
                class="level-card-cta">
               Más info e inscripción — Con experiencia →
             </a>
+            <div class="level-card-mobile-extra">
+              <div class="level-card-mobile-video" data-vid="RnRlFAWvrxM">
+                <img src="https://img.youtube.com/vi/RnRlFAWvrxM/hqdefault.jpg"
+                     alt="Taller con experiencia — Barcelona" loading="lazy">
+                <div class="play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <details class="level-card-details">
+                <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
+                <div class="level-card-details-body">
+                  <p>Trabajaremos para que los participantes dominen técnicamente su herramienta y puedan comprenderse como una fuerza poética, un cuerpo dispuesto, entrenado, vibrante, que en el momento de actuar pone en juego todos sus sentidos.</p>
+                  <p>Un espacio de profundización para actores y actrices que ya tuvieron un recorrido previo y desean ampliar su entrenamiento. Investigaremos escena, conflicto, presencia, deseo, imaginario y construcción de materiales actorales.</p>
+                </div>
+              </details>
+            </div>
           </div>
         </article>
 
@@ -3006,15 +3174,32 @@
             <p class="level-card-text">
               Exploraremos escenas y monólogos desde el cuerpo, el estado y las fuerzas invisibles que atraviesan cada situación. Texto, ritmo, sonoridad y conflicto como materia viva para actuar desde una presencia real y no desde la representación.
             </p>
+            <span class="level-card-coord-label">Coord. Sebastián Mogordoy</span>
             <p class="level-card-schedule">Lunes &nbsp;·&nbsp; 10 a 13h</p>
             <p class="level-card-schedule" style="margin-top:4px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
               <span>Lunes &nbsp;·&nbsp; 19 a 22h</span>
               <span style="color:var(--accent);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;">Inicio sept.</span>
             </p>
-            <a href="#info-avanzados"
+            <a href="/avanzados/"
                class="level-card-cta">
               Más info e inscripción — Cuerpo al texto →
             </a>
+            <div class="level-card-mobile-extra">
+              <div class="level-card-mobile-video" data-vid="4An61DJr39w">
+                <img src="https://img.youtube.com/vi/4An61DJr39w/hqdefault.jpg"
+                     alt="Cuerpo al texto — Barcelona" loading="lazy">
+                <div class="play-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <details class="level-card-details">
+                <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
+                <div class="level-card-details-body">
+                  <p>El trabajo sobre escenas de texto y monólogos estará centrado en comprender que actuar un texto no significa "decir bien" unas palabras, sino descubrir qué fuerzas lo producen.</p>
+                  <p>Nos interesa entender que las palabras salen de un cuerpo atravesado por un estado — afectado, vibrando, deseando, resistiendo. El texto será abordado como materia viva: acción, impulso, respiración y comportamiento.</p>
+                </div>
+              </details>
+            </div>
           </div>
         </article>
 
@@ -3170,11 +3355,29 @@
            alt="Sebastián Mogordoy — actor, director y profesor de teatro en Barcelona"
            width="2000" height="1333" loading="lazy" decoding="async">
     </div>
+      <div class="nosotros-portrait-caption-mobile">
+        <p class="prof-role">Coord. General · Profesor</p>
+        <h3 class="prof-name">Sebastián Mogordoy</h3>
+        <a href="https://www.instagram.com/sebamogordoy/" target="_blank" rel="noopener" class="prof-ig">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          @sebamogordoy
+        </a>
+        <p class="prof-bio">Actualmente forma parte del elenco protagónico de <em>El Fill</em>, de Jon Fosse, dirigida por Ferran Utzet, estrenada en el Teatre Lliure. La obra participó del Festival Internacional de Buenos Aires y se estrenó en la Sala Beckett. Recientemente formó parte del elenco de la película <em>El profesor</em>, producida por Netflix.</p>
+      </div>
     <div class="nosotros-portrait-item bw">
       <img src="imagenes_optimizadas/candelaria-sesin-actriz-profesora-teatro-barcelona.jpg"
            alt="Candelaria Sesín — actriz y profesora de teatro en Barcelona"
            width="1690" height="1204" loading="lazy" decoding="async">
     </div>
+      <div class="nosotros-portrait-caption-mobile">
+        <p class="prof-role">Profesora</p>
+        <h3 class="prof-name">Candelaria Sesín</h3>
+        <a href="https://www.instagram.com/candelariasesin/" target="_blank" rel="noopener" class="prof-ig">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          @candelariasesin
+        </a>
+        <p class="prof-bio">Actriz, gestora cultural y docente de teatro. Coordinó las actividades del teatro Silencio de Negras y creó junto a varios grupos diferentes ciclos: Enredadera en la librería La Libre, Derrapé en Sala de Máquinas, Circuito Lumínico y Lo que dura una canción. Docente en Buenos Aires y Barcelona.</p>
+      </div>
   </div>
 
   <section class="nosotros-section" id="nosotros">
@@ -4343,7 +4546,7 @@
     });
 
     // ─── Videos de niveles (info-grid) ───────────────────────────────
-    document.querySelectorAll('.level-info-video').forEach(function(facade) {
+    document.querySelectorAll('.level-info-video, .level-card-mobile-video').forEach(function(facade) {
       facade.addEventListener('click', function() {
         const vid = facade.dataset.vid;
         const iframe = document.createElement('iframe');
