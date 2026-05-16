@@ -366,7 +366,7 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      background: var(--accent);
+      background: #facc15;
       color: var(--white);
       font-family: 'Inter', sans-serif;
       font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
@@ -1831,7 +1831,7 @@
       transition: border-color .2s, color .2s;
       width: fit-content;
     }
-    .ubicacion-cta:hover { border-color: var(--accent); color: var(--accent); }
+    .ubicacion-cta:hover { border-color: #facc15; color: #facc15; }
 
     /* Mapa — facade para performance (sin iframe hasta click) */
     .ubicacion-mapa-wrap {
@@ -4477,22 +4477,22 @@
       if (!h1) return;
 
       const slides = [
-        { lines: ['Bienvenidos al'],             accent: 'superjuego.'                 },
-        { lines: ['¿Tienes ganas'],             accent: 'de actuar?'                  },
-        { lines: ['Creemos.', 'Jugamos.'],       accent: 'Creamos.'                    },
-        { lines: ['Actuar es',  'entrar en'],    accent: 'otro estado.'                },
-        { lines: ['¿Por qué vivir'],             accent: 'una sola vida?'              },
-        { lines: ['¿Por qué representar'],       accent: 'solo un personaje?'          },
-        { lines: ['Ser todo eso'],               accent: 'que no somos.'               },
-        { lines: ['Ser todo eso'],               accent: 'que imaginamos.'             },
-        { lines: ['Improvisación', 'dirigida.'], accent: 'Teatro.'                     },
-        { lines: ['Escuela', 'de teatro.'],      accent: 'Entrenamiento en actuación.' },
+        { lines: ['Nos gusta crear'],             accent: 'realidades momentáneas.'    },
+        { lines: ['Habitar el vacío'],            accent: 'en libertad, total.'        },
+        { lines: ['Eso que quieres actuar,'],     accent: 'ven y actúalo.'             },
+        { lines: ['Dominar el tiempo.'],          accent: 'Ser una imagen.'            },
+        { lines: ['Flotando en el tiempo,'],      accent: 'atravesando el espacio.'    },
+        { lines: ['Imprimiendo tu ser,'],         accent: 'que es tu poética.'         },
+        { lines: ['Tu opinión'],                  accent: 'personal.'                  },
+        { lines: ['Actuar es',  'entrar en'],     accent: 'otro estado.'               },
+        { lines: ['¿Por qué vivir'],              accent: 'una sola vida?'             },
+        { lines: ['Ser todo eso'],                accent: 'que imaginamos.'            },
       ];
 
       let idx = 0;
-      const DISPLAY_MS = 3800;   // tiempo visible por frase
-      const FADE_OUT   = 900;    // dissolve salida
-      const FADE_IN    = 900;    // dissolve entrada
+      const DISPLAY_MS = 2800;   // tiempo visible por frase
+      const FADE_OUT   = 700;    // dissolve salida
+      const FADE_IN    = 700;    // dissolve entrada
 
       function renderSlide(slide) {
         const linesHTML = slide.lines.map(l => l + '<br>').join('');

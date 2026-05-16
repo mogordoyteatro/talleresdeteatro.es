@@ -237,7 +237,7 @@
 
     .btn-primary {
       display: inline-flex; align-items: center; gap: 12px;
-      background: var(--accent); color: var(--white);
+      background: #facc15; color: var(--white);
       font-family: 'Inter', sans-serif;
       font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
       letter-spacing: 0.05em; text-transform: uppercase;
@@ -759,6 +759,26 @@
     /* ═══════════════════════════════════════════
        15 AÑOS / COMUNIDAD
     ═══════════════════════════════════════════ */
+    /* ── Paloma ── */
+    .paloma-section {
+      background: var(--black);
+      padding: 0;
+      overflow: hidden;
+    }
+    .paloma-wrap {
+      max-height: clamp(400px, 60vw, 700px);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .paloma-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
     .comunidad-section {
       background: var(--bg-2);
       padding: var(--pad-y) 0;
@@ -1421,6 +1441,17 @@
     </div>
   </section>
 
+
+  <!-- ═══ PALOMA ═════════════════════════════════════════════════════ -->
+  <section class="paloma-section" aria-label="Actriz de teatro — Talleres de Teatro Barcelona">
+    <div class="paloma-wrap">
+      <img src="/imagenes_optimizadas/actriz-teatro-paloma-talleres-teatrales-barcelona.jpg"
+           alt="Actriz en entrenamiento teatral — Talleres de Teatro Gràcia Barcelona"
+           loading="lazy"
+           width="1600" height="1211"
+           class="paloma-img">
+    </div>
+  </section>
 
   <!-- ═══ 15 AÑOS JUNTOS / COMUNIDAD / ESPACIO ═════════════════════ -->
   <section class="comunidad-section" id="espacio" aria-label="La banda de los actores — comunidad de teatro en Barcelona">
