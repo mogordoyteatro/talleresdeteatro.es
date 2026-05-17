@@ -4,11 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Apúntate · Primera Clase de Teatro Gratis en Barcelona · Gràcia | talleresdeteatro.es</title>
-  <meta name="description" content="Primera clase de teatro gratis y sin compromiso en Barcelona · Gràcia. WhatsApp +34 676 694 958 o email. €100/mes, sin matrícula. Plazas abiertas 2025/26." />
+  <title>Primera Clase Gratis · Apúntate a los Talleres de Teatro Barcelona</title>
+  <meta name="description" content="Primera clase de teatro gratis y sin compromiso en Barcelona · Gràcia. WhatsApp +34 676 694 958 o email. Sin matrícula. Plazas abiertas curso 2026/27." />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="sitemap" type="application/xml" href="sitemap.xml" />
   <link rel="canonical" href="https://talleresdeteatro.es/contacto/" />
+
+  <!-- Geo / Local SEO -->
+  <meta name="geo.region" content="ES-CT" />
+  <meta name="geo.placename" content="Barcelona" />
+  <meta name="geo.position" content="41.3964;2.1787" />
+  <meta name="ICBM" content="41.3964, 2.1787" />
+  <meta name="theme-color" content="#0C0C0C" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://talleresdeteatro.es/contacto/" />
@@ -154,6 +161,14 @@
       white-space: nowrap;
     }
     .btn-primary:hover { filter: brightness(1.12); transform: translateY(-1px); }
+
+    /* ── Botón WhatsApp: siempre verde ── */
+    .btn-wa {
+      background: #25D366 !important;
+      color: #fff !important;
+      border: none !important;
+    }
+    .btn-wa:hover { filter: brightness(1.08) !important; }
 
     /* ─── NAV ─────────────────────────────────── */
     .hero-nav {
@@ -437,7 +452,7 @@
     .form-privacy a { color: rgba(255,255,255,0.5); }
 
     .form-submit {
-      background: var(--accent); color: var(--white);
+      background: #facc15; color: #0c0c0c;
       font-family: 'Inter', sans-serif;
       font-size: 13px; font-weight: 700;
       letter-spacing: 0.08em; text-transform: uppercase;
@@ -493,11 +508,17 @@
     .contact-card-icon {
       width: 40px; height: 40px;
       display: flex; align-items: center; justify-content: center;
-      background: rgba(229,9,20,0.12);
+      background: rgba(255,255,255,0.08);
       flex-shrink: 0;
       margin-top: 2px;
     }
-    .contact-card-icon svg { width: 20px; height: 20px; fill: var(--accent); }
+    .contact-card-icon svg { width: 20px; height: 20px; fill: #fff; }
+    /* WhatsApp card: ícono verde */
+    a[href*="whatsapp"] .contact-card-icon { background: rgba(37,211,102,0.15); }
+    a[href*="whatsapp"] .contact-card-icon svg { fill: #25D366; }
+    /* Email card: ícono blanco */
+    a[href^="mailto"] .contact-card-icon { background: rgba(255,255,255,0.08); }
+    a[href^="mailto"] .contact-card-icon svg { fill: #fff; }
     .contact-card-label {
       font-size: 10px; font-weight: 700;
       letter-spacing: 0.12em; text-transform: uppercase;
@@ -834,7 +855,7 @@
     
     @media (max-width: 768px) {
       .btn-primary, .btn-ghost {
-        width: 100%; max-width: 320px; justify-content: center;
+        width: 100%; max-width: 100%; justify-content: center; box-sizing: border-box;
       }
       .hero-cta-block { gap: 10px; flex-direction: column; align-items: flex-start; }
       .levels-announce-cta, .level-card-cta { width: auto; }
@@ -1280,7 +1301,7 @@
           Vienes, participas, y si el entrenamiento te habla, hablamos.
         </p>
         <div class="prueba-ctas">
-          <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+probar+una+clase+gratis" class="btn-primary" target="_blank" rel="noopener">
+          <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+probar+una+clase+gratis" class="btn-primary btn-wa" target="_blank" rel="noopener">
             Escribir por WhatsApp <span>→</span>
           </a>
           <a href="mailto:info@talleresdeteatro.com" class="btn-primary" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);">

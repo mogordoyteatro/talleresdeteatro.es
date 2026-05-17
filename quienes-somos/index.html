@@ -4,14 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Sebastián Mogordoy y Candelaria Sesín · Directores Talleres de Teatro Barcelona | talleresdeteatro.es</title>
-  <meta name="description" content="Sebastián Mogordoy y Candelaria Sesín dirigen los talleres de teatro en Gràcia, Barcelona desde 2020. 15 años de trayectoria escénica. 88 reseñas ★★★★★." />
+  <title>Mogordoy & Sesín · Directores de los Talleres de Teatro Barcelona</title>
+  <meta name="description" content="Sebastián Mogordoy y Candelaria Sesín dirigen los talleres de teatro en Gràcia, Barcelona. 15 años de trayectoria escénica. 88 reseñas ★★★★★ en Google." />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="sitemap" type="application/xml" href="sitemap.xml" />
   <link rel="canonical" href="https://talleresdeteatro.es/quienes-somos/" />
 
   <meta name="geo.region" content="ES-CT" />
   <meta name="geo.placename" content="Barcelona" />
+  <meta name="geo.position" content="41.3964;2.1787" />
+  <meta name="ICBM" content="41.3964, 2.1787" />
   <meta name="theme-color" content="#0C0C0C" />
 
   <meta property="og:type" content="website" />
@@ -20,8 +22,6 @@
   <meta property="og:description" content="Actores, directores y pedagogos. Quince años investigando actuación, cuerpo y escena. Talleres de teatro en Gracia, Barcelona. 88 reseñas ★★★★★." />
   <meta property="og:image" content="https://talleresdeteatro.es/imagenes_optimizadas/sebastian-mogordoy-candelaria-sesin-profesores-teatro-barcelona.jpg" />
   <meta property="og:locale" content="es_ES" />
-
-    <meta property="og:locale" content="es_ES" />
   <meta property="og:site_name" content="Talleres de Teatro Barcelona" />
 
   <meta name="twitter:card" content="summary_large_image" />
@@ -247,6 +247,14 @@
     .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
     .btn-primary .arrow { font-size: 15px; transition: transform .2s; }
     .btn-primary:hover .arrow { transform: translateX(3px); }
+
+    /* ── Botón WhatsApp: siempre verde ── */
+    .btn-wa {
+      background: #25D366 !important;
+      color: #fff !important;
+      border: none !important;
+    }
+    .btn-wa:hover { filter: brightness(1.08) !important; }
 
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 10px;
@@ -1079,13 +1087,46 @@
     
     @media (max-width: 768px) {
       .btn-primary, .btn-ghost {
-        width: 100%; max-width: 320px; justify-content: center;
+        width: 100%; max-width: 100%; justify-content: center; box-sizing: border-box;
       }
       .hero-cta-block { gap: 10px; flex-direction: column; align-items: flex-start; }
       .levels-announce-cta, .level-card-cta { width: auto; }
     }
     @media (max-width: 480px) {
       .hero-h1 { font-size: clamp(46px, 16vw, 80px); }
+    }
+
+    /* ── Hero SEO h1: visible mínimo en todos lados, invisible en mobile ── */
+    .hero-seo-h1 { font-size: clamp(8px, 0.75vw, 11px) !important; }
+    @media (max-width: 768px) {
+      .hero-seo-h1 { display: none !important; }
+    }
+
+    /* ── Badge mobile nombres directores ── */
+    .hero-mobile-names {
+      display: none;
+      position: absolute;
+      top: calc(68px + 14px);
+      left: var(--pad-x);
+      z-index: 10;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hero-mobile-names-years {
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: #FFD700;
+    }
+    .hero-mobile-names-text {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(14px, 4vw, 18px);
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.15;
+    }
+    @media (max-width: 768px) {
+      .hero-mobile-names { display: flex; }
     }
     
     /* ══ GLOBAL MOBILE: botones full-width + texto centrado ══════════ */
@@ -1261,9 +1302,15 @@
         <span class="hero-dir-junto">junto a Candelaria Sesín</span>
       </div>
 
-      <h1 style="position:absolute;top:calc(68px + 18px);left:var(--pad-x);z-index:10;font-family:'Inter',sans-serif;font-size:clamp(8px,0.75vw,11px);font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.55);pointer-events:none;">
+      <h1 class="hero-seo-h1" style="position:absolute;top:calc(68px + 18px);left:var(--pad-x);z-index:10;font-family:'Inter',sans-serif;font-size:clamp(8px,0.75vw,11px);font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.55);pointer-events:none;">
         Profesores de teatro Barcelona · Sebastián Mogordoy · Candelaria Sesín
       </h1>
+
+      <!-- Badge mobile — nombres pequeños visible solo en mobile -->
+      <div class="hero-mobile-names" aria-hidden="true">
+        <span class="hero-mobile-names-years">15 años de teatro</span>
+        <span class="hero-mobile-names-text">Sebastián Mogordoy · Candelaria Sesín</span>
+      </div>
 
       <!-- NOSOTROS — watermark centrado semitransparente -->
       <div aria-hidden="true" style="
@@ -1294,7 +1341,7 @@
             <a href="/principiantes/" class="btn-primary">
               Ver talleres <span class="arrow">→</span>
             </a>
-            <a href="https://api.whatsapp.com/send/?phone=34676694958" target="_blank" rel="noopener" class="btn-ghost">
+            <a href="https://api.whatsapp.com/send/?phone=34676694958" target="_blank" rel="noopener" class="btn-primary btn-wa">
               Escríbenos
             </a>
           </div>

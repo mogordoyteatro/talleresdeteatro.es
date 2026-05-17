@@ -5,11 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ═══ SEO CORE ═══════════════════════════════════════════════ -->
-  <title>Talleres de Teatro Barcelona · Gracia | Principiantes y Actores · talleresdeteatro.es</title>
-  <meta name="description" content="Talleres de teatro en Barcelona · Gracia. Para principiantes y actores con experiencia. Dir. Mogordoy & Sesín. Primera clase gratis. 88 reseñas ★★★★★." />
+  <title>Talleres de Teatro Barcelona · Principiantes y Actores en Gràcia</title>
+  <meta name="description" content="Talleres de teatro en Barcelona · Gràcia. Para principiantes y actores con experiencia. Dir. Mogordoy & Sesín. Primera clase gratis. 88 reseñas ★★★★★." />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="sitemap" type="application/xml" href="sitemap.xml" />
   <link rel="canonical" href="https://talleresdeteatro.es/" />
+
+  <!-- Geo / Local SEO -->
+  <meta name="geo.region" content="ES-CT" />
+  <meta name="geo.placename" content="Barcelona" />
+  <meta name="geo.position" content="41.3964;2.1787" />
+  <meta name="ICBM" content="41.3964, 2.1787" />
+  <meta name="theme-color" content="#0C0C0C" />
 
   <!-- ═══ OPEN GRAPH (redes sociales y WhatsApp) ═══════════════ -->
   <meta property="og:type" content="website" />
@@ -33,6 +40,7 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://talleresdeteatro.es/#organization",
     "additionalType": "https://schema.org/PerformingArtsTheater",
     "name": "Talleres de Teatro Barcelona · Sebastián Mogordoy",
     "description": "Escuela de teatro y entrenamiento actoral en Gracia, Barcelona. Clases para principiantes, intermedios y actores con experiencia. Dirigido por Sebastián Mogordoy y Candelaria Sesín.",
@@ -379,6 +387,14 @@
     .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
     .btn-primary .arrow { font-size: 15px; transition: transform .2s; }
     .btn-primary:hover .arrow { transform: translateX(3px); }
+
+    /* ── Botón WhatsApp: siempre verde ── */
+    .btn-wa {
+      background: #25D366 !important;
+      color: #fff !important;
+      border: none !important;
+    }
+    .btn-wa:hover { filter: brightness(1.08) !important; }
 
 
     /* ═══════════════════════════════════════════
@@ -1085,10 +1101,11 @@
       flex-direction: column;
       justify-content: flex-end;
       min-height: clamp(300px, 32vw, 460px);
-      margin-bottom: 24px;
+      margin: 0 clamp(12px, 2.5vw, 40px) 24px;
       text-decoration: none;
       overflow: hidden;
       background-color: #0e0000;
+      border-radius: 2px;
     }
     /* Foto de fondo cinemática */
     .levels-announce-bg {
@@ -1172,12 +1189,12 @@
       align-self: flex-start;
       margin-top: 8px;
     }
-    /* Franja inferior amarilla — info + CTA */
+    /* Franja inferior roja — info + CTA */
     .levels-announce-strip {
       display: flex;
       align-items: stretch;
       justify-content: space-between;
-      background: var(--gold);
+      background: var(--accent);
     }
     .levels-announce-cells {
       display: flex;
@@ -1190,24 +1207,24 @@
       justify-content: center;
       gap: 3px;
       padding: clamp(14px, 1.6vw, 22px) clamp(18px, 2.2vw, 32px);
-      border-right: 1px solid rgba(0,0,0,0.12);
+      border-right: 1px solid rgba(255,255,255,0.18);
     }
     .cell-label {
       font-size: clamp(9px, 0.85vw, 11px);
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(0,0,0,0.55);
+      color: rgba(255,255,255,0.65);
     }
     .cell-value {
       font-family: 'Archivo Black', sans-serif;
       font-size: clamp(13px, 1.4vw, 18px);
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      color: #000;
+      color: #fff;
       line-height: 1;
     }
-    /* CTA rojo — contrasta sobre la barra amarilla */
+    /* CTA amarillo — contrasta sobre la barra roja */
     .levels-announce-cta {
       display: inline-flex;
       align-items: center;
@@ -1217,7 +1234,7 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: #0c0c0c;
-      background: #facc15;
+      background: #FFD700;
       padding: clamp(18px, 2.2vw, 28px) clamp(28px, 4vw, 56px);
       white-space: nowrap;
       flex-shrink: 0;
@@ -2450,7 +2467,7 @@
     
     @media (max-width: 768px) {
       .btn-primary, .btn-ghost {
-        width: 100%; max-width: 320px; justify-content: center;
+        width: 100%; max-width: 100%; justify-content: center; box-sizing: border-box;
       }
       .hero-cta-block { gap: 10px; flex-direction: column; align-items: flex-start; }
       .levels-announce-cta, .level-card-cta { width: auto; }
@@ -2842,7 +2859,7 @@
               Ver talleres <span class="arrow">→</span>
             </a>
             <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+reservar+una+clase"
-               class="btn-primary" style="background:transparent; border:1px solid rgba(255,255,255,0.3); color:var(--white);">
+               class="btn-primary btn-wa">
               Reservar clase <span class="arrow">→</span>
             </a>
             <div class="hero-social">
@@ -3529,7 +3546,7 @@
       <div class="comunidad-cta-block">
         <a href="https://api.whatsapp.com/send/?phone=34676694958"
            target="_blank" rel="noopener"
-           class="btn-primary">Reservar clase de prueba <span class="arrow">→</span></a>
+           class="btn-primary btn-wa">Reservar clase de prueba <span class="arrow">→</span></a>
 
         <div class="comunidad-contact">
           <a href="https://api.whatsapp.com/send/?phone=34676694958" target="_blank" rel="noopener">

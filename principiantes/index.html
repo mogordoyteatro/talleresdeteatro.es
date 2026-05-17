@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Clases de Teatro para Principiantes en Barcelona · Primera clase gratis | talleresdeteatro.es</title>
-  <meta name="description" content="Clases de teatro para principiantes en Barcelona. Sin experiencia previa. Improvisación, cuerpo y presencia escénica en Gràcia. Primera clase sin cargo · 88 reseñas ★★★★★." />
+  <title>Teatro para Principiantes Barcelona · Primera Clase Gratis · Gràcia</title>
+  <meta name="description" content="Clases de teatro para principiantes en Barcelona · Gràcia. Sin experiencia previa. Improvisación, cuerpo y presencia escénica. Primera clase sin cargo · 88 reseñas ★★★★★." />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="sitemap" type="application/xml" href="sitemap.xml" />
   <link rel="canonical" href="https://talleresdeteatro.es/principiantes/" />
@@ -53,7 +53,9 @@
   "offers": {
     "@type": "Offer",
     "description": "Cuota mensual. Sin matrícula. Primera clase sin cargo.",
-    "availability": "https://schema.org/InStock"
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2026-06-01",
+    "url": "https://talleresdeteatro.es/principiantes/"
   },
   "teaches": "Actuación teatral, improvisación, expresión corporal, presencia escénica, formación actoral desde cero",
   "hasCourseInstance": [
@@ -329,6 +331,14 @@
     .btn-primary .arrow { transition: transform .2s; }
     .btn-primary:hover .arrow { transform: translateX(4px); }
 
+    /* ── Botón WhatsApp: siempre verde ── */
+    .btn-wa {
+      background: #25D366 !important;
+      color: #fff !important;
+      border: none !important;
+    }
+    .btn-wa:hover { filter: brightness(1.08) !important; }
+
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 10px;
       background: transparent; color: rgba(255,255,255,0.65);
@@ -432,9 +442,9 @@
     .nav-chevron { font-size: 7px; margin-left: 4px; opacity: 0.5; }
     @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } }
 
-    /* Touch targets mínimos en mobile */
+    /* Touch targets mínimos en mobile + full width */
     @media (max-width: 768px) {
-      .btn-primary, .btn-ghost { min-height: 48px; }
+      .btn-primary, .btn-ghost { min-height: 48px; width: 100%; max-width: 100%; box-sizing: border-box; justify-content: center; }
       .carousel-btn { width: 48px; height: 48px; }
       .hero-sound { width: 44px; height: 44px; }
     }
@@ -805,6 +815,22 @@
       font-size: clamp(10px, 0.9vw, 12px); font-weight: 700;
       letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--accent);
+    }
+    /* Mobile: separar del borde y subtítulo amarillo */
+    @media (max-width: 768px) {
+      .editorial-strip-caption {
+        right: auto;
+        left: clamp(20px, 5vw, 40px);
+        text-align: left;
+      }
+      .editorial-strip-caption span {
+        color: #FFD700;
+        display: block;
+        margin-bottom: 6px;
+      }
+      .editorial-strip-caption p {
+        font-size: clamp(16px, 5vw, 24px);
+      }
     }
 
     /* ─── MANIFESTO ─────────────────────────────── */
@@ -2260,7 +2286,7 @@
             <span class="hero-meta-item" style="color:var(--gold);font-weight:700;">Plazas abiertas</span>
           </div>
           <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+info+sobre+el+taller+de+principiantes."
-             class="btn-primary" target="_blank" rel="noopener">
+             class="btn-primary btn-wa" target="_blank" rel="noopener">
             Reservar plaza <span class="arrow">→</span>
           </a>
         </div>
