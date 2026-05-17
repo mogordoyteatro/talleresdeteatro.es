@@ -1,15 +1,17 @@
 User-agent: *
 Allow: /
 
+# Archivos legacy / prototipos — no indexar
+Disallow: /05-hero-prototipo-paletas.html
+Disallow: /06-home-completo.html
+Disallow: /07-home-seo.html
+Disallow: /con-experiencia-v2.html
+Disallow: /contacto-html.html
+Disallow: /cuerpo-al-texto-v1.html
+Disallow: /nosotros-v2.html
+Disallow: /principiantes-boceto.html
+Disallow: /principiantes-v2.html
+Disallow: /info.html
+
 # Sitemap
 Sitemap: https://talleresdeteatro.es/sitemap.xml
-
-# Directorios a no indexar
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /wp-content/plugins/
-Disallow: /wp-json/
-Disallow: /feed/
-Disallow: /?s=
-Disallow: /search/
-Disallow: /info.html
