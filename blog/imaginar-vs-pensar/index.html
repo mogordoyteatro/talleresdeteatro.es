@@ -109,6 +109,8 @@
     .footer-links { display: flex; gap: 20px; }
     .footer-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--g300); text-decoration: none; transition: color .2s; }
     .footer-links a:hover { color: var(--white); }
+    .article-hero { width: 100%; aspect-ratio: 16/7; overflow: hidden; display: block; }
+    .article-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
   </style>
 </head>
 <body>
@@ -116,7 +118,7 @@
   <nav class="hero-nav" aria-label="Navegación principal">
     <div class="nav-left">
       <a href="/" class="logo"><img src="/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg" alt="talleresdeteatro.es" width="180" height="32" loading="eager" /></a>
-      <span class="nav-tagline">Estudio de teatro&nbsp; | &nbsp;Dir. Sebastián Mogordoy</span>
+      
     </div>
     <ul class="nav-links" role="list">
       <li class="nav-level"><a href="/principiantes/">Principiantes</a></li>
@@ -159,6 +161,10 @@
       </div>
     </div>
   </header>
+
+  <div class="article-hero">
+    <img src="/imagenes_optimizadas/clase-teatro-intermedios-barcelona-ensayo-01.jpg" alt="Entrenamiento actoral en los Talleres de Teatro Barcelona — imaginar versus pensar" loading="eager" />
+  </div>
 
   <article class="article-body">
 
