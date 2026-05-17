@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog de Teatro · Reflexiones sobre actuación y entrenamiento · Talleres Barcelona</title>
+  <meta name="description" content="Artículos sobre actuación, entrenamiento teatral e improvisación. Por Sebastián Mogordoy, director de los Talleres de Teatro Barcelona en Gràcia." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://talleresdeteatro.es/blog/" />
+  <meta name="geo.region" content="ES-CT" />
+  <meta name="geo.placename" content="Barcelona" />
+  <meta name="theme-color" content="#0C0C0C" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://talleresdeteatro.es/blog/" />
+  <meta property="og:title" content="Blog de Teatro · Talleres de Teatro Barcelona" />
+  <meta property="og:description" content="Reflexiones sobre actuación, entrenamiento e improvisación dirigida. Por Sebastián Mogordoy." />
+  <meta property="og:image" content="https://talleresdeteatro.es/imagenes_optimizadas/sebastian-mogordoy-candelaria-sesin-profesores-teatro-barcelona.jpg" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Talleres de Teatro Barcelona" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog de Teatro · Talleres de Teatro Barcelona",
+    "description": "Artículos sobre actuación, entrenamiento teatral e improvisación dirigida por Sebastián Mogordoy.",
+    "url": "https://talleresdeteatro.es/blog/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Talleres de Teatro Barcelona",
+      "url": "https://talleresdeteatro.es",
+      "@id": "https://talleresdeteatro.es/#organization"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://talleresdeteatro.es/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://talleresdeteatro.es/blog/"}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --bg:     #0C0C0C;
+      --bg-2:   #161616;
+      --white:  #FFFFFF;
+      --g100:   #E0E0E0;
+      --g300:   #909090;
+      --g500:   #505050;
+      --g700:   #282828;
+      --accent: #E50914;
+      --gold:   #FFD700;
+      --pad-x:  clamp(24px, 5vw, 72px);
+      --pad-y:  clamp(56px, 7vw, 96px);
+      --max-w:  1280px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+    }
+
+    /* ── NAV ── */
+    .hero-nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 var(--pad-x);
+      height: 68px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .nav-left { display: flex; align-items: center; gap: clamp(12px,1.8vw,24px); }
+    .logo { display: flex; align-items: center; text-decoration: none; }
+    .logo img { height: 32px; width: auto; display: block; }
+    .nav-tagline {
+      font-size: 9px; font-weight: 400;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      padding-left: clamp(12px,1.8vw,24px);
+      border-left: 1px solid rgba(255,255,255,0.15);
+    }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: clamp(16px,2.2vw,32px); }
+    .nav-links a {
+      font-size: clamp(11px,1.1vw,13px); font-weight: 500;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--white); text-decoration: none;
+      opacity: 0.72; transition: opacity .2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-links .nav-active a { font-weight: 700; color: var(--gold) !important; opacity: 1; }
+    .nav-links .nav-level a { color: var(--gold); opacity: 0.85; }
+    .nav-links .nav-cta a { color: var(--accent); font-weight: 700; opacity: 1; }
+    .nav-ig a { color: var(--white); opacity: 0.6; transition: opacity .2s; }
+    .nav-ig a:hover { opacity: 1; }
+    .nav-ig svg { width: 20px; height: 20px; fill: currentColor; display: block; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 8px;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); transition: all .3s; }
+
+    /* ── HEADER ── */
+    .blog-header {
+      padding-top: calc(68px + var(--pad-y));
+      padding-bottom: var(--pad-y);
+      border-bottom: 1px solid var(--g700);
+    }
+    .overline {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: clamp(11px,1.2vw,13px); font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .overline::after {
+      content: ''; display: block; width: 28px; height: 1px;
+      background: var(--gold); flex-shrink: 0;
+    }
+    .blog-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(44px, 7vw, 96px);
+      font-weight: 400; text-transform: uppercase;
+      letter-spacing: -0.03em; line-height: 0.88;
+      color: var(--white);
+      margin-top: 20px;
+    }
+    .blog-title span { color: var(--accent); }
+    .blog-subtitle {
+      font-size: clamp(16px,1.8vw,20px);
+      font-weight: 300; line-height: 1.6;
+      color: rgba(255,255,255,0.65);
+      max-width: 52ch;
+      margin-top: 24px;
+    }
+
+    /* ── GRID DE ARTÍCULOS ── */
+    .blog-grid-section { padding: var(--pad-y) 0; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(20px, 3vw, 40px);
+    }
+    @media (max-width: 960px) { .blog-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+
+    .article-card {
+      display: flex; flex-direction: column;
+      background: var(--bg-2);
+      border: 1px solid var(--g700);
+      text-decoration: none;
+      transition: border-color .25s, transform .25s;
+    }
+    .article-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+    .card-tag {
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent);
+      padding: 20px 24px 0;
+    }
+    .card-num {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(52px, 7vw, 80px);
+      color: rgba(255,255,255,0.04);
+      line-height: 1; letter-spacing: -0.04em;
+      padding: 0 24px;
+      user-select: none;
+      margin-top: -10px;
+    }
+    .card-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 400; text-transform: uppercase;
+      letter-spacing: -0.02em; line-height: 1.05;
+      color: var(--white);
+      padding: 0 24px;
+      margin-top: -16px;
+    }
+    .card-excerpt {
+      font-size: clamp(13px, 1.3vw, 15px);
+      font-weight: 300; line-height: 1.65;
+      color: var(--g300);
+      padding: 16px 24px 24px;
+      flex: 1;
+    }
+    .card-cta {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold);
+      padding: 0 24px 24px;
+      margin-top: auto;
+    }
+    .card-cta::after { content: '→'; }
+
+    /* ── CTA FINAL ── */
+    .blog-cta {
+      padding: var(--pad-y) 0;
+      border-top: 1px solid var(--g700);
+    }
+    .blog-cta-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .blog-cta-text h2 {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(28px,4vw,52px);
+      text-transform: uppercase; letter-spacing: -0.02em;
+      line-height: 0.95; color: var(--white);
+    }
+    .blog-cta-text p {
+      font-size: clamp(14px,1.5vw,17px); color: var(--g300);
+      margin-top: 12px; max-width: 44ch;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: #facc15; color: #0c0c0c;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(13px,1.3vw,15px); font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 36px;
+      transition: filter .2s, transform .2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    .footer {
+      border-top: 1px solid var(--g700);
+      padding: clamp(40px,5vw,64px) 0;
+    }
+    .footer-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .footer-logo img { height: 28px; width: auto; opacity: 0.7; }
+    .footer-copy {
+      font-size: 12px; color: var(--g500);
+      letter-spacing: 0.05em;
+    }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--g300); text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    /* ── MOBILE ── */
+    .mobile-menu {
+      display: none;
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(8,8,8,0.98);
+      flex-direction: column;
+      padding: 24px var(--pad-x);
+    }
+    .mobile-menu.is-open { display: flex; }
+    .mobile-menu-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-bottom: 32px; border-bottom: 1px solid var(--g700);
+    }
+    .mobile-menu-close {
+      background: none; border: 1px solid var(--g500);
+      color: var(--white); font-size: 20px;
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+    }
+    .mobile-menu-nav {
+      display: flex; flex-direction: column; gap: 8px;
+      margin-top: 32px;
+    }
+    .mobile-menu-nav a {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(22px,5vw,30px);
+      text-transform: uppercase; letter-spacing: -0.01em;
+      color: var(--white); text-decoration: none;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--g700);
+    }
+    .mm-cta { color: var(--gold) !important; }
+    @media (max-width: 860px) {
+      .nav-links, .nav-tagline, .nav-ig { display: none; }
+      .hamburger { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAV ══ -->
+  <nav class="hero-nav" aria-label="Navegación principal">
+    <div class="nav-left">
+      <a href="/" class="logo" aria-label="talleresdeteatro.es — inicio">
+        <img src="/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg"
+             alt="talleresdeteatro.es" width="180" height="32" loading="eager" />
+      </a>
+      <span class="nav-tagline">Estudio de teatro&nbsp; | &nbsp;Dir. Sebastián Mogordoy</span>
+    </div>
+    <ul class="nav-links" role="list">
+      <li class="nav-level"><a href="/principiantes/">Principiantes</a></li>
+      <li class="nav-level"><a href="/intermedios/">Con experiencia</a></li>
+      <li class="nav-level"><a href="/avanzados/">Cuerpo al texto</a></li>
+      <li><a href="/quienes-somos/">Nosotros</a></li>
+      <li class="nav-active"><a href="/blog/">Blog</a></li>
+      <li class="nav-cta"><a href="/contacto/">Escríbenos</a></li>
+    </ul>
+    <div class="nav-ig">
+      <a href="https://www.instagram.com/tallerdeteatro.mogordoy/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+    </div>
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══ MOBILE MENU ══ -->
+  <div class="mobile-menu" role="dialog" aria-modal="true" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <a href="/" class="logo">
+        <img src="/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg" alt="talleresdeteatro.es" width="160" height="28" />
+      </a>
+      <button class="mobile-menu-close" aria-label="Cerrar menú" id="mobile-menu-close">✕</button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="/principiantes/">Principiantes</a>
+      <a href="/intermedios/">Con experiencia</a>
+      <a href="/avanzados/">Cuerpo al texto</a>
+      <a href="/quienes-somos/">Nosotros</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contacto/" class="mm-cta">Escríbenos →</a>
+    </nav>
+  </div>
+
+  <!-- ══ HEADER ══ -->
+  <header class="blog-header">
+    <div class="container">
+      <span class="overline">Reflexiones sobre actuación</span>
+      <h1 class="blog-title">El<br><span>Blog</span></h1>
+      <p class="blog-subtitle">Artículos sobre teatro, actuación e improvisación. Por Sebastián Mogordoy, director de los Talleres de Teatro Barcelona.</p>
+    </div>
+  </header>
+
+  <!-- ══ ARTÍCULOS ══ -->
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="blog-grid">
+
+        <a href="/blog/actuar-no-es-representar/" class="article-card" aria-label="Leer: Por qué actuar no es representar">
+          <span class="card-tag">Técnica actoral</span>
+          <span class="card-num">01</span>
+          <h2 class="card-title">Por qué actuar<br>no es representar</h2>
+          <p class="card-excerpt">La diferencia entre "hacer como que" y estar de verdad en escena. El "personajito" y el salto al presente que cambia todo.</p>
+          <span class="card-cta">Leer artículo</span>
+        </a>
+
+        <a href="/blog/el-juego-como-origen/" class="article-card" aria-label="Leer: El juego como origen">
+          <span class="card-tag">Filosofía del teatro</span>
+          <span class="card-num">02</span>
+          <h2 class="card-title">El juego<br>como origen</h2>
+          <p class="card-excerpt">De la infancia al escenario: por qué actuar es un superjuego adulto, apasionado y sin ingenuidad ni solemnidad.</p>
+          <span class="card-cta">Leer artículo</span>
+        </a>
+
+        <a href="/blog/imaginar-vs-pensar/" class="article-card" aria-label="Leer: Imaginar vs. pensar">
+          <span class="card-tag">Entrenamiento</span>
+          <span class="card-num">03</span>
+          <h2 class="card-title">Imaginar<br>vs. pensar</h2>
+          <p class="card-excerpt">Pensar organiza. Imaginar encarna. La diferencia más importante que existe para un actor, y cómo entrenarla.</p>
+          <span class="card-cta">Leer artículo</span>
+        </a>
+
+        <a href="/blog/improvisacion-dirigida/" class="article-card" aria-label="Leer: Qué es la improvisación dirigida">
+          <span class="card-tag">Metodología</span>
+          <span class="card-num">04</span>
+          <h2 class="card-title">Qué es la<br>improvisación dirigida</h2>
+          <p class="card-excerpt">El eje de nuestra filosofía de entrenamiento: crear sin guión, desde el cuerpo, con deseo y sin representar.</p>
+          <span class="card-cta">Leer artículo</span>
+        </a>
+
+        <a href="/blog/el-quiero-animal/" class="article-card" aria-label="Leer: El quiero animal">
+          <span class="card-tag">Escena y situación</span>
+          <span class="card-num">05</span>
+          <h2 class="card-title">El quiero<br>animal</h2>
+          <p class="card-excerpt">Cómo habitar una situación en escena y dejar de explicar el personaje. La fuerza que lo cambia todo.</p>
+          <span class="card-cta">Leer artículo</span>
+        </a>
+
+        <a href="/blog/bartis-y-serrano/" class="article-card" aria-label="Leer: Entre dos fuegos">
+          <span class="card-tag">Maestros</span>
+          <span class="card-num">06</span>
+          <h2 class="card-title">Entre dos<br>fuegos</h2>
+          <p class="card-excerpt">Raúl Serrano y Ricardo Bartís: cómo dos visiones a veces opuestas forjaron una mirada propia sobre el teatro.</p>
+          <span class="card-cta">Leer artículo</span>
+        </a>
+
+        <a href="/blog/el-cuerpo-como-pincel/" class="article-card" aria-label="Leer: El cuerpo como pincel">
+          <span class="card-tag">Entrenamiento</span>
+          <span class="card-num">07</span>
+          <h2 class="card-title">El cuerpo<br>como pincel</h2>
+          <p class="card-excerpt">Qué entrenamos realmente en el taller: el espacio como lienzo, la experiencia como pintura y el cuerpo como herramienta poética.</p>
+          <span class="card-cta">Leer artículo</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <section class="blog-cta">
+    <div class="container">
+      <div class="blog-cta-inner">
+        <div class="blog-cta-text">
+          <h2>¿Quieres vivirlo<br>en escena?</h2>
+          <p>La primera clase es gratis. Ven a probar el entrenamiento y descubre si el teatro es lo tuyo.</p>
+        </div>
+        <a href="/contacto/" class="btn-primary">Primera clase gratis →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="footer-logo">
+          <img src="/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg" alt="Talleres de Teatro Barcelona" width="140" height="25" />
+        </a>
+        <p class="footer-copy">© 2026 Talleres de Teatro Barcelona · Gràcia</p>
+        <nav class="footer-links">
+          <a href="/principiantes/">Principiantes</a>
+          <a href="/intermedios/">Con experiencia</a>
+          <a href="/avanzados/">Avanzados</a>
+          <a href="/contacto/">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeBtn = document.getElementById('mobile-menu-close');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('is-open'));
+    });
+    closeBtn.addEventListener('click', () => mobileMenu.classList.remove('is-open'));
+  </script>
+</body>
+</html>
