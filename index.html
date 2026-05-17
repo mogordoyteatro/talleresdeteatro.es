@@ -2079,6 +2079,12 @@
       padding: var(--pad-y) 0;
       background: var(--bg);
     }
+    /* Fotos: rompe el container y ocupa todo el ancho de pantalla */
+    #panel-fotos {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
     .gallery-tabs {
       display: flex;
       border-bottom: 1px solid var(--g700);
@@ -2205,17 +2211,18 @@
 
     /* ── Fotos masonry ── */
     .photos-grid {
-      columns: 4; column-gap: 5px;
+      columns: 8; column-gap: 2px;
+      padding: 0;
     }
     .photos-grid-item {
-      break-inside: avoid; margin-bottom: 5px;
+      break-inside: avoid; margin-bottom: 2px;
       overflow: hidden; cursor: zoom-in;
     }
     .photos-grid-item img {
       width:100%; display:block;
-      transition: transform .4s ease;
+      transition: transform .35s ease;
     }
-    .photos-grid-item:hover img { transform: scale(1.04); }
+    .photos-grid-item:hover img { transform: scale(1.06); }
 
     /* ── Videos grid ── */
     .videos-grid {
@@ -2284,13 +2291,19 @@
     .lightbox-prev { left: 12px; }
     .lightbox-next { right: 12px; }
 
+    @media (max-width: 1200px) {
+      .photos-grid { columns: 6; }
+    }
     @media (max-width: 960px) {
-      .photos-grid { columns: 3; }
+      .photos-grid { columns: 5; }
       .ig-grid { grid-template-columns: repeat(3,1fr); }
     }
     @media (max-width: 640px) {
-      .photos-grid { columns: 2; }
+      .photos-grid { columns: 4; }
       .gallery-tab { font-size: 12px; padding: 0 20px 14px 0; }
+    }
+    @media (max-width: 400px) {
+      .photos-grid { columns: 3; }
     }
 
     /* ═══════════════════════════════════════════
@@ -4191,44 +4204,13 @@
       </div>
 
             <!-- ── TAB: Fotos ── -->
-      <div class="gallery-panel" id="panel-fotos" role="tabpanel">
-        <div class="photos-grid" id="photosGrid">
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/principiantes-clase-2025.jpg" alt="Clase de teatro Barcelona 2025" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatro-barcelona-0575.jpg" alt="Improvisación teatral Barcelona" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/avanzados-clase-2025.jpg" alt="Entrenamiento actoral Espacio La Mansión" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/intermedios-clase-2025.jpg" alt="Ensayo de teatro Gracia Barcelona" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatro-barcelona-0607.jpg" alt="Taller de teatro — trabajo de escena" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0096.jpg" alt="Actuación alumnos teatro Barcelona" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-barcelona-0497.jpg" alt="Teatro principiantes Barcelona 2025" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-gracia-barcelona-0662.jpg" alt="Clase actoral Talleres Mogordoy" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/actuacion-teatro-barcelona-0592.jpg" alt="Improvisación colectiva teatro Barcelona" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-gracia-barcelona-0034.jpg" alt="Escena de entrenamiento actoral" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatro-barcelona-0775.jpg" alt="Grupo teatro Barcelona — Espacio La Mansión" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/ensayo-teatro-barcelona-0394.jpg" alt="Clase teatro Barcelona proceso creativo" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-barcelona-0393.jpg" alt="Taller teatro Gracia — entrenamiento físico" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0104.jpg" alt="Actuación en escena Barcelona 2025" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-barcelona-principiantes-0310.jpg" alt="Teatro Barcelona — trabajo de presencia" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/actuacion-teatro-barcelona-0119.jpg" alt="Ensayo final taller teatro Barcelona" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/actuacion-teatro-barcelona-0576.jpg" alt="Principiantes en escena — teatro Barcelona" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-barcelona-principiantes-0161.jpg" alt="Clase actoral improvisación 2025" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0741.jpg" alt="Entrenamiento vocal y corporal Barcelona" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0629.jpg" alt="Teatro Barcelona — dinámica de grupo" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-espacio-mansion-barcelona-0296.jpg" alt="Escena teatro — Espacio La Mansión Gracia" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-barcelona-principiantes-0065.jpg" alt="Alumnos teatro Barcelona en función" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/clase-teatro-principiantes-barcelona-0037.jpg" alt="Improvisación teatral — Talleres Mogordoy" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0195.jpg" alt="Clase teatro Barcelona trabajo escénico" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatral-barcelona-0156.jpg" alt="Entrenamiento actoral Barcelona 2025" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-gracia-barcelona-0362.jpg" alt="Teatro Barcelona — investigación escénica" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0091.jpg" alt="Taller teatro Barcelona — creación colectiva" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/taller-teatro-gracia-barcelona-0178.jpg" alt="Actuación teatro Gracia Barcelona" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/improvisacion-teatro-barcelona-1063.jpg" alt="Clase teatro Barcelona — escucha activa" loading="lazy"></div>
-          <div class="photos-grid-item"><img src="imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0347.jpg" alt="Teatro Barcelona — proceso de creación" loading="lazy"></div>
+      <div class="gallery-panel" id="panel-fotos" role="tabpanel" style="padding:0;">
+        <div class="photos-grid" id="photosGrid" style="margin:0;">
+          <!-- Las fotos se cargan dinámicamente desde galeria-fotos.json -->
         </div>
-      </div>
-
         <!-- Botón ver más -->
-        <div style="text-align:center; margin-top: 40px;">
-          <button id="fotosVerMas" class="btn-primary" style="background:transparent; border:1px solid var(--g500); color:var(--white); min-width:240px;">
+        <div style="text-align:center; padding: 32px 0 48px;">
+          <button id="fotosVerMas" class="btn-primary" style="display:none; background:transparent; border:1px solid var(--g500); color:var(--white); min-width:240px;">
             Ver más fotos
           </button>
         </div>
@@ -4642,9 +4624,10 @@
       document.getElementById('photosGrid')?.addEventListener('click', e => {
         const item = e.target.closest('.photos-grid-item');
         if (!item) return;
-        const items = Array.from(document.querySelectorAll('#photosGrid .photos-grid-item img')).map(i => i.src);
-        const idx   = Array.from(document.querySelectorAll('#photosGrid .photos-grid-item')).indexOf(item);
-        open(items, idx);
+        const allItems = Array.from(document.querySelectorAll('#photosGrid .photos-grid-item'));
+        const imgs  = allItems.map(el => el.querySelector('img').src);
+        const idx   = allItems.indexOf(item);
+        open(imgs, idx);
       });
 
       lbClose.addEventListener('click', close);
@@ -4660,29 +4643,55 @@
     })();
     // ─────────────────────────────────────────────────────────────────
 
-    // ─── Fotos "Ver más" ──────────────────────────────────────────────
+    // ─── Galería de Fotos — carga desde JSON ─────────────────────────
     (function () {
-      const grid    = document.getElementById('photosGrid');
-      const btn     = document.getElementById('fotosVerMas');
+      const grid = document.getElementById('photosGrid');
+      const btn  = document.getElementById('fotosVerMas');
       if (!grid || !btn) return;
-      const BATCH   = 24;
-      const items   = Array.from(grid.querySelectorAll('.photos-grid-item'));
-      let shown     = BATCH;
 
-      // Ocultar todo lo que supera el primer batch
-      items.forEach((item, i) => {
-        if (i >= BATCH) item.style.display = 'none';
-      });
+      const BATCH   = 200;   // fotos por carga
+      let allPhotos = [];
+      let shown     = 0;
 
-      btn.addEventListener('click', () => {
-        const end = Math.min(shown + BATCH, items.length);
-        for (let i = shown; i < end; i++) items[i].style.display = '';
+      function renderBatch() {
+        const end = Math.min(shown + BATCH, allPhotos.length);
+        const frag = document.createDocumentFragment();
+        for (let i = shown; i < end; i++) {
+          const p    = allPhotos[i];
+          const src  = typeof p === 'string' ? p : p.src;
+          const alt  = (typeof p === 'object' && p.alt) ? p.alt : 'Talleres de Teatro Barcelona';
+          const div  = document.createElement('div');
+          div.className = 'photos-grid-item';
+          const img  = document.createElement('img');
+          img.src    = src;
+          img.alt    = alt;
+          img.loading = 'lazy';
+          div.appendChild(img);
+          frag.appendChild(div);
+        }
+        grid.appendChild(frag);
         shown = end;
-        if (shown >= items.length) btn.style.display = 'none';
-        else btn.textContent = `Ver más fotos (${items.length - shown} restantes)`;
-      });
 
-      btn.textContent = `Ver más fotos (${items.length - shown} restantes)`;
+        if (shown >= allPhotos.length) {
+          btn.style.display = 'none';
+        } else {
+          btn.style.display = '';
+          btn.textContent = `Ver más fotos (${allPhotos.length - shown} restantes)`;
+        }
+      }
+
+      fetch('galeria-fotos.json')
+        .then(r => r.json())
+        .then(data => {
+          // Mezcla aleatoria para variedad
+          allPhotos = data.sort(() => Math.random() - 0.5);
+          renderBatch();
+        })
+        .catch(() => {
+          // Fallback silencioso si no carga el JSON
+        });
+
+      btn.addEventListener('click', renderBatch);
     })();
     // ─────────────────────────────────────────────────────────────────
 
