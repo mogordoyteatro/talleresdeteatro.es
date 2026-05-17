@@ -4118,7 +4118,8 @@
 
       <header style="margin-bottom: 40px;">
         <span class="overline">Galería</span>
-        <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(32px,4vw,52px);text-transform:uppercase;letter-spacing:0.01em;margin-top:12px;">El estudio en imágenes</h2>
+        <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,4vw,52px);text-transform:uppercase;letter-spacing:0.01em;margin-top:12px;line-height:1.05;">Nuestro universo<br>en imágenes.</h2>
+        <p style="margin-top:20px;font-size:clamp(14px,1.4vw,18px);color:var(--g100);line-height:1.6;max-width:52ch;">A todos ❤️ los de hoy y los de siempre,<br>todos juntos, siempre es hoy.</p>
       </header>
 
       <!-- Tabs -->
@@ -4626,8 +4627,9 @@
         const item = e.target.closest('.photos-grid-item');
         if (!item) return;
         const allItems = Array.from(document.querySelectorAll('#photosGrid .photos-grid-item'));
-        const imgs  = allItems.map(el => el.querySelector('img').src);
-        const idx   = allItems.indexOf(item);
+        // Usa data-full (original) si existe, si no el src del img
+        const imgs = allItems.map(el => el.dataset.full || el.querySelector('img').src);
+        const idx  = allItems.indexOf(item);
         open(imgs, idx);
       });
 
@@ -4658,16 +4660,18 @@
         const end = Math.min(shown + BATCH, allPhotos.length);
         const frag = document.createDocumentFragment();
         for (let i = shown; i < end; i++) {
-          const p    = allPhotos[i];
-          const src  = typeof p === 'string' ? p : p.src;
-          const alt  = (typeof p === 'object' && p.alt) ? p.alt : 'Talleres de Teatro Barcelona';
-          const div  = document.createElement('div');
+          const p     = allPhotos[i];
+          const thumb = typeof p === 'string' ? p : (p.thumb || p.src);
+          const full  = typeof p === 'string' ? p : p.src;
+          const alt   = (typeof p === 'object' && p.alt) ? p.alt : 'Talleres de Teatro Barcelona';
+          const div   = document.createElement('div');
           div.className = 'photos-grid-item';
-          const img  = document.createElement('img');
-          img.alt    = alt;
+          div.dataset.full = full;   // foto original para lightbox
+          const img   = document.createElement('img');
+          img.alt     = alt;
           img.loading = 'lazy';
-          img.onload = () => img.classList.add('loaded');
-          img.src    = src;
+          img.onload  = () => img.classList.add('loaded');
+          img.src     = thumb;       // thumbnail 200×200 para la cuadrícula
           if (img.complete) img.classList.add('loaded');
           div.appendChild(img);
           frag.appendChild(div);
