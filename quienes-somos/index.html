@@ -1661,119 +1661,139 @@
 
 
 
-  <!-- ═══ CAMILA GRANIERI ════════════════════════════════════════════ -->
-  <section class="persona-section" id="camila" aria-label="Camila Granieri — actriz, bailarina y docente teatral">
+  <!-- ═══ ASISTENTES: CAMILA Y ANDRÉS ════════════════════════════════ -->
+  <style>
+    .asistentes-section { background: var(--bg-2); padding: clamp(64px,8vw,110px) 0; border-top: 1px solid rgba(255,255,255,0.07); }
+    .asistentes-header { margin-bottom: clamp(36px,5vw,56px); }
+    .asistentes-overline { display: block; font-size: 11px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px; }
+    .asistentes-h2 { font-family: 'Archivo Black', sans-serif; font-size: clamp(26px,3vw,40px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.95; color: #fff; margin: 0; }
+    .asistentes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,5vw,64px); }
+    @media (max-width: 620px) { .asistentes-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+    .asistente-card { display: flex; flex-direction: column; }
+    .asistente-top { display: grid; grid-template-columns: 84px 1fr; gap: 18px; align-items: flex-start; margin-bottom: 14px; }
+    .asistente-img { width: 84px; height: 84px; border-radius: 2px; overflow: hidden; flex-shrink: 0; }
+    .asistente-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(100%); display: block; transition: filter .3s; }
+    .asistente-img:hover img { filter: grayscale(60%); }
+    .asistente-meta { padding-top: 2px; }
+    .asistente-num { display: block; font-size: 10px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 4px; font-family: 'Archivo Black', sans-serif; }
+    .asistente-role { display: block; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
+    .asistente-name { font-family: 'Archivo Black', sans-serif; font-size: clamp(18px,2vw,24px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; color: #fff; margin: 0; }
+    .asistente-bio { font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.55); margin: 0; }
+
+    .asistente-details { margin-top: 18px; border-top: 1px solid rgba(255,255,255,0.07); }
+    .asistente-summary { list-style: none; cursor: pointer; padding: 12px 0; display: flex; align-items: center; gap: 7px; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); user-select: none; transition: color .2s; }
+    .asistente-summary::-webkit-details-marker { display: none; }
+    .asistente-summary:hover { color: rgba(255,255,255,0.65); }
+    .asistente-arrow { display: inline-block; transition: transform .22s; font-size: 9px; }
+    details[open] .asistente-arrow { transform: rotate(180deg); }
+    .asistente-cv { padding-bottom: 4px; }
+    .asistente-cv-block { margin-bottom: 16px; }
+    .asistente-cv-block:last-child { margin-bottom: 0; }
+    .asistente-cv-label { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 8px; }
+    .asistente-cv-item { margin-bottom: 8px; }
+    .asistente-cv-item strong { display: block; font-size: 12px; color: rgba(255,255,255,0.85); font-weight: 600; }
+    .asistente-cv-item em { font-size: 11px; color: rgba(255,255,255,0.38); font-style: normal; }
+  </style>
+
+  <section class="asistentes-section" id="camila" aria-label="Asistentes de entrenamiento — Camila Granieri y Andrés Rasdolsky">
     <div class="container">
-      <div class="persona-inner">
+      <header class="asistentes-header">
+        <span class="asistentes-overline">Asistentes de entrenamiento</span>
+        <h2 class="asistentes-h2">Acompañan<br>el proceso.</h2>
+      </header>
+      <div class="asistentes-grid">
 
-        <div>
-          <div class="persona-img-wrap bw">
-            <img src="/imagenes_optimizadas/camila-granieri-actriz-docente-teatro-barcelona.png"
-                 alt="Camila Granieri — actriz y docente de teatro en Barcelona"
-                 loading="lazy" decoding="async">
+        <!-- ── Camila ── -->
+        <div class="asistente-card">
+          <div class="asistente-top">
+            <div class="asistente-img">
+              <img src="/imagenes_optimizadas/camila-granieri-actriz-docente-teatro-barcelona.png"
+                   alt="Camila Granieri — actriz y docente de teatro en Barcelona"
+                   loading="lazy" decoding="async">
+            </div>
+            <div class="asistente-meta">
+              <span class="asistente-num">03</span>
+              <span class="asistente-role">Actriz · Bailarina · Docente</span>
+              <p class="asistente-name">Camila Granieri.</p>
+            </div>
           </div>
+          <p class="asistente-bio">Actriz y bailarina porteña, egresada de la UNA. Integra movimiento, danza y actuación como lenguajes indisociables. Asistente en los talleres desde 2024.</p>
+          <details class="asistente-details">
+            <summary class="asistente-summary">
+              Ver CV <span class="asistente-arrow">▾</span>
+            </summary>
+            <div class="asistente-cv">
+              <div class="asistente-cv-block">
+                <span class="asistente-cv-label">Teatro</span>
+                <div class="asistente-cv-item">
+                  <strong>Pickpockets</strong>
+                  <em>Festival Subtravelling · Barcelona · 2024</em>
+                </div>
+                <div class="asistente-cv-item">
+                  <strong>Pibitxs del río · Y que cumplas muchos más</strong>
+                  <em>Teatro independiente · Buenos Aires</em>
+                </div>
+                <div class="asistente-cv-item">
+                  <strong>La tiranía del deseo</strong>
+                  <em>Teatro independiente · Buenos Aires</em>
+                </div>
+              </div>
+              <div class="asistente-cv-block">
+                <span class="asistente-cv-label">Formación</span>
+                <div class="asistente-cv-item">
+                  <strong>Licenciatura en Artes Dramáticas</strong>
+                  <em>Universidad Nacional de las Artes · Buenos Aires</em>
+                </div>
+              </div>
+            </div>
+          </details>
         </div>
 
-        <div class="persona-content">
-          <p class="persona-num" aria-hidden="true">03</p>
-          <span class="persona-role">Actriz · Bailarina · Docente</span>
-          <h2 class="persona-name">Camila <br /> Granieri.</h2>
-
-          <div class="persona-bio">
-            <p>Actriz, bailarina y docente teatral porteña radicada en Barcelona. Egresada de la <strong>Universidad Nacional de las Artes (UNA)</strong> de Buenos Aires. Su trabajo integra el movimiento, la danza y la actuación como lenguajes indisociables.</p>
-            <p>Participó del espectáculo <em>Pickpockets</em> presentado en el <strong>Festival Subtravelling 2024</strong> de Barcelona. En Buenos Aires formó parte de las obras <em>Pibitxs del río</em>, <em>Y que cumplas muchos más</em> y <em>La tiranía del deseo</em>.</p>
-            <p>Asistente de entrenamiento actoral en los talleres desde 2024.</p>
-          </div>
-
-          <div class="cv-grid">
-            <div class="cv-block">
-              <span class="cv-block-label">Teatro</span>
-              <div class="cv-item">
-                <strong>Pickpockets</strong>
-                <em>Festival Subtravelling · Barcelona · 2024</em>
-              </div>
-              <div class="cv-item">
-                <strong>Pibitxs del río · Y que cumplas muchos más</strong>
-                <em>Teatro independiente · Buenos Aires</em>
-              </div>
-              <div class="cv-item">
-                <strong>La tiranía del deseo</strong>
-                <em>Teatro independiente · Buenos Aires</em>
-              </div>
+        <!-- ── Andrés ── -->
+        <div class="asistente-card" id="andres">
+          <div class="asistente-top">
+            <div class="asistente-img">
+              <img src="/imagenes_optimizadas/andres-rasdolsky-actor-docente-teatro-barcelona.png"
+                   alt="Andrés Rasdolsky — actor y docente de teatro en Barcelona"
+                   loading="lazy" decoding="async">
             </div>
-            <div class="cv-block">
-              <span class="cv-block-label">Formación</span>
-              <div class="cv-item">
-                <strong>Licenciatura en Artes Dramáticas</strong>
-                <em>Universidad Nacional de las Artes · Buenos Aires</em>
-              </div>
-              <div class="cv-block-label" style="margin-top:20px;">Docencia</div>
-              <div class="cv-item">
-                <strong>Talleres de Teatro Barcelona</strong>
-                <em>Asistente · 2024–presente</em>
-              </div>
+            <div class="asistente-meta">
+              <span class="asistente-num">04</span>
+              <span class="asistente-role">Actor · Docente</span>
+              <p class="asistente-name">Andrés Rasdolsky.</p>
             </div>
           </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══ ANDRES RASDOLSKY ════════════════════════════════════════════ -->
-  <section class="persona-section alt" id="andres" aria-label="Andrés Rasdolsky — actor y docente teatral">
-    <div class="container">
-      <div class="persona-inner" style="direction:rtl;">
-
-        <div style="direction:ltr;">
-          <div class="persona-img-wrap bw">
-            <img src="/imagenes_optimizadas/andres-rasdolsky-actor-docente-teatro-barcelona.png"
-                 alt="Andrés Rasdolsky — actor y docente de teatro en Barcelona"
-                 loading="lazy" decoding="async">
-          </div>
-        </div>
-
-        <div class="persona-content" style="direction:ltr;">
-          <p class="persona-num" aria-hidden="true">04</p>
-          <span class="persona-role">Actor · Docente</span>
-          <h2 class="persona-name">Andrés <br /> Rasdolsky.</h2>
-
-          <div class="persona-bio">
-            <p>Actor y docente teatral nacido en Buenos Aires en 1985. Licenciado en Artes Dramáticas por la <strong>Universidad Nacional de las Artes (UNA)</strong>. Formado en el teatro argentino contemporáneo, su carrera combina la actuación de alta exigencia con una dedicación profunda a la pedagogía.</p>
-            <p>Participó de producciones en el <strong>Teatro Nacional Cervantes</strong> de Buenos Aires, en las obras <em>Romeo y Julieta</em> y <em>Terminal Young</em> —<strong>Gran Premio del jurado en el BAFICI 2023</strong>— y en <em>Novak</em>.</p>
-            <p>Asistente de entrenamiento actoral en los talleres desde 2024.</p>
-          </div>
-
-          <div class="cv-grid">
-            <div class="cv-block">
-              <span class="cv-block-label">Teatro</span>
-              <div class="cv-item">
-                <strong>Terminal Young</strong>
-                <em>Gran Premio BAFICI 2023 · Buenos Aires</em>
+          <p class="asistente-bio">Actor y docente, Lic. en Artes Dramáticas (UNA). Formado en el teatro argentino contemporáneo. Asistente en los talleres desde 2024.</p>
+          <details class="asistente-details">
+            <summary class="asistente-summary">
+              Ver CV <span class="asistente-arrow">▾</span>
+            </summary>
+            <div class="asistente-cv">
+              <div class="asistente-cv-block">
+                <span class="asistente-cv-label">Teatro</span>
+                <div class="asistente-cv-item">
+                  <strong>Terminal Young</strong>
+                  <em>Gran Premio BAFICI 2023 · Buenos Aires</em>
+                </div>
+                <div class="asistente-cv-item">
+                  <strong>Romeo y Julieta</strong>
+                  <em>Teatro Cervantes · Buenos Aires</em>
+                </div>
+                <div class="asistente-cv-item">
+                  <strong>Novak</strong>
+                  <em>Teatro independiente · Buenos Aires</em>
+                </div>
               </div>
-              <div class="cv-item">
-                <strong>Romeo y Julieta</strong>
-                <em>Teatro Cervantes · Buenos Aires</em>
-              </div>
-              <div class="cv-item">
-                <strong>Novak</strong>
-                <em>Teatro independiente · Buenos Aires</em>
+              <div class="asistente-cv-block">
+                <span class="asistente-cv-label">Formación</span>
+                <div class="asistente-cv-item">
+                  <strong>Licenciatura en Artes Dramáticas</strong>
+                  <em>Universidad Nacional de las Artes · Buenos Aires</em>
+                </div>
               </div>
             </div>
-            <div class="cv-block">
-              <span class="cv-block-label">Formación</span>
-              <div class="cv-item">
-                <strong>Licenciatura en Artes Dramáticas</strong>
-                <em>Universidad Nacional de las Artes · Buenos Aires</em>
-              </div>
-              <div class="cv-block-label" style="margin-top:20px;">Docencia</div>
-              <div class="cv-item">
-                <strong>Talleres de Teatro Barcelona</strong>
-                <em>Asistente · 2024–presente</em>
-              </div>
-            </div>
-          </div>
+          </details>
         </div>
 
       </div>
