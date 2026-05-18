@@ -1667,22 +1667,20 @@
     .asistentes-header { margin-bottom: clamp(36px,5vw,56px); }
     .asistentes-overline { display: block; font-size: 11px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 12px; }
     .asistentes-h2 { font-family: 'Archivo Black', sans-serif; font-size: clamp(26px,3vw,40px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.95; color: #fff; margin: 0; }
-    .asistentes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,5vw,64px); }
-    @media (max-width: 620px) { .asistentes-grid { grid-template-columns: 1fr; gap: 48px; } }
+    .asistentes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,5vw,56px); align-items: start; }
+    @media (max-width: 620px) { .asistentes-grid { grid-template-columns: 1fr; gap: 56px; } }
 
     .asistente-card { display: flex; flex-direction: column; }
-    .asistente-top { display: grid; grid-template-columns: 84px 1fr; gap: 18px; align-items: flex-start; margin-bottom: 14px; }
-    .asistente-img { width: 84px; height: 84px; border-radius: 2px; overflow: hidden; flex-shrink: 0; }
-    .asistente-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(100%); display: block; transition: filter .3s; }
-    .asistente-img:hover img { filter: grayscale(60%); }
-    .asistente-meta { padding-top: 2px; }
-    .asistente-num { display: block; font-size: 10px; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 4px; font-family: 'Archivo Black', sans-serif; }
-    .asistente-role { display: block; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
-    .asistente-name { font-family: 'Archivo Black', sans-serif; font-size: clamp(18px,2vw,24px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; color: #fff; margin: 0; }
-    .asistente-bio { font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.55); margin: 0; }
+    .asistente-photo { position: relative; overflow: hidden; margin-bottom: 20px; }
+    .asistente-photo img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; filter: grayscale(100%); display: block; transition: transform .5s ease; }
+    .asistente-photo:hover img { transform: scale(1.03); }
+    .asistente-num { display: block; font-family: 'Archivo Black', sans-serif; font-size: 10px; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 6px; }
+    .asistente-role { display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 10px; }
+    .asistente-name { font-family: 'Archivo Black', sans-serif; font-size: clamp(22px,2.5vw,34px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.95; color: #fff; margin: 0 0 14px; }
+    .asistente-bio { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.55); margin: 0; }
 
-    .asistente-details { margin-top: 18px; border-top: 1px solid rgba(255,255,255,0.07); }
-    .asistente-summary { list-style: none; cursor: pointer; padding: 12px 0; display: flex; align-items: center; gap: 7px; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); user-select: none; transition: color .2s; }
+    .asistente-details { margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.07); }
+    .asistente-summary { list-style: none; cursor: pointer; padding: 13px 0; display: flex; align-items: center; gap: 7px; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); user-select: none; transition: color .2s; }
     .asistente-summary::-webkit-details-marker { display: none; }
     .asistente-summary:hover { color: rgba(255,255,255,0.65); }
     .asistente-arrow { display: inline-block; transition: transform .22s; font-size: 9px; }
@@ -1706,18 +1704,14 @@
 
         <!-- ── Camila ── -->
         <div class="asistente-card">
-          <div class="asistente-top">
-            <div class="asistente-img">
-              <img src="/imagenes_optimizadas/camila-granieri-actriz-docente-teatro-barcelona.png"
-                   alt="Camila Granieri — actriz y docente de teatro en Barcelona"
-                   loading="lazy" decoding="async">
-            </div>
-            <div class="asistente-meta">
-              <span class="asistente-num">03</span>
-              <span class="asistente-role">Actriz · Bailarina · Docente</span>
-              <p class="asistente-name">Camila Granieri.</p>
-            </div>
+          <div class="asistente-photo">
+            <img src="/imagenes_optimizadas/camila-granieri-actriz-docente-teatro-barcelona.png"
+                 alt="Camila Granieri — actriz y docente de teatro en Barcelona"
+                 loading="lazy" decoding="async">
           </div>
+          <span class="asistente-num">03</span>
+          <span class="asistente-role">Actriz · Bailarina · Docente</span>
+          <p class="asistente-name">Camila Granieri.</p>
           <p class="asistente-bio">Actriz y bailarina porteña, egresada de la UNA. Integra movimiento, danza y actuación como lenguajes indisociables. Asistente en los talleres desde 2024.</p>
           <details class="asistente-details">
             <summary class="asistente-summary">
@@ -1752,18 +1746,14 @@
 
         <!-- ── Andrés ── -->
         <div class="asistente-card" id="andres">
-          <div class="asistente-top">
-            <div class="asistente-img">
-              <img src="/imagenes_optimizadas/andres-rasdolsky-actor-docente-teatro-barcelona.png"
-                   alt="Andrés Rasdolsky — actor y docente de teatro en Barcelona"
-                   loading="lazy" decoding="async">
-            </div>
-            <div class="asistente-meta">
-              <span class="asistente-num">04</span>
-              <span class="asistente-role">Actor · Docente</span>
-              <p class="asistente-name">Andrés Rasdolsky.</p>
-            </div>
+          <div class="asistente-photo">
+            <img src="/imagenes_optimizadas/andres-rasdolsky-actor-docente-teatro-barcelona.png"
+                 alt="Andrés Rasdolsky — actor y docente de teatro en Barcelona"
+                 loading="lazy" decoding="async">
           </div>
+          <span class="asistente-num">04</span>
+          <span class="asistente-role">Actor · Docente</span>
+          <p class="asistente-name">Andrés Rasdolsky.</p>
           <p class="asistente-bio">Actor y docente, Lic. en Artes Dramáticas (UNA). Formado en el teatro argentino contemporáneo. Asistente en los talleres desde 2024.</p>
           <details class="asistente-details">
             <summary class="asistente-summary">
