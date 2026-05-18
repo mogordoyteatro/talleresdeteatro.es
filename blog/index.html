@@ -161,6 +161,46 @@
       margin-top: 24px;
     }
 
+    /* ── TABS ── */
+    .blog-tabs {
+      border-bottom: 1px solid var(--g700);
+    }
+    .blog-tabs .container {
+      display: flex;
+      gap: 0;
+    }
+    .blog-tab {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(11px, 1.1vw, 13px);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--g300);
+      padding: 1.2rem 0;
+      margin-right: clamp(24px, 3vw, 48px);
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: -1px;
+    }
+    .blog-tab:hover { color: var(--white); }
+    .blog-tab.active {
+      color: var(--white);
+      border-bottom-color: var(--accent);
+    }
+    .blog-tab.tab-quiz {
+      color: var(--g500);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .blog-tab.tab-quiz::before {
+      content: '✦';
+      font-size: 0.65em;
+      color: var(--accent);
+    }
+    .blog-tab.tab-quiz:hover { color: var(--white); }
+
     /* ── GRID DE ARTÍCULOS ── */
     .blog-grid-section { padding: var(--pad-y) 0; }
     .blog-grid {
@@ -415,6 +455,14 @@
       <p class="blog-subtitle">Artículos sobre teatro, actuación e improvisación. Por Sebastián Mogordoy.</p>
     </div>
   </header>
+
+  <!-- ══ TABS ══ -->
+  <div class="blog-tabs">
+    <div class="container">
+      <span class="blog-tab active">Lecturas</span>
+      <a href="/cuestionario/" class="blog-tab tab-quiz">Cuestionario</a>
+    </div>
+  </div>
 
   <!-- ══ ARTÍCULOS ══ -->
   <section class="blog-grid-section">
