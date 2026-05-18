@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuestionario de Teatro · Talleres de Teatro Barcelona</title>
+  <meta name="description" content="Elige un tema y pon a prueba lo que sabes sobre el entrenamiento actoral. Nueve bloques temáticos sobre actuación, cuerpo, improvisación y presencia escénica." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://talleresdeteatro.es/cuestionario/" />
+  <meta property="og:title" content="Cuestionario de Teatro · Talleres de Teatro Barcelona" />
+  <meta property="og:description" content="Nueve temas. Cuatro preguntas cada uno. Actuación, cuerpo, improvisación y presencia escénica." />
+  <meta property="og:url" content="https://talleresdeteatro.es/cuestionario/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:            #0C0C0C;
+      --surface:       #161616;
+      --surface-hover: #1E1E1E;
+      --border:        #2A2A2A;
+      --border-hover:  #444;
+      --red:           #E50914;
+      --white:         #FFFFFF;
+      --gray:          #888888;
+      --gray-light:    #CCCCCC;
+      --font-display:  'Archivo Black', sans-serif;
+      --font-body:     'Inter', sans-serif;
+      --max-w:         1200px;
+      --quiz-w:        660px;
+      --ease:          cubic-bezier(0.4, 0, 0.2, 1);
+      --pad-x:         clamp(20px, 5vw, 72px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; color: inherit; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; }
+
+    /* ── PROGRESS LINE ── */
+    #progress-line {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      width: 0%;
+      background: var(--red);
+      transition: width 0.6s var(--ease);
+      z-index: 300;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      padding: 1rem var(--pad-x);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 200;
+      background: rgba(12,12,12,0.96);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .nav-logo span { color: var(--red); }
+    .nav-back {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray);
+      transition: color 0.2s ease;
+    }
+    .nav-back:hover { color: var(--white); }
+
+    /* ── SCREENS ── */
+    .screen {
+      display: none;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.45s var(--ease), transform 0.45s var(--ease);
+    }
+    .screen.visible { opacity: 1; transform: translateY(0); }
+
+    /* ════════════════════════════════
+       ① LANDING
+    ════════════════════════════════ */
+    #landing-screen {
+      min-height: 100vh;
+      flex-direction: column;
+      padding-top: 57px;
+    }
+
+    .landing-header {
+      padding: clamp(48px, 8vw, 96px) var(--pad-x) clamp(32px, 5vw, 56px);
+      border-bottom: 1px solid var(--border);
+      max-width: var(--max-w);
+      width: 100%;
+      margin: 0 auto;
+    }
+    .landing-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--red);
+      display: block;
+      margin-bottom: 1.25rem;
+    }
+    .landing-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 7rem);
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 0.9;
+      margin-bottom: 1.5rem;
+    }
+    .landing-title em { font-style: normal; color: var(--red); }
+    .landing-meta {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .landing-desc {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--gray-light);
+      letter-spacing: 0.01em;
+    }
+    .landing-count {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .landing-count strong {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0;
+      color: var(--white);
+    }
+
+    /* ── THEME GRID ── */
+    .themes-section {
+      padding: clamp(24px, 4vw, 48px) var(--pad-x) clamp(40px, 6vw, 80px);
+      max-width: var(--max-w);
+      width: 100%;
+      margin: 0 auto;
+      flex: 1;
+    }
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 900px)  { .themes-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px)  { .themes-grid { grid-template-columns: 1fr; } }
+
+    .theme-card {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+    }
+    .theme-card-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.55s var(--ease);
+    }
+    .theme-card:hover .theme-card-img { transform: scale(1.06); }
+    .theme-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+        rgba(12,12,12,0.95) 0%,
+        rgba(12,12,12,0.5)  45%,
+        rgba(12,12,12,0.15) 100%
+      );
+      transition: background 0.3s ease;
+    }
+    .theme-card:hover .theme-card-overlay {
+      background: linear-gradient(to top,
+        rgba(12,12,12,0.97) 0%,
+        rgba(12,12,12,0.65) 55%,
+        rgba(12,12,12,0.28) 100%
+      );
+    }
+    .theme-card-content {
+      position: absolute;
+      inset: 0;
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .theme-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .theme-num {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.38);
+    }
+    .theme-badge {
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: rgba(229,9,20,0.1);
+      border: 1px solid rgba(229,9,20,0.28);
+      padding: 0.22rem 0.45rem;
+    }
+    .theme-card-title {
+      font-family: var(--font-display);
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+    .theme-card-sub {
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.45;
+    }
+    .theme-card-arrow {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--red);
+      transition: letter-spacing 0.3s ease;
+    }
+    .theme-card:hover .theme-card-arrow { letter-spacing: 0.22em; }
+
+    /* ════════════════════════════════
+       ② QUIZ
+    ════════════════════════════════ */
+    #quiz-screen {
+      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 7rem 1.5rem 3rem;
+    }
+
+    .quiz-theme-bar {
+      position: fixed;
+      top: 57px; left: 0; right: 0;
+      padding: 0.55rem var(--pad-x);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      z-index: 150;
+      background: rgba(12,12,12,0.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+    .quiz-back-btn {
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gray);
+      transition: color 0.2s ease;
+      padding: 0;
+    }
+    .quiz-back-btn:hover { color: var(--white); }
+    .quiz-divider { width: 1px; height: 12px; background: var(--border-hover); }
+    .quiz-theme-name {
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .q-inner {
+      max-width: var(--quiz-w);
+      width: 100%;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+    .q-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+    }
+    .q-counter {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    .q-counter strong {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0;
+      color: var(--white);
+    }
+    .q-dots { display: flex; gap: 5px; }
+    .q-dot {
+      height: 2px; width: 20px;
+      background: var(--border);
+      transition: background 0.4s ease, width 0.3s ease;
+    }
+    .q-dot.done    { background: var(--red); }
+    .q-dot.current { background: var(--gray); width: 30px; }
+
+    .q-tag {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+    .q-tag::before { content: '→ '; color: var(--red); }
+
+    .q-text {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 3vw, 1.6rem);
+      line-height: 1.35;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      margin-bottom: 2.25rem;
+      font-weight: 400;
+    }
+
+    /* options */
+    .options { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease, opacity 0.3s ease;
+      opacity: 0;
+      transform: translateY(5px);
+      animation: optIn 0.35s var(--ease) forwards;
+    }
+    .option:nth-child(1) { animation-delay: 0.06s; }
+    .option:nth-child(2) { animation-delay: 0.14s; }
+    .option:nth-child(3) { animation-delay: 0.22s; }
+    .option:nth-child(4) { animation-delay: 0.30s; }
+    @keyframes optIn { to { opacity: 1; transform: translateY(0); } }
+
+    .option:hover:not(.disabled) { border-color: var(--border-hover); background: var(--surface-hover); }
+    .option.disabled { cursor: default; }
+    .option.correct  { border-color: var(--white); background: rgba(255,255,255,0.04); }
+    .option.wrong    { border-color: var(--border); opacity: 0.35; }
+    .option.reveal   { border-color: var(--white); background: rgba(255,255,255,0.04); }
+
+    .opt-letter {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: var(--gray);
+      min-width: 1.1rem;
+      padding-top: 3px;
+      transition: color 0.2s ease;
+    }
+    .option.correct .opt-letter,
+    .option.reveal  .opt-letter { color: var(--red); }
+
+    .opt-text {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.58;
+      color: var(--gray-light);
+      flex: 1;
+      transition: color 0.2s ease;
+    }
+    .option.correct .opt-text,
+    .option.reveal  .opt-text { color: var(--white); }
+
+    .opt-icon {
+      font-size: 0.8rem;
+      min-width: 1rem;
+      padding-top: 3px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .option.correct .opt-icon { opacity: 1; color: var(--white); }
+    .option.wrong   .opt-icon { opacity: 1; color: var(--gray); }
+
+    /* hint */
+    .hint-row { margin-bottom: 0.5rem; }
+    .hint-btn {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--red);
+      padding: 0;
+      transition: opacity 0.2s ease;
+    }
+    .hint-btn:hover { opacity: 0.65; }
+    .hint-box {
+      display: none;
+      margin-top: 0.8rem;
+      padding: 0.85rem 1.1rem;
+      border-left: 2px solid var(--red);
+      font-size: 0.82rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gray-light);
+      line-height: 1.65;
+      animation: fadeSlide 0.3s ease;
+    }
+    .hint-box.open { display: block; }
+
+    /* feedback */
+    .feedback-box {
+      display: none;
+      margin-top: 1.1rem;
+      padding: 1.1rem 1.2rem;
+      background: var(--surface);
+      border-left: 2px solid var(--border-hover);
+      animation: fadeSlide 0.4s ease;
+    }
+    .feedback-box.open { display: block; }
+    .feedback-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 0.45rem;
+    }
+    .feedback-label.wrong-lbl { color: var(--gray); }
+    .feedback-text {
+      font-size: 0.84rem;
+      font-weight: 300;
+      color: var(--gray-light);
+      line-height: 1.68;
+    }
+
+    /* next btn */
+    .btn-next {
+      font-family: var(--font-display);
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      border: 1px solid var(--border-hover);
+      padding: 0.9rem 2rem;
+      margin-top: 1.5rem;
+      display: none;
+      opacity: 0;
+      transition: border-color 0.2s ease, background 0.2s ease, opacity 0.3s ease;
+    }
+    .btn-next.show    { display: inline-block; }
+    .btn-next.visible { opacity: 1; }
+    .btn-next:hover { border-color: var(--white); background: rgba(255,255,255,0.04); }
+
+    .kbd-hint {
+      margin-top: 2rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--border-hover);
+      text-align: center;
+      animation: fadeIn 1s ease 1.2s both;
+    }
+    @media (pointer: coarse) { .kbd-hint { display: none; } }
+
+    /* ════════════════════════════════
+       ③ RESULT
+    ════════════════════════════════ */
+    #result-screen {
+      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 1.5rem 3rem;
+    }
+    .result-inner {
+      max-width: 540px;
+      width: 100%;
+      text-align: center;
+    }
+    .result-tema-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      display: block;
+      margin-bottom: 2rem;
+    }
+    .score-block { line-height: 1; margin-bottom: 0.5rem; }
+    .score-num {
+      font-family: var(--font-display);
+      font-size: clamp(5.5rem, 20vw, 9rem);
+      color: var(--white);
+    }
+    .score-denom {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      color: var(--gray);
+    }
+    .score-bar {
+      width: 100%; height: 2px;
+      background: var(--border);
+      margin: 1.5rem 0 2rem;
+      overflow: hidden;
+    }
+    .score-bar-fill {
+      height: 100%;
+      background: var(--red);
+      width: 0%;
+      transition: width 1s var(--ease) 0.3s;
+    }
+    .result-phrase {
+      font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gray-light);
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+    }
+    .result-actions {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--red);
+      padding: 0.9rem 1.8rem;
+      display: inline-block;
+      transition: background 0.2s ease;
+    }
+    .btn-primary:hover { background: #c5000f; }
+    .btn-secondary {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      border: 1px solid var(--border);
+      padding: 0.9rem 1.8rem;
+      display: inline-block;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .btn-secondary:hover { color: var(--white); border-color: var(--gray); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.25rem; }
+      .landing-header { padding: 36px 1.25rem 28px; }
+      .themes-section { padding: 1.5rem 1.25rem 3rem; }
+      #quiz-screen, #result-screen { padding: 6rem 1.1rem 2.5rem; }
+      .q-dots { display: none; }
+      .result-actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress-line"></div>
+
+  <nav>
+    <a href="/" class="nav-logo">Talleres de <span>Teatro</span></a>
+    <a href="/blog/" class="nav-back">← Lecturas</a>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       ① LANDING
+  ══════════════════════════════════════ -->
+  <section id="landing-screen" class="screen">
+
+    <div class="landing-header">
+      <span class="landing-eyebrow">Talleres de Teatro · Barcelona</span>
+      <h1 class="landing-title">TEATRO<br><em>CUESTIONARIO</em></h1>
+      <div class="landing-meta">
+        <p class="landing-desc">Elige un tema y pon a prueba lo que sabes.</p>
+        <span class="landing-count"><strong>9</strong> temas · <strong>4</strong> preguntas cada uno</span>
+      </div>
+    </div>
+
+    <div class="themes-section">
+      <div class="themes-grid" id="themes-grid"></div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ② QUIZ
+  ══════════════════════════════════════ -->
+  <section id="quiz-screen" class="screen">
+
+    <div class="quiz-theme-bar">
+      <button class="quiz-back-btn" id="quiz-back-btn">← Temas</button>
+      <div class="quiz-divider"></div>
+      <span class="quiz-theme-name" id="quiz-theme-name"></span>
+    </div>
+
+    <div class="q-inner" id="q-inner">
+      <div class="q-header">
+        <div class="q-counter">Pregunta <strong id="q-num">1</strong> de 4</div>
+        <div class="q-dots" id="q-dots"></div>
+      </div>
+      <p class="q-tag" id="q-tag"></p>
+      <h2 class="q-text" id="q-text"></h2>
+      <div class="options" id="options-list"></div>
+      <div class="hint-row">
+        <button class="hint-btn" id="hint-btn" aria-expanded="false">▸ PISTA</button>
+        <div class="hint-box" id="hint-box" role="note"></div>
+      </div>
+      <div class="feedback-box" id="feedback-box" role="status">
+        <p class="feedback-label" id="feedback-label"></p>
+        <p class="feedback-text" id="feedback-text"></p>
+      </div>
+      <button class="btn-next" id="next-btn">SIGUIENTE →</button>
+      <p class="kbd-hint">Teclas 1 · 2 · 3 · 4 para elegir &nbsp;·&nbsp; Enter para continuar</p>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ③ RESULTADO
+  ══════════════════════════════════════ -->
+  <section id="result-screen" class="screen">
+    <div class="result-inner">
+      <span class="result-tema-label" id="result-tema-label"></span>
+      <div class="score-block">
+        <span class="score-num" id="result-score">0</span>
+        <span class="score-denom"> / 4</span>
+      </div>
+      <div class="score-bar"><div class="score-bar-fill" id="score-bar-fill"></div></div>
+      <p class="result-phrase" id="result-phrase"></p>
+      <div class="result-actions">
+        <a href="#" class="btn-primary" id="result-articulo-btn">LEER EL ARTÍCULO →</a>
+        <button class="btn-secondary" id="result-retry-btn">REPETIR TEMA</button>
+        <button class="btn-secondary" id="result-temas-btn">OTRO TEMA</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    /* ══════════════════════════════════════════════
+       DATOS — 9 temas × 4 preguntas
+    ══════════════════════════════════════════════ */
+    const TEMAS = [
+
+      /* 01 ─────────────────────────────────────── */
+      {
+        titulo:    "ACTUAR VS\nREPRESENTAR",
+        subtitulo: "La diferencia que lo cambia todo",
+        foto:      "actuacion-teatro-barcelona-0015.jpg",
+        articulo:  "/blog/actuar-no-es-representar/",
+        preguntas: [
+          {
+            tag: "Actuar no es representar",
+            pregunta: "¿Cuál es la distinción principal entre 'representar' y 'actuar'?",
+            opciones: [
+              "Representar es propio del teatro profesional; actuar es un término para principiantes.",
+              "Representar se enfoca en el cuerpo; actuar, en la declamación de textos.",
+              "Representar es una repetición de formas vacías; actuar implica riesgo, presencia y deseo encarnado.",
+              "No existe distinción real; ambos términos son intercambiables en el arte escénico."
+            ],
+            correcta: 2,
+            pista: "Considera cuál de los dos se asocia con una 'imagen muerta' y cuál con un 'salto al vacío'.",
+            explicacion: "Representar es 'hacer como que': una ilusión controlada que nace de la cabeza. Actuar es arrojarse al vacío del presente impulsado por el deseo — riesgo real, presencia real."
+          },
+          {
+            tag: "Actuar no es representar",
+            pregunta: "¿Qué es el 'personajito' en el lenguaje del taller?",
+            opciones: [
+              "Un personaje secundario de poca importancia en la obra.",
+              "Una forma de actuar controlada desde la cabeza que disimula en lugar de habitar el presente.",
+              "Un recurso cómico para aliviar la tensión dramática.",
+              "El primer personaje que trabaja un actor principiante."
+            ],
+            correcta: 1,
+            pista: "Piensa en la distancia entre el actor y lo que está viviendo.",
+            explicacion: "El 'personajito' es la actuación que nace del control: el actor que explica su estado en lugar de vivirlo. Gestiona la imagen desde fuera en lugar de arrojarse al presente."
+          },
+          {
+            tag: "Actuar no es representar",
+            pregunta: "¿Qué implica el 'salto al vacío' en la actuación?",
+            opciones: [
+              "Improvisar sin ningún tipo de preparación ni técnica previa.",
+              "Entrar al personaje desde la emoción más intensa posible.",
+              "Entregarse al presente de la escena sin saber de antemano qué va a pasar.",
+              "Ignorar al compañero para encontrar el estado interno propio."
+            ],
+            correcta: 2,
+            pista: "No es falta de preparación. Es confianza en el presente.",
+            explicacion: "El salto al vacío es confiar en lo que el cuerpo y la situación van a generar. Es lo opuesto al control: entrar sin red, con deseo pero sin plan."
+          },
+          {
+            tag: "Actuar no es representar",
+            pregunta: "Representar nace cuando el actor…",
+            opciones: [
+              "Trabaja con un texto que no comprende del todo.",
+              "Intenta explicar o ilustrar un estado emocional en lugar de vivirlo.",
+              "Está demasiado relajado y pierde la concentración en escena.",
+              "No tiene suficiente experiencia para confiar en su técnica."
+            ],
+            correcta: 1,
+            pista: "¿Desde dónde opera el actor que representa — la cabeza o el cuerpo?",
+            explicacion: "Representar es una operación mental: el actor decide cómo se ve un estado y lo reproduce. Actuar es dejarse atravesar por la situación sin mediación."
+          }
+        ]
+      },
+
+      /* 02 ─────────────────────────────────────── */
+      {
+        titulo:    "IMAGINAR\nvs PENSAR",
+        subtitulo: "El fogonazo que atraviesa el cuerpo",
+        foto:      "clase-teatro-barcelona-0801.jpg",
+        articulo:  "/blog/imaginar-vs-pensar/",
+        preguntas: [
+          {
+            tag: "Imaginar vs pensar",
+            pregunta: "En la improvisación, ¿por qué es vital imaginar en lugar de pensar?",
+            opciones: [
+              "Porque imaginar permite desconectarse del compañero y refugiarse en anécdotas privadas.",
+              "Porque pensar paraliza y juzga; imaginar es un fogonazo que atraviesa el cuerpo en tiempo real.",
+              "Porque pensar requiere conocer la biografía completa del personaje antes de actuar.",
+              "Porque el pensamiento lineal pertenece a la dirección y el actor solo debe moverse instintivamente."
+            ],
+            correcta: 1,
+            pista: "¿Cuál de los dos procesos encarna y cuál controla?",
+            explicacion: "Pensar detiene la acción porque organiza desde el control y el juicio externo. Imaginar puebla el interior de imágenes y sensaciones, permitiendo que el cuerpo responda al aquí y ahora."
+          },
+          {
+            tag: "Imaginar vs pensar",
+            pregunta: "¿Qué le ocurre al actor cuando 'piensa' en escena?",
+            opciones: [
+              "Accede a recursos más profundos de su historia personal.",
+              "Logra mayor claridad sobre la intención del personaje.",
+              "Organiza la escena desde el control y el juicio externo, deteniéndola.",
+              "Se conecta con el texto de manera más intelectual y sofisticada."
+            ],
+            correcta: 2,
+            pista: "Pensar es una forma de control. ¿Qué hace el control con la escena?",
+            explicacion: "Cuando el actor piensa, juzga su propio proceso desde fuera. Esa posición externa es incompatible con el presente escénico — paraliza la acción antes de que pueda surgir."
+          },
+          {
+            tag: "Imaginar vs pensar",
+            pregunta: "¿Qué produce en el cuerpo el acto de imaginar?",
+            opciones: [
+              "Una relajación profunda que elimina la tensión física.",
+              "Una desconexión del entorno para enfocarse en el interior.",
+              "Una ralentización del tiempo que da espacio para tomar decisiones.",
+              "Un fogonazo de imágenes y sensaciones que el cuerpo puede habitar de inmediato."
+            ],
+            correcta: 3,
+            pista: "Imaginar no es lento. ¿Qué velocidad tiene una imagen cuando aparece?",
+            explicacion: "Imaginar es instantáneo y encarnado. Una imagen que aparece ya tiene cuerpo, ya tiene ritmo, ya tiene temperatura. No necesita traducción — el cuerpo la recibe y responde."
+          },
+          {
+            tag: "Imaginar vs pensar",
+            pregunta: "Cuando en el taller decimos 'imagina que…', ¿qué estamos activando?",
+            opciones: [
+              "La memoria emotiva del actor para que reviva experiencias pasadas.",
+              "Un ejercicio de visualización para relajarse antes de entrar en escena.",
+              "La capacidad de poblar el espacio con imágenes que generen acción real.",
+              "Un mecanismo de defensa que evita el contacto directo con el compañero."
+            ],
+            correcta: 2,
+            pista: "Las imágenes que activan la escena no son decorativas. ¿Qué hacen?",
+            explicacion: "Cuando activamos el imaginar convocamos un estado que el cuerpo puede habitar. Las imágenes que importan son las que generan impulso — no las que decoran, sino las que mueven."
+          }
+        ]
+      },
+
+      /* 03 ─────────────────────────────────────── */
+      {
+        titulo:    "EL QUIERO\nANIMAL",
+        subtitulo: "El motor que ancla en la situación",
+        foto:      "improvisacion-teatral-barcelona-0100.jpg",
+        articulo:  "/blog/el-quiero-animal/",
+        preguntas: [
+          {
+            tag: "El quiero animal",
+            pregunta: "¿Qué rol específico juega el 'quiero animal' cuando el actor habita una situación?",
+            opciones: [
+              "Reemplaza las palabras, volviendo la escena puramente física y coreográfica.",
+              "Sirve para ilustrar las emociones del personaje y hacer el mensaje claro al público.",
+              "Ancla al cuerpo en el presente con un objetivo urgente que genera fricción real con el entorno.",
+              "Habilita la desmesura sin ninguna restricción ni regla que la contenga."
+            ],
+            correcta: 2,
+            pista: "Piensa en qué hace ese deseo con el 'yo cotidiano' del actor.",
+            explicacion: "El quiero animal ancla en la situación y llena de intensidad. Ese deseo concreto choca con el entorno o con el otro, generando el verdadero conflicto teatral."
+          },
+          {
+            tag: "El quiero animal",
+            pregunta: "¿Qué diferencia al 'quiero animal' de un simple deseo cotidiano?",
+            opciones: [
+              "Que es más intenso y dramático que cualquier deseo real.",
+              "Que no tiene objeto: es energía pura sin dirección.",
+              "Que ancla en la situación específica y genera fricción con el entorno escénico.",
+              "Que se construye antes de entrar a escena y se mantiene fijo durante toda la actuación."
+            ],
+            correcta: 2,
+            pista: "¿Qué pasa cuando ese deseo choca con algo o con alguien?",
+            explicacion: "El quiero animal no es abstracto: tiene un objeto concreto en la situación. Esa concreción es la que genera el conflicto real — choca, resiste, transforma. Sin esa fricción no hay escena."
+          },
+          {
+            tag: "El quiero animal",
+            pregunta: "¿Qué le sucede a la escena cuando el actor no tiene un quiero claro?",
+            opciones: [
+              "Se vuelve más poética y ambigua, lo que puede ser muy interesante.",
+              "El cuerpo queda a la deriva: ilustra, decora o espera sin generar acción real.",
+              "El actor se vuelve más disponible porque no está condicionado por un objetivo.",
+              "La escena gana en naturalismo porque se parece más a la vida cotidiana."
+            ],
+            correcta: 1,
+            pista: "Sin deseo, ¿qué queda? ¿Qué hace un cuerpo que no quiere nada?",
+            explicacion: "Sin quiero, el cuerpo pierde su motor. Decora el espacio, ilustra una idea o espera que algo pase desde fuera. La acción escénica nace del deseo — sin él, solo hay imagen vacía."
+          },
+          {
+            tag: "El quiero animal",
+            pregunta: "¿Por qué llamamos 'animal' a este querer?",
+            opciones: [
+              "Porque implica movimientos instintivos y primitivos en el espacio.",
+              "Porque pertenece a la parte más irracional y violenta del ser humano.",
+              "Porque es anterior al juicio: opera antes de que la mente pueda controlarlo.",
+              "Porque solo surge cuando el actor trabaja con textos naturalistas o realistas."
+            ],
+            correcta: 2,
+            pista: "¿Qué tiene 'lo animal' que no tiene 'lo racional'?",
+            explicacion: "Lo llamamos animal porque no pide permiso. Es un impulso que ya está en movimiento cuando la mente todavía está evaluando. Ese adelanto al juicio es exactamente lo que la escena necesita."
+          }
+        ]
+      },
+
+      /* 04 ─────────────────────────────────────── */
+      {
+        titulo:    "CUERPOS\nDESEANTES",
+        subtitulo: "Contra la lógica del sentido representativo",
+        foto:      "actores-taller-barcelona-0403.jpg",
+        articulo:  "/blog/cuerpos-deseantes/",
+        preguntas: [
+          {
+            tag: "Cuerpos deseantes",
+            pregunta: "¿Cuál es la diferencia central entre un 'cuerpo domesticado' y un 'cuerpo deseante'?",
+            opciones: [
+              "El domesticado tiene entrenamiento físico; el deseante trabaja solo desde la emoción.",
+              "El deseante improvisa sin reglas; el domesticado sigue una partitura exacta.",
+              "El domesticado opera desde la lógica del sentido representativo — necesita que lo que hace tenga una justificación comprensible; el deseante ya está en movimiento antes de que empiece la escena.",
+              "El domesticado pertenece al teatro clásico; el deseante al contemporáneo."
+            ],
+            correcta: 2,
+            pista: "¿Cuál de los dos necesita justificar lo que hace antes de hacerlo?",
+            explicacion: "El cuerpo domesticado está organizado por la lógica del sentido representativo: necesita que sus acciones 'tengan sentido', que sean comprensibles, que estén justificadas. Esa necesidad es su parálisis."
+          },
+          {
+            tag: "Cuerpos deseantes",
+            pregunta: "¿Qué significa que un cuerpo 'opere desde la lógica del sentido'?",
+            opciones: [
+              "Que el actor necesita indicaciones del director antes de moverse.",
+              "Que el cuerpo solo actúa si lo que hace tiene una justificación causal comprensible dentro de la lógica representativa.",
+              "Que el actor no confía en su intuición y busca aprobación externa.",
+              "Que el texto de la obra debe estar memorizado antes de poder actuar."
+            ],
+            correcta: 1,
+            pista: "¿Qué tipo de lógica organiza al cuerpo domesticado?",
+            explicacion: "El cuerpo domesticado no actúa hasta que encuentra una justificación para hacerlo. Necesita que sus acciones 'tengan sentido' dentro del universo representativo. Esa necesidad de sentido es lo que lo congela."
+          },
+          {
+            tag: "Cuerpos deseantes",
+            pregunta: "¿Cuál es la propuesta del entrenamiento respecto al cuerpo domesticado?",
+            opciones: [
+              "Alcanzar una neutralidad física total para que el actor sea un instrumento limpio.",
+              "Despertar las fuerzas que la vida cotidiana domestica: desmesura, misterio, poesía.",
+              "Trabajar desde la biografía personal para encontrar autenticidad emocional.",
+              "Eliminar los hábitos corporales para construir un cuerpo nuevo desde cero."
+            ],
+            correcta: 1,
+            pista: "¿Qué reprime la vida social que el teatro quiere recuperar?",
+            explicacion: "El entrenamiento es una resistencia contra la corrección social. Entrenamos para soltar la persona prolija y dejar que el cuerpo recupere su potencia — las fuerzas que la vida cotidiana prohíbe o reprime."
+          },
+          {
+            tag: "Cuerpos deseantes",
+            pregunta: "¿De qué está 'atravesado' el cuerpo deseante?",
+            opciones: [
+              "De emociones autobiográficas que conectan actor y personaje.",
+              "De conocimiento técnico que le permite controlar cada impulso.",
+              "De la memoria del texto que organiza cada acción desde el pensamiento.",
+              "De fuerzas que no piden permiso: imagina, narra, quiere y ama con el cuerpo."
+            ],
+            correcta: 3,
+            pista: "¿Qué hace el cuerpo deseante con las fuerzas que lo atraviesan?",
+            explicacion: "El cuerpo deseante no espera. Está ya en movimiento, permeado por imágenes, ritmos y deseos que lo organizan desde dentro — no desde la lógica externa del sentido representativo."
+          }
+        ]
+      },
+
+      /* 05 ─────────────────────────────────────── */
+      {
+        titulo:    "LA IMAGEN\nEN ESCENA",
+        subtitulo: "El cuerpo como imagen que narra",
+        foto:      "mansion-0160.jpg",
+        articulo:  "/blog/somos-una-imagen/",
+        preguntas: [
+          {
+            tag: "Somos una imagen",
+            pregunta: "¿Qué determina que una imagen escénica no colapse ante la mirada del otro?",
+            opciones: [
+              "La tensión muscular que el actor logra sostener para demostrar virtuosismo físico.",
+              "Que el actor cambie de posición constantemente para mantener el ritmo visual.",
+              "Que la mirada del actor se dirija siempre de frente al público.",
+              "Que la imagen esté habitada desde dentro por algo vivo: un deseo, una escucha real."
+            ],
+            correcta: 3,
+            pista: "Una imagen no se sostiene por una pose impuesta desde fuera. ¿Qué hace que dure?",
+            explicacion: "La imagen dura exactamente el tiempo en que un pulso vital late en su interior. Si empieza a vaciarse, el actor no necesita moverse: necesita volver a habitarla."
+          },
+          {
+            tag: "La mirada es un acto",
+            pregunta: "¿Qué convierte a la mirada en un acto escénico y no en un simple gesto?",
+            opciones: [
+              "Que el actor entorne los ojos para proyectar intensidad dramática hacia la sala.",
+              "Que sea técnicamente dirigida hacia el centro del escenario.",
+              "Que evite el contacto directo con el público para mantener la cuarta pared.",
+              "Que lleve dentro un deseo, una pregunta o una historia: que vea de verdad algo o a alguien."
+            ],
+            correcta: 3,
+            pista: "La mirada vacía no comunica. ¿Qué tiene que haber dentro de ella?",
+            explicacion: "La mirada es un acto cuando hay algo detrás: un deseo, una pregunta, una historia. Una mirada vacía es decorativa. Una mirada habitada construye realidad escénica."
+          },
+          {
+            tag: "Somos una imagen",
+            pregunta: "¿Qué determina la calidad de la imagen que un actor produce?",
+            opciones: [
+              "La habilidad técnica del actor para controlar cada elemento de su presencia.",
+              "El vestuario, la iluminación y los elementos escenográficos que lo rodean.",
+              "Lo que habita esa imagen desde dentro: el deseo, la escucha, la historia que la atraviesa.",
+              "La distancia física que mantiene con el público para crear la ilusión escénica."
+            ],
+            correcta: 2,
+            pista: "Una imagen puede ser bella y estar muerta. ¿Qué la hace vivir?",
+            explicacion: "La calidad de una imagen escénica no es estética, es vital. Lo que la hace interesante es lo que la habita: el actor que mira de verdad, que quiere algo concreto, que está presente."
+          },
+          {
+            tag: "Somos una imagen",
+            pregunta: "Cuando decimos que 'somos una imagen que narra un punto de vista', ¿qué significa?",
+            opciones: [
+              "Que el actor debe contar la historia del personaje con palabras claras.",
+              "Que la posición y el peso del cuerpo en el espacio comunican antes que el texto.",
+              "Que cada actor debe preparar una imagen fotográfica de su personaje.",
+              "Que la narración en teatro siempre debe ser visual, sin diálogos."
+            ],
+            correcta: 1,
+            pista: "¿Qué dice el cuerpo en el espacio antes de que el actor abra la boca?",
+            explicacion: "Antes de hablar, el actor ya es una imagen: una posición en el espacio, un peso, una tensión. Esa imagen ya narra un punto de vista sobre el mundo. La presencia escénica empieza ahí."
+          }
+        ]
+      },
+
+      /* 06 ─────────────────────────────────────── */
+      {
+        titulo:    "EL PODER\nDEL VESTUARIO",
+        subtitulo: "Vestirse no es disfrazarse",
+        foto:      "mansion-0520.jpg",
+        articulo:  "/blog/el-poder-del-vestuario/",
+        preguntas: [
+          {
+            tag: "El poder del vestuario",
+            pregunta: "Según el taller, ponerse una prenda de vestuario en escena es…",
+            opciones: [
+              "Un disfraz que oculta la identidad real del actor para protegerlo del público.",
+              "Un elemento decorativo que ayuda al público a identificar al personaje.",
+              "Una modificación corporal que altera el peso, el andar y la imagen que uno tiene de sí mismo.",
+              "Un recurso reservado para el teatro de texto, no para la improvisación."
+            ],
+            correcta: 2,
+            pista: "¿Qué cambia en el cuerpo, no solo en la apariencia exterior?",
+            explicacion: "Vestirse no es disfrazarse. Una prenda modifica la corporalidad: cambia cómo uno se mueve, cómo ocupa el espacio y cómo la mirada del otro construye al que la lleva."
+          },
+          {
+            tag: "El poder del vestuario",
+            pregunta: "¿Cuál es la diferencia entre 'disfrazarse' y 'vestirse' en el entrenamiento actoral?",
+            opciones: [
+              "Disfrazarse es para teatro de texto; vestirse es para improvisación.",
+              "Disfrazarse requiere maquillaje; vestirse solo implica cambiar la ropa.",
+              "Disfrazarse es ocultar; vestirse modifica la corporalidad y transforma cómo el actor habita el espacio.",
+              "No hay diferencia real: en teatro ambos términos son intercambiables."
+            ],
+            correcta: 2,
+            pista: "¿Qué cambia en el cuerpo cuando te pones una prenda que no es tuya?",
+            explicacion: "Disfrazarse es una operación externa: uno sigue siendo el mismo pero con otra apariencia. Vestirse en teatro es diferente: la prenda penetra en la corporalidad, cambia el peso, el andar, la relación con el espacio."
+          },
+          {
+            tag: "El poder del vestuario",
+            pregunta: "¿Qué hace el vestuario con las posibilidades del personaje?",
+            opciones: [
+              "Las limita: cuanto más específico el vestuario, menos libertad tiene el actor.",
+              "Las organiza sin agotarlas: da un punto de partida corporal desde donde explorar.",
+              "Las determina completamente: la prenda define al personaje de principio a fin.",
+              "Las hace innecesarias: el vestuario reemplaza al trabajo de construcción de personaje."
+            ],
+            correcta: 1,
+            pista: "¿Es el vestuario un techo o un punto de partida?",
+            explicacion: "Una prenda no cierra las posibilidades: las organiza. Da al actor un cuerpo inicial — un peso, un andar, una imagen — desde donde puede empezar a explorar quién vive dentro de esa ropa."
+          },
+          {
+            tag: "El poder del vestuario",
+            pregunta: "¿Desde dónde propone el taller que el actor habite el vestuario?",
+            opciones: [
+              "Desde la comprensión intelectual del período histórico que representa la prenda.",
+              "Desde dentro: dejando que la prenda modifique la corporalidad y la imagen de uno mismo.",
+              "Desde fuera: observando cómo lo percibe el público con esa ropa puesta.",
+              "Desde el texto: el personaje en el guion determina cómo usar el vestuario."
+            ],
+            correcta: 1,
+            pista: "¿Quién habita la prenda — el exterior que ve el público o el interior del actor?",
+            explicacion: "Habitar el vestuario desde dentro significa dejar que la prenda cambie cómo te sientes a ti mismo: tu peso, tu presencia, tu relación con el espacio. Esa transformación interna es lo que el público termina viendo."
+          }
+        ]
+      },
+
+      /* 07 ─────────────────────────────────────── */
+      {
+        titulo:    "TU UNIVERSO\nPOÉTICO",
+        subtitulo: "El cuerpo como pincel de la poética propia",
+        foto:      "improvisacion-teatro-barcelona-0407.jpg",
+        articulo:  "/blog/tu-universo-no-es-tu-biografia/",
+        preguntas: [
+          {
+            tag: "Tu universo no es tu biografía",
+            pregunta: "Cuando decimos que el teatro no es psicoanálisis, ¿qué estamos proponiendo?",
+            opciones: [
+              "Que el actor debe olvidar completamente su historia personal para interpretar personajes.",
+              "Que las emociones reales no tienen lugar en escena, solo las técnicas.",
+              "Que el material de trabajo es el universo poético propio: imágenes, ritmos y obsesiones, no la autobiografía literal.",
+              "Que los actores con más experiencia de vida tienen ventaja sobre los más jóvenes."
+            ],
+            correcta: 2,
+            pista: "¿Cuál es la diferencia entre 'lo que te pasó' y 'tu poética'?",
+            explicacion: "El teatro no es confesión. El material no es la biografía sino el universo personal: las imágenes que te habitan, las obsesiones que te atraviesan, el ritmo con que ves el mundo."
+          },
+          {
+            tag: "Tu universo no es tu biografía",
+            pregunta: "¿Qué es el 'universo personal' de un actor?",
+            opciones: [
+              "La suma de todas las experiencias traumáticas que lo forman como persona.",
+              "Las imágenes, ritmos y obsesiones que lo atraviesan y que conforman su poética propia.",
+              "El conjunto de personajes que ha interpretado a lo largo de su carrera.",
+              "Su historia de vida contada de manera ordenada y cronológica."
+            ],
+            correcta: 1,
+            pista: "¿Qué tienen en común las imágenes que vuelven siempre?",
+            explicacion: "El universo personal no es la biografía: es la poética. Son las imágenes que te persiguen, los ritmos con que ves el mundo, las obsesiones que aparecen en tu trabajo aunque no las hayas elegido."
+          },
+          {
+            tag: "Tu universo no es tu biografía",
+            pregunta: "¿Qué ocurre cuando un actor trabaja 'desde la autobiografía' en lugar de 'desde su universo'?",
+            opciones: [
+              "Logra mayor autenticidad porque el material es genuinamente suyo.",
+              "La escena gana en realismo y el público se identifica más fácilmente.",
+              "Se queda en la anécdota y pierde acceso al plano poético donde vive la ficción.",
+              "Trabaja de manera más libre porque no necesita construir un personaje."
+            ],
+            correcta: 2,
+            pista: "¿Qué diferencia hay entre 'lo que te pasó' y 'lo que te obsesiona'?",
+            explicacion: "La autobiografía es anécdota. La poética es otra cosa: son las fuerzas, las imágenes y los ritmos que te atraviesan más allá de los hechos. El teatro trabaja en ese plano — no en el de los eventos, sino en el de las fuerzas."
+          },
+          {
+            tag: "El cuerpo como pincel",
+            pregunta: "¿Por qué decimos que el cuerpo es el 'pincel' del actor?",
+            opciones: [
+              "Porque el actor debe pintar imágenes en el espacio con sus movimientos.",
+              "Porque el cuerpo ejecuta lo que la mente del actor compone previamente.",
+              "Porque el cuerpo es el instrumento a través del cual el universo poético del actor se hace visible.",
+              "Porque en el entrenamiento se trabaja con elementos visuales y plásticos."
+            ],
+            correcta: 2,
+            pista: "Si el universo personal es la pintura, ¿qué sería el cuerpo?",
+            explicacion: "El cuerpo no reproduce lo que la mente ordena — es el instrumento desde el cual el universo interior del actor se hace materia escénica. Las imágenes que habitan al actor se expresan a través del cuerpo: en el peso, la mirada, el ritmo."
+          }
+        ]
+      },
+
+      /* 08 ─────────────────────────────────────── */
+      {
+        titulo:    "LA IMPROVISACIÓN\nDIRIGIDA",
+        subtitulo: "La restricción como dispositivo creativo",
+        foto:      "improvisacion-teatro-barcelona-0415.jpg",
+        articulo:  "/blog/improvisacion-dirigida/",
+        preguntas: [
+          {
+            tag: "La improvisación dirigida",
+            pregunta: "¿Qué diferencia a la improvisación dirigida de la improvisación libre?",
+            opciones: [
+              "La improvisación libre tiene más calidad artística porque no hay limitaciones.",
+              "La improvisación dirigida trabaja con un encuadre — una situación, restricción o punto de partida — que activa la creatividad.",
+              "La improvisación dirigida solo la usan actores con experiencia; los principiantes hacen libre.",
+              "La improvisación libre es espontánea; la dirigida está ensayada de antemano."
+            ],
+            correcta: 1,
+            pista: "¿Qué tiene la improvisación dirigida que no tiene la libre?",
+            explicacion: "La improvisación dirigida no es caos ni libertad total: trabaja con un encuadre. Ese encuadre puede ser una situación, un objeto, un ritmo o una restricción — y es lo que activa la creatividad en lugar de ahogarla."
+          },
+          {
+            tag: "La improvisación dirigida",
+            pregunta: "¿Cuál es el rol del punto de partida en una improvisación dirigida?",
+            opciones: [
+              "Decidir de antemano el final de la escena para que los actores sepan adónde van.",
+              "Dar a los actores un libreto que seguir cuando no saben qué hacer.",
+              "Encuadrar la escena con una restricción que activa la creatividad en lugar de limitarla.",
+              "Reemplazar la espontaneidad con una estructura fija que garantiza resultados."
+            ],
+            correcta: 2,
+            pista: "¿El punto de partida es una limitación o un disparador?",
+            explicacion: "El punto de partida no es una trampa: es un dispositivo que encuadra la energía. La restricción bien elegida no limita — abre, porque le da al actor algo concreto contra lo que trabajar."
+          },
+          {
+            tag: "La improvisación dirigida",
+            pregunta: "¿Qué rol cumple la escucha en la improvisación?",
+            opciones: [
+              "Permite al actor memorizar lo que dijo el compañero para responder lógicamente.",
+              "Sirve para esperar el momento adecuado de interrumpir al compañero.",
+              "Es la condición básica para que algo pueda surgir entre dos cuerpos en el espacio.",
+              "Garantiza que ningún actor domine la escena más que el otro."
+            ],
+            correcta: 2,
+            pista: "Sin escucha, ¿qué hay entre dos actores en escena?",
+            explicacion: "La escucha no es una habilidad técnica — es la condición de posibilidad del encuentro. Sin escucha real no hay dos actores en escena: hay dos solistas paralelos que se ignoran."
+          },
+          {
+            tag: "La improvisación dirigida",
+            pregunta: "En la improvisación dirigida, ¿qué se entiende por 'la situación'?",
+            opciones: [
+              "El resumen del argumento de la obra que los actores deben conocer de antemano.",
+              "Las circunstancias específicas — quién, dónde, qué quiere — que generan la fricción escénica.",
+              "Los datos biográficos del personaje que el actor debe memorizar antes de entrar.",
+              "El estado emocional general que el director pide para toda la escena."
+            ],
+            correcta: 1,
+            pista: "¿Qué elementos concretos componen 'la situación'?",
+            explicacion: "La situación no es el tema de la escena: son las circunstancias específicas que la hacen única. Quién está, dónde está, qué quiere, qué le impide obtenerlo. Esos datos son los que generan fricción real."
+          }
+        ]
+      },
+
+      /* 09 ─────────────────────────────────────── */
+      {
+        titulo:    "EL JUEGO\nY LA FICCIÓN",
+        subtitulo: "El teatro como superjuego adulto",
+        foto:      "clase-teatro-barcelona-0681.jpg",
+        articulo:  "/blog/el-juego-como-origen/",
+        preguntas: [
+          {
+            tag: "El juego como origen",
+            pregunta: "¿Por qué decimos que el teatro es un 'superjuego' adulto?",
+            opciones: [
+              "Porque usa reglas más complejas que los juegos infantiles.",
+              "Porque recupera la capacidad de creer absolutamente en una ficción, con la conciencia y el deseo del adulto.",
+              "Porque es un juego que requiere formación profesional y no cualquiera puede practicarlo.",
+              "Porque produce resultados artísticos que trascienden el simple entretenimiento."
+            ],
+            correcta: 1,
+            pista: "¿Qué tiene el juego adulto que no tiene el infantil?",
+            explicacion: "El superjuego adulto no es infantilismo: es recuperar la fe absoluta en la ficción con la complejidad del ser adulto — su deseo, su historia, su conciencia de sí mismo. Esa combinación es lo que hace interesante al teatro."
+          },
+          {
+            tag: "El juego como origen",
+            pregunta: "¿Qué tiene en común el teatro con el juego de los niños?",
+            opciones: [
+              "Que en ambos los participantes fingen ser algo que no son.",
+              "Que ambos requieren público para tener sentido.",
+              "La creencia absoluta y apasionada en la ficción que se está creando.",
+              "Que ninguno de los dos tiene consecuencias reales en el mundo."
+            ],
+            correcta: 2,
+            pista: "¿Qué hace un niño que juega que lo convierte en el mejor actor?",
+            explicacion: "Un niño que juega no 'finge': cree absolutamente en lo que está haciendo. Esa creencia total es exactamente lo que el teatro necesita. La diferencia es que el actor adulto la sostiene con conciencia."
+          },
+          {
+            tag: "El juego como origen",
+            pregunta: "¿Por qué el juego escénico no es gratuito ni ingenuo?",
+            opciones: [
+              "Porque el teatro profesional requiere rigor técnico y disciplina.",
+              "Porque el juego en teatro está atravesado por el deseo, la historia y la conciencia del adulto que juega.",
+              "Porque los actores estudian años antes de poder jugar en escena.",
+              "Porque el juego escénico siempre tiene un objetivo artístico claro."
+            ],
+            correcta: 1,
+            pista: "¿Qué lleva encima el actor adulto que el niño no tiene?",
+            explicacion: "El juego escénico no es inocente. Está cargado del peso del adulto: su deseo, sus obsesiones, su historia. Esa carga es lo que lo convierte en teatro y no en simple entretenimiento infantil."
+          },
+          {
+            tag: "Habitar el presente",
+            pregunta: "¿Cuál es el efecto más profundo del '¡dale que!' en el estado del actor?",
+            opciones: [
+              "Funciona como acuerdo técnico para indicar al compañero los desplazamientos en el espacio.",
+              "Instala una fe escénica inmediata: el juego importa en serio y el cuerpo se entrega de verdad.",
+              "Destruye toda limitación, habilitando una impunidad donde todo vale sin consecuencias.",
+              "Obliga al actor a usar sus traumas personales para garantizar la organicidad del llanto."
+            ],
+            correcta: 1,
+            pista: "¿Qué suspende el 'dale que' en la lógica cotidiana del actor?",
+            explicacion: "El ¡dale que! suspende la lógica cotidiana para aceptar una nueva realidad momentánea. Al asumir esa creencia, el imaginario se enciende y el cuerpo deja de juzgarse desde fuera."
+          }
+        ]
+      }
+
+    ]; /* fin TEMAS */
+
+    /* ══════════════════════════════════════
+       STATE
+    ══════════════════════════════════════ */
+    let activeTema = null;
+    let curQ = 0, score = 0, answered = false, hintOpen = false;
+
+    /* ══════════════════════════════════════
+       DOM
+    ══════════════════════════════════════ */
+    const $ = id => document.getElementById(id);
+    const landingScreen  = $('landing-screen');
+    const quizScreen     = $('quiz-screen');
+    const resultScreen   = $('result-screen');
+    const progressLine   = $('progress-line');
+    const themesGrid     = $('themes-grid');
+    const quizBackBtn    = $('quiz-back-btn');
+    const quizThemeName  = $('quiz-theme-name');
+    const qInner         = $('q-inner');
+    const qNum           = $('q-num');
+    const qDots          = $('q-dots');
+    const qTag           = $('q-tag');
+    const qText          = $('q-text');
+    const optionsList    = $('options-list');
+    const hintBtn        = $('hint-btn');
+    const hintBox        = $('hint-box');
+    const feedbackBox    = $('feedback-box');
+    const feedbackLabel  = $('feedback-label');
+    const feedbackText   = $('feedback-text');
+    const nextBtn        = $('next-btn');
+    const resultTemaLbl  = $('result-tema-label');
+    const resultScore    = $('result-score');
+    const scoreBarFill   = $('score-bar-fill');
+    const resultPhrase   = $('result-phrase');
+    const resultArtBtn   = $('result-articulo-btn');
+    const resultRetryBtn = $('result-retry-btn');
+    const resultTemasBtn = $('result-temas-btn');
+
+    const BASE = 'https://talleresdeteatro.es/imagenes_optimizadas/';
+
+    /* ══════════════════════════════════════
+       SCREEN TRANSITIONS
+    ══════════════════════════════════════ */
+    function showScreen(el) {
+      [landingScreen, quizScreen, resultScreen].forEach(s => {
+        s.classList.remove('visible');
+        s.style.display = 'none';
+      });
+      el.style.display = 'flex';
+      el.offsetHeight;
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('visible')));
+    }
+
+    /* ══════════════════════════════════════
+       BUILD LANDING
+    ══════════════════════════════════════ */
+    function buildLanding() {
+      themesGrid.innerHTML = '';
+      TEMAS.forEach((tema, i) => {
+        const card = document.createElement('div');
+        card.className = 'theme-card';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', `Tema: ${tema.titulo.replace('\n', ' ')}`);
+        card.innerHTML = `
+          <img class="theme-card-img" src="${BASE}${tema.foto}" alt="${tema.titulo.replace('\n', ' ')}" loading="${i < 3 ? 'eager' : 'lazy'}" />
+          <div class="theme-card-overlay"></div>
+          <div class="theme-card-content">
+            <div class="theme-card-top">
+              <span class="theme-num">0${i + 1}</span>
+              <span class="theme-badge">4 preguntas</span>
+            </div>
+            <div class="theme-card-bottom">
+              <h2 class="theme-card-title">${tema.titulo.replace('\n', '<br>')}</h2>
+              <p class="theme-card-sub">${tema.subtitulo}</p>
+              <span class="theme-card-arrow">COMENZAR →</span>
+            </div>
+          </div>`;
+        card.addEventListener('click', () => startTema(i));
+        card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') startTema(i); });
+        themesGrid.appendChild(card);
+      });
+    }
+
+    /* ══════════════════════════════════════
+       START TEMA
+    ══════════════════════════════════════ */
+    function startTema(idx) {
+      activeTema = TEMAS[idx];
+      curQ = 0; score = 0; answered = false; hintOpen = false;
+      quizThemeName.textContent = activeTema.titulo.replace('\n', ' ');
+      progressLine.style.width = '0%';
+      loadQuestion(0);
+      showScreen(quizScreen);
+    }
+
+    /* ══════════════════════════════════════
+       BUILD DOTS
+    ══════════════════════════════════════ */
+    function buildDots() {
+      qDots.innerHTML = '';
+      activeTema.preguntas.forEach((_, i) => {
+        const d = document.createElement('div');
+        d.className = 'q-dot' + (i < curQ ? ' done' : i === curQ ? ' current' : '');
+        qDots.appendChild(d);
+      });
+    }
+
+    /* ══════════════════════════════════════
+       LOAD QUESTION
+    ══════════════════════════════════════ */
+    function loadQuestion(idx) {
+      answered = false; hintOpen = false;
+      const q = activeTema.preguntas[idx];
+
+      qNum.textContent = idx + 1;
+      buildDots();
+      progressLine.style.width = (idx / activeTema.preguntas.length * 100) + '%';
+      qTag.textContent  = q.tag;
+      qText.textContent = q.pregunta;
+
+      optionsList.innerHTML = '';
+      ['A','B','C','D'].forEach((ltr, i) => {
+        const opt = document.createElement('div');
+        opt.className = 'option';
+        opt.setAttribute('role', 'button');
+        opt.setAttribute('tabindex', '0');
+        opt.innerHTML = `
+          <span class="opt-letter">${ltr}</span>
+          <span class="opt-text">${q.opciones[i]}</span>
+          <span class="opt-icon" aria-hidden="true"></span>`;
+        opt.addEventListener('click', () => pick(i));
+        opt.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') pick(i); });
+        optionsList.appendChild(opt);
+      });
+
+      hintBox.textContent = q.pista;
+      hintBox.classList.remove('open');
+      hintBtn.textContent = '▸ PISTA';
+      hintBtn.setAttribute('aria-expanded', 'false');
+
+      feedbackBox.classList.remove('open');
+      feedbackLabel.textContent = '';
+      feedbackText.textContent  = '';
+      feedbackLabel.classList.remove('wrong-lbl');
+
+      nextBtn.classList.remove('show', 'visible');
+    }
+
+    /* ══════════════════════════════════════
+       PICK
+    ══════════════════════════════════════ */
+    function pick(idx) {
+      if (answered) return;
+      answered = true;
+      const q    = activeTema.preguntas[curQ];
+      const opts = optionsList.querySelectorAll('.option');
+      opts.forEach(o => o.classList.add('disabled'));
+
+      if (idx === q.correcta) {
+        score++;
+        opts[idx].classList.add('correct');
+        opts[idx].querySelector('.opt-icon').textContent = '✓';
+        feedbackLabel.textContent = 'Correcto';
+      } else {
+        opts[idx].classList.add('wrong');
+        opts[idx].querySelector('.opt-icon').textContent = '✗';
+        opts[q.correcta].classList.add('reveal');
+        feedbackLabel.textContent = 'No exactamente';
+        feedbackLabel.classList.add('wrong-lbl');
+      }
+
+      feedbackText.textContent = q.explicacion;
+      feedbackBox.classList.add('open');
+
+      nextBtn.textContent = curQ === activeTema.preguntas.length - 1 ? 'VER RESULTADO →' : 'SIGUIENTE →';
+      nextBtn.classList.add('show');
+      requestAnimationFrame(() => requestAnimationFrame(() => nextBtn.classList.add('visible')));
+    }
+
+    /* ══════════════════════════════════════
+       ADVANCE
+    ══════════════════════════════════════ */
+    function advance() {
+      curQ++;
+      if (curQ >= activeTema.preguntas.length) { showResult(); return; }
+      qInner.style.opacity = '0';
+      qInner.style.transform = 'translateY(-10px)';
+      qInner.style.transition = 'opacity 0.22s ease, transform 0.22s ease';
+      setTimeout(() => {
+        loadQuestion(curQ);
+        qInner.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          qInner.style.opacity = '1';
+          qInner.style.transform = 'translateY(0)';
+        }));
+      }, 240);
+    }
+
+    /* ══════════════════════════════════════
+       RESULT
+    ══════════════════════════════════════ */
+    function showResult() {
+      progressLine.style.width = '100%';
+      resultTemaLbl.textContent = activeTema.titulo.replace('\n', ' ');
+      resultScore.textContent   = score;
+      resultArtBtn.href         = activeTema.articulo;
+
+      const phrases = [
+        { min: 4, text: "Lo tienes claro. Ahora llévalo al cuerpo." },
+        { min: 3, text: "Casi todo. Vuelve a la pregunta que dudaste." },
+        { min: 2, text: "Vale la pena leer el artículo de nuevo." },
+        { min: 0, text: "El teatro empieza donde terminan las certezas." }
+      ];
+      resultPhrase.textContent = phrases.find(p => score >= p.min).text;
+
+      showScreen(resultScreen);
+      setTimeout(() => { scoreBarFill.style.width = (score / activeTema.preguntas.length * 100) + '%'; }, 100);
+    }
+
+    /* ══════════════════════════════════════
+       HINT / KEYBOARD / EVENTS
+    ══════════════════════════════════════ */
+    hintBtn.addEventListener('click', () => {
+      hintOpen = !hintOpen;
+      hintBox.classList.toggle('open', hintOpen);
+      hintBtn.textContent = hintOpen ? '▾ PISTA' : '▸ PISTA';
+      hintBtn.setAttribute('aria-expanded', String(hintOpen));
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!quizScreen.classList.contains('visible')) return;
+      const map = { '1': 0, '2': 1, '3': 2, '4': 3 };
+      if (map[e.key] !== undefined && !answered) pick(map[e.key]);
+      if ((e.key === 'Enter' || e.key === 'ArrowRight') && answered) advance();
+    });
+
+    quizBackBtn.addEventListener('click', () => { progressLine.style.width = '0%'; showScreen(landingScreen); });
+    nextBtn.addEventListener('click', advance);
+    resultRetryBtn.addEventListener('click', () => startTema(TEMAS.indexOf(activeTema)));
+    resultTemasBtn.addEventListener('click', () => {
+      progressLine.style.width = '0%';
+      scoreBarFill.style.width = '0%';
+      showScreen(landingScreen);
+    });
+
+    /* ══════════════════════════════════════
+       INIT
+    ══════════════════════════════════════ */
+    buildLanding();
+    landingScreen.style.display = 'flex';
+    landingScreen.offsetHeight;
+    requestAnimationFrame(() => requestAnimationFrame(() => landingScreen.classList.add('visible')));
+  </script>
+</body>
+</html>

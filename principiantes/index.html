@@ -3013,6 +3013,149 @@
   </section>
 
 
+  <!-- ═══ TESTIMONIOS — REELS DE ALUMNOS ══════════════════════ -->
+  <style>
+    .test-section{background:#0C0C0C;padding:clamp(72px,9vw,120px) 0;border-top:1px solid rgba(255,255,255,0.07);}
+    .test-header{margin-bottom:clamp(36px,5vw,64px);}
+    .test-overline{display:block;font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;}
+    .test-h2{font-family:'Archivo Black',sans-serif;font-size:clamp(32px,4.5vw,60px);text-transform:uppercase;letter-spacing:-0.03em;line-height:0.93;color:#fff;margin:0;}
+    .test-h2 .acc{color:#E50914;}
+    .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,20px);}
+    @media(max-width:700px){.test-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.test-grid{grid-template-columns:1fr;}}
+    .test-card{position:relative;aspect-ratio:9/16;background:#111;overflow:hidden;cursor:pointer;border:1px solid rgba(255,255,255,0.07);transition:border-color .2s;}
+    .test-card:hover{border-color:rgba(255,255,255,0.25);}
+    .test-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+    .test-card:hover img{transform:scale(1.04);}
+    .test-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 50%);}
+    .test-card-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+    .test-card-play svg{width:48px;height:48px;opacity:0.9;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.5));}
+    .test-card-label{position:absolute;bottom:12px;left:12px;right:12px;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    /* Modal */
+    .reel-modal{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+    .reel-modal.open{opacity:1;pointer-events:all;}
+    .reel-modal-inner{position:relative;width:min(400px,90vw);max-height:90vh;}
+    .reel-modal-close{position:absolute;top:-44px;right:0;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1;padding:8px;}
+    .reel-modal-embed{width:100%;min-height:500px;background:#111;display:flex;align-items:center;justify-content:center;}
+    .reel-modal-embed .instagram-media{margin:0 !important;min-width:0 !important;width:100% !important;}
+  </style>
+
+  <section class="test-section">
+    <div class="container">
+      <header class="test-header">
+        <span class="test-overline">Testimonios</span>
+        <h2 class="test-h2">Lo que dicen<br>quienes ya<br><span class="acc">estuvieron.</span></h2>
+      </header>
+      <div class="test-grid">
+
+        <div class="test-card" data-reel="DPv_SNDAePH" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="https://www.instagram.com/p/DPv_SNDAePH/media/?size=l"
+               onerror="this.src='../imagenes_optimizadas/principiantes-clase-2025.jpg'"
+               alt="Testimonio alumno" loading="lazy">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
+        </div>
+
+        <div class="test-card" data-reel="DOxzpJUjYm2" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="https://www.instagram.com/p/DOxzpJUjYm2/media/?size=l"
+               onerror="this.src='../imagenes_optimizadas/actores-taller-barcelona-0451.jpg'"
+               alt="Testimonio alumno" loading="lazy">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
+        </div>
+
+        <div class="test-card" data-reel="C_grhGuIM2p" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="https://www.instagram.com/p/C_grhGuIM2p/media/?size=l"
+               onerror="this.src='../imagenes_optimizadas/actores-taller-barcelona-0579.jpg'"
+               alt="Testimonio alumno" loading="lazy">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
+        </div>
+
+        <div class="test-card" data-reel="C_p9zgyI2T1" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="https://www.instagram.com/p/C_p9zgyI2T1/media/?size=l"
+               onerror="this.src='../imagenes_optimizadas/actores-taller-barcelona-0451.jpg'"
+               alt="Testimonio alumno" loading="lazy">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
+        </div>
+
+        <div class="test-card" data-reel="C_hua2-ofvq" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="https://www.instagram.com/p/C_hua2-ofvq/media/?size=l"
+               onerror="this.src='../imagenes_optimizadas/actores-taller-barcelona-0579.jpg'"
+               alt="Testimonio alumno" loading="lazy">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
+        </div>
+
+        <div class="test-card" data-reel="DO8QpM9DaEA" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="https://www.instagram.com/p/DO8QpM9DaEA/media/?size=l"
+               onerror="this.src='../imagenes_optimizadas/principiantes-clase-2025.jpg'"
+               alt="Testimonio alumno" loading="lazy">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de reel -->
+  <div class="reel-modal" id="reelModal" role="dialog" aria-modal="true" aria-label="Ver reel">
+    <div class="reel-modal-inner">
+      <button class="reel-modal-close" id="reelModalClose" aria-label="Cerrar">×</button>
+      <div class="reel-modal-embed" id="reelModalEmbed"></div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var modal   = document.getElementById('reelModal');
+    var embed   = document.getElementById('reelModalEmbed');
+    var btnClose= document.getElementById('reelModalClose');
+    var igLoaded= false;
+
+    function loadIgScript(){
+      if(igLoaded) return;
+      igLoaded = true;
+      var s = document.createElement('script');
+      s.src = '//www.instagram.com/embed.js';
+      s.async = true;
+      document.body.appendChild(s);
+    }
+
+    function openReel(shortcode){
+      embed.innerHTML = '<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/'+shortcode+'/?utm_source=ig_embed" data-instgrm-version="14" style="background:#111;border:0;border-radius:0;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;"></blockquote>';
+      loadIgScript();
+      if(window.instgrm) window.instgrm.Embeds.process();
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(){
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function(){ embed.innerHTML = ''; }, 300);
+    }
+
+    document.querySelectorAll('.test-card').forEach(function(card){
+      function activate(){ openReel(card.dataset.reel); }
+      card.addEventListener('click', activate);
+      card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' ') activate(); });
+    });
+
+    btnClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+  })();
+  </script>
+
   <!-- ═══ CTA FINAL ════════════════════════════════════════════ -->
   <section class="cta-section" aria-label="Reservar lugar en el taller de teatro">
     <div class="cta-bg" aria-hidden="true"></div>

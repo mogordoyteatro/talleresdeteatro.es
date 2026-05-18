@@ -235,6 +235,104 @@
 
   </article>
 
+  <style>
+  .mq{background:#0C0C0C;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);padding:clamp(48px,6vw,72px) 0;margin:0}
+  .mq-inner{max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+  .mq-eyebrow{display:flex;align-items:center;gap:10px;font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#E50914;margin-bottom:16px}
+  .mq-eyebrow::after{content:'';display:block;width:24px;height:1px;background:#E50914}
+  .mq-title{font-family:'Archivo Black',sans-serif;font-size:clamp(28px,4vw,48px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.92;color:#fff;margin-bottom:8px}
+  .mq-subtitle{font-size:clamp(13px,1.5vw,16px);font-weight:300;color:rgba(255,255,255,0.45);margin-bottom:clamp(32px,4vw,48px)}
+  .mq-questions{display:flex;flex-direction:column;gap:clamp(28px,3vw,40px)}
+  .mq-q{display:flex;flex-direction:column;gap:12px}
+  .mq-q-num{font-family:'Archivo Black',sans-serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.25)}
+  .mq-q-text{font-size:clamp(15px,1.8vw,19px);font-weight:400;line-height:1.5;color:#fff}
+  .mq-opts{display:flex;flex-direction:column;gap:7px;margin-top:2px}
+  .mq-opt{background:none;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);font-family:'Inter',sans-serif;font-size:clamp(13px,1.4vw,15px);font-weight:400;text-align:left;padding:11px 15px;cursor:pointer;transition:border-color .16s,color .16s,opacity .16s;line-height:1.45;border-radius:2px;width:100%}
+  .mq-opt:hover{border-color:rgba(255,255,255,0.35);color:#fff}
+  .mq-opt.correct{border-color:#fff !important;color:#fff !important;opacity:1 !important}
+  .mq-opt.wrong{opacity:0.22 !important;cursor:default}
+  .mq-opt.sel-wrong{border-color:#E50914 !important;color:rgba(255,255,255,0.55) !important;opacity:0.55 !important;cursor:default}
+  .mq-opt:disabled{cursor:default}
+  .mq-feedback{display:none;font-size:clamp(12px,1.3vw,14px);font-weight:300;line-height:1.65;color:rgba(255,255,255,0.5);padding:11px 14px;border-left:2px solid rgba(255,255,255,0.1);margin-top:2px;font-style:italic}
+  .mq-q.answered .mq-feedback{display:block}
+  .mq-result{display:none;margin-top:clamp(36px,5vw,52px);padding-top:clamp(28px,4vw,44px);border-top:1px solid rgba(255,255,255,0.07);text-align:center}
+  .mq-result.show{display:block}
+  .mq-score-num{font-family:'Archivo Black',sans-serif;font-size:clamp(52px,8vw,84px);text-transform:uppercase;letter-spacing:-0.04em;line-height:1;color:#fff}
+  .mq-score-den{font-size:0.5em;opacity:0.28}
+  .mq-bar-track{width:100%;max-width:260px;height:2px;background:rgba(255,255,255,0.08);margin:14px auto}
+  .mq-bar-fill{height:100%;background:#fff;width:0;transition:width 0.9s ease}
+  .mq-phrase{font-size:clamp(14px,1.6vw,17px);font-weight:300;font-style:italic;color:rgba(255,255,255,0.55);margin:14px 0 26px}
+  .mq-cta-btn{display:inline-block;font-family:'Archivo Black',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.35);padding-bottom:2px;transition:border-color .2s,color .2s}
+  .mq-cta-btn:hover{border-color:#E50914;color:#E50914}
+  </style>
+  <section class="mq" aria-label="Comprueba lo que leíste">
+    <div class="mq-inner">
+      <p class="mq-eyebrow">Cuestionario</p>
+      <h2 class="mq-title">¿Lo tienes<br>claro?</h2>
+      <p class="mq-subtitle">3 preguntas sobre lo que acabas de leer.</p>
+      <div class="mq-questions" id="mq-qs">
+        <div class="mq-q" data-correct="1">
+          <p class="mq-q-num">01 / 03</p>
+          <p class="mq-q-text">¿Qué diferencia a la espera activa de la espera pasiva en escena?</p>
+          <div class="mq-opts">
+            <button class="mq-opt" data-i="0">La espera activa implica moverse; la espera pasiva, quedarse completamente quieto.</button>
+            <button class="mq-opt" data-i="1">La espera activa es escucha real que genera información visible; la pasiva es un 'apagón' interno que rompe la escena.</button>
+            <button class="mq-opt" data-i="2">La espera activa es una técnica de memorización entre las réplicas del personaje.</button>
+            <button class="mq-opt" data-i="3">La espera activa pertenece al teatro de texto; la pasiva, a la improvisación.</button>
+          </div>
+          <p class="mq-feedback">La espera pasiva es reconocible: el actor que no habla baja la intensidad y se prepara internamente. Ese apagón lo ve el espectador y rompe la escena. La espera activa es escucha real: recibir, dejarse afectar, procesar.</p>
+        </div>
+        <div class="mq-q" data-correct="2">
+          <p class="mq-q-num">02 / 03</p>
+          <p class="mq-q-text">¿Qué efecto produce en el compañero de escena un actor que escucha de verdad?</p>
+          <div class="mq-opts">
+            <button class="mq-opt" data-i="0">Genera incomodidad porque el compañero siente la presión de estar siendo observado.</button>
+            <button class="mq-opt" data-i="1">Distrae al compañero de su propio proceso interno de construcción del personaje.</button>
+            <button class="mq-opt" data-i="2">El compañero habla distinto, se expone más y se anima a cosas que no haría si nadie prestara atención.</button>
+            <button class="mq-opt" data-i="3">Ayuda al compañero a recordar sus líneas porque siente apoyo en escena.</button>
+          </div>
+          <p class="mq-feedback">La escucha real genera un bucle: cuando alguien te escucha de verdad, hablás distinto. Te exponés más. Ese efecto sobre el compañero es uno de los regalos más importantes que un actor puede dar.</p>
+        </div>
+        <div class="mq-q" data-correct="0">
+          <p class="mq-q-num">03 / 03</p>
+          <p class="mq-q-text">¿Qué determina que un silencio en escena sea 'cargado' y no vacío?</p>
+          <div class="mq-opts">
+            <button class="mq-opt" data-i="0">Que el actor esté procesando algo real en ese silencio, no nada.</button>
+            <button class="mq-opt" data-i="1">Que el director haya indicado expresamente que ese silencio debe ser dramático.</button>
+            <button class="mq-opt" data-i="2">Que sea lo suficientemente largo como para crear tensión en el espectador.</button>
+            <button class="mq-opt" data-i="3">Que el texto del personaje justifique una pausa en ese momento concreto.</button>
+          </div>
+          <p class="mq-feedback">El silencio vacío y el silencio cargado se parecen en la forma pero son opuestos en el efecto. La diferencia la genera lo que pasa dentro del actor durante esos segundos. Sin algo real que procesar, el silencio se percibe como error.</p>
+        </div>
+      </div>
+      <div class="mq-result" id="mq-result">
+        <div class="mq-score-num" id="mq-score">0<span class="mq-score-den">/3</span></div>
+        <div class="mq-bar-track"><div class="mq-bar-fill" id="mq-bar"></div></div>
+        <p class="mq-phrase" id="mq-phrase"></p>
+        <a href="/cuestionario/" class="mq-cta-btn">Explorar todos los cuestionarios →</a>
+      </div>
+    </div>
+  </section>
+  <script>
+  (function(){
+    var qs=document.querySelectorAll('#mq-qs .mq-q'),res=document.getElementById('mq-result'),sc=document.getElementById('mq-score'),bar=document.getElementById('mq-bar'),ph=document.getElementById('mq-phrase'),done=0,score=0;
+    var phrases=["El teatro empieza donde terminan las certezas.","Vale la pena releer el artículo con calma.","Casi todo. Una pregunta vale la pena revisarla.","Lo tienes claro. Ahora llévalo al cuerpo."];
+    qs.forEach(function(q){
+      var c=parseInt(q.dataset.correct),opts=q.querySelectorAll('.mq-opt');
+      opts.forEach(function(o){
+        o.addEventListener('click',function(){
+          if(q.classList.contains('answered'))return;
+          var i=parseInt(o.dataset.i);
+          opts.forEach(function(x){x.disabled=true;if(parseInt(x.dataset.i)===c)x.classList.add('correct');else if(parseInt(x.dataset.i)===i)x.classList.add('sel-wrong');else x.classList.add('wrong');});
+          if(i===c)score++;
+          q.classList.add('answered');
+          done++;
+          if(done===qs.length){res.classList.add('show');sc.innerHTML=score+'<span class="mq-score-den">/3</span>';setTimeout(function(){bar.style.width=Math.round(score/qs.length*100)+'%';},120);ph.textContent=phrases[score]||phrases[0];setTimeout(function(){res.scrollIntoView({behavior:'smooth',block:'center'});},400);}
+        });
+      });
+    });
+  })();
+  </script>
   <div class="article-cta">
     <div class="cta-box">
       <div class="cta-box-text">
