@@ -130,11 +130,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://talleresdeteatro.es/blog/el-punto-de-vista/</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
 
 </urlset>
