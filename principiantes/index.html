@@ -3427,18 +3427,30 @@
   </a>
 
   <script>
-    // Botón mute/unmute del hero
-    const soundBtn = document.getElementById('soundBtn');
-    const heroVideo = document.querySelector('.hero-video');
-    if (soundBtn && heroVideo) {
-      soundBtn.addEventListener('click', () => {
-        heroVideo.muted = !heroVideo.muted;
-        soundBtn.classList.toggle('is-unmuted', !heroVideo.muted);
-        soundBtn.setAttribute('aria-label',
-          heroVideo.muted ? 'Activar sonido' : 'Silenciar'
-        );
+    // Música ambient via Spotify embed
+    (function () {
+      var btn = document.getElementById('soundBtn');
+      if (!btn) return;
+      var spIframe = null;
+      var playing = false;
+      btn.addEventListener('click', function () {
+        if (!playing) {
+          spIframe = document.createElement('iframe');
+          spIframe.src = 'https://open.spotify.com/embed/track/0dMd4rilfd6gPbXaLpNYhu?utm_source=generator&theme=0&autoplay=1';
+          spIframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+          spIframe.style.cssText = 'position:fixed;bottom:-400px;left:-400px;width:152px;height:152px;border:0;pointer-events:none;';
+          document.body.appendChild(spIframe);
+          playing = true;
+          btn.classList.add('is-unmuted');
+          btn.setAttribute('aria-label', 'Pausar música');
+        } else {
+          if (spIframe) { spIframe.remove(); spIframe = null; }
+          playing = false;
+          btn.classList.remove('is-unmuted');
+          btn.setAttribute('aria-label', 'Reproducir música');
+        }
       });
-    }
+    })();
 
     // Botón mute/unmute video "Hacemos Teatro"
     const hacerSoundBtn = document.getElementById('hacerSoundBtn');
