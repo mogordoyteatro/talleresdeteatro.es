@@ -269,6 +269,7 @@
       </a>
     </div>
     <button class="hamburger" aria-label="Abrir menú" id="hamburger"><span></span><span></span><span></span></button>
+    <button class="lang-toggle" aria-label="Canviar a català">CA</button>
   </nav>
 
   <div class="mobile-menu" role="dialog" aria-modal="true" id="mobile-menu">
@@ -387,6 +388,25 @@
   .mq-phrase{font-size:clamp(14px,1.6vw,17px);font-weight:300;font-style:italic;color:rgba(255,255,255,0.55);margin:14px 0 26px}
   .mq-cta-btn{display:inline-block;font-family:'Archivo Black',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.35);padding-bottom:2px;transition:border-color .2s,color .2s}
   .mq-cta-btn:hover{border-color:#E50914;color:#E50914}
+
+    /* ── Selector de idioma ─────────────────────────────── */
+    .lang-toggle {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.35);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      padding: 3px 8px;
+      border-radius: 3px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity .2s, border-color .2s;
+      margin-left: clamp(6px,1vw,12px);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .lang-toggle:hover { opacity: 1; border-color: rgba(255,255,255,0.7); }
   </style>
   <section class="mq" aria-label="Comprueba lo que leíste">
     <div class="mq-inner">
@@ -499,5 +519,6 @@
     hamburger.addEventListener('click', () => { mobileMenu.classList.toggle('is-open'); hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('is-open')); });
     closeBtn.addEventListener('click', () => mobileMenu.classList.remove('is-open'));
   </script>
+  <script defer src="/lang.js"></script>
 </body>
 </html>
