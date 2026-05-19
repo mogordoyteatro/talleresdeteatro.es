@@ -21,7 +21,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://talleresdeteatro.es/quienes-somos/" />
   <meta property="og:title" content="Sebastián Mogordoy y Candelaria Sesín · Talleres de Teatro Barcelona" />
-  <meta property="og:description" content="Actores, directores y pedagogos. Quince años investigando actuación, cuerpo y escena. Talleres de teatro en Gracia, Barcelona. 88 reseñas ★★★★★." />
+  <meta property="og:description" content="Actores, directores y pedagogos. Quince años investigando actuación, cuerpo y escena. Talleres de teatro en Gràcia, Barcelona. 88 reseñas ★★★★★." />
   <meta property="og:image" content="https://talleresdeteatro.es/imagenes_optimizadas/sebastian-mogordoy-candelaria-sesin-profesores-teatro-barcelona.jpg" />
   <meta property="og:locale" content="es_ES" />
   <meta property="og:site_name" content="Talleres de Teatro Barcelona" />
@@ -42,13 +42,13 @@
         "name": "Talleres de Teatro Barcelona",
         "url": "https://talleresdeteatro.es",
         "logo": "https://talleresdeteatro.es/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg",
-        "description": "Escuela de teatro y entrenamiento actoral en Gracia, Barcelona. Fundada en 2010. Dirigida por Sebastián Mogordoy y Candelaria Sesín.",
+        "description": "Escuela de teatro y entrenamiento actoral en Gràcia, Barcelona. Fundada en 2010. Dirigida por Sebastián Mogordoy y Candelaria Sesín.",
         "foundingDate": "2010",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Carrer de Roger de Flor, 253, Local 2 y 3",
           "addressLocality": "Barcelona",
-          "addressRegion": "Gracia",
+          "addressRegion": "Catalunya",
           "postalCode": "08025",
           "addressCountry": "ES"
         },
@@ -79,7 +79,7 @@
           "@type": "PostalAddress",
           "streetAddress": "Carrer de Roger de Flor, 253, Local 2 y 3",
           "addressLocality": "Barcelona",
-          "addressRegion": "Gracia",
+          "addressRegion": "Catalunya",
           "postalCode": "08025",
           "addressCountry": "ES"
         },
@@ -1137,10 +1137,11 @@
       .hero-h1 { font-size: clamp(46px, 16vw, 80px); }
     }
 
-    /* ── Hero SEO h1: visible mínimo en todos lados, invisible en mobile ── */
-    .hero-seo-h1 { font-size: clamp(8px, 0.75vw, 11px) !important; }
-    @media (max-width: 768px) {
-      .hero-seo-h1 { display: none !important; }
+    /* ── Screen-reader only utility ─────────────────────── */
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
     }
 
     /* ── Badge mobile nombres directores ── */
@@ -1349,9 +1350,7 @@
         <span class="hero-dir-junto">junto a Candelaria Sesín</span>
       </div>
 
-      <h1 class="hero-seo-h1" style="position:absolute;top:calc(68px + 18px);left:var(--pad-x);z-index:10;font-family:'Inter',sans-serif;font-size:clamp(8px,0.75vw,11px);font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.55);pointer-events:none;">
-        Profesores de teatro Barcelona · Sebastián Mogordoy · Candelaria Sesín
-      </h1>
+      <h1 class="sr-only">Profesores de teatro Barcelona · Sebastián Mogordoy · Candelaria Sesín</h1>
 
       <!-- Badge mobile — nombres pequeños visible solo en mobile -->
       <div class="hero-mobile-names" aria-hidden="true">
@@ -1472,11 +1471,12 @@
 
           <!-- Pedagogía — serif itálica debajo de videos -->
           <div style="margin-top:clamp(28px,3vw,44px);padding-top:clamp(20px,2.5vw,32px);border-top:1px solid rgba(255,255,255,0.07);">
-            <h3 style="font-family:'Archivo Black',sans-serif;font-size:clamp(13px,1.3vw,16px);text-transform:uppercase;letter-spacing:0.06em;line-height:1.3;color:var(--gold);margin-bottom:clamp(16px,2vw,24px);">Una pedagogía del impulso, la presencia y la transformación</h3>
+            <h3 style="font-family:'Archivo Black',sans-serif;font-size:clamp(13px,1.3vw,16px);text-transform:uppercase;letter-spacing:0.06em;line-height:1.3;color:var(--gold);margin-bottom:clamp(16px,2vw,24px);"
+                data-ca="Una pedagogia de l&#39;impuls, la presència i la transformació">Una pedagogía del impulso, la presencia y la transformación</h3>
             <div style="font-family:'Georgia','Times New Roman',serif;font-style:italic;font-size:clamp(15px,1.35vw,18px);font-weight:400;line-height:1.85;color:var(--g100);display:flex;flex-direction:column;gap:18px;">
-              <p>Mi forma de enseñar es transmitir. Acompañar. No responde a moldes clásicos ni a métodos cerrados. Lo que puedo ofrecer es un espacio vivo, donde se cruzan lo poético, lo sensorial, lo técnico y lo filosófico. Soy un acompañante de procesos, no solo un transmisor de contenidos. El actor no viene a aprender a "hacer", sino a "ser", a "estar", a encontrarse en escena, y transitarla, escuchando su deseo, a habitar el cuerpo como campo de conflicto y creación: un cuerpo poético. Vienen a descubrir, desplegar y comprender sus posibilidades expresivas. Vienen a dejar de representar el personaje de la vida, vienen a imaginar con el cuerpo, a trascender la forma y crear y divertirse.</p>
-              <p>A tener un encuentro real.</p>
-              <p>Pasaron 15 años desde la primera clase y aún cuando los miro actuar, y cuando veo los procesos me sigue emocionando… verlos haciendo esas cosas que hacemos, con tanta entrega, con tanta creatividad y amor propio. Gracias por permitirme tener el mejor trabajo que puedo tener: dar clases de teatro. ¡Bienvenidos!</p>
+              <p data-ca="La meva forma d&#39;ensenyar és transmetre. Acompanyar. No respon a motlles clàssics ni a mètodes tancats. El que puc oferir és un espai viu, on es creuen el poètic, el sensorial, el tècnic i el filosòfic. Sóc un acompanyant de processos, no només un transmissor de continguts. L&#39;actor no ve a aprendre a «fer», sinó a «ser», a «estar», a trobar-se a escena, i transitar-la, escoltant el seu desig, a habitar el cos com a camp de conflicte i creació: un cos poètic. Venen a descobrir, desplegar i comprendre les seves possibilitats expressives. Venen a deixar de representar el personatge de la vida, venen a imaginar amb el cos, a transcendir la forma i crear i divertir-se.">Mi forma de enseñar es transmitir. Acompañar. No responde a moldes clásicos ni a métodos cerrados. Lo que puedo ofrecer es un espacio vivo, donde se cruzan lo poético, lo sensorial, lo técnico y lo filosófico. Soy un acompañante de procesos, no solo un transmisor de contenidos. El actor no viene a aprender a "hacer", sino a "ser", a "estar", a encontrarse en escena, y transitarla, escuchando su deseo, a habitar el cuerpo como campo de conflicto y creación: un cuerpo poético. Vienen a descubrir, desplegar y comprender sus posibilidades expresivas. Vienen a dejar de representar el personaje de la vida, vienen a imaginar con el cuerpo, a trascender la forma y crear y divertirse.</p>
+              <p data-ca="A tenir una trobada real.">A tener un encuentro real.</p>
+              <p data-ca="Van passar 15 anys des de la primera classe i encara quan els miro actuar, i quan veig els processos em continua emocionant… veure&#39;ls fent aquestes coses que fem, amb tanta entrega, amb tanta creativitat i amor propi. Gràcies per permetre&#39;m tenir el millor treball que puc tenir: donar classes de teatre. Benvinguts!">Pasaron 15 años desde la primera clase y aún cuando los miro actuar, y cuando veo los procesos me sigue emocionando… verlos haciendo esas cosas que hacemos, con tanta entrega, con tanta creatividad y amor propio. Gracias por permitirme tener el mejor trabajo que puedo tener: dar clases de teatro. ¡Bienvenidos!</p>
             </div>
           </div>
         </div>
@@ -1504,7 +1504,7 @@
           <div class="persona-bio">
             <p>Actor, director y pedagogo teatral argentino radicado en Barcelona. Formado junto a <strong>Ricardo Bartís</strong> en el Sportivo Teatral de Buenos Aires, referencia ineludible del teatro argentino contemporáneo. Sus quince años de docencia en Buenos Aires y Barcelona han construido un método de trabajo reconocido por la comunidad teatral.</p>
             <p>Actualmente forma parte del elenco protagónico de <em>El Fill</em>, de Jon Fosse, dirigida por <strong>Ferran Utzet</strong>, estrenada en el <strong>Teatre Lliure</strong> de Barcelona. Protagonizó <em>Euforia y Desazón</em>, de Sergio Boris, con temporada en el Festival Temporada Alta 2024, la <strong>Sala Beckett</strong> y los <strong>Teatros del Canal</strong> de Madrid. En cine, formó parte de la película <em>El profesor</em>, producción de Netflix.</p>
-            <p>Su trabajo actoral ha sido descrito como "de otro planeta" (elDiario.es). Dirige los talleres de Principiantes, Con experiencia y Cuerpo al texto en Gracia, Barcelona.</p>
+            <p>Su trabajo actoral ha sido descrito como "de otro planeta" (elDiario.es). Dirige los talleres de Principiantes, Con experiencia y Cuerpo al texto en Gràcia, Barcelona.</p>
           </div>
 
           <!-- CV completo (accordion) -->
@@ -1843,7 +1843,7 @@
       <div class="espacio-datos" style="max-width:680px;margin-top:clamp(32px,4vw,56px);">
         <div class="espacio-dato">
           <span class="espacio-dato-label">Dónde</span>
-          <span class="espacio-dato-val">Espacio La Mansión · Carrer de Roger de Flor, 253, Local 2 y 3 · Gracia, Barcelona</span>
+          <span class="espacio-dato-val">Espacio La Mansión · Carrer de Roger de Flor, 253, Local 2 y 3 · Gràcia, Barcelona</span>
         </div>
         <div class="espacio-dato">
           <span class="espacio-dato-label">Metro</span>
@@ -1876,7 +1876,7 @@
   <!-- ═══ FOTO GRUPO ════════════════════════════════════════════════ -->
   <div class="foto-grupo">
     <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-3-005.jpg"
-         alt="Grupo de alumnos del taller de teatro en Barcelona — Espacio La Mansión, Gracia"
+         alt="Grupo de alumnos del taller de teatro en Barcelona — Espacio La Mansión, Gràcia"
          loading="lazy" width="1400" height="520" style="filter:grayscale(100%);">
   </div>
 
@@ -2059,6 +2059,6 @@
     // ── Fin mobile menu ─────────────────────────────
 
   </script>
-  <script src="/lang.js"></script>
+  <script defer src="/lang.js"></script>
 </body>
 </html>

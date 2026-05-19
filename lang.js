@@ -27,6 +27,19 @@
     /* Botón WhatsApp y hamburger */
     { sel: '.btn-wa',                                    html: 'Reservar classe <span class="arrow">→</span>' },
     { sel: '.hamburger', attr: 'aria-label', val: 'Obrir menú' },
+    /* Footer SEO nav — comú a totes les pàgines */
+    { sel: '.seo-footer-nav a[href="/principiantes/"]', html: 'Principiants' },
+    { sel: '.seo-footer-nav a[href="/intermedios/"]',   html: 'Amb experiència' },
+    { sel: '.seo-footer-nav a[href="/avanzados/"]',     html: 'Cos al text' },
+    { sel: '.seo-footer-nav a[href="/quienes-somos/"]', html: 'Nosaltres' },
+    { sel: '.seo-footer-nav a[href="/contacto/"]',      html: 'Contacte' },
+    { findText: '.seo-footer-copy', from: '© 2025 talleresdeteatro.es · Gràcia, Barcelona', to: '© 2025 talleresdeteatro.es · Gràcia, Barcelona' },
+    /* Botó mail — comú a diverses pàgines */
+    { findText: '.btn-ghost', from: 'Escribir por mail', to: 'Escriure per mail' },
+    { findText: '.btn-ghost', from: 'Llamar',            to: 'Trucar' },
+    { findText: '.btn-ghost', from: 'Enviar mail',       to: 'Enviar correu' },
+    /* Overline "Dónde estamos" → "On som" */
+    { findText: '.overline', from: 'Dónde estamos', to: 'On som' },
   ];
 
   /* ── Traducciones por página ─────────────────────────────────── */
@@ -38,12 +51,26 @@
     '/': [
       { sel: '.hero-mobile-badge',   html: 'Estudi de teatre<br>Dir. Sebastián Mogordoy · Candelaria Sesín' },
       { sel: '.hero-overline',       html: 'Des del 2010 a Buenos Aires — Des del 2020 a Barcelona · Gràcia' },
-      { sel: '.hero-h1',             html: 'Ser tot allò<br><span class="accent-word">que no som.</span>' },
+      { sel: '.hero-h1-seo',         html: 'Tallers de Teatre a Barcelona' },
+      /* Meta-lines del hero */
+      { sel: '.meta-line', html: 'Tallers de teatre i entrenament actoral', index: 0 },
+      { sel: '.meta-line', html: 'Formació per a principiants, intermedis<br>i entrenament per a actors professionals.', index: 1 },
+      { sel: '.meta-line', html: 'Una nova proposta de formació actoral<br>des de la improvisació dirigida.', index: 2 },
       { sel: '.hero-cta-block a.btn-primary:not(.btn-wa)', html: 'Veure tallers <span class="arrow">→</span>' },
-      /* Reseñas */
+      /* Ressenyes */
       { sel: '.reviews-header-left .overline', html: 'El que diuen' },
+      { sel: '.reviews-h2',          html: '<span class="accent-num">5</span> <span class="reviews-stars-emoji">⭐⭐⭐⭐⭐</span> <br /> 88 ressenyes <br /> a Google' },
+      { sel: '.reviews-subtitle',    html: 'Gràcies als nostres alumnes per les seves ressenyes a Google! I per la confiança, els riures, les abraçades i tot el que vivim… tant en la realitat com en la ficció.<br><br>Persones que van arribar per primera vegada al teatre i actors amb experiència comparteixen un mateix espai d\'entrenament, joc i creació. Classes de teatre a Barcelona per a tots els nivells.<br><br>Visca el teatre!' },
+      { sel: '.link-all',            html: 'Veure les 88 ressenyes <span class="arrow">→</span>' },
+      { findText: '.card-tag', from: 'Principiante', to: 'Principiant' },
+      { findText: '.card-tag', from: 'Actriz',        to: 'Actriu' },
+      { findText: '.card-tag', from: 'Intermedio',    to: 'Amb experiència' },
+      { sel: '.reviews-local-note',  html: '<strong>Classes de teatre presencials a Gràcia, Barcelona</strong> · Principiants, actors amb experiència i Cos al text' },
       { sel: '.badge-txt',           html: '<strong>5 / 5</strong> · 88 ressenyes · Google' },
-      /* Talleres */
+      { sel: '.reviews-footer a',    html: '¿Ja has entrenat amb nosaltres? Deixa la teva ressenya a Google →' },
+      /* Talleres — capçalera */
+      { sel: '.levels-header .overline', html: 'Tallers de teatre a Barcelona' },
+      { findText: 'p', from: 'dar el salto.', to: 'donar el salt.' },
       { sel: '.levels-h2',           html: 'Tria el teu<br>punt d\'<br><span class="accent-word">entrada.</span>' },
       { sel: '.levels-intro',        html: 'Tres recorreguts possibles per estudiar teatre a Barcelona: per als que comencen de zero, per als que volen aprofundir i per a actors que busquen entrenament, presència i llenguatge propi.' },
       /* Anuncio */
@@ -137,9 +164,67 @@
       { sel: '.prof-role', html: 'Professora', index: 1 },
       { sel: '.nosotros-15anos-titulo', html: '15 anys <br><span class="nosotros-juntos">junts.</span>' },
       { sel: '.nosotros-card-text', html: 'Vam começar l\'any 2010 amb 8 inoblidables alumnes al Camarín de las Musas. Avui continuem fent i pensant el teatre que ens agrada.', index: 2 },
+      /* Bios dels professors (home, índexs 0 i 1) */
+      { sel: '.nosotros-card-text', html: 'Actualment forma part de l\'elenc protagonista de <em>El Fill</em>, de Jon Fosse, dirigida per Ferran Utzet, estrenada al Teatre Lliure. L\'obra va participar al Festival Internacional de Buenos Aires i es va estrenar a la Sala Beckett. Recentment va formar part de l\'elenc de la pel·lícula <em>El professor</em>, produïda per Netflix.', index: 0 },
+      { sel: '.nosotros-card-text', html: 'Actriu, gestora cultural i docent de teatre. Va coordinar les activitats del teatre Silencio de Negras i va crear juntament amb diversos grups diferents cicles: Enredadera a la llibreria La Libre, Derrapé a Sala de Màquines, Circuito Lumínico i Lo que dura una canción. Docent a Buenos Aires i Barcelona.', index: 1 },
+      /* 15 anys junts */
       { sel: '#nosotros .container > div:last-child h2', html: 'Tenim <br><span style="color:var(--accent);">el teatre.</span>' },
       { sel: '.nosotros-card-text', html: 'En un món on la realitat ens empeny a sobreviure enmig de diferents guerres, el teatre continua sent la nostra trinxera, el nostre refugi, lloc d\'expressió, experimentació i investigació, de l\'humà i del procés creatiu.', index: 3 },
       { sel: '.nosotros-card-text', html: 'Quan la vida es posa una mica avorrida o massa agressiva, el teatre ens proposa intensitats poètiques i expressives que ens fan soltar la representació "del personatge que som a la vida" per llençar-nos en un no saber que ens obre a altres possibilitats d\'existència, expandint la nostra experiència, habitant forces i situacions que no ens són pròpies. Ens convida a ser tot allò que no som.', index: 4 },
+
+      /* Bios capçaleres mòbil */
+      { sel: '.prof-bio', html: 'Actualment forma part de l\'elenc protagonista de <em>El Fill</em>, de Jon Fosse, dirigida per Ferran Utzet, estrenada al Teatre Lliure. L\'obra va participar al Festival Internacional de Buenos Aires i es va estrenar a la Sala Beckett. Recentment va formar part de l\'elenc de la pel·lícula <em>El professor</em>, produïda per Netflix.', index: 0 },
+      { sel: '.prof-bio', html: 'Actriu, gestora cultural i docent de teatre. Va coordinar les activitats del teatre Silencio de Negras i va crear juntament amb diversos grups diferents cicles: Enredadera a la llibreria La Libre, Derrapé a Sala de Màquines, Circuito Lumínico i Lo que dura una canción. Docent a Buenos Aires i Barcelona.', index: 1 },
+
+      /* Secció Comunitat / Més enllà de la ficció */
+      { sel: '.comunidad-section .overline', html: 'Uneix-te' },
+      { sel: '.comunidad-h2',    html: 'Més enllà <br /> de la ficció.' },
+      { sel: '.comunidad-quote', html: 'Una classe de prova,<br>sense cost.' },
+      { sel: '.comunidad-text',  html: 'Barcelona és una ciutat vibrant, plena de persones de diverses edats, costums i nacionalitats. Cultivem un espai de creació, trobada real, expressió i construcció social. A més de desenvolupar el teu treball actoral, coneixes gent, compartiu i creeu amb els vostres companys. Les classes es transformen en una experiència acumulativa de rialles, assoliments i amistats.' },
+      { sel: '.comunidad-cta-block .btn-wa', html: 'Reservar classe de prova <span class="arrow">→</span>' },
+
+      /* Secció En cartellera */
+      { sel: '.noticias-section .overline', html: 'En cartellera' },
+      { sel: '#noticias h2',  html: 'Sebastián Mogordoy <br /> en escena.' },
+      { sel: '.noticia-tag',  html: 'Estrena 2026 · Teatre Lliure', index: 0 },
+      { sel: '.noticia-text', html: 'Sebastián Mogordoy forma part de l\'elenc protagonista de <em>El Fill</em>, de Jon Fosse, dirigida per Ferran Utzet. Estrenada al Teatre Lliure de Barcelona.', index: 0 },
+      { sel: '.noticia-title', html: 'Eufòria i <br /> Desassossec', index: 1 },
+      { sel: '.noticia-text', html: 'Sebastián Mogordoy forma part de l\'elenc protagonista. Dirigida per Sergio Boris. Estrenada al Festival Temporada Alta 2024. Temporada a la Sala Beckett, Obrador Internacional de Dramatúrgia. Teatros del Canal, Madrid, 2025/26.', index: 1 },
+      { findText: '.noticia-link', from: 'Ver espectáculo →', to: 'Veure l\'espectacle →' },
+
+      /* FAQs de la home */
+      { sel: '.faq-section .overline', html: 'Preguntes freqüents' },
+      { sel: '.faq-h2', html: 'Tot el que <br /> necessites saber.' },
+      { findText: '.faq-question', from: '¿Necesito experiencia previa para apuntarme?',                    to: 'Necessito experiència prèvia per apuntar-me?' },
+      { findText: '.faq-question', from: '¿Puedo apuntarme si soy actor o actriz con formación previa?',    to: 'Puc apuntar-me si sóc actor o actriu amb formació prèvia?' },
+      { findText: '.faq-question', from: '¿Cómo es una clase? ¿Qué pasa en cada encuentro?',               to: 'Com és una classe? Què passa en cada trobada?' },
+      { findText: '.faq-question', from: '¿Hay una clase de prueba gratuita?',                              to: 'Hi ha una classe de prova gratuïta?' },
+      { findText: '.faq-question', from: '¿Cuándo empieza el próximo grupo? ¿Se puede unir a uno en cualquier momento?', to: 'Quan comença el pròxim grup? Es pot incorporar algú en qualsevol moment?' },
+      { findText: '.faq-question', from: '¿Dónde se realizan las clases?',                                  to: 'On es realitzen les classes?' },
+      { findText: '.faq-question', from: '¿Qué edades participan en los talleres?',                         to: 'Quines edats participen als tallers?' },
+      { findText: '.faq-question', from: '¿Cuánto cuesta el taller?',                                       to: 'Quant costa el taller?' },
+      { findText: '.faq-question', from: '¿Se trabaja improvisación, texto o las dos cosas?',               to: 'Es treballa improvisació, text o les dues coses?' },
+      { sel: '.faq-answer p', html: 'No. El taller de principiants està dissenyat per a persones que s\'acosten al teatre per primera vegada, o que volen tornar a connectar amb el joc i l\'escena després d\'anys. El punt de partida és la curiositat i les ganes d\'explorar. No cal saber res de bestreta.', index: 0 },
+      { sel: '.faq-answer p', html: 'Sí. El taller d\'intermedis (Amb experiència) està pensat exactament per a això: actors, actrius i estudiants avançats que ja tenen un recorregut i volen aprofundir en tècnica, presència, conflicte i construcció d\'una poètica pròpia. També oferim el nivell <em>Cos al text</em>, centrat en escenes i monòlegs per a actors amb formació sòlida.', index: 1 },
+      { sel: '.faq-answer p', html: 'Cada trobada dura 3 hores. Combinem entrenament físic i vocal, improvisació d\'escenes i reflexió compartida sobre el treball. La metodologia part del cos, el present escènic i el vincle entre els participants. No treballem des de fórmules, sinó des de l\'aquí i ara de l\'escena.', index: 2 },
+      { sel: '.faq-answer p', html: 'Sí. Oferim una primera classe de prova sense cost perquè puguis viure l\'experiència abans de comprometre\'t. Només escriu-nos per WhatsApp o correu i t\'afegim a la pròxima sessió disponible.', index: 3 },
+      { sel: '.faq-answer p', html: 'Els grups de principiants obren al setembre, al gener i al juny segons la demanda. El pròxim grup arrencarà el juny de 2026. Els nivells intermedis i avançats tenen incorporació contínua quan hi ha places disponibles. Consulta\'ns per WhatsApp per saber l\'estat actual de cada grup.', index: 4 },
+      { sel: '.faq-answer p', html: 'Les classes es realitzen a l\'<strong>Espai La Mansió</strong>, al Carrer de Roger de Flor, 253, Local 2 i 3, barri de Gràcia, Barcelona (08025). És un espai ampli amb escenari, vestuari, llums i tots els recursos necessaris per a l\'entrenament actoral.', index: 5 },
+      { sel: '.faq-answer p', html: 'Els tallers estan oberts a adults de totes les edats. Conviuen persones de perfils molt diversos: estudiants, professionals, jubilats, actors en actiu i persones que mai han trepitjat un escenari. La diversitat d\'edats i experiències enriqueix el treball de grup.', index: 6 },
+      { sel: '.faq-answer p', html: 'La quota mensual inclou totes les trobades del mes. Escriu-nos per saber el detall de preus actualitzats i les opcions disponibles. La primera classe és sempre gratuïta.', index: 7 },
+      { sel: '.faq-answer p', html: 'La improvisació dirigida és l\'eix central de tots els tallers. Al nivell avançat <em>Cos al text</em> treballem específicament sobre escenes i monòlegs, abordant el text com a matèria viva: acció, impuls, respiració i comportament, no com a recitació de paraules. A tots els nivells el cos i el present escènic són el punt de partida.', index: 8 },
+
+      /* Secció Ubicació */
+      { sel: '.ubicacion-section .overline', html: 'On som' },
+      { sel: '.ubicacion-espacio', html: 'Espai <br /> La Mansió<span>.</span>' },
+      { sel: '.ubicacion-dato-text', html: '<strong>Roger de Flor, 253 · Gràcia, Barcelona</strong> Local 2 i 3 · 08025 — Barcelona, Espanya', index: 0 },
+      { findText: '.ubicacion-dato-icon', from: 'Clases', to: 'Classes' },
+      { sel: '.ubicacion-dato-text', html: 'Dilluns · Dimarts · Dimecres · Dijous<br>19:00 — 22:00 h', index: 4 },
+      { sel: '.ubicacion-cta', html: 'Com arribar-hi →' },
+      { sel: '.ubicacion-mapa-label', html: 'Gràcia · Barcelona · Clica per carregar el mapa' },
+
+      /* Galeria principal */
+      { sel: '.galeria-titulo', html: 'Som imatges <br><span class="acc">que expliquem històries.</span>' },
     ],
 
     /* ══════════════════════════════════════════════════════
@@ -170,7 +255,7 @@
       /* Tags */
       { findText: '.intro-kw-tag', from: 'Improvisación teatral', to: 'Improvisació teatral' },
       { findText: '.intro-kw-tag', from: 'Formación actoral',     to: 'Formació actoral' },
-      { findText: '.intro-kw-tag', from: 'Gracia, Barcelona',     to: 'Gràcia, Barcelona' },
+      { findText: '.intro-kw-tag', from: 'Gràcia, Barcelona',     to: 'Gràcia, Barcelona' },
       { findText: '.intro-kw-tag', from: 'Adultos',               to: 'Adults' },
       { findText: '.intro-kw-tag', from: 'Desde cero',            to: 'Des de zero' },
 
@@ -294,6 +379,42 @@
       { sel: '.galeria-universo .overline', html: 'El taller en imatges' },
       { sel: '.galeria-titulo', html: 'Som imatges<br><span class="acc">que expliquem històries.</span>' },
       { sel: '.gallery .overline', html: 'Galeria' },
+
+      /* Hacer teatro section */
+      { sel: '.hacer-headline', html: '<span class="hacer-verb">Fem</span><br>teatre.' },
+      { sel: '.hacer-headline', attr: 'aria-label', val: 'Fem teatre' },
+
+      /* Video section — parágrafos */
+      { sel: '.video-p', html: 'Tres hores per setmana. Un espai pensat perquè alguna cosa real passi.', index: 0 },
+      { sel: '.video-p', html: 'Coord. <strong>Sebastián Mogordoy</strong> i <strong>Candelaria Sesín</strong><br>Espai La Mansió · Gràcia, Barcelona', index: 1 },
+
+      /* Testimonios secció */
+      { sel: '.testimonio-featured-text', html: 'Vaig arribar sense experiència i amb molta por. Des de la primera classe vaig sentir que podia provar, equivocar-me i descobrir alguna cosa pròpia. No és només una classe de teatre: és un espai per animar-se a parts d\'un mateix que la rutina sol apagar.' },
+      { sel: '.testimonio-featured-name', html: '★★★★★, Laura M. · Principiants, Barcelona' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(1) .testimonio-text', html: 'Buscava un taller per perdre la vergonya i vaig acabar trobant molt més. El treball amb el cos, la improvisació i el grup et porten a llocs que no esperaves. Seba i Cande creen un ambient únic.' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(1) .testimonio-name', html: 'Marc P. · Principiant · Barcelona' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(2) .testimonio-text', html: 'Mai vaig imaginar que podria pujar a un escenari i gaudir-ne. Recomano aquesta experiència a qualsevol persona que senti alguna cosa en imaginar-se actuant, aquell pessigolleig no enganya.' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(2) .testimonio-name', html: 'Clara R. · Principiant · Barcelona' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(3) .testimonio-text', html: 'No tenia ni idea de teatre i m\'hi vaig animar. Des de la primera classe vaig entendre que no es tracta d\'actuar «bé», sinó d\'estar present i ser honesta. Alguna cosa d\'això em va quedar també fora del taller.' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(3) .testimonio-name', html: 'Marta L. · Primer any · Gràcia' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(4) .testimonio-text', html: 'Hi ha alguna cosa molt especial en la forma en què es construeix el grup. Cada classe obre una porta diferent: al joc, a la imaginació, al cos, a l\'escena. No esperava que fos tan transformador.' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(4) .testimonio-name', html: 'Ana G. · Alumna primer any · Barcelona' },
+
+      /* Reels/test section */
+      { sel: '.test-h2', html: 'El que diuen<br>els que ja<br><span class="acc">hi eren.</span>' },
+      { findText: '.test-card-label', from: 'Testimonio', to: 'Testimoni' },
+
+      /* Info — Precio i Días y grupos */
+      { findText: '.info-label', from: 'Precio', to: 'Preu' },
+      { sel: '.info-value', html: '<strong>Dilluns · 19 a 22 h</strong> — Coord. Candelaria Sesín.<br><span class="info-note">Sense vacants. Inscripció oberta per a setembre.</span><br><br><strong>Dimarts · 19 a 22 h</strong> — Coord. Sebastián Mogordoy.<br><span class="info-note">Inici juny · Seminari juny i juliol. Inscripció oberta.</span><br><br><strong>Dijous · 19 a 22 h</strong> — Coord. Sebastián Mogordoy.<br><span class="info-note">Sense vacants. Inscripció oberta per a setembre.</span>', index: 2 },
+      { sel: '.info-value', html: 'Sebastián Mogordoy · Candelaria Sesín', index: 5 },
+      { findText: '.info-note', from: 'Para grupos nuevos te recomendamos reservar plaza directamente, las vacantes son limitadas.', to: 'Per a grups nous et recomanem reservar plaça directament, les vacants són limitades.' },
+      { findText: '.info-note', from: 'Enviamos la info completa de precios y horarios al consultar.', to: 'Us enviem la info completa de preus i horaris en consultar.' },
+
+      /* Botons CTA info section */
+      { sel: 'a.btn-primary[href*="principiantes."]', html: 'Consultar per WhatsApp <span class="arrow">→</span>' },
+      { sel: 'a[href*="taller-bienvenida"] span:first-of-type', html: 'Carta de benvinguda al taller' },
+      { sel: 'a[href*="taller-bienvenida"] span:last-of-type',  html: 'PDF · Descarregar' },
     ],
 
     /* ══════════════════════════════════════════════════════
@@ -407,6 +528,29 @@
       { sel: '.cta-final-heading', html: 'Imaginar amb <br>el cos. <br><span class="acc">El cos com a territori.</span>' },
       { sel: '.cta-final-sub', html: 'Una primera classe sense cost. Sense compromís.<br>Només per veure si és el teu lloc.' },
       { sel: '.cta-nota', html: 'Incorporació per entrevista — Places limitades' },
+
+      /* Info h2 i tagline (intermedios) */
+      { sel: '.info-h2',      html: 'Tot el <br>que necessites <br>saber.' },
+      { sel: '.info-tagline', html: 'Una primera classe de prova sense cost. Sense compromisos. Per veure si el treball ressona amb el que busques.' },
+
+      /* Botons CTA info section */
+      { sel: 'a.btn-primary[href*="experiencia."]', html: 'Reservar plaça <span class="arrow">→</span>' },
+
+      /* Testimonios */
+      { sel: '.testimonio-featured-text', html: 'Feia anys que feia teatre però havia perdut el fil. Vaig trobar en aquest taller un lloc on el treball té exigència real: no s\'explica, es fa. Seba i Cande et porten a llocs que no esperaves, fins i tot quan crèies que ja els coneixies.' },
+      { sel: '.testimonio-featured-name', html: '★★★★★ · Rodrigo M. · Actor, taller amb experiència · Barcelona' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(1) .testimonio-text', html: 'Venia d\'una formació acadèmica i buscava alguna cosa que complementés la tècnica amb la recerca personal. Aquest taller fa exactament això: el treball és rigorós, però el punt d\'arribada és sempre alguna cosa teva.' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(1) .testimonio-name', html: 'Patricia V. · Actriu · Barcelona' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(2) .testimonio-text', html: 'El que més em va sorprendre va ser la qualitat de l\'escolta en el grup. Quan el nivell és similar el treball canvia completament. Cada classe obre alguna cosa que no hauries obert sol.' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(2) .testimonio-name', html: 'Iván P. · Actor independent · Barcelona' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(3) .testimonio-text', html: 'Havia fet diversos tallers i en molts el temps se n\'anava en explicar el bàsic. Aquí des del primer dia vam entrar directament al treball. Es nota que el nivell és diferent i això s\'agraeix moltíssim.' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(3) .testimonio-name', html: 'Elena G. · Estudiant d\'interpretació · Gràcia' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(4) .testimonio-text', html: 'No esperava trobar un espai on la poètica personal tingués tant de pes. No és un taller on t\'ensenyen a actuar: és un espai on aprens a reconèixer quin tipus d\'actor ets. Això no té preu.' },
+      { sel: '.testimonios-grid .testimonio-card:nth-child(4) .testimonio-name', html: 'Marta S. · Actriu i directora · Barcelona' },
+
+      /* Galeria */
+      { sel: '.galeria-titulo', html: 'El nostre univers, <br><span class="acc">les nostres imatges.</span>' },
+      { findText: 'p', from: 'Haz clic en cualquier foto para ampliarla.', to: 'Fes clic a qualsevol foto per ampliar-la.' },
     ],
 
     /* ══════════════════════════════════════════════════════
@@ -440,7 +584,7 @@
       { findText: '.intro-kw-tag', from: 'Monólogos',         to: 'Monòlegs' },
       { findText: '.intro-kw-tag', from: 'Voz y actuación',   to: 'Veu i actuació' },
       { findText: '.intro-kw-tag', from: 'Técnica actoral',   to: 'Tècnica actoral' },
-      { findText: '.intro-kw-tag', from: 'Barcelona · Gracia', to: 'Barcelona · Gràcia' },
+      { findText: '.intro-kw-tag', from: 'Barcelona · Gràcia', to: 'Barcelona · Gràcia' },
 
       /* Escena section */
       { sel: '.escena-section .overline', html: 'Entrenament' },
@@ -521,6 +665,25 @@
       { sel: '.cta-final-heading', html: 'Habitar <br><span class="acc">les paraules.</span>' },
       { sel: '.cta-final-sub', html: 'Incorporació per entrevista o experiència prèvia.<br>Escriu-nos i ho parlem.' },
       { sel: '.cta-nota', html: 'Incorporació per entrevista — Places limitades' },
+
+      /* Editorial strip caption */
+      { sel: '.editorial-strip-caption span', html: 'Cos al text' },
+      { sel: '.editorial-strip-caption p',    html: 'La paraula<br>com a esdeveniment<br>físic.' },
+
+      /* Botó "Consultar vacantes" al vídeo */
+      { sel: 'a.btn-primary[href*="Cuerpo"]', html: 'Consultar vacants <span class="arrow">→</span>' },
+
+      /* Testimonios — estructura diferent en avanzados */
+      { sel: '.testimonio-featured .testimonio-text', html: 'Feia anys treballant amb text i sentia que alguna cosa no tancava. Deia bé, em movia bé, però no hi havia res viu a dins. En aquest taller vaig entendre que no és qüestió de dir millor: és qüestió d\'estar en situació. La diferència entre recitar i actuar la vaig entendre aquí per primera vegada.' },
+      { sel: '.testimonio-featured .testimonio-author', html: 'Marta F. — Actriu, formació ESAD' },
+      { sel: '.testimonio-grid .testimonio-item:nth-child(1) .testimonio-text', html: 'El treball amb la veu em va obrir alguna cosa que no esperava. No era tècnica vocal separada de l\'actuació, era tot junt. Quan l\'estat és real, la veu sona diferent. Això no ho havia escoltat en cap altre lloc.' },
+      { sel: '.testimonio-grid .testimonio-item:nth-child(1) .testimonio-author', html: 'Daniel V. — Actor de companyia' },
+      { sel: '.testimonio-grid .testimonio-item:nth-child(2) .testimonio-text', html: 'Vaig treballar monòlegs durant anys sense entendre què em bloquejava. Aquí vaig descobrir que el problema era que els tractava com textos. Des que els treballo com escenes, amb algú real o imaginari davant, alguna cosa es va obrir.' },
+      { sel: '.testimonio-grid .testimonio-item:nth-child(2) .testimonio-author', html: 'Andrea P. — Estudiant avançada' },
+      { sel: '.testimonio-grid .testimonio-item:nth-child(3) .testimonio-text', html: 'El que més em va sorprendre va ser la precisió. No és un taller on tot val. Es treballa amb molta atenció sobre el que passa realment a escena. Això és exactament el que necessitava.' },
+      { sel: '.testimonio-grid .testimonio-item:nth-child(3) .testimonio-author', html: 'Javier C. — Actor independent, Barcelona' },
+      { sel: '.testimonio-grid .testimonio-item:nth-child(4) .testimonio-text', html: 'El ritme del text va començar a tenir sentit quan el vaig connectar amb la respiració i amb el que vull a l\'escena. Abans era decoratiu. Ara és constitutiu. Aquesta diferència la vaig aprendre aquí.' },
+      { sel: '.testimonio-grid .testimonio-item:nth-child(4) .testimonio-author', html: 'Lucía M. — Actriu i directora' },
     ],
 
     /* ══════════════════════════════════════════════════════
@@ -582,24 +745,66 @@
       /* CTA final */
       { sel: '.cta-final-heading', html: 'Ser el <br>poema. <br><span class="acc">Imaginar amb el cos.</span>' },
       { sel: '.cta-final-sub', html: 'Un espai per actuar,<br>pensar, imaginar<br>i estar amb altres.' },
+
+      /* Hero SEO h1 */
+      { sel: '.hero-seo-h1', html: 'Professors de teatre Barcelona · Sebastián Mogordoy · Candelaria Sesín' },
+
+      /* Hero mobile names */
+      { sel: '.hero-mobile-names-years', html: '15 anys de teatre' },
+      { sel: '.hero-mobile-names-text',  html: 'Sebastián Mogordoy · Candelaria Sesín' },
+
+      /* Bios dels assistents */
+      { sel: '.asistente-bio', html: 'Actriu i ballarina portenya, llicenciada per la UNA. Integra moviment, dansa i actuació com a llenguatges indissociables. Assistent als tallers des de 2024.', index: 0 },
+      { sel: '.asistente-bio', html: 'Actor i docent, Llicenciat en Arts Dramàtiques (UNA). Formulat en el teatre argentí contemporani. Assistent als tallers des de 2024.', index: 1 },
     ],
 
     /* ══════════════════════════════════════════════════════
        CONTACTO
     ══════════════════════════════════════════════════════ */
     '/contacto/': [
-      { sel: '.contact-hero-title',      html: 'Escriu-nos.' },
-      { sel: 'label[for="nombre"]',      html: 'Nom' },
-      { sel: 'label[for="email"]',       html: 'Correu electrònic' },
-      { sel: 'label[for="nivel"]',       html: 'Nivell d\'interès' },
-      { sel: 'label[for="mensaje"]',     html: 'Missatge' },
-      { sel: 'input[name="nombre"]',     attr: 'placeholder', val: 'El teu nom' },
-      { sel: 'input[name="email"]',      attr: 'placeholder', val: 'correu@exemple.com' },
-      { sel: 'textarea[name="mensaje"]', attr: 'placeholder', val: 'Explica\'ns el que vulguis...' },
-      { sel: 'button[type="submit"]',    html: 'Enviar missatge →' },
-      { sel: 'option[value="principiantes"]', html: 'Principiants' },
-      { sel: 'option[value="intermedios"]',   html: 'Amb experiència' },
-      { sel: 'option[value="avanzados"]',     html: 'Cos al text' },
+      /* Hero */
+      { findText: '.overline', from: 'Talleres de Teatro Barcelona · Desde 2010', to: 'Tallers de Teatre Barcelona · Des del 2010' },
+      { sel: '.contact-hero-title', html: 'Vine a una classe <br /> de prova, <br><span>¡sense cost!</span>' },
+      { sel: '.contact-hero-sub',   html: 'Escriu-nos, explica\'ns en quin nivell estàs i et diem com provar-ho.' },
+
+      /* Franja contacte ràpid */
+      { findText: '.quick-strip-label', from: 'Contacto', to: 'Contacte' },
+
+      /* Formulari */
+      { findText: '.overline', from: 'Escríbenos', to: 'Escriu-nos' },
+      { sel: '.form-heading', html: 'Reserva el teu lloc.' },
+      { sel: '.form-sub',     html: 'Et responem en menys de 24 hores amb tota la info per començar.' },
+      { sel: 'label[for="nombre"]',   html: 'Nom' },
+      { sel: 'input[name="nombre"]',  attr: 'placeholder', val: 'El teu nom' },
+      { sel: 'label[for="apellido"]', html: 'Cognom' },
+      { sel: 'input[name="apellido"]',attr: 'placeholder', val: 'El teu cognom' },
+      { sel: 'label[for="email"]',    html: 'Correu electrònic' },
+      { sel: 'input[name="email"]',   attr: 'placeholder', val: 'tu@correu.com' },
+      { sel: 'label[for="telefono"]', html: 'Telèfon / WhatsApp' },
+      { sel: 'label[for="nivel"]',    html: 'Quin taller t\'interessa?' },
+      { sel: 'option[value=""]',      html: 'Selecciona un taller' },
+      { sel: 'option[value="principiantes"]', html: 'Principiants — sense experiència prèvia' },
+      { sel: 'option[value="intermedios"]',   html: 'Amb experiència — un cert recorregut' },
+      { sel: 'option[value="avanzados"]',     html: 'Cos al text — actors formats' },
+      { sel: 'option[value="no-se"]',         html: 'Encara no ho sé, necessito orientar-me' },
+      { sel: 'label[for="mensaje"]',          html: 'Missatge (opcional)' },
+      { sel: 'textarea[name="mensaje"]',      attr: 'placeholder', val: 'Explica\'ns alguna cosa sobre tu, la teva experiència o el que busques…' },
+      { sel: '.form-privacy',  html: 'En enviar aquest formulari acceptes que les teves dades s\'usin únicament per respondre la teva consulta. No compartim informació amb tercers.' },
+      { sel: 'button[type="submit"]', html: 'Enviar missatge <span style="margin-left:4px;">→</span>' },
+
+      /* Missatge d'èxit */
+      { sel: '.form-success h3', html: 'Missatge enviat!' },
+      { sel: '.form-success p',  html: 'Et responem en menys de 24 hores. Mentrestant, pots escriure\'ns per WhatsApp si ho necessites.' },
+
+      /* Bloc d'informació */
+      { sel: '.info-block-title', html: 'Contacte', index: 0 },
+      { sel: '.info-block-title', html: 'Xarxes socials', index: 1 },
+      { sel: '.contact-card-note', html: 'La manera més ràpida de contactar-nos', index: 0 },
+      { sel: '.contact-card-note', html: 'Et responem en menys de 24h', index: 1 },
+
+      /* Footer */
+      { findText: '.footer-copy', from: '© 2025 Talleres de Teatro Barcelona · talleresdeteatro.es', to: '© 2025 Tallers de Teatre Barcelona · talleresdeteatro.es' },
+      { findText: '.footer-copy', from: 'Espacio La Mansión · Gràcia, Barcelona', to: 'Espai La Mansió · Gràcia, Barcelona' },
     ],
 
     /* ══════════════════════════════════════════════════════
@@ -613,8 +818,78 @@
        BLOG
     ══════════════════════════════════════════════════════ */
     '/blog/': [
-      { sel: '.blog-overline, .page-overline', html: 'Lectures' },
-      { sel: '.blog-h1, .page-h1',             html: 'Articles i reflexions.' },
+      /* Capçalera */
+      { sel: '.blog-header .overline', html: 'Articles sobre actuació, improvisació i entrenament' },
+      { sel: '.blog-title',            html: 'Pensem <br><span>el teatre.</span>' },
+      { sel: '.blog-subtitle',         html: 'Articles sobre teatre, actuació i improvisació. Per Sebastián Mogordoy.' },
+
+      /* Pestanyes */
+      { sel: 'span.blog-tab',          html: 'Lectures' },
+      { sel: 'a.blog-tab.tab-quiz',    html: 'Qüestionari' },
+
+      /* Tags d'articles */
+      { findText: '.card-tag', from: 'Técnica actoral',      to: 'Tècnica actoral' },
+      { findText: '.card-tag', from: 'Filosofía del teatro', to: 'Filosofia del teatre' },
+      { findText: '.card-tag', from: 'Entrenamiento',        to: 'Entrenament' },
+      { findText: '.card-tag', from: 'Metodología',          to: 'Metodologia' },
+      { findText: '.card-tag', from: 'Escena y situación',   to: 'Escena i situació' },
+      { findText: '.card-tag', from: 'Maestros',             to: 'Mestres' },
+      { findText: '.card-tag', from: 'Proceso creativo',     to: 'Procés creatiu' },
+
+      /* Títols dels 18 articles */
+      { sel: '.card-title', html: 'Per què actuar <br /> no és representar',              index: 0 },
+      { sel: '.card-title', html: 'El joc <br /> com a origen',                           index: 1 },
+      { sel: '.card-title', html: 'Imaginar <br /> vs. pensar',                           index: 2 },
+      { sel: '.card-title', html: 'Què és la <br /> improvisació dirigida',               index: 3 },
+      { sel: '.card-title', html: 'El voler <br /> animal',                               index: 4 },
+      { sel: '.card-title', html: 'Entre dos <br /> focs',                                index: 5 },
+      { sel: '.card-title', html: 'El cos <br /> com a territori',                        index: 6 },
+      { sel: '.card-title', html: 'La mirada <br /> és un acte',                          index: 7 },
+      { sel: '.card-title', html: 'El cos <br /> parla primer',                           index: 8 },
+      { sel: '.card-title', html: 'El que no <br /> es pot dir',                          index: 9 },
+      { sel: '.card-title', html: 'L\'espera <br /> activa',                              index: 10 },
+      { sel: '.card-title', html: 'Som <br /> una imatge',                                index: 11 },
+      { sel: '.card-title', html: 'El teu univers <br /> no és la teva biografia',        index: 12 },
+      { sel: '.card-title', html: 'Habitar <br /> el present',                            index: 13 },
+      { sel: '.card-title', html: 'El vèrtig <br /> de la pàgina en blanc',               index: 14 },
+      { sel: '.card-title', html: 'Cossos <br /> desitjants',                             index: 15 },
+      { sel: '.card-title', html: 'El poder <br /> del vestuari',                         index: 16 },
+      { sel: '.card-title', html: 'L\'assaig',                                            index: 17 },
+
+      /* Extractes dels 18 articles */
+      { sel: '.card-excerpt', html: 'La diferència entre «fer com si» i estar de veritat a escena. El «personatget» i el salt al present que ho canvia tot.', index: 0 },
+      { sel: '.card-excerpt', html: 'De la infància a l\'escenari: per què actuar és un superjoc adult, apassionat i sense ingenuïtat ni solemnitat.', index: 1 },
+      { sel: '.card-excerpt', html: 'Pensar organitza. Imaginar encarna. La diferència més important que existeix per a un actor, i com entrenar-la.', index: 2 },
+      { sel: '.card-excerpt', html: 'L\'eix de la nostra filosofia d\'entrenament: crear sense guió, des del cos, amb desig i sense representar.', index: 3 },
+      { sel: '.card-excerpt', html: 'Com habitar una situació a escena i deixar d\'explicar el personatge. La força que ho canvia tot.', index: 4 },
+      { sel: '.card-excerpt', html: 'Raúl Serrano i Ricardo Bartís: com dues visions de vegades oposades van forjar una mirada pròpia sobre el teatre.', index: 5 },
+      { sel: '.card-excerpt', html: 'El cos no representa: habita. L\'espai escènic com a camp d\'acció i l\'actor com a territori viu.', index: 6 },
+      { sel: '.card-excerpt', html: 'En teatre, mirar no és observar passivament. És prendre poder, investigar l\'altre, deixar-se travessar.', index: 7 },
+      { sel: '.card-excerpt', html: 'Abans que arribin les paraules, el cos ja va parlar. Per què el moviment és el primer text de l\'actor.', index: 8 },
+      { sel: '.card-excerpt', html: 'El teatre com a espai on el prohibit troba veu. El desig reprimit com a motor de tota acció dramàtica.', index: 9 },
+      { sel: '.card-excerpt', html: 'Esperar a escena no és no fer res. L\'escolta real és una de les accions més exigents del treball actoral.', index: 10 },
+      { sel: '.card-excerpt', html: 'Abans de dir la primera paraula, ja estàs narrant. El cos a l\'espai és una imatge viva que interpel·la qui l\'observa.', index: 11 },
+      { sel: '.card-excerpt', html: 'El teatre no és psicodrama. No ens interessa la teva història privada, ens interessa el teu univers personal: la teva sensibilitat, els teus ritmes, les teves imatges.', index: 12 },
+      { sel: '.card-excerpt', html: 'El personatget apareix quan actuem per explicar una idea. L\'alternativa és el voler animal: un desig que ancora el cos en temps real.', index: 13 },
+      { sel: '.card-excerpt', html: 'Què passa si em bloquejo? El vèrtig apareix quan busquem lògica en la improvisació. La sortida és baixar al cos i deixar que les paraules siguin imatges.', index: 14 },
+      { sel: '.card-excerpt', html: 'La societat genera un cos domesticat que reprimeix l\'impuls. Al taller donem la batalla contrària: despertar la desmesura i la fricció viva.', index: 15 },
+      { sel: '.card-excerpt', html: 'Posar-se una peça no és disfressar-se. El vestuari modifica la corporalitat, altera el centre de gravetat i canvia tot el que narrem abans de parlar.', index: 16 },
+      { sel: '.card-excerpt', html: 'L\'assaig no és un espai per a la correcció ni l\'obediència. És el territori de major perill i fricció, on el cos intenta obrir aquella esquerda en la realitat.', index: 17 },
+
+      /* CTA de tots els articles */
+      { findText: '.card-cta', from: 'Leer artículo', to: 'Llegir article' },
+
+      /* Secció CTA final del blog */
+      { sel: '.blog-cta-text h2', html: '¿Vols viure\'l<br>a escena?' },
+      { sel: '.blog-cta-text p',  html: 'La primera classe és gratuïta. Vine a provar l\'entrenament i descobreix si el teatre és el teu lloc.' },
+      { sel: '.blog-cta .btn-primary', html: 'Primera classe gratuïta →' },
+
+      /* Footer links blog */
+      { sel: '.footer-links a[href="/principiantes/"]', html: 'Principiants' },
+      { sel: '.footer-links a[href="/intermedios/"]',   html: 'Amb experiència' },
+      { sel: '.footer-links a[href="/avanzados/"]',     html: 'Cos al text' },
+      { sel: '.footer-links a[href="/contacto/"]',      html: 'Contacte' },
+      { findText: '.footer-copy', from: '© 2026 Talleres de Teatro Barcelona · Gràcia', to: '© 2026 Tallers de Teatre Barcelona · Gràcia' },
     ],
   };
 
@@ -653,6 +928,10 @@
     var path = location.pathname;
     if (path !== '/' && path.slice(-1) !== '/') path += '/';
     if (PAGES[path]) applyList(PAGES[path]);
+    /* data-ca: elements marcats amb data-ca reben aquell HTML */
+    document.querySelectorAll('[data-ca]').forEach(function(el) {
+      el.innerHTML = el.getAttribute('data-ca');
+    });
     document.documentElement.lang = 'ca';
     localStorage.setItem('ttb_lang', 'ca');
     updateToggle('ca');
