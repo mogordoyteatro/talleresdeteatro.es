@@ -441,7 +441,7 @@
 
     /* ── Botón mute/unmute ── */
     .hero-sound {
-      position: absolute; top: calc(var(--nav-h, 72px) + 160px); right: var(--pad-x);
+      position: absolute; top: calc(68px + 14px); right: var(--pad-x);
       z-index: 20;
       background: rgba(0,0,0,0.45);
       border: 1px solid rgba(255,255,255,0.2);
@@ -4354,11 +4354,16 @@
             </div>
           </div>
 
-          <!-- V01: Intro MP4 -->
+          <!-- V01: Presentación YT -->
           <div class="video-card">
             <div class="video-card-label">Presentación</div>
             <div class="video-embed-wrap">
-              <video controls preload="metadata" poster="imagenes_optimizadas/sebastian-mogordoy-candelaria-sesin-profesores-teatro-barcelona.jpg">              </video>
+              <div class="yt-facade" data-ytid="cjjhpn-KzAE">
+                <img src="/imagenes_optimizadas/sebastian-mogordoy-candelaria-sesin-profesores-teatro-barcelona.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/cjjhpn-KzAE/hqdefault.jpg'"
+                     alt="Presentación — Talleres de Teatro Barcelona" loading="lazy">
+                <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="white"/></svg></div>
+              </div>
             </div>
           </div>
 
@@ -4367,7 +4372,9 @@
             <div class="video-card-label">Principiantes</div>
             <div class="video-embed-wrap">
               <div class="yt-facade" data-ytid="rKMlLob3r1w">
-                <img src="/imagenes_optimizadas/la-creacion-del-artificio-taller-teatro-principiantes-barcelona.jpg" alt="Principiantes — La creación del artificio" loading="lazy">
+                <img src="/imagenes_optimizadas/la-creacion-del-artificio-taller-teatro-principiantes-barcelona.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/rKMlLob3r1w/hqdefault.jpg'"
+                     alt="Principiantes — La creación del artificio" loading="lazy" style="display:block;">
                 <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="white"/></svg></div>
               </div>
             </div>
@@ -4378,7 +4385,9 @@
             <div class="video-card-label">Intermedios</div>
             <div class="video-embed-wrap">
               <div class="yt-facade" data-ytid="4An61DJr39w">
-                <img src="https://img.youtube.com/vi/4An61DJr39w/hqdefault.jpg" alt="Intermedios — Inscribir lo propio" loading="lazy">
+                <img src="https://img.youtube.com/vi/4An61DJr39w/hqdefault.jpg"
+                     onerror="this.src='/imagenes_optimizadas/nosotros-candelaria-sebastian-directores-talleres-teatro-barcelona.jpg'"
+                     alt="Intermedios — Inscribir lo propio" loading="lazy" style="display:block;">
                 <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="white"/></svg></div>
               </div>
             </div>
@@ -4593,13 +4602,6 @@
             </div>
           </div>
 
-          <!-- V23: WhatsApp Behind the scenes -->
-          <div class="video-card">
-            <div class="video-card-label">Behind the scenes</div>
-            <div class="video-embed-wrap">
-              <video controls preload="metadata">              </video>
-            </div>
-          </div>
 
         </div>
       </div>
