@@ -1923,7 +1923,7 @@
     /* ══════════════════════════════════════
        BUILD LANDING
     ══════════════════════════════════════ */
-    function buildLanding() {
+    function buildLanding(forceEager) {
       themesGrid.innerHTML = '';
       getCurrentTemas().forEach((tema, i) => {
         const card = document.createElement('div');
@@ -1931,8 +1931,9 @@
         card.setAttribute('role', 'button');
         card.setAttribute('tabindex', '0');
         card.setAttribute('aria-label', `Tema: ${tema.titulo.replace('\n', ' ')}`);
+        const loadAttr = (forceEager || i < 3) ? 'eager' : 'lazy';
         card.innerHTML = `
-          <img class="theme-card-img" src="${BASE}${tema.foto}" alt="${tema.titulo.replace('\n', ' ')}" loading="${i < 3 ? 'eager' : 'lazy'}" />
+          <img class="theme-card-img" src="${BASE}${tema.foto}" alt="${tema.titulo.replace('\n', ' ')}" loading="${loadAttr}" />
           <div class="theme-card-overlay"></div>
           <div class="theme-card-content">
             <div class="theme-card-top">
@@ -2114,7 +2115,7 @@
     ══════════════════════════════════════ */
     new MutationObserver(() => {
       if (landingScreen.classList.contains('visible')) {
-        buildLanding();
+        buildLanding(true); /* forceEager: las imágenes ya estaban cargadas, no re-lazy */
       } else if (quizScreen.classList.contains('visible') && activeTemaIdx !== null) {
         activeTema = getCurrentTemas()[activeTemaIdx];
         quizThemeName.textContent = activeTema.titulo.replace('\n', ' ');
