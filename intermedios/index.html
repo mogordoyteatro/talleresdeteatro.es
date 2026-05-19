@@ -2507,14 +2507,26 @@
       }, { passive: true });
     })();
 
-    // ── Hero sound toggle ─────────────────────────────────────
+    // ── Música ambient — audio nativo
     (function () {
       var btn = document.getElementById('soundBtn');
-      var vid = document.getElementById('heroVideo');
-      if (!btn || !vid) return;
+      if (!btn) return;
+      var audio = new Audio('/audio/oiseau.mp3');
+      audio.loop = true;
+      audio.volume = 0.55;
+      var playing = false;
       btn.addEventListener('click', function () {
-        vid.muted = !vid.muted;
-        btn.classList.toggle('is-unmuted', !vid.muted);
+        if (!playing) {
+          audio.play();
+          playing = true;
+          btn.classList.add('is-unmuted');
+          btn.setAttribute('aria-label', 'Pausar música');
+        } else {
+          audio.pause();
+          playing = false;
+          btn.classList.remove('is-unmuted');
+          btn.setAttribute('aria-label', 'Reproducir música');
+        }
       });
     })();
 

@@ -2133,29 +2133,28 @@
     })();
 
     // ── Música ambient — Futile Devices (Sufjan Stevens) ────────
-    (function () {
+    // Música ambient — audio nativo
+    (function () {{
       var btn = document.getElementById('soundBtn');
       if (!btn) return;
-      var iframe = null;
+      var audio = new Audio('/audio/higher-ground.mp3');
+      audio.loop = true;
+      audio.volume = 0.55;
       var playing = false;
-      btn.addEventListener('click', function () {
-        if (!playing) {
-          iframe = document.createElement('iframe');
-          iframe.src = 'https://open.spotify.com/embed/track/4Zts9erRexAxILn5XjSwUN?utm_source=generator&theme=0&autoplay=1';
-          iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-          iframe.style.cssText = 'position:fixed;bottom:-400px;left:-400px;width:152px;height:152px;border:0;pointer-events:none;';
-          document.body.appendChild(iframe);
+      btn.addEventListener('click', function () {{
+        if (!playing) {{
+          audio.play();
           playing = true;
           btn.classList.add('is-unmuted');
           btn.setAttribute('aria-label', 'Pausar música');
-        } else {
-          if (iframe) { iframe.remove(); iframe = null; }
+        }} else {{
+          audio.pause();
           playing = false;
           btn.classList.remove('is-unmuted');
           btn.setAttribute('aria-label', 'Reproducir música');
-        }
-      });
-    })();
+        }}
+      }});
+    }})();
 
     // ── Hamburger mobile ──────────────────────────────────────
     (function () {
