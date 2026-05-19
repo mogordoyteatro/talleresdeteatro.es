@@ -2143,7 +2143,7 @@
           iframe = document.createElement('iframe');
           iframe.src = 'https://open.spotify.com/embed/track/4Zts9erRexAxILn5XjSwUN?utm_source=generator&theme=0&autoplay=1';
           iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-          iframe.style.cssText = 'position:absolute;width:0;height:0;border:0;opacity:0;pointer-events:none;';
+          iframe.style.cssText = 'position:fixed;bottom:-200px;left:-200px;width:80px;height:80px;border:0;opacity:0;pointer-events:none;';
           document.body.appendChild(iframe);
           playing = true;
           btn.classList.add('is-unmuted');
