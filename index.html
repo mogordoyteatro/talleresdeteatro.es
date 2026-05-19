@@ -4312,48 +4312,6 @@
       <div class="gallery-panel" id="panel-videos" role="tabpanel">
         <div class="videos-grid">
 
-          <!-- R01: Reel IG -->
-          <div class="video-card ig-reel-card" data-reel="DTS8bjXlVIE" role="button" tabindex="0" aria-label="Ver reel de Instagram" style="cursor:pointer;">
-            <div class="video-card-label">El entrenamiento</div>
-            <div class="video-embed-wrap" style="position:relative;background:#111;">
-              <img src="https://www.instagram.com/p/DTS8bjXlVIE/media/?size=l"
-                   onerror="this.src='imagenes_optimizadas/actores-taller-barcelona-0451.jpg'"
-                   alt="Reel — El entrenamiento" loading="lazy"
-                   style="width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:16/9;">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
-                <svg viewBox="0 0 80 80" fill="none" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg>
-              </div>
-            </div>
-          </div>
-
-          <!-- R02: Reel IG -->
-          <div class="video-card ig-reel-card" data-reel="DVd4sbUDydx" role="button" tabindex="0" aria-label="Ver reel de Instagram" style="cursor:pointer;">
-            <div class="video-card-label">La clase</div>
-            <div class="video-embed-wrap" style="position:relative;background:#111;">
-              <img src="https://www.instagram.com/p/DVd4sbUDydx/media/?size=l"
-                   onerror="this.src='imagenes_optimizadas/clases-de-teatro-barcelona-principiantes-intermedios-avanzados.jpg'"
-                   alt="Reel — La clase" loading="lazy"
-                   style="width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:16/9;">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
-                <svg viewBox="0 0 80 80" fill="none" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg>
-              </div>
-            </div>
-          </div>
-
-          <!-- R03: Reel IG -->
-          <div class="video-card ig-reel-card" data-reel="DGp3r5BsMB5" role="button" tabindex="0" aria-label="Ver reel de Instagram" style="cursor:pointer;">
-            <div class="video-card-label">En escena</div>
-            <div class="video-embed-wrap" style="position:relative;background:#111;">
-              <img src="https://www.instagram.com/p/DGp3r5BsMB5/media/?size=l"
-                   onerror="this.src='imagenes_optimizadas/actores-taller-barcelona-0579.jpg'"
-                   alt="Reel — En escena" loading="lazy"
-                   style="width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:16/9;">
-              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
-                <svg viewBox="0 0 80 80" fill="none" width="52" height="52" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg>
-              </div>
-            </div>
-          </div>
-
           <!-- V01: Presentación YT -->
           <div class="video-card">
             <div class="video-card-label">Presentación</div>
@@ -5365,6 +5323,9 @@
     var closeBtn = document.getElementById('popup-close-btn');
     if (!popup) return;
 
+    var iframe = popup.querySelector('iframe');
+    var iframeSrc = iframe ? iframe.src : '';
+
     // Mostrar después de 1.2 seg si no lo cerró hoy
     var key = 'ttb_popup_closed_clase_abierta';
     var today = new Date().toDateString();
@@ -5373,6 +5334,8 @@
     }
 
     function closePopup() {
+      // Detener el video limpiando el src del iframe
+      if (iframe) { iframe.src = ''; }
       popup.classList.remove('is-open');
       sessionStorage.setItem(key, today);
     }
