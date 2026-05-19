@@ -2113,14 +2113,28 @@
       }, { passive: true });
     })();
 
-    // ── Hero sound toggle ─────────────────────────────────────
+    // ── Música ambient — Futile Devices (Sufjan Stevens) ────────
     (function () {
       var btn = document.getElementById('soundBtn');
-      var vid = document.getElementById('heroVideo');
-      if (!btn || !vid) return;
+      if (!btn) return;
+      var iframe = null;
+      var playing = false;
       btn.addEventListener('click', function () {
-        vid.muted = !vid.muted;
-        btn.classList.toggle('is-unmuted', !vid.muted);
+        if (!playing) {
+          iframe = document.createElement('iframe');
+          iframe.src = 'https://open.spotify.com/embed/track/4Zts9erRexAxILn5XjSwUN?utm_source=generator&theme=0&autoplay=1';
+          iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+          iframe.style.cssText = 'position:absolute;width:0;height:0;border:0;opacity:0;pointer-events:none;';
+          document.body.appendChild(iframe);
+          playing = true;
+          btn.classList.add('is-unmuted');
+          btn.setAttribute('aria-label', 'Pausar música');
+        } else {
+          if (iframe) { iframe.remove(); iframe = null; }
+          playing = false;
+          btn.classList.remove('is-unmuted');
+          btn.setAttribute('aria-label', 'Reproducir música');
+        }
       });
     })();
 
