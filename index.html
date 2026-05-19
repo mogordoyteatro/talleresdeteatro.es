@@ -5156,9 +5156,22 @@
     .popup-video-wrap {
       position: relative; width: 100%; padding-bottom: 56.25%;
       border: 2px solid #E50914; background: #111; flex-shrink: 0;
+      cursor: pointer; overflow: hidden;
     }
-    .popup-video-wrap iframe {
+    .popup-video-wrap iframe,
+    .popup-video-wrap .pv-facade {
       position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+    }
+    .popup-video-wrap .pv-facade img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .popup-video-wrap .pv-play {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.2);
+    }
+    .popup-video-wrap .pv-play svg {
+      width: 64px; height: 64px; drop-shadow: 0 2px 12px rgba(0,0,0,0.6);
     }
 
     /* Right: jerarquía tipográfica del flyer */
@@ -5276,11 +5289,18 @@
         <!-- Izquierda: título + video con borde rojo -->
         <div class="popup-video-col">
           <p class="popup-left-title">La creación del artificio.</p>
-          <div class="popup-video-wrap">
-            <iframe src="https://www.youtube.com/embed/_DD2o8RWFzI?rel=0&modestbranding=1"
-                    title="La creación del artificio — Talleres de Teatro Barcelona"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen loading="lazy"></iframe>
+          <div class="popup-video-wrap" id="popup-yt-wrap" data-ytid="_DD2o8RWFzI">
+            <div class="pv-facade">
+              <img src="/imagenes_optimizadas/la-creacion-del-artificio-cartel-taller-principiantes.jpg"
+                   onerror="this.src='https://img.youtube.com/vi/_DD2o8RWFzI/hqdefault.jpg'"
+                   alt="La creación del artificio — Talleres de Teatro Barcelona">
+            </div>
+            <div class="pv-play">
+              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="39" fill="rgba(229,9,20,0.92)"/>
+                <path d="M32 26l24 14-24 14V26z" fill="white"/>
+              </svg>
+            </div>
           </div>
         </div>
 
@@ -5326,8 +5346,22 @@
     var closeBtn = document.getElementById('popup-close-btn');
     if (!popup) return;
 
-    var iframe = popup.querySelector('iframe');
-    var iframeSrc = iframe ? iframe.src : '';
+    var ytWrap = document.getElementById('popup-yt-wrap');
+
+    // Click en el facade: carga el iframe con autoplay
+    if (ytWrap) {
+      ytWrap.addEventListener('click', function () {
+        var ytid = ytWrap.dataset.ytid;
+        if (ytWrap.querySelector('iframe')) return; // ya cargado
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + ytid + '?rel=0&modestbranding=1&autoplay=1';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
+        ytWrap.innerHTML = '';
+        ytWrap.appendChild(iframe);
+      });
+    }
 
     // Mostrar después de 1.2 seg si no lo cerró hoy
     var key = 'ttb_popup_closed_clase_abierta';
@@ -5337,8 +5371,11 @@
     }
 
     function closePopup() {
-      // Detener el video limpiando el src del iframe
-      if (iframe) { iframe.src = ''; }
+      // Detener el video quitando el iframe (si se cargó)
+      if (ytWrap) {
+        var iframe = ytWrap.querySelector('iframe');
+        if (iframe) { iframe.src = ''; }
+      }
       popup.classList.remove('is-open');
       sessionStorage.setItem(key, today);
     }

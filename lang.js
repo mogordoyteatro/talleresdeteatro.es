@@ -63,6 +63,83 @@
       { sel: '#avanzados .level-card-cta',          html: 'Més info i inscripció — Cos al text →' },
       /* Galería */
       { sel: '.galeria-overline',    html: 'Fotos i vídeos' },
+
+      /* Announce cells */
+      { sel: '.cell-label',  html: 'Dia',    index: 1 },
+      { sel: '.cell-label',  html: 'Horari', index: 2 },
+      { sel: '.cell-value',  html: 'Dimarts', index: 1 },
+
+      /* Level card texts (resum breu) */
+      { sel: '#principiantes .level-card-text', html: 'Per a persones sense experiència prèvia — o amb ganes de tornar a jugar. El més important és passar-la bé, desconnectar i descobrir el plaer d\'actuar. Improvisació, cos, escolta i primeres eines actorals per entrar en la ficció sense por.' },
+      { sel: '#intermedios .level-card-text',   html: 'Per a qui ja té experiència i vol aprofundir i entrenar actuació. Personatge, presència, desig, conflicte i poètica personal.' },
+      { sel: '#avanzados .level-card-text',     html: 'Explorarem escenes i monòlegs des del cos, l\'estat i les forces invisibles que travessen cada situació. Text, ritme, sonoritat i conflicte com a matèria viva per actuar des d\'una presència real i no des de la representació.' },
+
+      /* Level card horaris */
+      { sel: '#principiantes .level-card-schedule', html: 'Dilluns / Dimarts / Dijous &nbsp;·&nbsp; 19 a 22h' },
+      { sel: '#intermedios .level-card-schedule',   html: 'Dimecres &nbsp;·&nbsp; 19 a 22h' },
+      { sel: '#avanzados .level-card-schedule',     html: 'Dilluns &nbsp;·&nbsp; 10 a 13h', index: 0 },
+
+      /* Level card detalls desplegables */
+      { sel: '#principiantes .level-card-details summary', html: 'Llegir descripció completa <span class="dets-arrow">↓</span>' },
+      { sel: '#intermedios .level-card-details summary',   html: 'Llegir descripció completa <span class="dets-arrow">↓</span>' },
+      { sel: '#avanzados .level-card-details summary',     html: 'Llegir descripció completa <span class="dets-arrow">↓</span>' },
+
+      /* Level info texts (expandits, desktop) */
+      { sel: '#info-principiantes .level-info-text', html: 'Vols estudiar per primera vegada? En aquesta primera etapa els participants formaran part d\'un espai diferent als de la seva vida quotidiana, amb altres regles i altres possibilitats, juntament amb un grup de persones de diverses edats. La proposta és treballar amb cadascú, des del joc, transcendint cap al teatral. Que vulguin donar-se permís per tornar a jugar, desinhibir-se, perdre la por a l\'exposició, donant credibilitat a les situacions de ficció i descobrint la pròpia potència expressiva. Que puguin "fracturar el real" per alterar el quotidià, soltant el "jo social" i donant lloc a l\'escena de ficció, possibilitant un encontre diferent amb un mateix i amb els altres.<br><br>Un espai per als qui desitgen començar a actuar o tornar a connectar amb el joc, la imaginació i la presència. Treballarem improvisació, escolta, disponibilitat, cos, vincle i primeres eines actorals per entrar en la ficció des de l\'acció i no des de la idea. Explorarem l\'entrenament com un territori de llibertat expressiva on l\'escena apareix com a experiència viva, sensible i compartida.' },
+      { sel: '#info-intermedios .level-info-text',   html: 'Treballarem perquè els participants dominin tècnicament la seva eina i que puguin comprendre\'s —més que com la idea d\'un personatge— com una força poètica, un cos disposat, entrenat, vibrant, que en el moment d\'actuar posa en joc tots els seus sentits i aconsegueix manejar tant la percepció multidireccional com la radiació de la pròpia energia, per mitjà de la improvisació dirigida.<br><br>S\'assimila la tècnica i s\'aferma la poètica. L\'activitat demana major compromís i comença a desplegar major complexitat i profunditat en el encontre amb l\'actuació. Entrenarem i crearem escenes per presentar a fi de cicle davant els nostres amics i familiars.<br><br>Un espai d\'aprofundiment per a actors, actrius i estudiants avançats, que ja van tenir un recorregut previ i desitgen ampliar el seu entrenament. Investigarem escena, conflicte, presència, desig, imaginari i construcció de materials actorals des d\'una recerca tècnica i poètica. El treball estarà orientat a desenvolupar una major complexitat expressiva, enfortint la relació entre cos, actuació i mirada pròpia dins de l\'escena.' },
+      { sel: '#info-avanzados .level-info-text',     html: 'El treball sobre escenes de text i monòlegs estarà centrat en comprendre que actuar un text no significa "dir bé" unes paraules, sinó descobrir quines forces el produeixen. Analitzarem les tensions que organitzen cada situació, investigant com moltes vegades la veritable lògica de l\'escena no coincideix amb la lògica racional del text escrit. L\'actuació apareix justament en aquella fricció.<br><br>Ens interessa entendre que les paraules no surten solament d\'una idea, sinó d\'un cos travessat per un estat. Un cos afectat, vibrant, desitjant, resistint, manipulant, fugint, necessitant alguna cosa de l\'altre. El text serà abordat doncs com a matèria viva: acció, impuls, respiració i comportament.<br><br>Treballarem també sobre les dimensions sonores i musicals de l\'actuació: el ritme intern de l\'escena, les velocitats, les pauses, les ruptures, la melodia de les frases, la respiració i la relació entre so i sentit.<br><br>La recerca serà que cada actor pugui construir una relació orgànica i poètica amb el text, allunyant-se de la representació il·lustrativa per trobar una actuació viva, present i travessada per veritables forces escèniques.' },
+
+      /* Secció Nuestra mirada / superjuego */
+      { sel: '.mirada-grid .overline', html: 'La nostra mirada' },
+      { sel: '.mirada-grid h2',        html: 'El teatre <br /> com un <br><span style="color:var(--accent);">superjoc.</span>' },
+      { sel: '.mirada-grid p', html: 'Actuar és un acte conscient, tècnic, poètic, lúdic i expressiu. La nostra pedagogia no transmet continguts: t\'acompanyem en el teu procés creatiu.', index: 0 },
+      { sel: '.mirada-grid p', html: 'El teatre és el territori on pots ser tot allò que no ets. Un superjoc que t\'invita a descobrir una nova forma d\'habitar el món, d\'estar amb altres, d\'arriscar.', index: 1 },
+      { sel: '.mirada-grid p', html: 'Si busques classes de teatre a Barcelona que et permetin explorar la teva creativitat, connectar amb el teu cos i transformar el teu potencial expressiu — has arribat al lloc indicat.', index: 2 },
+
+      /* Metodologia */
+      { sel: '.metodo-header .overline', html: 'Metodologia' },
+      { sel: '.metodo-header h2',        html: 'Per què triar els nostres tallers de teatre a Barcelona?' },
+      { findText: '.metodo-item-title', from: 'Sin experiencia previa',         to: 'Sense experiència prèvia' },
+      { findText: '.metodo-item-title', from: 'El cuerpo como protagonista',    to: 'El cos com a protagonista' },
+      { findText: '.metodo-item-title', from: 'Desarrollo integral',            to: 'Desenvolupament integral' },
+      { findText: '.metodo-item-title', from: 'Poética personal',               to: 'Poètica personal' },
+      { findText: '.metodo-item-title', from: 'Enfoque en el «Aquí y Ahora»',   to: 'Enfocament en l\'«Aquí i Ara»' },
+      { findText: '.metodo-item-title', from: 'Los encuentros',                 to: 'Les trobades' },
+      { sel: '.metodo-item-text', html: 'Si mai has actuat, aquest és el teu lloc! Els nostres grups per a principiants estan dissenyats per a persones sense cap experiència, on el joc i la improvisació són el punt de partida perquè desenvolupis el teu camp imaginari.', index: 0 },
+      { sel: '.metodo-item-text', html: 'Inspirats en grans mestres com Raúl Serrano i Ricardo Bartís, treballem el cos no només com una eina expressiva, sinó com el territori on s\'inscriu el conflicte, un llenguatge que no necessita paraules, un lloc de contradicció i veritat.', index: 1 },
+      { sel: '.metodo-item-text', html: 'Fomentem la desinhibició, la confiança i la creativitat. Aquí podràs donar-te permís per tornar a jugar, equivocar-te i expandir-te, allunyant-te del «jo social» i fer un salt al camp imaginari, on tot el que t\'imaginis pot passar.', index: 2 },
+      { sel: '.metodo-item-text', html: 'Creiem que la teva poètica personal és el relat. No busquem actors genèrics, sinó alliberar la teva veu pròpia i singular, aquella «força expressiva» que et fa únic.', index: 3 },
+      { sel: '.metodo-item-text', html: 'T\'ensenyem a activar el present escènic, a vincular-te sense guió previ i a permetre que el teu cos estigui disposat a l\'error i a la troballa.', index: 4 },
+      { sel: '.metodo-item-text', html: 'Les trobades setmanals de 3 hores inclouen entrenament col·lectiu, improvisació d\'escenes i reflexió compartida per integrar l\'aprenentatge.<br><br>Tenim molts vestuaris, sabates, perruques, objectes, llums perquè l\'experiència sigui espectacular!', index: 5 },
+
+      /* Bloc Lectures */
+      { sel: '.lect-grid > div > span',         html: 'Lectures' },
+      { sel: '.lect-grid > div > h3',           html: 'Pensar<br>el teatre.' },
+      { sel: '.lect-grid > div > p',            html: 'Articles sobre actuació, cos, imatge i procés creatiu.' },
+      { findText: '.lect-grid span', from: 'Técnica actoral',               to: 'Tècnica actoral' },
+      { findText: '.lect-grid span', from: 'Filosofía',                     to: 'Filosofia' },
+      { findText: '.lect-grid span', from: 'Entrenamiento',                 to: 'Entrenament' },
+      { findText: '.lect-grid span', from: 'Por qué actuar no es representar', to: 'Per què actuar no és representar' },
+      { findText: '.lect-grid span', from: 'El juego como origen',          to: 'El joc com a origen' },
+      { sel: '.lect-grid > div > a[href="/blog/"]', html: 'Veure tots els articles →' },
+
+      /* Bloc Qüestionaris */
+      { sel: '.lect-grid > a > span:first-child', html: 'Qüestionaris' },
+      { sel: '.lect-grid > a > h3',               html: 'Posa\'l<br>a prova.' },
+      { sel: '.lect-grid > a > p',                html: 'Preguntes sobre els conceptes de l\'entrenament: presència, imatge, cos, improvisació. Per saber el que saps, i el que encara no.' },
+      { sel: '.lect-grid > a > span:last-child',  html: 'Anar als qüestionaris →' },
+
+      /* Secció Nosaltres (home) */
+      { sel: '.nosotros-header .overline', html: 'Qui som' },
+      { sel: '.nosotros-card-role', html: 'Coord. General · Professor', index: 0 },
+      { sel: '.nosotros-card-role', html: 'Professora', index: 1 },
+      { sel: '.prof-role', html: 'Coord. General · Professor', index: 0 },
+      { sel: '.prof-role', html: 'Professora', index: 1 },
+      { sel: '.nosotros-15anos-titulo', html: '15 anys <br><span class="nosotros-juntos">junts.</span>' },
+      { sel: '.nosotros-card-text', html: 'Vam começar l\'any 2010 amb 8 inoblidables alumnes al Camarín de las Musas. Avui continuem fent i pensant el teatre que ens agrada.', index: 2 },
+      { sel: '#nosotros .container > div:last-child h2', html: 'Tenim <br><span style="color:var(--accent);">el teatre.</span>' },
+      { sel: '.nosotros-card-text', html: 'En un món on la realitat ens empeny a sobreviure enmig de diferents guerres, el teatre continua sent la nostra trinxera, el nostre refugi, lloc d\'expressió, experimentació i investigació, de l\'humà i del procés creatiu.', index: 3 },
+      { sel: '.nosotros-card-text', html: 'Quan la vida es posa una mica avorrida o massa agressiva, el teatre ens proposa intensitats poètiques i expressives que ens fan soltar la representació "del personatge que som a la vida" per llençar-nos en un no saber que ens obre a altres possibilitats d\'existència, expandint la nostra experiència, habitant forces i situacions que no ens són pròpies. Ens convida a ser tot allò que no som.', index: 4 },
     ],
 
     /* ══════════════════════════════════════════════════════
@@ -457,6 +534,7 @@
 
       /* Manifiesto */
       { sel: '.manifiesto-section .overline', html: 'La nostra mirada' },
+      { sel: '.manifiesto-left h2', html: 'El teatre que ens interessa fractura el real.<span class="acc"> Altera el quotidià.</span>' },
       { sel: '.manifiesto-p', html: 'Proposa intensitats poètiques que ens fan alliberar la representació «del personatge que som a la vida» per llençar-nos en un no saber que ens obre a altres possibilitats d\'existència.' },
 
       /* Editorial full */
