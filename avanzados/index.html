@@ -428,6 +428,24 @@
     }
     .nav-ig a:hover { opacity: 1; }
     .nav-ig svg { width: 18px; height: 18px; fill: currentColor; }
+    /* Selector de idioma */
+    .lang-toggle {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.35);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      padding: 3px 8px;
+      border-radius: 3px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity .2s, border-color .2s;
+      margin-left: clamp(6px,1vw,12px);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .lang-toggle:hover { opacity: 1; border-color: rgba(255,255,255,0.7); }
     .hamburger {
       display: none; background: none; border: none; cursor: pointer;
       flex-direction: column; gap: 5px; padding: 4px;
@@ -1515,6 +1533,7 @@
             </svg>
           </a>
         </div>
+        <button class="lang-toggle" aria-label="Canviar a català">CA</button>
         <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -2279,5 +2298,6 @@
     // ── Fin mobile menu ─────────────────────────────
 
   </script>
+  <script src="/lang.js"></script>
 </body>
 </html>
