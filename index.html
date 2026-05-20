@@ -5270,13 +5270,28 @@
     @media (max-width: 640px) {
       .popup-body { grid-template-columns: 1fr; }
       .popup-headline .h-clase,
-      .popup-headline .h-abierta { font-size: clamp(54px,15vw,80px); }
-      .popup-video-col { padding: 16px; }
-      .popup-copy-col { padding: 16px; }
+      .popup-headline .h-abierta { font-size: clamp(38px,11vw,58px); }
+      .popup-video-col { padding: 12px 14px 8px; gap: 8px; }
+      .popup-copy-col { padding: 12px 14px 10px; gap: 4px; }
+      .popup-left-title { font-size: clamp(17px,5vw,24px); }
+      .popup-nivel { font-size: clamp(16px,5vw,22px); }
+      .popup-encuentros { font-size: clamp(11px,3.5vw,16px); }
       .popup-bottom { grid-template-columns: 1fr 1fr; }
       .popup-bottom-coord { display: none; }
-      .popup-bottom-teatro { font-size: 38px; }
+      .popup-bottom-teatro { font-size: 28px; }
+      .popup-stripe { height: 3px; }
+      .popup-cta-btn { margin-top: 8px; padding: 7px 12px; }
     }
+    /* Evitar que el popup desborde en browsers con chrome extra (Instagram, FB) */
+    @media (max-height: 700px) and (max-width: 640px) {
+      .popup-video-col { display: none; }
+      .popup-card { max-width: 400px; }
+      .popup-headline .h-clase,
+      .popup-headline .h-abierta { font-size: clamp(44px,13vw,64px); }
+      .popup-copy-col { padding: 16px 18px 12px; }
+    }
+    #popup-clase { align-items: flex-start; padding-top: max(12px, env(safe-area-inset-top)); }
+    @media (min-width: 641px) { #popup-clase { align-items: center; } }
   </style>
 
   <div id="popup-clase" role="dialog" aria-modal="true" aria-label="Clase Abierta Principiantes">
