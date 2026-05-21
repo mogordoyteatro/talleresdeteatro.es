@@ -5099,257 +5099,198 @@
   </script>
   <script defer src="/lang.js"></script>
 
-  <!-- ═══ POPUP CLASE ABIERTA ══════════════════════════════════ -->
+  <!-- ═══ POPUP VIDEO CLASE ABIERTA ══════════════════════════════════ -->
   <style>
-    /* Overlay */
-    #popup-clase {
+    #popup-video {
       position: fixed; inset: 0; z-index: 9999;
-      background: rgba(0,0,0,0.85);
+      background: rgba(0,0,0,0.92);
       display: flex; align-items: center; justify-content: center;
-      padding: clamp(12px,3vw,32px);
+      padding: 12px;
       opacity: 0; pointer-events: none;
-      transition: opacity .35s ease;
+      transition: opacity .4s ease;
     }
-    #popup-clase.is-open { opacity: 1; pointer-events: all; }
+    #popup-video.is-open { opacity: 1; pointer-events: all; }
 
-    /* Card */
-    .popup-card {
+    /* Container del video — portrait, responsive */
+    .pv-container {
       position: relative;
-      background: #080808;
-      width: 100%; max-width: 940px;
-      border: 1px solid rgba(255,255,255,0.07);
-      overflow: hidden;
-    }
-
-    /* Close */
-    .popup-close {
-      position: absolute; top: 12px; right: 14px; z-index: 10;
-      background: none; border: none; cursor: pointer;
-      color: rgba(255,255,255,0.4); font-size: 20px; line-height: 1;
-      transition: color .2s;
-    }
-    .popup-close:hover { color: #fff; }
-
-    /* Top red stripe */
-    .popup-stripe { height: 5px; background: #E50914; }
-
-    /* Body: two columns — 42 / 58 como el flyer */
-    .popup-body {
-      display: grid;
-      grid-template-columns: 42fr 58fr;
-      gap: 0;
-    }
-
-    /* Left: título grande + video centrado verticalmente */
-    .popup-video-col {
+      width: 100%;
+      max-width: 380px;
       background: #000;
-      padding: clamp(18px,2.5vw,30px);
-      display: flex; flex-direction: column; gap: 14px;
-      justify-content: center;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.8);
     }
-    .popup-left-title {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px,3vw,40px);
-      line-height: 1.05; color: #fff;
-      letter-spacing: -.02em; margin: 0;
+    /* Franja roja top */
+    .pv-stripe { height: 4px; background: #E50914; }
+
+    /* Botón cerrar — flotante arriba del card */
+    .pv-close {
+      position: absolute; top: -44px; right: 0; z-index: 20;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff; font-size: 15px; cursor: pointer;
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      transition: background .2s;
     }
-    .popup-video-wrap {
-      position: relative; width: 100%; padding-bottom: 56.25%;
-      border: 2px solid #E50914; background: #111; flex-shrink: 0;
-      cursor: pointer; overflow: hidden;
+    .pv-close:hover { background: rgba(255,255,255,0.22); }
+
+    /* Wrapper relativo para video + controles flotantes */
+    .pv-video-wrap { position: relative; line-height: 0; }
+
+    /* El video en sí */
+    .pv-video {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 74vh;
+      object-fit: cover;
+      background: #000;
     }
-    .popup-video-wrap iframe,
-    .popup-video-wrap .pv-facade {
-      position: absolute; inset: 0; width: 100%; height: 100%; border: none;
-    }
-    .popup-video-wrap .pv-facade img {
-      width: 100%; height: 100%; object-fit: cover; display: block;
-    }
-    .popup-video-wrap .pv-play {
+
+    /* Play overlay — visible solo si autoplay bloqueado */
+    .pv-play-overlay {
       position: absolute; inset: 0;
       display: flex; align-items: center; justify-content: center;
-      background: rgba(0,0,0,0.2);
+      background: rgba(0,0,0,0.28);
+      cursor: pointer; z-index: 10;
+      transition: opacity .2s;
     }
-    .popup-video-wrap .pv-play svg {
-      width: 64px; height: 64px; drop-shadow: 0 2px 12px rgba(0,0,0,0.6);
-    }
+    .pv-play-overlay.hidden { display: none; }
+    .pv-play-overlay svg { width: 68px; height: 68px; }
 
-    /* Right: jerarquía tipográfica del flyer */
-    .popup-copy-col {
-      padding: clamp(18px,2.5vw,30px) clamp(18px,2.5vw,30px) clamp(14px,2vw,22px);
-      display: flex; flex-direction: column; justify-content: space-between;
-      background: #080808;
-      gap: 8px;
+    /* Botón mute/unmute — esquina inferior derecha del video */
+    .pv-unmute {
+      position: absolute; bottom: 12px; right: 12px; z-index: 15;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff; cursor: pointer;
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      transition: background .2s;
+      backdrop-filter: blur(6px);
     }
-    .popup-nivel {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(20px,2.6vw,32px); letter-spacing: -.01em;
-      text-transform: uppercase; color: #fff; line-height: 1; margin: 0;
+    .pv-unmute:hover { background: rgba(0,0,0,0.82); }
+    .pv-unmute svg { width: 16px; height: 16px; }
+
+    /* Barra inferior — info + CTA */
+    .pv-bottom {
+      background: #0a0a0a;
+      border-top: 2px solid #E50914;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
     }
-    .popup-encuentros {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(14px,1.9vw,22px); letter-spacing: -.01em;
-      text-transform: uppercase; color: #D4A020; margin: 0;
-    }
-    .popup-lugar {
+    .pv-info-label {
       font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
-      color: rgba(255,255,255,0.25); margin: 4px 0 0;
+      color: rgba(255,255,255,0.3); margin: 0 0 3px;
     }
-    /* CLASE / ABIERTA. — enorme, como en el flyer */
-    .popup-headline {
+    .pv-info-title {
       font-family: 'Archivo Black', sans-serif;
-      line-height: .88; text-transform: uppercase; margin: 4px 0 0;
+      font-size: 17px; letter-spacing: -.01em;
+      text-transform: uppercase; color: #fff;
+      line-height: 1; margin: 0;
     }
-    .popup-headline .h-clase {
-      display: block;
-      font-size: clamp(60px,8.5vw,108px);
-      color: #fff; letter-spacing: -.03em;
-    }
-    .popup-headline .h-abierta {
-      display: block;
-      font-size: clamp(60px,8.5vw,108px);
-      color: #E50914; letter-spacing: -.03em;
-    }
-    .popup-nota {
-      margin-top: 10px;
-      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-    }
-    .popup-nota-dash { color: #E50914; font-weight: 900; font-size: 15px; }
-    .popup-nota-text {
-      font-size: 11px; color: rgba(255,255,255,0.38); font-style: italic;
-    }
-    .popup-gratis {
-      background: #E50914; color: #fff;
+    .pv-info-sub {
+      font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+      color: #E50914; margin: 4px 0 0;
       font-family: 'Archivo Black', sans-serif;
-      font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
-      padding: 3px 9px; border-radius: 2px;
     }
-    .popup-cta-btn {
-      display: inline-block; margin-top: 14px;
+    .pv-cta {
+      flex-shrink: 0;
+      display: inline-flex; align-items: center; gap: 6px;
       background: #25D366; color: #fff;
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(9px,1vw,11px); letter-spacing: .07em;
-      text-transform: uppercase; padding: 8px 14px;
-      text-decoration: none; transition: background .2s; align-self: flex-start;
+      font-size: 10px; letter-spacing: .07em;
+      text-transform: uppercase; padding: 10px 14px;
+      text-decoration: none; white-space: nowrap;
+      transition: background .2s;
+      line-height: 1;
     }
-    .popup-cta-btn:hover { background: #1fba58; }
+    .pv-cta:hover { background: #1fba58; }
+    .pv-cta svg { flex-shrink: 0; }
 
-    /* Bottom bar — rojo, TEATRO+coord a la izquierda, fecha a la derecha */
-    .popup-bottom {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 8px clamp(14px,3vw,26px);
-      background: #E50914;
-      gap: 12px;
+    /* Mobile: ocupa más ancho de pantalla */
+    @media (max-width: 480px) {
+      .pv-container { max-width: 100%; }
+      #popup-video {
+        padding: 8px;
+        align-items: flex-start;
+        padding-top: max(48px, env(safe-area-inset-top, 16px));
+      }
+      .pv-video { max-height: 70vh; }
+      .pv-close { top: -42px; }
     }
-    .popup-bottom-left {
-      display: flex; flex-direction: column; gap: 0;
+    @media (min-width: 481px) {
+      #popup-video { align-items: center; }
     }
-    .popup-bottom-teatro {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(30px,5vw,62px); letter-spacing: -.02em;
-      text-transform: uppercase; color: rgba(255,255,255,0.35); line-height: 1;
+    /* Pantallas muy bajas (landscape mobile, Instagram con barra de nav) */
+    @media (max-height: 600px) {
+      .pv-video { max-height: 56vh; }
     }
-    .popup-bottom-coord {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(9px,1vw,11px); letter-spacing: .1em;
-      text-transform: uppercase; color: rgba(255,255,255,0.7);
-      text-align: left; line-height: 1.4;
-    }
-    .popup-bottom-coord strong {
-      font-size: clamp(11px,1.3vw,14px);
-      color: #fff; letter-spacing: .05em;
-    }
-    .popup-bottom-fecha {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(13px,1.8vw,21px); letter-spacing: -.01em;
-      text-transform: uppercase; color: #fff;
-      text-align: right; line-height: 1; white-space: nowrap;
-    }
-
-    /* Mobile */
-    @media (max-width: 640px) {
-      .popup-body { grid-template-columns: 1fr; }
-      .popup-headline .h-clase,
-      .popup-headline .h-abierta { font-size: clamp(38px,11vw,58px); }
-      .popup-video-col { padding: 12px 14px 8px; gap: 8px; }
-      .popup-copy-col { padding: 12px 14px 10px; gap: 4px; }
-      .popup-left-title { font-size: clamp(17px,5vw,24px); }
-      .popup-nivel { font-size: clamp(16px,5vw,22px); }
-      .popup-encuentros { font-size: clamp(11px,3.5vw,16px); }
-      .popup-bottom { grid-template-columns: 1fr 1fr; }
-      .popup-bottom-coord { display: none; }
-      .popup-bottom-teatro { font-size: 28px; }
-      .popup-stripe { height: 3px; }
-      .popup-cta-btn { margin-top: 8px; padding: 7px 12px; }
-    }
-    /* Evitar que el popup desborde en browsers con chrome extra (Instagram, FB) */
-    @media (max-height: 700px) and (max-width: 640px) {
-      .popup-video-col { display: none; }
-      .popup-card { max-width: 400px; }
-      .popup-headline .h-clase,
-      .popup-headline .h-abierta { font-size: clamp(44px,13vw,64px); }
-      .popup-copy-col { padding: 16px 18px 12px; }
-    }
-    #popup-clase { align-items: flex-start; padding-top: max(12px, env(safe-area-inset-top)); }
-    @media (min-width: 641px) { #popup-clase { align-items: center; } }
   </style>
 
-  <div id="popup-clase" role="dialog" aria-modal="true" aria-label="Clase Abierta Principiantes">
-    <div class="popup-card">
-      <div class="popup-stripe"></div>
-      <button class="popup-close" id="popup-close-btn" aria-label="Cerrar">✕</button>
+  <div id="popup-video" role="dialog" aria-modal="true" aria-label="Clase Abierta Principiantes">
+    <div class="pv-container">
 
-      <div class="popup-body">
+      <button class="pv-close" id="pv-close-btn" aria-label="Cerrar">✕</button>
+      <div class="pv-stripe"></div>
 
-        <!-- Izquierda: título + video con borde rojo -->
-        <div class="popup-video-col">
-          <p class="popup-left-title">La creación del artificio.</p>
-          <div class="popup-video-wrap" id="popup-yt-wrap" data-ytid="_DD2o8RWFzI">
-            <div class="pv-facade">
-              <img src="/imagenes_optimizadas/la-creacion-del-artificio-cartel-taller-principiantes.jpg"
-                   onerror="this.src='https://img.youtube.com/vi/_DD2o8RWFzI/hqdefault.jpg'"
-                   alt="La creación del artificio — Talleres de Teatro Barcelona">
-            </div>
-            <div class="pv-play">
-              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="40" cy="40" r="39" fill="rgba(229,9,20,0.92)"/>
-                <path d="M32 26l24 14-24 14V26z" fill="white"/>
-              </svg>
-            </div>
-          </div>
+      <div class="pv-video-wrap">
+        <!-- Video autoplay muted playsinline: compatible iOS, Android e Instagram in-app -->
+        <video
+          id="pv-video"
+          class="pv-video"
+          src="/clase-abierta-popup.mp4"
+          autoplay
+          muted
+          playsinline
+          loop
+          preload="auto"
+          poster="/imagenes_optimizadas/la-creacion-del-artificio-cartel-taller-principiantes.jpg"
+        ></video>
+
+        <!-- Overlay de play (fallback si autoplay bloqueado) -->
+        <div class="pv-play-overlay hidden" id="pv-play-overlay" role="button" tabindex="0" aria-label="Reproducir video">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="39" fill="rgba(229,9,20,0.92)"/>
+            <path d="M32 26l24 14-24 14V26z" fill="white"/>
+          </svg>
         </div>
 
-        <!-- Derecha: jerarquía tipográfica -->
-        <div class="popup-copy-col">
-          <div>
-            <p class="popup-nivel">Principiantes</p>
-            <p class="popup-encuentros">9 encuentros Junio/Julio</p>
-            <p class="popup-lugar">Talleres de Teatro · Barcelona · Gràcia</p>
-            <div class="popup-headline">
-              <span class="h-clase">Clase</span>
-              <span class="h-abierta">Abierta.</span>
-            </div>
-            <div class="popup-nota">
-              <span class="popup-nota-dash">—</span>
-              <span class="popup-nota-text">Para principiantes · sin experiencia previa</span>
-              <span class="popup-gratis">Gratis</span>
-            </div>
-          </div>
-          <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+reservar+la+clase+abierta+de+principiantes+del+martes+2+de+junio."
-             class="popup-cta-btn" target="_blank" rel="noopener">
-            Reservar plaza gratis →
-          </a>
-        </div>
-
+        <!-- Botón mute/unmute -->
+        <button class="pv-unmute" id="pv-unmute-btn" aria-label="Activar sonido">
+          <!-- Icono silenciado (visible por defecto) -->
+          <svg id="pv-icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <!-- Icono con sonido (oculto por defecto) -->
+          <svg id="pv-icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
       </div>
 
-      <!-- Bottom bar: [TEATRO + Coord. Sebastián] a la izquierda | MARTES 2 DE JUNIO a la derecha -->
-      <div class="popup-bottom">
-        <div class="popup-bottom-left">
-          <div class="popup-bottom-teatro">Teatro</div>
-          <div class="popup-bottom-coord">Coord. <strong>Sebastián Mogordoy</strong></div>
+      <!-- Barra inferior: info + botón WhatsApp -->
+      <div class="pv-bottom">
+        <div>
+          <p class="pv-info-label">Principiantes · Barcelona · Gràcia</p>
+          <p class="pv-info-title">Clase Abierta.</p>
+          <p class="pv-info-sub">Gratis — Martes 2 de Junio</p>
         </div>
-        <div class="popup-bottom-fecha">Martes 2 de Junio</div>
+        <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+reservar+la+clase+abierta+de+principiantes+del+martes+2+de+junio."
+           class="pv-cta" target="_blank" rel="noopener" aria-label="Reservar plaza gratis por WhatsApp">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+          </svg>
+          Reservar gratis →
+        </a>
       </div>
 
     </div>
@@ -5357,41 +5298,67 @@
 
   <script>
   (function () {
-    var popup = document.getElementById('popup-clase');
-    var closeBtn = document.getElementById('popup-close-btn');
-    if (!popup) return;
+    var popup      = document.getElementById('popup-video');
+    var video      = document.getElementById('pv-video');
+    var closeBtn   = document.getElementById('pv-close-btn');
+    var unmuteBtn  = document.getElementById('pv-unmute-btn');
+    var playOvl    = document.getElementById('pv-play-overlay');
+    var iconMuted  = document.getElementById('pv-icon-muted');
+    var iconSound  = document.getElementById('pv-icon-sound');
+    if (!popup || !video) return;
 
-    var ytWrap = document.getElementById('popup-yt-wrap');
+    /* ── Intentar autoplay (obligatorio muted para iOS / Instagram) ── */
+    function tryAutoplay() {
+      video.muted = true;
+      var p = video.play();
+      if (p && p.then) {
+        p.then(function () {
+          // Autoplay OK: ocultamos overlay de play
+          if (playOvl) playOvl.classList.add('hidden');
+        }).catch(function () {
+          // Bloqueado: mostramos overlay de "pulsa para reproducir"
+          if (playOvl) playOvl.classList.remove('hidden');
+        });
+      }
+    }
 
-    // Click en el facade: carga el iframe con autoplay
-    if (ytWrap) {
-      ytWrap.addEventListener('click', function () {
-        var ytid = ytWrap.dataset.ytid;
-        if (ytWrap.querySelector('iframe')) return; // ya cargado
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://www.youtube.com/embed/' + ytid + '?rel=0&modestbranding=1&autoplay=1';
-        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-        iframe.allowFullscreen = true;
-        iframe.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:none;';
-        ytWrap.innerHTML = '';
-        ytWrap.appendChild(iframe);
+    /* ── Play overlay (click para reproducir si autoplay falló) ── */
+    if (playOvl) {
+      playOvl.addEventListener('click', function () {
+        video.play();
+        playOvl.classList.add('hidden');
       });
     }
 
-    // Mostrar después de 1.2 seg si no lo cerró hoy
-    var key = 'ttb_popup_closed_clase_abierta';
-    var today = new Date().toDateString();
-    if (sessionStorage.getItem(key) !== today) {
-      setTimeout(function () { popup.classList.add('is-open'); }, 1200);
+    /* ── Toggle mute/unmute ── */
+    if (unmuteBtn) {
+      unmuteBtn.addEventListener('click', function () {
+        video.muted = !video.muted;
+        iconMuted.style.display = video.muted ? '' : 'none';
+        iconSound.style.display = video.muted ? 'none' : '';
+        // En algunos browsers móviles el primer unmute requiere que el
+        // vídeo esté reproduciendo; si estaba parado, lo arrancamos
+        if (!video.muted && video.paused) video.play();
+      });
     }
 
+    /* ── Mostrar popup tras breve delay (sesión) ── */
+    var key   = 'ttb_popup_closed_clase_abierta';
+    var today = new Date().toDateString();
+    if (sessionStorage.getItem(key) !== today) {
+      setTimeout(function () {
+        popup.classList.add('is-open');
+        tryAutoplay();
+      }, 800);
+    }
+
+    /* ── Cerrar popup ── */
     function closePopup() {
-      // Detener el video quitando el iframe (si se cargó)
-      if (ytWrap) {
-        var iframe = ytWrap.querySelector('iframe');
-        if (iframe) { iframe.src = ''; }
-      }
       popup.classList.remove('is-open');
+      video.pause();
+      video.muted = true; // resetea mute para próxima vez
+      iconMuted.style.display = '';
+      iconSound.style.display = 'none';
       sessionStorage.setItem(key, today);
     }
 

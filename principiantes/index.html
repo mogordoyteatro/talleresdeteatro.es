@@ -650,9 +650,56 @@
     }
     .intro-grid {
       display: grid;
-      grid-template-columns: 5fr 7fr;
-      gap: clamp(48px, 7vw, 112px);
+      grid-template-columns: 240px 5fr 7fr;
+      gap: clamp(28px, 4vw, 72px);
       align-items: start;
+    }
+    /* ─── Columna de video en sección intro ─── */
+    .intro-video-col {
+      position: sticky; top: 80px; /* se queda fija mientras scrolleas */
+    }
+    .intro-video-wrap {
+      position: relative;
+      border-top: 3px solid var(--accent);
+      background: #000;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .intro-video-player {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 78vh;
+      object-fit: cover;
+    }
+    /* Botón unmute sobre el video de sección */
+    .intro-unmute-btn {
+      position: absolute; bottom: 10px; right: 10px;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff; cursor: pointer;
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      transition: background .2s;
+      backdrop-filter: blur(6px);
+    }
+    .intro-unmute-btn:hover { background: rgba(0,0,0,0.82); }
+    .intro-unmute-btn svg { width: 14px; height: 14px; }
+    /* Etiqueta debajo del video */
+    .intro-video-label {
+      margin-top: 10px;
+      font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+    }
+    /* Mobile: una sola columna, video arriba a ancho completo */
+    @media (max-width: 900px) {
+      .intro-grid { grid-template-columns: 1fr; }
+      .intro-video-col {
+        position: static; /* quita el sticky en mobile */
+        max-width: 340px; /* no ocupa todo el ancho, se queda proporcional */
+        margin: 0 auto;   /* centrado */
+      }
     }
     .intro-statement {
       font-family: 'Archivo Black', sans-serif;
@@ -708,7 +755,7 @@
       border: 1px solid rgba(255,215,0,0.3);
       padding: 5px 10px;
     }
-    @media (max-width: 760px) { .intro-grid { grid-template-columns: 1fr; } }
+    /* El media query de mobile ya está cubierto arriba (max-width: 900px) */
 
     /* ─── STRIP IMAGEN INTERMEDIA ───────────────── */
     .mid-strip {
@@ -2327,6 +2374,35 @@
     <div class="container">
       <div class="intro-grid">
 
+        <!-- ─ Columna izquierda: video clase abierta ─ -->
+        <div class="intro-video-col" aria-hidden="true">
+          <div class="intro-video-wrap">
+            <video
+              id="intro-section-video"
+              class="intro-video-player"
+              src="/clase-abierta-popup.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+              preload="none"
+              poster="/imagenes_optimizadas/la-creacion-del-artificio-cartel-taller-principiantes.jpg"
+            ></video>
+            <button class="intro-unmute-btn" id="intro-unmute-btn" aria-label="Activar/silenciar sonido">
+              <svg id="intro-icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+              <svg id="intro-icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </button>
+          </div>
+          <p class="intro-video-label">Clase Abierta · Principiantes · Gratis</p>
+        </div>
+
         <div class="intro-left">
           <span class="overline">Para quién</span>
           <h2 class="intro-statement">
@@ -3793,5 +3869,41 @@
 
   </script>
   <script defer src="/lang.js"></script>
+
+  <!-- ─── Script: video de sección principiantes ─── -->
+  <script>
+  (function() {
+    var video     = document.getElementById('intro-section-video');
+    var unmuteBtn = document.getElementById('intro-unmute-btn');
+    var iconM     = document.getElementById('intro-icon-muted');
+    var iconS     = document.getElementById('intro-icon-sound');
+    if (!video) return;
+
+    // Intersection Observer: arranca cuando el video entra en viewport
+    if ('IntersectionObserver' in window) {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            video.play().catch(function(){});
+            obs.unobserve(video);
+          }
+        });
+      }, { threshold: 0.2 });
+      obs.observe(video);
+    } else {
+      video.play().catch(function(){});
+    }
+
+    // Toggle mute
+    if (unmuteBtn) {
+      unmuteBtn.addEventListener('click', function() {
+        video.muted = !video.muted;
+        iconM.style.display = video.muted ? '' : 'none';
+        iconS.style.display = video.muted ? 'none' : '';
+        if (!video.muted && video.paused) video.play().catch(function(){});
+      });
+    }
+  })();
+  </script>
 </body>
 </html>
