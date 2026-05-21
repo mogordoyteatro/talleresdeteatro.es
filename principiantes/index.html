@@ -3880,20 +3880,18 @@
     var iconS     = document.getElementById('intro-icon-sound');
     if (!video) return;
 
-    // Intersection Observer: arranca cuando el video entra en viewport
-    if ('IntersectionObserver' in window) {
-      var obs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            video.play().catch(function(){});
-            obs.unobserve(video);
-          }
-        });
-      }, { threshold: 0.2 });
-      obs.observe(video);
-    } else {
-      video.play().catch(function(){});
-    }
+    // Autoplay directo al cargar (muted+playsinline garantiza compatibilidad)
+    video.muted = true;
+    video.play().catch(function() {
+      // Si el browser lo bloquea, lo intentamos en el primer scroll/tap
+      var resume = function() {
+        video.play().catch(function(){});
+        document.removeEventListener('scroll', resume);
+        document.removeEventListener('touchstart', resume);
+      };
+      document.addEventListener('scroll', resume, { passive: true });
+      document.addEventListener('touchstart', resume, { passive: true });
+    });
 
     // Toggle mute
     if (unmuteBtn) {
