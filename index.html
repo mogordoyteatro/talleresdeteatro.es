@@ -5142,6 +5142,21 @@
       max-height: 88vh;
     }
 
+    /* Botón sonido — esquina inferior derecha del video */
+    .pv-sound {
+      position: absolute; bottom: 12px; right: 12px; z-index: 20;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff; cursor: pointer;
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      backdrop-filter: blur(6px);
+      transition: background .2s;
+    }
+    .pv-sound:hover { background: rgba(0,0,0,0.85); }
+    .pv-sound svg { width: 15px; height: 15px; }
+
     /* Overlay de play — solo si autoplay bloqueado */
     .pv-play-overlay {
       position: absolute; inset: 0;
@@ -5182,15 +5197,31 @@
           <path d="M32 26l24 14-24 14V26z" fill="white"/>
         </svg>
       </div>
+
+      <!-- Botón sonido: activa/silencia -->
+      <button class="pv-sound" id="pv-sound-btn" aria-label="Activar sonido">
+        <svg id="pv-icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+        <svg id="pv-icon-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+      </button>
     </div>
   </div>
 
   <script>
   (function () {
-    var popup    = document.getElementById('popup-video');
-    var video    = document.getElementById('pv-video');
-    var closeBtn = document.getElementById('pv-close-btn');
-    var playOvl  = document.getElementById('pv-play-overlay');
+    var popup     = document.getElementById('popup-video');
+    var video     = document.getElementById('pv-video');
+    var closeBtn  = document.getElementById('pv-close-btn');
+    var playOvl   = document.getElementById('pv-play-overlay');
+    var soundBtn  = document.getElementById('pv-sound-btn');
+    var iconMuted = document.getElementById('pv-icon-muted');
+    var iconSound = document.getElementById('pv-icon-sound');
     if (!popup || !video) return;
 
     function tryPlay() {
@@ -5212,6 +5243,16 @@
       });
     }
 
+    // Toggle sonido
+    if (soundBtn) {
+      soundBtn.addEventListener('click', function() {
+        video.muted = !video.muted;
+        iconMuted.style.display = video.muted ? '' : 'none';
+        iconSound.style.display = video.muted ? 'none' : '';
+        if (!video.muted && video.paused) video.play().catch(function(){});
+      });
+    }
+
     var key = 'ttb_popup_v2';
     var today = new Date().toDateString();
     if (sessionStorage.getItem(key) !== today) {
@@ -5224,6 +5265,9 @@
     function closePopup() {
       popup.classList.remove('is-open');
       video.pause();
+      video.muted = true;
+      iconMuted.style.display = '';
+      iconSound.style.display = 'none';
       sessionStorage.setItem(key, today);
     }
 
