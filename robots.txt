@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-# Archivos legacy / prototipos — no indexar
+# ── Archivos legacy / prototipos — nunca indexar ──────────────────
+Disallow: /index-v2.html
 Disallow: /05-hero-prototipo-paletas.html
 Disallow: /06-home-completo.html
 Disallow: /07-home-seo.html
@@ -13,5 +14,34 @@ Disallow: /principiantes-boceto.html
 Disallow: /principiantes-v2.html
 Disallow: /info.html
 
-# Sitemap
+# ── Archivos de datos / scripts ────────────────────────────────────
+Disallow: /galeria-fotos.json
+Disallow: /galeria-universo.json
+Disallow: /lang.js
+Disallow: /lang.min.js
+Disallow: /lang.source.js
+
+# ── PDFs (accesibles pero sin indexar como páginas) ────────────────
+Disallow: /taller-bienvenida.pdf
+Disallow: /talleres-informacion-2025-26.pdf
+Disallow: /la-creacion-del-artificio.pdf
+Disallow: /la-creacion-del-artificio-programa.pdf
+
+# ── Permitir rastreadores de IA (para aparecer en Gemini, ChatGPT, Perplexity) ──
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ── Sitemap ────────────────────────────────────────────────────────
 Sitemap: https://talleresdeteatro.es/sitemap.xml
