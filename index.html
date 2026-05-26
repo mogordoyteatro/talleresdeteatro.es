@@ -3987,13 +3987,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: clamp(6px, 1vw, 14px);
-      padding: 0 clamp(16px, 4vw, 60px);
-      max-width: 1400px;
-      margin: 0 auto;
+      gap: clamp(4px, 0.6vw, 10px);
+      padding: 0;
     }
     .galeria-thumb {
-      width: clamp(80px, 10vw, 140px);
+      width: clamp(90px, 13vw, 200px);
       aspect-ratio: 3/4;
       overflow: hidden;
       border-radius: 4px;
@@ -4036,7 +4034,7 @@
     .g-lb-next  { right: 16px; top: 50%; transform: translateY(-50%); }
     .g-lb-count { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.5); font-size: .8rem; font-family: Inter, sans-serif; }
     @media (max-width: 600px) {
-      .galeria-thumb { width: clamp(64px, 22vw, 100px); }
+      .galeria-thumb { width: clamp(80px, 28vw, 140px); }
       .g-lb-prev { left: 4px; } .g-lb-next { right: 4px; }
     }
     .galeria-mas-btn {
