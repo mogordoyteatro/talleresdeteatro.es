@@ -89,18 +89,59 @@
         "@type": "Person",
         "@id": "https://talleresdeteatro.es/#sebastian",
         "name": "Sebastián Mogordoy",
-        "jobTitle": "Actor, Director y profesor de teatro",
+        "givenName": "Sebastián",
+        "familyName": "Mogordoy",
+        "jobTitle": "Actor, director y profesor de teatro",
+        "description": "Actor, director y profesor de teatro argentino radicado en Barcelona. Formado con Ricardo Bartís en el Sportivo Teatral. Dirige los Talleres de Teatro Barcelona desde 2010 (en Buenos Aires) y desde 2020 (en Barcelona). Integrante del elenco protagónico de El Fill en el Teatre Lliure.",
         "nationality": "AR",
-        "knowsAbout": ["Actuación teatral", "Improvisación dirigida", "Pedagogía teatral", "Dirección escénica", "Entrenamiento actoral"],
+        "birthPlace": "Rosario, Argentina",
+        "knowsAbout": ["Actuación teatral", "Improvisación dirigida", "Pedagogía teatral", "Dirección escénica", "Entrenamiento actoral", "Teatro contemporáneo", "Tradición teatral argentina"],
         "alumniOf": [
-          { "@type": "Organization", "name": "Teatro San Martín — Ricardo Bartís" },
-          { "@type": "Organization", "name": "Sportivo Teatral" }
+          { "@type": "Organization", "name": "Sportivo Teatral", "description": "Escuela de teatro de Ricardo Bartís, Buenos Aires" },
+          { "@type": "Organization", "name": "Escuela de Teatro de Buenos Aires", "description": "Formación con Raúl Serrano" },
+          { "@type": "Organization", "name": "Instituto de Entrenamiento Actoral", "description": "Formación con Julio Chávez, Buenos Aires" }
         ],
         "worksFor": {
           "@id": "https://talleresdeteatro.es/#organization"
         },
+        "performerIn": [
+          {
+            "@type": "TheaterEvent",
+            "name": "El Fill",
+            "description": "Obra de Jon Fosse dirigida por Ferran Utzet. Sebastián Mogordoy forma parte del elenco protagónico.",
+            "location": { "@type": "PerformingArtsTheater", "name": "Teatre Lliure", "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressCountry": "ES" } },
+            "startDate": "2026",
+            "director": { "@type": "Person", "name": "Ferran Utzet" }
+          },
+          {
+            "@type": "TheaterEvent",
+            "name": "Euforia y Desazón",
+            "description": "Obra dirigida por Sergio Boris. Temporada en el Festival Temporada Alta 2024, Sala Beckett y Teatros del Canal de Madrid 2025/26.",
+            "location": [
+              { "@type": "PerformingArtsTheater", "name": "Sala Beckett", "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressCountry": "ES" } },
+              { "@type": "PerformingArtsTheater", "name": "Teatros del Canal", "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" } }
+            ],
+            "startDate": "2024",
+            "director": { "@type": "Person", "name": "Sergio Boris" }
+          },
+          {
+            "@type": "Movie",
+            "name": "El profesor",
+            "description": "Película producida por Netflix con la participación de Sebastián Mogordoy.",
+            "productionCompany": { "@type": "Organization", "name": "Netflix" }
+          },
+          {
+            "@type": "TheaterEvent",
+            "name": "La Máquina Idiota",
+            "description": "Obra dirigida por Ricardo Bartís en el Sportivo Teatral. Participó en el Asian Art Festival (Corea) y el Festival Internacional de Buenos Aires.",
+            "director": { "@type": "Person", "name": "Ricardo Bartís" }
+          }
+        ],
+        "award": "Premio Teatro del Mundo 2009 — Mejor Actor (por Los Rocabilis y Amor a tiros, dir. Bernardo Cappa). Mención Teatro del Mundo 2008 (por La Funeraria).",
         "sameAs": [
-          "https://www.instagram.com/sebamogordoy/"
+          "https://www.instagram.com/sebamogordoy/",
+          "https://sebamogordoy.com",
+          "https://www.teatrelliure.com/es/el-fill"
         ]
       },
       {
