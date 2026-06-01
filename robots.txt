@@ -1,6 +1,12 @@
 User-agent: *
 Allow: /
 
+# ── Rutas legacy del hosting antiguo (cPanel / WordPress) ─────────
+Disallow: /cgi-sys/
+Disallow: /wp-content/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
 # ── Archivos legacy / prototipos — nunca indexar ──────────────────
 Disallow: /index-v2.html
 Disallow: /05-hero-prototipo-paletas.html

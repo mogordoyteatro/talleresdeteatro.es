@@ -2,27 +2,25 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=/">
   <link rel="canonical" href="https://talleresdeteatro.es/">
   <title>Talleres de Teatro Barcelona</title>
-</head>
-<body>
   <script>
-    // Redirigir URLs antiguas de WordPress
-    var path = window.location.pathname;
+    // Redirigir URLs antiguas al destino correcto
+    var path = window.location.pathname.replace(/\/$/, '') || '/';
     var redirects = {
-      '/contacto-html/': '/contacto/',
-      '/contacto-html': '/contacto/',
-      '/argetina/': '/',
-      '/argentina/': '/',
-      '/feed/': '/',
+      '/contacto-html':                     '/contacto/',
+      '/fotos-2015-html':                   '/',
+      '/la-tirania-del-deseo-ciclo-de-teatro': '/quienes-somos/',
+      '/on-line-html':                      '/principiantes/',
+      '/flyers-html':                       '/',
+      '/argetina':                          '/',
+      '/argentina':                         '/',
+      '/feed':                              '/blog/',
     };
-    var dest = redirects[path];
-    if (dest) {
-      window.location.replace(dest);
-    } else {
-      window.location.replace('/');
-    }
+    var dest = redirects[path] || '/';
+    window.location.replace(dest);
   </script>
-</body>
+  <noscript><meta http-equiv="refresh" content="0;url=/"></noscript>
+</head>
+<body></body>
 </html>
