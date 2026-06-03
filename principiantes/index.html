@@ -668,9 +668,10 @@
     .intro-video-player {
       display: block;
       width: 100%;
-      height: auto;
-      max-height: 45vh;
+      height: 100%;
       object-fit: cover;
+      position: absolute;
+      inset: 0;
     }
     /* Botón unmute sobre el video de sección */
     .intro-unmute-btn {
@@ -3902,6 +3903,22 @@
 
   </script>
   <script defer src="/lang.js"></script>
+
+  <!-- ─── Script: iguala altura video con columna central ─── -->
+  <script>
+  (function() {
+    function matchVideoHeight() {
+      var left = document.querySelector('.intro-left');
+      var wrap = document.querySelector('.intro-video-wrap');
+      if (!left || !wrap || window.innerWidth < 900) return;
+      wrap.style.height = left.offsetHeight + 'px';
+    }
+    window.addEventListener('load', matchVideoHeight);
+    window.addEventListener('resize', matchVideoHeight);
+    // También al renderizar fuentes/imágenes
+    document.fonts && document.fonts.ready && document.fonts.ready.then(matchVideoHeight);
+  })();
+  </script>
 
   <!-- ─── Script: video de sección principiantes ─── -->
   <script>
