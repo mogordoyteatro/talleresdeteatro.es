@@ -650,13 +650,14 @@
     }
     .intro-grid {
       display: grid;
-      grid-template-columns: 240px 5fr 7fr;
+      grid-template-columns: 300px 5fr 7fr;
       gap: clamp(28px, 4vw, 72px);
       align-items: start;
     }
     /* ─── Columna de video en sección intro ─── */
     .intro-video-col {
-      position: sticky; top: 80px; /* se queda fija mientras scrolleas */
+      position: sticky; top: 80px;
+      align-self: stretch;
     }
     .intro-video-wrap {
       position: relative;
@@ -664,12 +665,13 @@
       background: #000;
       overflow: hidden;
       line-height: 0;
+      height: 100%;
     }
     .intro-video-player {
       display: block;
       width: 100%;
-      height: auto;
-      max-height: 78vh;
+      height: 100%;
+      min-height: 400px;
       object-fit: cover;
     }
     /* Botón unmute sobre el video de sección */
@@ -2413,14 +2415,13 @@
             <video
               id="intro-section-video"
               class="intro-video-player"
-              src="/clase-abierta-popup.mp4"
+              src="/nuevo-grupo-principiantes.mp4"
               autoplay
               muted
               playsinline
               webkit-playsinline
               loop
               preload="auto"
-              poster="/imagenes_optimizadas/clase-abierta-popup-poster.jpg"
             ></video>
             <button class="intro-unmute-btn" id="intro-unmute-btn" aria-label="Activar/silenciar sonido">
               <svg id="intro-icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2434,7 +2435,7 @@
               </svg>
             </button>
           </div>
-          <p class="intro-video-label">Clase Abierta · Principiantes · Gratis</p>
+          <p class="intro-video-label">Principiantes · La creación del artificio</p>
         </div>
 
         <div class="intro-left">
