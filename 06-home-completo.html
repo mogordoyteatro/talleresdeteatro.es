@@ -237,7 +237,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: clamp(11px, 1.2vw, 14px);
+      font-size: 1.2vw; font-size: clamp(11px, 1.2vw, 14px);
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -258,7 +258,7 @@
       background: var(--accent);
       color: var(--white);
       font-family: 'Inter', sans-serif;
-      font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
+      font-size: 1.3vw; font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
       letter-spacing: 0.05em; text-transform: uppercase;
       text-decoration: none;
       padding: 20px 40px;
@@ -372,7 +372,7 @@
     /* Logo + tagline agrupados */
     .nav-left {
       display: flex; align-items: center;
-      gap: clamp(12px, 1.8vw, 24px); flex-shrink: 0;
+      gap: 1.8vw; gap: clamp(12px, 1.8vw, 24px); flex-shrink: 0;
     }
     .logo {
       display: flex; align-items: center;
@@ -386,7 +386,7 @@
       font-size: 9px; font-weight: 400;
       letter-spacing: 0.15em; text-transform: uppercase;
       color: rgba(255,255,255,0.65); white-space: nowrap;
-      padding-left: clamp(12px, 1.8vw, 24px);
+      padding-left: 1.8vw; padding-left: clamp(12px, 1.8vw, 24px);
       border-left: 1px solid rgba(255,255,255,0.15);
       line-height: 1.3;
     }
@@ -394,10 +394,10 @@
 
     .nav-links {
       display: flex; align-items: center;
-      gap: clamp(16px, 2.5vw, 32px); list-style: none;
+      gap: 2.5vw; gap: clamp(16px, 2.5vw, 32px); list-style: none;
     }
     .nav-links a {
-      font-size: clamp(11px, 1vw, 13px); font-weight: 400;
+      font-size: 1vw; font-size: clamp(11px, 1vw, 13px); font-weight: 400;
       letter-spacing: 0.06em; text-transform: uppercase;
       color: var(--white); text-decoration: none;
       transition: opacity .2s;
@@ -411,7 +411,7 @@
     /* Icono Instagram en nav */
     .nav-ig {
       display: flex; align-items: center;
-      margin-left: clamp(8px, 1.2vw, 16px);
+      margin-left: 1.2vw; margin-left: clamp(8px, 1.2vw, 16px);
       flex-shrink: 0;
     }
     .nav-ig a {
@@ -433,8 +433,8 @@
     .hero-body {
       position: relative; z-index: 10; flex: 1;
       display: grid; grid-template-rows: 1fr auto;
-      padding: clamp(40px, 6vw, 88px) var(--pad-x) clamp(48px, 7vw, 96px);
-      gap: clamp(32px, 4vw, 56px);
+      padding: 6vw var(--pad-x) 7vw; padding: clamp(40px, 6vw, 88px) var(--pad-x) clamp(48px, 7vw, 96px);
+      gap: 4vw; gap: clamp(32px, 4vw, 56px);
     }
     /* Bloque título: centra overline + H1 verticalmente en el espacio disponible */
     .hero-title-block {
@@ -443,7 +443,7 @@
       justify-content: center;
     }
     .hero-overline {
-      font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
       letter-spacing: 0.07em; text-transform: uppercase;
       color: rgba(255,255,255,0.75); margin-bottom: 20px;
       display: flex; align-items: center; gap: 12px;
@@ -451,7 +451,7 @@
     .hero-overline::after { content: ''; flex: 0 0 32px; height: 1px; background: rgba(255,255,255,0.4); }
     .hero-h1 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(44px, 8.5vw, 118px);
+      font-size: 8.5vw; font-size: clamp(44px, 8.5vw, 118px);
       font-weight: 400; font-style: normal;
       line-height: 0.92; letter-spacing: -0.02em;
       text-transform: uppercase; color: var(--white);
@@ -461,17 +461,17 @@
     .hero-h1 .accent-word { color: var(--accent); display: block; }
     .hero-footer {
       display: grid; grid-template-columns: 1fr auto;
-      gap: clamp(24px, 4vw, 64px); align-items: end;
+      gap: 4vw; gap: clamp(24px, 4vw, 64px); align-items: end;
     }
     .hero-meta { display: flex; flex-direction: column; gap: 20px; }
     .meta-group { display: flex; flex-direction: column; gap: 3px; }
     .meta-label {
-      font-size: clamp(11px, 1.1vw, 13px); font-weight: 700;
+      font-size: 1.1vw; font-size: clamp(11px, 1.1vw, 13px); font-weight: 700;
       letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--white); margin-bottom: 4px;
     }
     .meta-line {
-      font-size: clamp(14px, 1.6vw, 17px); font-weight: 400;
+      font-size: 1.6vw; font-size: clamp(14px, 1.6vw, 17px); font-weight: 400;
       letter-spacing: 0.03em; text-transform: uppercase;
       color: var(--white); line-height: 1.5;
     }
@@ -494,19 +494,19 @@
       display: flex; flex-direction: column; gap: 3px;
     }
     .hero-dir-label {
-      font-size: clamp(11px, 0.95vw, 14px);
+      font-size: 0.95vw; font-size: clamp(11px, 0.95vw, 14px);
       font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--accent);
     }
     .hero-dir-name {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px, 2.4vw, 34px);
+      font-size: 2.4vw; font-size: clamp(22px, 2.4vw, 34px);
       text-transform: uppercase; letter-spacing: -0.02em;
       color: var(--white); line-height: 0.95;
     }
     .hero-dir-junto {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(16px, 1.8vw, 24px);
+      font-size: 1.8vw; font-size: clamp(16px, 1.8vw, 24px);
       font-weight: 400; letter-spacing: -0.01em;
       color: rgba(255,255,255,0.85);
       text-transform: uppercase;
@@ -530,9 +530,9 @@
     .reviews-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(24px, 4vw, 64px);
+      gap: 4vw; gap: clamp(24px, 4vw, 64px);
       align-items: start;
-      margin-bottom: clamp(48px, 6vw, 72px);
+      margin-bottom: 6vw; margin-bottom: clamp(48px, 6vw, 72px);
     }
     .reviews-header-left {}
     .reviews-header-right {
@@ -545,7 +545,7 @@
 
     .reviews-h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(40px, 6vw, 80px);
+      font-size: 6vw; font-size: clamp(40px, 6vw, 80px);
       font-weight: 400; font-style: normal;
       line-height: 0.9; letter-spacing: -0.02em;
       text-transform: uppercase;
@@ -560,7 +560,7 @@
     .reviews-header-left .overline::after { background: var(--gold); }
 
     .reviews-subtitle {
-      font-size: clamp(17px, 2vw, 22px);
+      font-size: 2vw; font-size: clamp(17px, 2vw, 22px);
       font-weight: 300; line-height: 1.65;
       color: var(--white);
       max-width: 42ch;
@@ -568,7 +568,7 @@
 
     .link-all {
       display: inline-flex; align-items: center; gap: 8px;
-      font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
       letter-spacing: 0.05em; text-transform: uppercase;
       color: var(--gold); text-decoration: none;
       border-bottom: 1px solid var(--gold);
@@ -637,7 +637,7 @@
     .review-card {
       background: var(--bg-2);
       border: 1px solid var(--g700);
-      padding: clamp(24px, 3vw, 36px);
+      padding: 3vw; padding: clamp(24px, 3vw, 36px);
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -697,7 +697,7 @@
 
     /* Texto de la reseña */
     .card-text {
-      font-size: clamp(15px, 1.6vw, 18px);
+      font-size: 1.6vw; font-size: clamp(15px, 1.6vw, 18px);
       font-weight: 300;
       line-height: 1.65;
       color: var(--white);
@@ -716,8 +716,8 @@
 
     /* Línea SEO-local al pie del bloque */
     .reviews-footer {
-      margin-top: clamp(32px, 4vw, 48px);
-      padding-top: clamp(20px, 2.5vw, 28px);
+      margin-top: 4vw; margin-top: clamp(32px, 4vw, 48px);
+      padding-top: 2.5vw; padding-top: clamp(20px, 2.5vw, 28px);
       border-top: 1px solid var(--g700);
       display: flex;
       align-items: center;
@@ -726,7 +726,7 @@
       gap: 16px;
     }
     .reviews-local-note {
-      font-size: clamp(12px, 1.2vw, 14px); font-weight: 400;
+      font-size: 1.2vw; font-size: clamp(12px, 1.2vw, 14px); font-weight: 400;
       letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--white);
     }
@@ -738,7 +738,7 @@
       color: var(--gold); font-size: 14px; letter-spacing: 1px;
     }
     .reviews-google-badge .badge-txt {
-      font-size: clamp(12px, 1.2vw, 14px); color: var(--white);
+      font-size: 1.2vw; font-size: clamp(12px, 1.2vw, 14px); color: var(--white);
     }
     .reviews-google-badge .badge-txt strong { color: var(--white); font-weight: 700; }
 
@@ -771,7 +771,7 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-h1 { font-size: clamp(52px, 15vw, 88px); }
+      .hero-h1 { font-size: 15vw; font-size: clamp(52px, 15vw, 88px); }
 
       .hero-footer { grid-template-columns: 1fr; }
       .hero-cta-block {
@@ -836,7 +836,7 @@
     .editorial-caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
-      padding: clamp(24px, 5vw, 56px);
+      padding: 5vw; padding: clamp(24px, 5vw, 56px);
       background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
       display: flex; align-items: flex-end; justify-content: space-between;
       gap: 24px; flex-wrap: wrap;
@@ -854,7 +854,7 @@
     }
     .editorial-quote {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(20px, 3.5vw, 44px);
+      font-size: 3.5vw; font-size: clamp(20px, 3.5vw, 44px);
       font-weight: 400; font-style: normal;
       line-height: 0.96; letter-spacing: 0em;
       text-transform: uppercase; color: var(--white);
@@ -935,7 +935,7 @@
        BLOQUE 04 — NIVELES / TALLERES
     ═══════════════════════════════════════════ */
     .levels-section {
-      padding: clamp(40px, 5vw, 72px) 0 0;
+      padding: 5vw 0 0; padding: clamp(40px, 5vw, 72px) 0 0;
       background: var(--bg-2);
     }
 
@@ -943,13 +943,13 @@
     .levels-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(24px, 4vw, 64px);
+      gap: 4vw; gap: clamp(24px, 4vw, 64px);
       align-items: end;
-      margin-bottom: clamp(40px, 6vw, 72px);
+      margin-bottom: 6vw; margin-bottom: clamp(40px, 6vw, 72px);
     }
     .levels-h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(48px, 7vw, 96px);
+      font-size: 7vw; font-size: clamp(48px, 7vw, 96px);
       line-height: 0.88;
       letter-spacing: -0.01em;
       text-transform: uppercase;
@@ -958,7 +958,7 @@
     }
     .levels-h2 .accent-word { color: var(--accent); }
     .levels-intro {
-      font-size: clamp(17px, 2vw, 22px);
+      font-size: 2vw; font-size: clamp(17px, 2vw, 22px);
       font-weight: 300;
       line-height: 1.6;
       color: var(--white);
@@ -973,7 +973,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      min-height: clamp(300px, 32vw, 460px);
+      min-height: 32vw; min-height: clamp(300px, 32vw, 460px);
       margin-bottom: 24px;
       text-decoration: none;
       overflow: hidden;
@@ -1018,7 +1018,7 @@
       flex: 1;
       display: flex;
       align-items: center;
-      padding: clamp(24px, 4vw, 56px);
+      padding: 4vw; padding: clamp(24px, 4vw, 56px);
     }
     /* Bloque tipográfico con panel translúcido */
     .levels-announce-panel {
@@ -1028,13 +1028,13 @@
       background: rgba(0,0,0,0.55);
       backdrop-filter: blur(3px);
       -webkit-backdrop-filter: blur(3px);
-      padding: clamp(18px, 2.2vw, 30px) clamp(24px, 3vw, 44px);
+      padding: 2.2vw 3vw; padding: clamp(18px, 2.2vw, 30px) clamp(24px, 3vw, 44px);
       align-self: flex-start;
       border-left: 5px solid var(--accent);
     }
     .levels-announce-tag {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(13px, 1.6vw, 20px);
+      font-size: 1.6vw; font-size: clamp(13px, 1.6vw, 20px);
       line-height: 1;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -1042,7 +1042,7 @@
     }
     .levels-announce-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(52px, 8vw, 110px);
+      font-size: 8vw; font-size: clamp(52px, 8vw, 110px);
       line-height: 0.86;
       letter-spacing: -0.03em;
       text-transform: uppercase;
@@ -1051,7 +1051,7 @@
     /* Badge bajo PRINCIPIANTES — dentro del panel */
     .levels-announce-badge {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(10px, 1vw, 13px);
+      font-size: 1vw; font-size: clamp(10px, 1vw, 13px);
       text-transform: uppercase;
       letter-spacing: 0.14em;
       color: #000;
@@ -1078,11 +1078,11 @@
       flex-direction: column;
       justify-content: center;
       gap: 3px;
-      padding: clamp(14px, 1.6vw, 22px) clamp(18px, 2.2vw, 32px);
+      padding: 1.6vw 2.2vw; padding: clamp(14px, 1.6vw, 22px) clamp(18px, 2.2vw, 32px);
       border-right: 1px solid rgba(0,0,0,0.12);
     }
     .cell-label {
-      font-size: clamp(9px, 0.85vw, 11px);
+      font-size: 0.85vw; font-size: clamp(9px, 0.85vw, 11px);
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -1090,7 +1090,7 @@
     }
     .cell-value {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(13px, 1.4vw, 18px);
+      font-size: 1.4vw; font-size: clamp(13px, 1.4vw, 18px);
       text-transform: uppercase;
       letter-spacing: 0.02em;
       color: #000;
@@ -1102,12 +1102,12 @@
       align-items: center;
       gap: 14px;
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(13px, 1.5vw, 19px);
+      font-size: 1.5vw; font-size: clamp(13px, 1.5vw, 19px);
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--white);
       background: var(--accent);
-      padding: clamp(18px, 2.2vw, 28px) clamp(28px, 4vw, 56px);
+      padding: 2.2vw 4vw; padding: clamp(18px, 2.2vw, 28px) clamp(28px, 4vw, 56px);
       white-space: nowrap;
       flex-shrink: 0;
       transition: filter .2s;
@@ -1129,7 +1129,7 @@
       border-top: none;
     }
     .level-info-col {
-      padding: clamp(28px, 3.5vw, 48px) clamp(20px, 3vw, 40px);
+      padding: 3.5vw 3vw; padding: clamp(28px, 3.5vw, 48px) clamp(20px, 3vw, 40px);
       border-right: 1px solid rgba(255,255,255,0.06);
       display: flex;
       flex-direction: column;
@@ -1181,13 +1181,13 @@
       width: 100%; height: 100%; border: none;
     }
     .level-info-text {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 300;
       line-height: 1.7;
       color: var(--white);
     }
     .level-info-coord {
-      font-size: clamp(11px, 1.1vw, 13px);
+      font-size: 1.1vw; font-size: clamp(11px, 1.1vw, 13px);
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -1204,10 +1204,10 @@
     /* ── Texto filosófico + metodología unificados ── */
     .levels-philosophy {
       background: var(--bg-2);
-      padding: clamp(48px, 6vw, 96px) clamp(24px, 8vw, 120px);
+      padding: 6vw 8vw; padding: clamp(48px, 6vw, 96px) clamp(24px, 8vw, 120px);
       display: flex;
       flex-direction: column;
-      gap: clamp(48px, 6vw, 80px);
+      gap: 6vw; gap: clamp(48px, 6vw, 80px);
     }
     .levels-philosophy-inner {
       width: 100%;
@@ -1219,7 +1219,7 @@
       width: 100%;
     }
     .levels-philosophy p {
-      font-size: clamp(15px, 1.5vw, 18px);
+      font-size: 1.5vw; font-size: clamp(15px, 1.5vw, 18px);
       font-weight: 300;
       line-height: 1.75;
       color: var(--white);
@@ -1227,13 +1227,13 @@
     }
     .levels-philosophy-lead {
       font-family: 'Archivo Black', sans-serif !important;
-      font-size: clamp(20px, 2.5vw, 30px) !important;
+      font-size: 2.5vw !important; font-size: clamp(20px, 2.5vw, 30px) !important;
       font-weight: 400 !important;
       line-height: 1.25 !important;
       color: var(--white) !important;
     }
     .levels-philosophy-subtitle {
-      font-size: clamp(11px, 1.1vw, 13px) !important;
+      font-size: 1.1vw !important; font-size: clamp(11px, 1.1vw, 13px) !important;
       font-weight: 700 !important;
       letter-spacing: 0.08em !important;
       text-transform: uppercase !important;
@@ -1304,12 +1304,12 @@
       display: flex;
       flex-direction: column;
       flex: 1;
-      padding: clamp(20px, 2.5vw, 32px);
+      padding: 2.5vw; padding: clamp(20px, 2.5vw, 32px);
       gap: 12px;
     }
 
     .level-card-subtitle {
-      font-size: clamp(14px, 1.6vw, 20px);
+      font-size: 1.6vw; font-size: clamp(14px, 1.6vw, 20px);
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -1318,20 +1318,20 @@
     }
     .level-card-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(28px, 3vw, 42px);
+      font-size: 3vw; font-size: clamp(28px, 3vw, 42px);
       line-height: 0.9; letter-spacing: -0.01em;
       text-transform: uppercase;
       color: var(--white);
     }
     .level-card-text {
-      font-size: clamp(15px, 1.5vw, 17px);
+      font-size: 1.5vw; font-size: clamp(15px, 1.5vw, 17px);
       font-weight: 300;
       line-height: 1.6;
       color: var(--white);
       flex: 1;
     }
     .level-card-schedule {
-      font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
       letter-spacing: 0.03em;
       color: var(--white);
       padding: 12px 0;
@@ -1356,7 +1356,7 @@
       .levels-grid { grid-template-columns: 1fr; gap: 0; }
       .level-card-img-wrap { padding-bottom: 56%; } /* 16:9 en mobile */
       .levels-announce {
-        min-height: clamp(260px, 60vw, 360px);
+        min-height: 60vw; min-height: clamp(260px, 60vw, 360px);
       }
       .levels-announce-top {
         padding: 16px;
@@ -1378,10 +1378,10 @@
     ═══════════════════════════════════════════ */
     .metodo-section {
       background: var(--bg);
-      padding: clamp(64px, 8vw, 112px) 0;
+      padding: 8vw 0; padding: clamp(64px, 8vw, 112px) 0;
     }
     .metodo-header {
-      margin-bottom: clamp(40px, 5vw, 64px);
+      margin-bottom: 5vw; margin-bottom: clamp(40px, 5vw, 64px);
     }
     .metodo-grid {
       display: grid;
@@ -1389,7 +1389,7 @@
       gap: 0;
     }
     .metodo-item {
-      padding: clamp(28px, 3.5vw, 44px) clamp(24px, 3vw, 40px);
+      padding: 3.5vw 3vw; padding: clamp(28px, 3.5vw, 44px) clamp(24px, 3vw, 40px);
       border-top: 1px solid rgba(255,255,255,0.07);
       border-right: 1px solid rgba(255,255,255,0.07);
       display: flex;
@@ -1404,13 +1404,13 @@
     }
     .metodo-item-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(18px, 2vw, 24px);
+      font-size: 2vw; font-size: clamp(18px, 2vw, 24px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.01em; color: var(--white);
       line-height: 1.05;
     }
     .metodo-item-text {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 300; line-height: 1.75;
       color: var(--white);
     }
@@ -1454,26 +1454,26 @@
     .nosotros-portrait-caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
-      padding: clamp(16px, 2vw, 28px);
+      padding: 2vw; padding: clamp(16px, 2vw, 28px);
       background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
     }
     .nosotros-portrait-caption .nosotros-card-name {
-      font-size: clamp(18px, 2.2vw, 28px);
+      font-size: 2.2vw; font-size: clamp(18px, 2.2vw, 28px);
     }
     @media (max-width: 600px) {
       .nosotros-portraits { grid-template-columns: 1fr; }
     }
     .nosotros-section {
       background: var(--bg-2);
-      padding: clamp(56px, 7vw, 96px) 0;
+      padding: 7vw 0; padding: clamp(56px, 7vw, 96px) 0;
     }
     .nosotros-header {
-      margin-bottom: clamp(40px, 5vw, 60px);
+      margin-bottom: 5vw; margin-bottom: clamp(40px, 5vw, 60px);
     }
     .nosotros-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(32px, 5vw, 72px);
+      gap: 5vw; gap: clamp(32px, 5vw, 72px);
     }
     .nosotros-card {
       display: flex;
@@ -1482,7 +1482,7 @@
     }
     .nosotros-card-name {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px, 2.8vw, 36px);
+      font-size: 2.8vw; font-size: clamp(22px, 2.8vw, 36px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; color: var(--white);
       line-height: 1;
@@ -1493,7 +1493,7 @@
       color: var(--gold);
     }
     .nosotros-card-text {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 300; line-height: 1.75;
       color: var(--white);
     }
@@ -1512,20 +1512,20 @@
     .nosotros-15anos {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(32px, 5vw, 72px);
+      gap: 5vw; gap: clamp(32px, 5vw, 72px);
       align-items: center;
       border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: clamp(40px, 5vw, 72px);
+      padding-top: 5vw; padding-top: clamp(40px, 5vw, 72px);
     }
     .nosotros-15anos-titulo {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(56px, 9vw, 120px);
+      font-size: 9vw; font-size: clamp(56px, 9vw, 120px);
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: -0.03em;
       line-height: 0.9;
       color: var(--white);
-      margin-bottom: clamp(20px, 3vw, 36px);
+      margin-bottom: 3vw; margin-bottom: clamp(20px, 3vw, 36px);
     }
     .nosotros-15anos-foto {
       overflow: hidden;
@@ -1545,24 +1545,24 @@
     ═══════════════════════════════════════════ */
     .comunidad-section {
       background: var(--bg);
-      padding: clamp(64px, 8vw, 112px) 0;
+      padding: 8vw 0; padding: clamp(64px, 8vw, 112px) 0;
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .comunidad-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 96px);
+      gap: 6vw; gap: clamp(40px, 6vw, 96px);
       align-items: start;
     }
     .comunidad-h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(32px, 4vw, 56px);
+      font-size: 4vw; font-size: clamp(32px, 4vw, 56px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; line-height: 0.95;
       color: var(--white); margin-top: 12px;
     }
     .comunidad-text {
-      font-size: clamp(14px, 1.4vw, 17px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 17px);
       font-weight: 300; line-height: 1.8;
       color: var(--white);
     }
@@ -1581,7 +1581,7 @@
     }
     .comunidad-contact a {
       display: inline-flex; align-items: center; gap: 10px;
-      font-size: clamp(13px, 1.3vw, 15px); font-weight: 400;
+      font-size: 1.3vw; font-size: clamp(13px, 1.3vw, 15px); font-weight: 400;
       color: var(--white); text-decoration: none;
       transition: color .2s;
     }
@@ -1589,7 +1589,7 @@
     .comunidad-contact svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
     .comunidad-foto-wrap {
       width: 100%;
-      margin-bottom: clamp(40px, 5vw, 64px);
+      margin-bottom: 5vw; margin-bottom: clamp(40px, 5vw, 64px);
       overflow: hidden;
     }
     .comunidad-foto-wrap img {
@@ -1608,14 +1608,14 @@
     ═══════════════════════════════════════════ */
     .noticias-section {
       background: var(--bg-2);
-      padding: clamp(56px, 7vw, 96px) 0;
+      padding: 7vw 0; padding: clamp(56px, 7vw, 96px) 0;
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .noticias-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2px;
-      margin-top: clamp(32px, 4vw, 48px);
+      margin-top: 4vw; margin-top: clamp(32px, 4vw, 48px);
     }
     .noticia-card {
       background: var(--bg);
@@ -1630,7 +1630,7 @@
       background: #111;
     }
     .noticia-body {
-      padding: clamp(24px, 3vw, 40px);
+      padding: 3vw; padding: clamp(24px, 3vw, 40px);
       display: flex; flex-direction: column; gap: 12px;
       flex: 1;
     }
@@ -1641,20 +1641,20 @@
     }
     .noticia-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px, 2.5vw, 32px);
+      font-size: 2.5vw; font-size: clamp(22px, 2.5vw, 32px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; color: var(--white);
       line-height: 0.95;
     }
     .noticia-text {
-      font-size: clamp(13px, 1.3vw, 15px);
+      font-size: 1.3vw; font-size: clamp(13px, 1.3vw, 15px);
       font-weight: 300; line-height: 1.7;
       color: rgba(255,255,255,0.75);
       flex: 1;
     }
     .noticia-logos {
       display: flex; align-items: center;
-      gap: clamp(16px, 2vw, 28px); flex-wrap: wrap;
+      gap: 2vw; gap: clamp(16px, 2vw, 28px); flex-wrap: wrap;
       padding-top: 16px;
       border-top: 1px solid rgba(255,255,255,0.07);
       margin-top: 4px;
@@ -1684,20 +1684,20 @@
     ═══════════════════════════════════════════ */
     .site-footer {
       background: #080808;
-      padding: clamp(48px, 6vw, 80px) 0 clamp(28px, 3vw, 40px);
+      padding: 6vw 0 3vw; padding: clamp(48px, 6vw, 80px) 0 clamp(28px, 3vw, 40px);
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .footer-inner {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
-      gap: clamp(32px, 5vw, 64px);
-      padding-bottom: clamp(40px, 5vw, 56px);
+      gap: 5vw; gap: clamp(32px, 5vw, 64px);
+      padding-bottom: 5vw; padding-bottom: clamp(40px, 5vw, 56px);
       border-bottom: 1px solid rgba(255,255,255,0.07);
-      margin-bottom: clamp(24px, 3vw, 32px);
+      margin-bottom: 3vw; margin-bottom: clamp(24px, 3vw, 32px);
     }
     .footer-brand-name {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(16px, 1.8vw, 20px);
+      font-size: 1.8vw; font-size: clamp(16px, 1.8vw, 20px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.01em; color: var(--white);
       margin-bottom: 10px;
@@ -1794,7 +1794,7 @@
     .gallery-tab {
       background: none; border: none; cursor: pointer;
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(14px, 1.5vw, 18px);
+      font-size: 1.5vw; font-size: clamp(14px, 1.5vw, 18px);
       font-weight: 400; letter-spacing: 0em;
       text-transform: uppercase;
       color: var(--white);
@@ -1937,7 +1937,7 @@
     .video-card-label span { color: var(--accent); margin-right: 6px; }
     .video-card-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(15px, 1.5vw, 18px);
+      font-size: 1.5vw; font-size: clamp(15px, 1.5vw, 18px);
       text-transform: uppercase; letter-spacing: 0.04em;
       color: var(--white); margin-bottom: 14px;
     }
@@ -2109,9 +2109,9 @@
         <div class="hero-footer fade-in-3">
           <div class="hero-meta">
             <div class="meta-group">
-              <div class="meta-line" style="font-size:clamp(15px,1.8vw,22px);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.6);">Talleres de teatro y entrenamiento actoral</div>
-              <div class="meta-line" style="font-size:clamp(18px,2.2vw,28px);font-weight:400;color:rgba(255,255,255,0.88);line-height:1.35;text-transform:uppercase;letter-spacing:-0.01em;">Formación para principiantes, intermedios<br>y entrenamiento para actores profesionales.</div>
-              <div class="meta-line" style="font-size:clamp(13px,1.5vw,20px);font-weight:400;color:rgba(255,255,255,0.5);line-height:1.5;margin-top:8px;text-transform:uppercase;letter-spacing:0.02em;">Una nueva propuesta de formación actoral<br>desde la improvisación dirigida.</div>
+              <div class="meta-line" style="font-size:1.8vw; font-size:clamp(15px,1.8vw,22px);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.6);">Talleres de teatro y entrenamiento actoral</div>
+              <div class="meta-line" style="font-size:2.2vw; font-size:clamp(18px,2.2vw,28px);font-weight:400;color:rgba(255,255,255,0.88);line-height:1.35;text-transform:uppercase;letter-spacing:-0.01em;">Formación para principiantes, intermedios<br>y entrenamiento para actores profesionales.</div>
+              <div class="meta-line" style="font-size:1.5vw; font-size:clamp(13px,1.5vw,20px);font-weight:400;color:rgba(255,255,255,0.5);line-height:1.5;margin-top:8px;text-transform:uppercase;letter-spacing:0.02em;">Una nueva propuesta de formación actoral<br>desde la improvisación dirigida.</div>
             </div>
           </div>
 
@@ -2151,7 +2151,7 @@
           <span class="overline">Reseñas de alumnos</span>
           <img src="imagenes_optimizadas/Google_2015_logo.webp"
                alt="Google"
-               style="height:clamp(28px,3.5vw,44px);width:auto;display:block;margin-bottom:12px;opacity:0.95;">
+               style="height:3.5vw; height:clamp(28px,3.5vw,44px);width:auto;display:block;margin-bottom:12px;opacity:0.95;">
           <h2 class="reviews-h2">
             <span class="accent-num">5</span> <span class="reviews-stars-emoji">⭐⭐⭐⭐⭐</span><br>
             88 reseñas<br>
@@ -2562,7 +2562,7 @@
         <div class="levels-philosophy-grid-wrap">
           <header class="metodo-header">
             <span class="overline">Metodología</span>
-            <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.5vw,48px);text-transform:uppercase;letter-spacing:-0.02em;line-height:1;color:var(--white);margin-top:12px;max-width:22ch;">¿Por qué elegir nuestros talleres de teatro en Barcelona?</h2>
+            <h2 style="font-family:'Archivo Black',sans-serif;font-size:3.5vw; font-size:clamp(28px,3.5vw,48px);text-transform:uppercase;letter-spacing:-0.02em;line-height:1;color:var(--white);margin-top:12px;max-width:22ch;">¿Por qué elegir nuestros talleres de teatro en Barcelona?</h2>
           </header>
 
           <div class="metodo-grid">
@@ -2658,7 +2658,7 @@
       </header>
 
       <!-- Profesores primero -->
-      <div class="nosotros-grid" style="margin-bottom: clamp(48px,6vw,88px);">
+      <div class="nosotros-grid" style="margin-bottom: 6vw; margin-bottom: clamp(48px,6vw,88px);">
 
         <div class="nosotros-card">
           <p class="nosotros-card-role">Coord. General · Profesor</p>
@@ -2754,7 +2754,7 @@
   <section class="noticias-section" id="noticias">
     <div class="container">
       <span class="overline">En cartelera</span>
-      <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.5vw,44px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-top:12px;">Sebastián Mogordoy<br>en escena.</h2>
+      <h2 style="font-family:'Archivo Black',sans-serif;font-size:3.5vw; font-size:clamp(28px,3.5vw,44px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-top:12px;">Sebastián Mogordoy<br>en escena.</h2>
 
       <div class="noticias-grid">
 
@@ -2886,7 +2886,7 @@
 
       <header style="margin-bottom: 40px;">
         <span class="overline">Galería</span>
-        <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(32px,4vw,52px);text-transform:uppercase;letter-spacing:0.01em;margin-top:12px;">El estudio en imágenes</h2>
+        <h2 style="font-family:'Archivo Black',sans-serif;font-size:4vw; font-size:clamp(32px,4vw,52px);text-transform:uppercase;letter-spacing:0.01em;margin-top:12px;">El estudio en imágenes</h2>
       </header>
 
       <!-- Tabs -->

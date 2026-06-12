@@ -347,7 +347,7 @@
       left: var(--pad-x);
       z-index: 10;
       font-family: 'Inter', sans-serif;
-      font-size: clamp(8px, 0.75vw, 11px);
+      font-size: 0.75vw; font-size: clamp(8px, 0.75vw, 11px);
       font-weight: 400;
       letter-spacing: 0.22em;
       text-transform: uppercase;
@@ -399,7 +399,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: clamp(11px, 1.2vw, 14px);
+      font-size: 1.2vw; font-size: clamp(11px, 1.2vw, 14px);
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -420,7 +420,7 @@
       background: #facc15;
       color: #0c0c0c;
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(13px, 1.3vw, 16px);
+      font-size: 1.3vw; font-size: clamp(13px, 1.3vw, 16px);
       letter-spacing: 0.05em; text-transform: uppercase;
       text-decoration: none;
       padding: 20px 40px;
@@ -542,7 +542,7 @@
     /* Logo + tagline agrupados */
     .nav-left {
       display: flex; align-items: center;
-      gap: clamp(12px, 1.8vw, 24px); flex-shrink: 0;
+      gap: 1.8vw; gap: clamp(12px, 1.8vw, 24px); flex-shrink: 0;
     }
     .logo {
       display: flex; align-items: center;
@@ -556,7 +556,7 @@
       font-size: 9px; font-weight: 400;
       letter-spacing: 0.15em; text-transform: uppercase;
       color: rgba(255,255,255,0.84); white-space: nowrap;
-      padding-left: clamp(12px, 1.8vw, 24px);
+      padding-left: 1.8vw; padding-left: clamp(12px, 1.8vw, 24px);
       border-left: 1px solid rgba(255,255,255,0.15);
       line-height: 1.3;
     }
@@ -564,10 +564,10 @@
 
     .nav-links {
       display: flex; align-items: center;
-      gap: clamp(16px, 2.5vw, 32px); list-style: none;
+      gap: 2.5vw; gap: clamp(16px, 2.5vw, 32px); list-style: none;
     }
     .nav-links a {
-      font-size: clamp(11px, 1vw, 13px); font-weight: 400;
+      font-size: 1vw; font-size: clamp(11px, 1vw, 13px); font-weight: 400;
       letter-spacing: 0.06em; text-transform: uppercase;
       color: var(--white); text-decoration: none;
       transition: opacity .2s;
@@ -581,7 +581,7 @@
     /* Icono Instagram en nav */
     .nav-ig {
       display: flex; align-items: center;
-      margin-left: clamp(8px, 1.2vw, 16px);
+      margin-left: 1.2vw; margin-left: clamp(8px, 1.2vw, 16px);
       flex-shrink: 0;
     }
     .nav-ig a {
@@ -606,7 +606,7 @@
       cursor: pointer;
       opacity: 0.7;
       transition: opacity .2s, border-color .2s;
-      margin-left: clamp(6px,1vw,12px);
+      margin-left: 1vw; margin-left: clamp(6px,1vw,12px);
       flex-shrink: 0;
       line-height: 1;
     }
@@ -621,8 +621,8 @@
     .hero-body {
       position: relative; z-index: 10; flex: 1;
       display: grid; grid-template-rows: 1fr auto;
-      padding: clamp(40px, 6vw, 88px) var(--pad-x) clamp(48px, 7vw, 96px);
-      gap: clamp(32px, 4vw, 56px);
+      padding: 6vw var(--pad-x) 7vw; padding: clamp(40px, 6vw, 88px) var(--pad-x) clamp(48px, 7vw, 96px);
+      gap: 4vw; gap: clamp(32px, 4vw, 56px);
     }
     /* Bloque título: centra overline + H1 verticalmente en el espacio disponible */
     .hero-title-block {
@@ -631,7 +631,7 @@
       justify-content: center;
     }
     .hero-overline {
-      font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
       letter-spacing: 0.07em; text-transform: uppercase;
       color: rgba(255,255,255,0.90); margin-bottom: 20px;
       display: flex; align-items: center; gap: 12px;
@@ -639,7 +639,7 @@
     .hero-overline::after { content: ''; flex: 0 0 32px; height: 1px; background: rgba(255,255,255,0.4); }
     .hero-h1 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(44px, 8.5vw, 118px);
+      font-size: 8.5vw; font-size: clamp(44px, 8.5vw, 118px);
       font-weight: 400; font-style: normal;
       line-height: 0.92; letter-spacing: -0.02em;
       text-transform: uppercase; color: var(--white);
@@ -649,17 +649,17 @@
     .hero-h1 .accent-word { color: var(--accent); display: block; }
     .hero-footer {
       display: grid; grid-template-columns: 1fr auto;
-      gap: clamp(24px, 4vw, 64px); align-items: end;
+      gap: 4vw; gap: clamp(24px, 4vw, 64px); align-items: end;
     }
     .hero-meta { display: flex; flex-direction: column; gap: 20px; }
     .meta-group { display: flex; flex-direction: column; gap: 3px; }
     .meta-label {
-      font-size: clamp(11px, 1.1vw, 13px); font-weight: 700;
+      font-size: 1.1vw; font-size: clamp(11px, 1.1vw, 13px); font-weight: 700;
       letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--white); margin-bottom: 4px;
     }
     .meta-line {
-      font-size: clamp(14px, 1.6vw, 17px); font-weight: 400;
+      font-size: 1.6vw; font-size: clamp(14px, 1.6vw, 17px); font-weight: 400;
       letter-spacing: 0.03em; text-transform: uppercase;
       color: var(--white); line-height: 1.5;
     }
@@ -682,19 +682,19 @@
       display: flex; flex-direction: column; gap: 3px;
     }
     .hero-dir-label {
-      font-size: clamp(11px, 0.95vw, 14px);
+      font-size: 0.95vw; font-size: clamp(11px, 0.95vw, 14px);
       font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--accent);
     }
     .hero-dir-name {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px, 2.4vw, 34px);
+      font-size: 2.4vw; font-size: clamp(22px, 2.4vw, 34px);
       text-transform: uppercase; letter-spacing: -0.02em;
       color: var(--white); line-height: 0.95;
     }
     .hero-dir-junto {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(16px, 1.8vw, 24px);
+      font-size: 1.8vw; font-size: clamp(16px, 1.8vw, 24px);
       font-weight: 400; letter-spacing: -0.01em;
       color: rgba(255,255,255,0.85);
       text-transform: uppercase;
@@ -718,9 +718,9 @@
     .reviews-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(24px, 4vw, 64px);
+      gap: 4vw; gap: clamp(24px, 4vw, 64px);
       align-items: start;
-      margin-bottom: clamp(48px, 6vw, 72px);
+      margin-bottom: 6vw; margin-bottom: clamp(48px, 6vw, 72px);
     }
     .reviews-header-left {}
     .reviews-header-right {
@@ -733,7 +733,7 @@
 
     .reviews-h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(40px, 6vw, 80px);
+      font-size: 6vw; font-size: clamp(40px, 6vw, 80px);
       font-weight: 400; font-style: normal;
       line-height: 0.9; letter-spacing: -0.02em;
       text-transform: uppercase;
@@ -748,7 +748,7 @@
     .reviews-header-left .overline::after { background: var(--gold); }
 
     .reviews-subtitle {
-      font-size: clamp(17px, 2vw, 22px);
+      font-size: 2vw; font-size: clamp(17px, 2vw, 22px);
       font-weight: 300; line-height: 1.65;
       color: var(--white);
       max-width: 42ch;
@@ -756,7 +756,7 @@
 
     .link-all {
       display: inline-flex; align-items: center; gap: 8px;
-      font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
       letter-spacing: 0.05em; text-transform: uppercase;
       color: var(--gold); text-decoration: none;
       border-bottom: 1px solid var(--gold);
@@ -825,7 +825,7 @@
     .review-card {
       background: var(--bg-2);
       border: 1px solid var(--g700);
-      padding: clamp(24px, 3vw, 36px);
+      padding: 3vw; padding: clamp(24px, 3vw, 36px);
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -885,7 +885,7 @@
 
     /* Texto de la reseña */
     .card-text {
-      font-size: clamp(15px, 1.6vw, 18px);
+      font-size: 1.6vw; font-size: clamp(15px, 1.6vw, 18px);
       font-weight: 300;
       line-height: 1.65;
       color: var(--white);
@@ -904,8 +904,8 @@
 
     /* Línea SEO-local al pie del bloque */
     .reviews-footer {
-      margin-top: clamp(32px, 4vw, 48px);
-      padding-top: clamp(20px, 2.5vw, 28px);
+      margin-top: 4vw; margin-top: clamp(32px, 4vw, 48px);
+      padding-top: 2.5vw; padding-top: clamp(20px, 2.5vw, 28px);
       border-top: 1px solid var(--g700);
       display: flex;
       align-items: center;
@@ -914,7 +914,7 @@
       gap: 16px;
     }
     .reviews-local-note {
-      font-size: clamp(12px, 1.2vw, 14px); font-weight: 400;
+      font-size: 1.2vw; font-size: clamp(12px, 1.2vw, 14px); font-weight: 400;
       letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--white);
     }
@@ -926,7 +926,7 @@
       color: var(--gold); font-size: 14px; letter-spacing: 1px;
     }
     .reviews-google-badge .badge-txt {
-      font-size: clamp(12px, 1.2vw, 14px); color: var(--white);
+      font-size: 1.2vw; font-size: clamp(12px, 1.2vw, 14px); color: var(--white);
     }
     .reviews-google-badge .badge-txt strong { color: var(--white); font-weight: 700; }
 
@@ -959,7 +959,7 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-h1 { font-size: clamp(38px, 12vw, 60px); }
+      .hero-h1 { font-size: 12vw; font-size: clamp(38px, 12vw, 60px); }
 
       .hero-footer { grid-template-columns: 1fr; }
       .hero-cta-block {
@@ -1024,7 +1024,7 @@
     .editorial-caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
-      padding: clamp(24px, 5vw, 56px);
+      padding: 5vw; padding: clamp(24px, 5vw, 56px);
       background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
       display: flex; align-items: flex-end; justify-content: space-between;
       gap: 24px; flex-wrap: wrap;
@@ -1042,7 +1042,7 @@
     }
     .editorial-quote {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(20px, 3.5vw, 44px);
+      font-size: 3.5vw; font-size: clamp(20px, 3.5vw, 44px);
       font-weight: 400; font-style: normal;
       line-height: 0.96; letter-spacing: 0em;
       text-transform: uppercase; color: var(--white);
@@ -1123,7 +1123,7 @@
        BLOQUE 04, NIVELES / TALLERES
     ═══════════════════════════════════════════ */
     .levels-section {
-      padding: clamp(40px, 5vw, 72px) 0 0;
+      padding: 5vw 0 0; padding: clamp(40px, 5vw, 72px) 0 0;
       background: var(--bg-2);
     }
 
@@ -1131,13 +1131,13 @@
     .levels-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(24px, 4vw, 64px);
+      gap: 4vw; gap: clamp(24px, 4vw, 64px);
       align-items: end;
-      margin-bottom: clamp(40px, 6vw, 72px);
+      margin-bottom: 6vw; margin-bottom: clamp(40px, 6vw, 72px);
     }
     .levels-h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(48px, 7vw, 96px);
+      font-size: 7vw; font-size: clamp(48px, 7vw, 96px);
       line-height: 0.88;
       letter-spacing: -0.01em;
       text-transform: uppercase;
@@ -1146,7 +1146,7 @@
     }
     .levels-h2 .accent-word { color: var(--accent); }
     .levels-intro {
-      font-size: clamp(17px, 2vw, 22px);
+      font-size: 2vw; font-size: clamp(17px, 2vw, 22px);
       font-weight: 300;
       line-height: 1.6;
       color: var(--white);
@@ -1161,8 +1161,8 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      min-height: clamp(300px, 32vw, 460px);
-      margin: 0 clamp(12px, 2.5vw, 40px) 24px;
+      min-height: 32vw; min-height: clamp(300px, 32vw, 460px);
+      margin: 0 2.5vw 24px; margin: 0 clamp(12px, 2.5vw, 40px) 24px;
       text-decoration: none;
       overflow: hidden;
       background-color: #0e0000;
@@ -1207,7 +1207,7 @@
       flex: 1;
       display: flex;
       align-items: center;
-      padding: clamp(24px, 4vw, 56px);
+      padding: 4vw; padding: clamp(24px, 4vw, 56px);
     }
     /* Bloque tipográfico con panel translúcido */
     .levels-announce-panel {
@@ -1217,13 +1217,13 @@
       background: rgba(0,0,0,0.55);
       backdrop-filter: blur(3px);
       -webkit-backdrop-filter: blur(3px);
-      padding: clamp(18px, 2.2vw, 30px) clamp(24px, 3vw, 44px);
+      padding: 2.2vw 3vw; padding: clamp(18px, 2.2vw, 30px) clamp(24px, 3vw, 44px);
       align-self: flex-start;
       border-left: 5px solid var(--accent);
     }
     .levels-announce-tag {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px, 3vw, 42px);
+      font-size: 3vw; font-size: clamp(22px, 3vw, 42px);
       line-height: 1;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -1231,7 +1231,7 @@
     }
     .levels-announce-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(52px, 8vw, 110px);
+      font-size: 8vw; font-size: clamp(52px, 8vw, 110px);
       line-height: 0.86;
       letter-spacing: -0.03em;
       text-transform: uppercase;
@@ -1240,7 +1240,7 @@
     /* Badge bajo PRINCIPIANTES, dentro del panel */
     .levels-announce-badge {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(10px, 1vw, 13px);
+      font-size: 1vw; font-size: clamp(10px, 1vw, 13px);
       text-transform: uppercase;
       letter-spacing: 0.14em;
       color: #000;
@@ -1267,11 +1267,11 @@
       flex-direction: column;
       justify-content: center;
       gap: 3px;
-      padding: clamp(14px, 1.6vw, 22px) clamp(18px, 2.2vw, 32px);
+      padding: 1.6vw 2.2vw; padding: clamp(14px, 1.6vw, 22px) clamp(18px, 2.2vw, 32px);
       border-right: 1px solid rgba(255,255,255,0.18);
     }
     .cell-label {
-      font-size: clamp(9px, 0.85vw, 11px);
+      font-size: 0.85vw; font-size: clamp(9px, 0.85vw, 11px);
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -1279,7 +1279,7 @@
     }
     .cell-value {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(13px, 1.4vw, 18px);
+      font-size: 1.4vw; font-size: clamp(13px, 1.4vw, 18px);
       text-transform: uppercase;
       letter-spacing: 0.02em;
       color: #fff;
@@ -1291,12 +1291,12 @@
       align-items: center;
       gap: 14px;
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(13px, 1.5vw, 19px);
+      font-size: 1.5vw; font-size: clamp(13px, 1.5vw, 19px);
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: #0c0c0c;
       background: #FFD700;
-      padding: clamp(18px, 2.2vw, 28px) clamp(28px, 4vw, 56px);
+      padding: 2.2vw 4vw; padding: clamp(18px, 2.2vw, 28px) clamp(28px, 4vw, 56px);
       white-space: nowrap;
       flex-shrink: 0;
       transition: filter .2s;
@@ -1318,7 +1318,7 @@
       border-top: none;
     }
     .level-info-col {
-      padding: clamp(28px, 3.5vw, 48px) clamp(20px, 3vw, 40px);
+      padding: 3.5vw 3vw; padding: clamp(28px, 3.5vw, 48px) clamp(20px, 3vw, 40px);
       border-right: 1px solid rgba(255,255,255,0.06);
       display: flex;
       flex-direction: column;
@@ -1370,13 +1370,13 @@
       width: 100%; height: 100%; border: none;
     }
     .level-info-text {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 300;
       line-height: 1.7;
       color: var(--white);
     }
     .level-info-coord {
-      font-size: clamp(11px, 1.1vw, 13px);
+      font-size: 1.1vw; font-size: clamp(11px, 1.1vw, 13px);
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -1393,10 +1393,10 @@
     /* ── Texto filosófico + metodología unificados ── */
     .levels-philosophy {
       background: var(--bg-2);
-      padding: clamp(48px, 6vw, 96px) clamp(24px, 8vw, 120px);
+      padding: 6vw 8vw; padding: clamp(48px, 6vw, 96px) clamp(24px, 8vw, 120px);
       display: flex;
       flex-direction: column;
-      gap: clamp(48px, 6vw, 80px);
+      gap: 6vw; gap: clamp(48px, 6vw, 80px);
     }
     .levels-philosophy-inner {
       width: 100%;
@@ -1408,7 +1408,7 @@
       width: 100%;
     }
     .levels-philosophy p {
-      font-size: clamp(15px, 1.5vw, 18px);
+      font-size: 1.5vw; font-size: clamp(15px, 1.5vw, 18px);
       font-weight: 300;
       line-height: 1.75;
       color: var(--white);
@@ -1416,13 +1416,13 @@
     }
     .levels-philosophy-lead {
       font-family: 'Archivo Black', sans-serif !important;
-      font-size: clamp(20px, 2.5vw, 30px) !important;
+      font-size: 2.5vw !important; font-size: clamp(20px, 2.5vw, 30px) !important;
       font-weight: 400 !important;
       line-height: 1.25 !important;
       color: var(--white) !important;
     }
     .levels-philosophy-subtitle {
-      font-size: clamp(11px, 1.1vw, 13px) !important;
+      font-size: 1.1vw !important; font-size: clamp(11px, 1.1vw, 13px) !important;
       font-weight: 700 !important;
       letter-spacing: 0.08em !important;
       text-transform: uppercase !important;
@@ -1448,7 +1448,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 0;
-      margin: 0 clamp(12px, 2.5vw, 40px);
+      margin: 0 2.5vw; margin: 0 clamp(12px, 2.5vw, 40px);
     }
 
     /* Card individual */
@@ -1496,12 +1496,12 @@
       display: flex;
       flex-direction: column;
       flex: 1;
-      padding: clamp(20px, 2.5vw, 32px);
+      padding: 2.5vw; padding: clamp(20px, 2.5vw, 32px);
       gap: 12px;
     }
 
     .level-card-subtitle {
-      font-size: clamp(14px, 1.6vw, 20px);
+      font-size: 1.6vw; font-size: clamp(14px, 1.6vw, 20px);
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -1510,20 +1510,20 @@
     }
     .level-card-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(28px, 3vw, 42px);
+      font-size: 3vw; font-size: clamp(28px, 3vw, 42px);
       line-height: 0.9; letter-spacing: -0.01em;
       text-transform: uppercase;
       color: var(--white);
     }
     .level-card-text {
-      font-size: clamp(15px, 1.5vw, 17px);
+      font-size: 1.5vw; font-size: clamp(15px, 1.5vw, 17px);
       font-weight: 300;
       line-height: 1.6;
       color: var(--white);
       flex: 1;
     }
     .level-card-schedule {
-      font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
       letter-spacing: 0.03em;
       color: var(--white);
       padding: 12px 0;
@@ -1548,7 +1548,7 @@
       .levels-grid { grid-template-columns: 1fr; gap: 0; }
       .level-card-img-wrap { padding-bottom: 56%; } /* 16:9 en mobile */
       .levels-announce {
-        min-height: clamp(260px, 60vw, 360px);
+        min-height: 60vw; min-height: clamp(260px, 60vw, 360px);
       }
       .levels-announce-top {
         padding: 16px;
@@ -1570,10 +1570,10 @@
     ═══════════════════════════════════════════ */
     .metodo-section {
       background: var(--bg);
-      padding: clamp(64px, 8vw, 112px) 0;
+      padding: 8vw 0; padding: clamp(64px, 8vw, 112px) 0;
     }
     .metodo-header {
-      margin-bottom: clamp(40px, 5vw, 64px);
+      margin-bottom: 5vw; margin-bottom: clamp(40px, 5vw, 64px);
     }
     .metodo-grid {
       display: grid;
@@ -1581,7 +1581,7 @@
       gap: 0;
     }
     .metodo-item {
-      padding: clamp(28px, 3.5vw, 44px) clamp(24px, 3vw, 40px);
+      padding: 3.5vw 3vw; padding: clamp(28px, 3.5vw, 44px) clamp(24px, 3vw, 40px);
       border-top: 1px solid rgba(255,255,255,0.07);
       border-right: 1px solid rgba(255,255,255,0.07);
       display: flex;
@@ -1596,13 +1596,13 @@
     }
     .metodo-item-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(18px, 2vw, 24px);
+      font-size: 2vw; font-size: clamp(18px, 2vw, 24px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.01em; color: var(--white);
       line-height: 1.05;
     }
     .metodo-item-text {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 300; line-height: 1.75;
       color: var(--white);
     }
@@ -1646,11 +1646,11 @@
     .nosotros-portrait-caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
-      padding: clamp(16px, 2vw, 28px);
+      padding: 2vw; padding: clamp(16px, 2vw, 28px);
       background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
     }
     .nosotros-portrait-caption .nosotros-card-name {
-      font-size: clamp(18px, 2.2vw, 28px);
+      font-size: 2.2vw; font-size: clamp(18px, 2.2vw, 28px);
     }
     @media (max-width: 600px) {
       .nosotros-portraits { grid-template-columns: 1fr; }
@@ -1669,15 +1669,15 @@
 
     .nosotros-section {
       background: var(--bg-2);
-      padding: clamp(56px, 7vw, 96px) 0;
+      padding: 7vw 0; padding: clamp(56px, 7vw, 96px) 0;
     }
     .nosotros-header {
-      margin-bottom: clamp(40px, 5vw, 60px);
+      margin-bottom: 5vw; margin-bottom: clamp(40px, 5vw, 60px);
     }
     .nosotros-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(32px, 5vw, 72px);
+      gap: 5vw; gap: clamp(32px, 5vw, 72px);
     }
     .nosotros-card {
       display: flex;
@@ -1686,7 +1686,7 @@
     }
     .nosotros-card-name {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px, 2.8vw, 36px);
+      font-size: 2.8vw; font-size: clamp(22px, 2.8vw, 36px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; color: var(--white);
       line-height: 1;
@@ -1697,7 +1697,7 @@
       color: var(--gold);
     }
     .nosotros-card-text {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 300; line-height: 1.75;
       color: var(--white);
     }
@@ -1716,20 +1716,20 @@
     .nosotros-15anos {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(32px, 5vw, 72px);
+      gap: 5vw; gap: clamp(32px, 5vw, 72px);
       align-items: center;
       border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: clamp(40px, 5vw, 72px);
+      padding-top: 5vw; padding-top: clamp(40px, 5vw, 72px);
     }
     .nosotros-15anos-titulo {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(56px, 9vw, 120px);
+      font-size: 9vw; font-size: clamp(56px, 9vw, 120px);
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: -0.03em;
       line-height: 0.9;
       color: var(--white);
-      margin-bottom: clamp(20px, 3vw, 36px);
+      margin-bottom: 3vw; margin-bottom: clamp(20px, 3vw, 36px);
     }
     .nosotros-15anos-foto {
       overflow: hidden;
@@ -1794,35 +1794,35 @@
     /* Contenido debajo de la imagen, sobre el fondo negro */
     .comunidad-body {
       background: var(--bg);
-      padding: clamp(48px, 6vw, 88px) var(--pad-x);
+      padding: 6vw var(--pad-x); padding: clamp(48px, 6vw, 88px) var(--pad-x);
       max-width: var(--max-w);
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 96px);
+      gap: 6vw; gap: clamp(40px, 6vw, 96px);
       align-items: start;
     }
 
     .comunidad-h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(36px, 5vw, 68px);
+      font-size: 5vw; font-size: clamp(36px, 5vw, 68px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; line-height: 0.9;
       color: var(--white); margin-top: 12px;
     }
     .comunidad-quote {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(18px, 2.2vw, 28px);
+      font-size: 2.2vw; font-size: clamp(18px, 2.2vw, 28px);
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: -0.01em;
       line-height: 1.1;
       color: var(--accent);
-      margin-top: clamp(20px, 2.5vw, 32px);
+      margin-top: 2.5vw; margin-top: clamp(20px, 2.5vw, 32px);
       max-width: 28ch;
     }
     .comunidad-text {
-      font-size: clamp(14px, 1.4vw, 17px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 17px);
       font-weight: 300; line-height: 1.8;
       color: rgba(255,255,255,0.90);
       margin-top: 12px;
@@ -1831,7 +1831,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding-top: clamp(28px, 3.5vw, 48px);
+      padding-top: 3.5vw; padding-top: clamp(28px, 3.5vw, 48px);
     }
     .comunidad-contact {
       display: flex;
@@ -1843,7 +1843,7 @@
     }
     .comunidad-contact a {
       display: inline-flex; align-items: center; gap: 10px;
-      font-size: clamp(13px, 1.3vw, 15px); font-weight: 400;
+      font-size: 1.3vw; font-size: clamp(13px, 1.3vw, 15px); font-weight: 400;
       color: var(--white); text-decoration: none;
       transition: color .2s;
     }
@@ -1858,21 +1858,21 @@
     ═══════════════════════════════════════════ */
     .ubicacion-section {
       background: var(--bg);
-      padding: clamp(64px, 8vw, 104px) 0 0;
+      padding: 8vw 0 0; padding: clamp(64px, 8vw, 104px) 0 0;
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .ubicacion-inner {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
-      gap: clamp(40px, 6vw, 96px);
+      gap: 6vw; gap: clamp(40px, 6vw, 96px);
       align-items: stretch;
-      padding-bottom: clamp(56px, 7vw, 96px);
+      padding-bottom: 7vw; padding-bottom: clamp(56px, 7vw, 96px);
     }
-    .ubicacion-info { display: flex; flex-direction: column; gap: clamp(28px, 3.5vw, 44px); }
+    .ubicacion-info { display: flex; flex-direction: column; gap: 3.5vw; gap: clamp(28px, 3.5vw, 44px); }
 
     .ubicacion-espacio {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(28px, 3.5vw, 48px);
+      font-size: 3.5vw; font-size: clamp(28px, 3.5vw, 48px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; line-height: 0.95;
       color: var(--white);
@@ -1894,7 +1894,7 @@
       min-width: 56px;
     }
     .ubicacion-dato-text {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 300; line-height: 1.55;
       color: rgba(255,255,255,0.92);
     }
@@ -1904,7 +1904,7 @@
 
     .ubicacion-cta {
       display: inline-flex; align-items: center; gap: 12px;
-      font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(12px, 1.2vw, 14px); font-weight: 700;
       letter-spacing: 0.06em; text-transform: uppercase;
       color: var(--white); text-decoration: none;
       border: 1px solid rgba(255,255,255,0.25);
@@ -1918,7 +1918,7 @@
     .ubicacion-mapa-wrap {
       position: relative;
       width: 100%;
-      min-height: clamp(360px, 50vw, 560px);
+      min-height: 50vw; min-height: clamp(360px, 50vw, 560px);
       overflow: hidden;
       background: #111;
     }
@@ -1956,7 +1956,7 @@
     }
     .ubicacion-mapa-sublabel {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(14px, 1.6vw, 18px);
+      font-size: 1.6vw; font-size: clamp(14px, 1.6vw, 18px);
       text-transform: uppercase; letter-spacing: -0.01em;
       color: var(--white);
     }
@@ -1983,14 +1983,14 @@
     ═══════════════════════════════════════════ */
     .noticias-section {
       background: var(--bg-2);
-      padding: clamp(56px, 7vw, 96px) 0;
+      padding: 7vw 0; padding: clamp(56px, 7vw, 96px) 0;
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .noticias-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2px;
-      margin-top: clamp(32px, 4vw, 48px);
+      margin-top: 4vw; margin-top: clamp(32px, 4vw, 48px);
     }
     .noticia-card {
       background: var(--bg);
@@ -2005,7 +2005,7 @@
       background: #111;
     }
     .noticia-body {
-      padding: clamp(24px, 3vw, 40px);
+      padding: 3vw; padding: clamp(24px, 3vw, 40px);
       display: flex; flex-direction: column; gap: 12px;
       flex: 1;
     }
@@ -2016,20 +2016,20 @@
     }
     .noticia-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px, 2.5vw, 32px);
+      font-size: 2.5vw; font-size: clamp(22px, 2.5vw, 32px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; color: var(--white);
       line-height: 0.95;
     }
     .noticia-text {
-      font-size: clamp(13px, 1.3vw, 15px);
+      font-size: 1.3vw; font-size: clamp(13px, 1.3vw, 15px);
       font-weight: 300; line-height: 1.7;
       color: rgba(255,255,255,0.90);
       flex: 1;
     }
     .noticia-logos {
       display: flex; align-items: center;
-      gap: clamp(16px, 2vw, 28px); flex-wrap: wrap;
+      gap: 2vw; gap: clamp(16px, 2vw, 28px); flex-wrap: wrap;
       padding-top: 16px;
       border-top: 1px solid rgba(255,255,255,0.07);
       margin-top: 4px;
@@ -2059,20 +2059,20 @@
     ═══════════════════════════════════════════ */
     .site-footer {
       background: #080808;
-      padding: clamp(48px, 6vw, 80px) 0 clamp(28px, 3vw, 40px);
+      padding: 6vw 0 3vw; padding: clamp(48px, 6vw, 80px) 0 clamp(28px, 3vw, 40px);
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .footer-inner {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
-      gap: clamp(32px, 5vw, 64px);
-      padding-bottom: clamp(40px, 5vw, 56px);
+      gap: 5vw; gap: clamp(32px, 5vw, 64px);
+      padding-bottom: 5vw; padding-bottom: clamp(40px, 5vw, 56px);
       border-bottom: 1px solid rgba(255,255,255,0.07);
-      margin-bottom: clamp(24px, 3vw, 32px);
+      margin-bottom: 3vw; margin-bottom: clamp(24px, 3vw, 32px);
     }
     .footer-brand-name {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(16px, 1.8vw, 20px);
+      font-size: 1.8vw; font-size: clamp(16px, 1.8vw, 20px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.01em; color: var(--white);
       margin-bottom: 10px;
@@ -2175,7 +2175,7 @@
     .gallery-tab {
       background: none; border: none; cursor: pointer;
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(14px, 1.5vw, 18px);
+      font-size: 1.5vw; font-size: clamp(14px, 1.5vw, 18px);
       font-weight: 400; letter-spacing: 0em;
       text-transform: uppercase;
       color: var(--white);
@@ -2326,7 +2326,7 @@
     .video-card-label span { color: var(--accent); margin-right: 6px; }
     .video-card-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(15px, 1.5vw, 18px);
+      font-size: 1.5vw; font-size: clamp(15px, 1.5vw, 18px);
       text-transform: uppercase; letter-spacing: 0.04em;
       color: var(--white); margin-bottom: 14px;
     }
@@ -2393,15 +2393,15 @@
     ═══════════════════════════════════════════ */
     .faq-section {
       background: var(--bg-2);
-      padding: clamp(64px, 8vw, 112px) 0;
+      padding: 8vw 0; padding: clamp(64px, 8vw, 112px) 0;
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .faq-header {
-      margin-bottom: clamp(40px, 5vw, 64px);
+      margin-bottom: 5vw; margin-bottom: clamp(40px, 5vw, 64px);
     }
     .faq-h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(36px, 5vw, 72px);
+      font-size: 5vw; font-size: clamp(36px, 5vw, 72px);
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: -0.02em;
@@ -2426,9 +2426,9 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      padding: clamp(18px, 2.2vw, 26px) 0;
+      padding: 2.2vw 0; padding: clamp(18px, 2.2vw, 26px) 0;
       font-family: 'Inter', sans-serif;
-      font-size: clamp(15px, 1.6vw, 18px);
+      font-size: 1.6vw; font-size: clamp(15px, 1.6vw, 18px);
       font-weight: 500;
       letter-spacing: 0.01em;
       color: var(--white);
@@ -2453,10 +2453,10 @@
       color: var(--white);
     }
     .faq-answer {
-      padding-bottom: clamp(18px, 2.2vw, 26px);
+      padding-bottom: 2.2vw; padding-bottom: clamp(18px, 2.2vw, 26px);
     }
     .faq-answer p {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 300;
       line-height: 1.75;
       color: rgba(255,255,255,0.88);
@@ -2502,7 +2502,7 @@
     }
     .mobile-menu-nav a {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(26px, 9vw, 40px);
+      font-size: 9vw; font-size: clamp(26px, 9vw, 40px);
       text-transform: uppercase;
       color: rgba(255,255,255,0.88);
       text-decoration: none;
@@ -2516,7 +2516,7 @@
       color: #facc15;
       margin-top: 20px;
       border-bottom: none;
-      font-size: clamp(22px, 7vw, 34px);
+      font-size: 7vw; font-size: clamp(22px, 7vw, 34px);
     }
     .mobile-menu-footer {
       padding: 20px 28px;
@@ -2537,7 +2537,7 @@
       .levels-announce-cta, .level-card-cta { width: auto; }
     }
     @media (max-width: 480px) {
-      .hero-h1 { font-size: clamp(32px, 10.5vw, 46px); }
+      .hero-h1 { font-size: 10.5vw; font-size: clamp(32px, 10.5vw, 46px); }
     }
     
     /* ══ HERO MOBILE OVERRIDES ══════════════════════ */
@@ -2549,7 +2549,7 @@
       /* Badge limpio bajo el logo */
       .hero-mobile-badge {
         display: block;
-        font-size: clamp(13px, 3.8vw, 16px); font-weight: 700;
+        font-size: 3.8vw; font-size: clamp(13px, 3.8vw, 16px); font-weight: 700;
         letter-spacing: 0.06em; text-transform: uppercase;
         color: rgba(255,255,255,0.92);
         margin-bottom: 28px;
@@ -2560,7 +2560,7 @@
     /* ══ LEVELS ANNOUNCE TITLE, evitar overflow mobile ════════ */
     @media (max-width: 520px) {
       .levels-announce-title {
-        font-size: clamp(30px, 10vw, 44px) !important;
+        font-size: 10vw !important; font-size: clamp(30px, 10vw, 44px) !important;
       }
       .levels-announce-panel { overflow: hidden; max-width: 90vw; }
     }
@@ -2650,7 +2650,7 @@
       }
       .nosotros-portrait-caption-mobile .prof-name {
         font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px,7vw,32px); text-transform: uppercase;
+      font-size: 7vw; font-size: clamp(22px,7vw,32px); text-transform: uppercase;
         letter-spacing: -0.02em; color: var(--white);
         margin: 0 0 10px;
       }
@@ -2731,9 +2731,9 @@
       .grid-2, .directores-bio {
         grid-template-columns: 1fr !important;
       }
-      h1 { font-size: clamp(1.8rem, 8vw, 2.5rem) !important; }
-      h2 { font-size: clamp(1.4rem, 6vw, 2rem) !important; }
-      .hero-title { font-size: clamp(2rem, 9vw, 3rem) !important; }
+      h1 { font-size: 8vw !important; font-size: clamp(1.8rem, 8vw, 2.5rem) !important; }
+      h2 { font-size: 6vw !important; font-size: clamp(1.4rem, 6vw, 2rem) !important; }
+      .hero-title { font-size: 9vw !important; font-size: clamp(2rem, 9vw, 3rem) !important; }
       .section-padding { padding: 3rem 1.2rem !important; }
       .container { padding-left: 1.2rem !important; padding-right: 1.2rem !important; }
     }
@@ -2950,9 +2950,9 @@
         <div class="hero-footer fade-in-3">
           <div class="hero-meta">
             <div class="meta-group">
-              <div class="meta-line" style="font-size:clamp(15px,1.8vw,22px);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.6);">Talleres de teatro y entrenamiento actoral</div>
-              <div class="meta-line" style="font-size:clamp(18px,2.2vw,28px);font-weight:400;color:rgba(255,255,255,0.88);line-height:1.35;text-transform:uppercase;letter-spacing:-0.01em;">Formación para principiantes, intermedios<br>y entrenamiento para actores profesionales.</div>
-              <div class="meta-line" style="font-size:clamp(13px,1.5vw,20px);font-weight:400;color:rgba(255,255,255,0.5);line-height:1.5;margin-top:8px;text-transform:uppercase;letter-spacing:0.02em;">Una nueva propuesta de formación actoral<br>desde la improvisación dirigida.</div>
+              <div class="meta-line" style="font-size:1.8vw; font-size:clamp(15px,1.8vw,22px);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.6);">Talleres de teatro y entrenamiento actoral</div>
+              <div class="meta-line" style="font-size:2.2vw; font-size:clamp(18px,2.2vw,28px);font-weight:400;color:rgba(255,255,255,0.88);line-height:1.35;text-transform:uppercase;letter-spacing:-0.01em;">Formación para principiantes, intermedios<br>y entrenamiento para actores profesionales.</div>
+              <div class="meta-line" style="font-size:1.5vw; font-size:clamp(13px,1.5vw,20px);font-weight:400;color:rgba(255,255,255,0.5);line-height:1.5;margin-top:8px;text-transform:uppercase;letter-spacing:0.02em;">Una nueva propuesta de formación actoral<br>desde la improvisación dirigida.</div>
             </div>
           </div>
 
@@ -2992,7 +2992,7 @@
           <span class="overline">Reseñas de alumnos</span>
           <img loading="lazy" src="imagenes_optimizadas/Google_2015_logo.webp"
                alt="Google"
-               style="height:clamp(28px,3.5vw,44px);width:auto;display:block;margin-bottom:12px;opacity:0.95;">
+               style="height:3.5vw; height:clamp(28px,3.5vw,44px);width:auto;display:block;margin-bottom:12px;opacity:0.95;">
           <h2 class="reviews-h2">
             <span class="accent-num">5</span> <span class="reviews-stars-emoji">⭐⭐⭐⭐⭐</span> <br /> 88 reseñas <br /> en Google
           </h2>
@@ -3205,7 +3205,7 @@
           </h2>
         </div>
         <div>
-          <p style="font-family:'Archivo Black',sans-serif;font-size:clamp(20px,2.2vw,30px);text-transform:lowercase;letter-spacing:-0.02em;color:var(--white);margin-bottom:16px;line-height:1.05;">dar el salto.</p>
+          <p style="font-family:'Archivo Black',sans-serif;font-size:2.2vw; font-size:clamp(20px,2.2vw,30px);text-transform:lowercase;letter-spacing:-0.02em;color:var(--white);margin-bottom:16px;line-height:1.05;">dar el salto.</p>
           <p class="levels-intro">
             Tres recorridos posibles para estudiar teatro en Barcelona: para quienes empiezan desde cero, para quienes quieren profundizar y para actores que buscan entrenamiento, presencia y lenguaje propio.
           </p>
@@ -3466,7 +3466,7 @@
         <div class="levels-philosophy-grid-wrap">
           <header class="metodo-header">
             <span class="overline">Metodología</span>
-            <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.5vw,48px);text-transform:uppercase;letter-spacing:-0.02em;line-height:1;color:var(--white);margin-top:12px;max-width:22ch;">¿Por qué elegir nuestros talleres de teatro en Barcelona?</h2>
+            <h2 style="font-family:'Archivo Black',sans-serif;font-size:3.5vw; font-size:clamp(28px,3.5vw,48px);text-transform:uppercase;letter-spacing:-0.02em;line-height:1;color:var(--white);margin-top:12px;max-width:22ch;">¿Por qué elegir nuestros talleres de teatro en Barcelona?</h2>
           </header>
 
           <div class="metodo-grid">
@@ -3522,17 +3522,17 @@
   </div>
 
   <!-- Texto filosófico, diseño editorial -->
-  <section style="background:var(--bg-2); padding:clamp(72px,10vw,140px) 0;">
+  <section style="background:var(--bg-2); padding:10vw 0; padding:clamp(72px,10vw,140px) 0;">
     <div class="container">
-      <div class="mirada-grid" style="display:grid;grid-template-columns:1fr 2fr;gap:clamp(40px,7vw,112px);align-items:start;">
+      <div class="mirada-grid" style="display:grid;grid-template-columns:1fr 2fr;gap:7vw; gap:clamp(40px,7vw,112px);align-items:start;">
         <div>
           <span class="overline" style="margin-bottom:20px;display:block;">Nuestra mirada</span>
-          <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(36px,5vw,68px);text-transform:uppercase;letter-spacing:-0.03em;line-height:0.9;color:var(--white);">El teatro <br /> como un <br><span style="color:var(--accent);">superjuego.</span></h2>
+          <h2 style="font-family:'Archivo Black',sans-serif;font-size:5vw; font-size:clamp(36px,5vw,68px);text-transform:uppercase;letter-spacing:-0.03em;line-height:0.9;color:var(--white);">El teatro <br /> como un <br><span style="color:var(--accent);">superjuego.</span></h2>
         </div>
-        <div style="display:flex;flex-direction:column;gap:clamp(16px,2vw,24px);padding-top:4px;">
-          <p style="font-size:clamp(16px,1.6vw,20px);line-height:1.65;color:var(--g100);font-weight:300;">Actuar es un acto consciente, técnico, poético, lúdico y expresivo. No transmitimos contenidos: te acompañamos en tu proceso creativo.</p>
-          <p style="font-size:clamp(16px,1.6vw,20px);line-height:1.65;color:var(--g100);font-weight:300;">El teatro es el territorio donde puedes ser todo eso que no eres. Un superjuego que te invita a descubrir una nueva forma de habitar el mundo, de estar con otros, de arriesgar.</p>
-          <p style="font-size:clamp(13px,1.2vw,15px);line-height:1.7;color:var(--g300);font-weight:300;">Si buscas clases de teatro en Barcelona que te permitan explorar tu creatividad, conectar con tu cuerpo y transformar tu potencial expresivo, has llegado al lugar indicado.</p>
+        <div style="display:flex;flex-direction:column;gap:2vw; gap:clamp(16px,2vw,24px);padding-top:4px;">
+          <p style="font-size:1.6vw; font-size:clamp(16px,1.6vw,20px);line-height:1.65;color:var(--g100);font-weight:300;">Actuar es un acto consciente, técnico, poético, lúdico y expresivo. No transmitimos contenidos: te acompañamos en tu proceso creativo.</p>
+          <p style="font-size:1.6vw; font-size:clamp(16px,1.6vw,20px);line-height:1.65;color:var(--g100);font-weight:300;">El teatro es el territorio donde puedes ser todo eso que no eres. Un superjuego que te invita a descubrir una nueva forma de habitar el mundo, de estar con otros, de arriesgar.</p>
+          <p style="font-size:1.2vw; font-size:clamp(13px,1.2vw,15px);line-height:1.7;color:var(--g300);font-weight:300;">Si buscas clases de teatro en Barcelona que te permitan explorar tu creatividad, conectar con tu cuerpo y transformar tu potencial expresivo, has llegado al lugar indicado.</p>
         </div>
       </div>
     </div>
@@ -3541,39 +3541,39 @@
   <!-- ═══════════════════════════════════════════
        BLOQUE, LECTURAS Y CUESTIONARIOS
   ═══════════════════════════════════════════ -->
-  <style>.lect-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:start;}@media(max-width:640px){.lect-grid{grid-template-columns:1fr;}}</style>
-  <section style="background:var(--bg);padding:clamp(64px,8vw,100px) 0;border-top:1px solid rgba(255,255,255,0.06);">
+  <style>.lect-grid{display:grid;grid-template-columns:1fr 1fr;gap:4vw; gap:clamp(24px,4vw,64px);align-items:start;}@media(max-width:640px){.lect-grid{grid-template-columns:1fr;}}</style>
+  <section style="background:var(--bg);padding:8vw 0; padding:clamp(64px,8vw,100px) 0;border-top:1px solid rgba(255,255,255,0.06);">
     <div class="container">
       <div class="lect-grid">
 
         <!-- Lecturas, fusionado con blog promo -->
-        <div style="display:block;border:1px solid rgba(255,255,255,0.1);padding:clamp(28px,3.5vw,48px);">
+        <div style="display:block;border:1px solid rgba(255,255,255,0.1);padding:3.5vw; padding:clamp(28px,3.5vw,48px);">
           <span style="display:block;font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--g300);margin-bottom:20px;">Lecturas</span>
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:clamp(24px,3vw,40px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-bottom:16px;">Pensar<br>el teatro.</h3>
-          <p style="font-size:clamp(13px,1.2vw,15px);line-height:1.7;color:var(--g300);font-weight:300;margin-bottom:28px;">Artículos sobre actuación, cuerpo, imagen y proceso creativo.</p>
+          <h3 style="font-family:'Archivo Black',sans-serif;font-size:3vw; font-size:clamp(24px,3vw,40px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-bottom:16px;">Pensar<br>el teatro.</h3>
+          <p style="font-size:1.2vw; font-size:clamp(13px,1.2vw,15px);line-height:1.7;color:var(--g300);font-weight:300;margin-bottom:28px;">Artículos sobre actuación, cuerpo, imagen y proceso creativo.</p>
           <!-- 3 artículos destacados -->
           <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:28px;">
             <a href="/blog/actuar-no-es-representar/" style="display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);text-decoration:none;">
               <span style="display:block;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;">Técnica actoral</span>
-              <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(13px,1.2vw,15px);text-transform:uppercase;color:#9B7FD4;line-height:1.2;">Por qué actuar no es representar</span>
+              <span style="font-family:'Archivo Black',sans-serif;font-size:1.2vw; font-size:clamp(13px,1.2vw,15px);text-transform:uppercase;color:#9B7FD4;line-height:1.2;">Por qué actuar no es representar</span>
             </a>
             <a href="/blog/el-juego-como-origen/" style="display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.07);text-decoration:none;">
               <span style="display:block;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;">Filosofía</span>
-              <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(13px,1.2vw,15px);text-transform:uppercase;color:#9B7FD4;line-height:1.2;">El juego como origen</span>
+              <span style="font-family:'Archivo Black',sans-serif;font-size:1.2vw; font-size:clamp(13px,1.2vw,15px);text-transform:uppercase;color:#9B7FD4;line-height:1.2;">El juego como origen</span>
             </a>
             <a href="/blog/imaginar-vs-pensar/" style="display:block;padding:14px 0;text-decoration:none;">
               <span style="display:block;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;">Entrenamiento</span>
-              <span style="font-family:'Archivo Black',sans-serif;font-size:clamp(13px,1.2vw,15px);text-transform:uppercase;color:#9B7FD4;line-height:1.2;">Imaginar vs. pensar</span>
+              <span style="font-family:'Archivo Black',sans-serif;font-size:1.2vw; font-size:clamp(13px,1.2vw,15px);text-transform:uppercase;color:#9B7FD4;line-height:1.2;">Imaginar vs. pensar</span>
             </a>
           </div>
           <a href="/blog/" style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);text-decoration:none;">Ver todos los artículos →</a>
         </div>
 
         <!-- Cuestionarios -->
-        <a href="/cuestionario/" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,0.1);padding:clamp(28px,3.5vw,48px);transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <a href="/cuestionario/" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,0.1);padding:3.5vw; padding:clamp(28px,3.5vw,48px);transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <span style="display:block;font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--g300);margin-bottom:20px;">Cuestionarios</span>
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:clamp(24px,3vw,40px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-bottom:16px;">Ponelo<br>a prueba.</h3>
-          <p style="font-size:clamp(13px,1.2vw,15px);line-height:1.7;color:var(--g300);font-weight:300;margin-bottom:24px;">Preguntas sobre los conceptos del entrenamiento: presencia, imagen, cuerpo, improvisación. Para saber qué sabés, y qué todavía no.</p>
+          <h3 style="font-family:'Archivo Black',sans-serif;font-size:3vw; font-size:clamp(24px,3vw,40px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-bottom:16px;">Ponelo<br>a prueba.</h3>
+          <p style="font-size:1.2vw; font-size:clamp(13px,1.2vw,15px);line-height:1.7;color:var(--g300);font-weight:300;margin-bottom:24px;">Preguntas sobre los conceptos del entrenamiento: presencia, imagen, cuerpo, improvisación. Para saber qué sabés, y qué todavía no.</p>
           <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);">Ir a cuestionarios →</span>
         </a>
 
@@ -3622,7 +3622,7 @@
       </header>
 
       <!-- Profesores primero -->
-      <div class="nosotros-grid" style="margin-bottom: clamp(48px,6vw,88px);">
+      <div class="nosotros-grid" style="margin-bottom: 6vw; margin-bottom: clamp(48px,6vw,88px);">
 
         <div class="nosotros-card">
           <p class="nosotros-card-role">Coord. General · Profesor</p>
@@ -3632,6 +3632,7 @@
             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             @sebamogordoy
           </a>
+          <a href="https://www.sebastianmogordoy.com" target="_blank" rel="noopener" class="nosotros-card-ig">↗&nbsp;sebastianmogordoy.com</a>
         </div>
 
         <div class="nosotros-card">
@@ -3660,9 +3661,9 @@
       </div>
 
       <!-- TENEMOS EL TEATRO -->
-      <div style="margin-top:clamp(48px,6vw,88px);padding-top:clamp(48px,6vw,88px);border-top:1px solid rgba(255,255,255,0.08);text-align:center;">
-        <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(40px,6.5vw,88px);text-transform:uppercase;letter-spacing:-0.03em;line-height:0.9;color:var(--white);margin-bottom:clamp(24px,3vw,40px);">Tenemos <br><span style="color:var(--accent);">el teatro.</span></h2>
-        <p class="nosotros-card-text" style="max-width:980px;margin-left:auto;margin-right:auto;font-size:clamp(17px,2vw,26px);line-height:1.5;font-weight:300;">En un mundo donde la realidad nos empuja a sobrevivir en medio de diferentes guerras, el teatro sigue siendo nuestra trinchera, nuestro refugio, lugar de expresión, experimentación e investigación, de lo humano y del proceso creativo.</p>
+      <div style="margin-top:6vw; margin-top:clamp(48px,6vw,88px);padding-top:6vw; padding-top:clamp(48px,6vw,88px);border-top:1px solid rgba(255,255,255,0.08);text-align:center;">
+        <h2 style="font-family:'Archivo Black',sans-serif;font-size:6.5vw; font-size:clamp(40px,6.5vw,88px);text-transform:uppercase;letter-spacing:-0.03em;line-height:0.9;color:var(--white);margin-bottom:3vw; margin-bottom:clamp(24px,3vw,40px);">Tenemos <br><span style="color:var(--accent);">el teatro.</span></h2>
+        <p class="nosotros-card-text" style="max-width:980px;margin-left:auto;margin-right:auto;font-size:2vw; font-size:clamp(17px,2vw,26px);line-height:1.5;font-weight:300;">En un mundo donde la realidad nos empuja a sobrevivir en medio de diferentes guerras, el teatro sigue siendo nuestra trinchera, nuestro refugio, lugar de expresión, experimentación e investigación, de lo humano y del proceso creativo.</p>
         <p class="nosotros-card-text" style="max-width:680px;margin-top:16px;margin-left:auto;margin-right:auto;">Cuando la vida se pone un poco aburrida o demasiado agresiva, el teatro nos propone intensidades poéticas y expresivas que nos hacen soltar la representación "del personaje que somos en la vida" para arrojarnos en un no saber que nos abre a otras posibilidades de existencia, expandiendo nuestra experiencia, habitando fuerzas y situaciones que no nos son propias. Nos invita a ser todo eso que no somos.</p>
       </div>
 
@@ -3724,7 +3725,7 @@
   <section class="noticias-section" id="noticias">
     <div class="container">
       <span class="overline">En cartelera</span>
-      <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.5vw,44px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-top:12px;">Sebastián Mogordoy <br /> en escena.</h2>
+      <h2 style="font-family:'Archivo Black',sans-serif;font-size:3.5vw; font-size:clamp(28px,3.5vw,44px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-top:12px;">Sebastián Mogordoy <br /> en escena.</h2>
 
       <div class="noticias-grid">
 
@@ -3760,7 +3761,7 @@
             <span class="noticia-tag">Temporada Alta 2024 · Sala Beckett · Teatros del Canal 2025/26</span>
             <h3 class="noticia-title">Euforia y <br /> Desazón</h3>
             <p class="noticia-text">Sebastián Mogordoy forma parte del elenco protagónico. Dirigida por Sergio Boris. Estrenada en el Festival Temporada Alta 2024. Temporada en la Sala Beckett, Obrador Internacional de Dramaturgia. Teatros del Canal, Madrid, 2025/26.</p>
-            <blockquote style="border-left:2px solid var(--accent);padding-left:16px;margin:16px 0 8px;font-style:italic;font-size:clamp(13px,1.3vw,15px);line-height:1.65;color:var(--g100);">
+            <blockquote style="border-left:2px solid var(--accent);padding-left:16px;margin:16px 0 8px;font-style:italic;font-size:1.3vw; font-size:clamp(13px,1.3vw,15px);line-height:1.65;color:var(--g100);">
               "Boris plantea una actuación en la que se juega con el descontrol, con un teatro donde la actuación siempre está en riesgo. Punto y aparte para Mogordoy que es de otro planeta."
               <cite style="display:block;font-style:normal;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--g300);margin-top:8px;"> Pablo Caruana Húder · <a href="https://www.eldiario.es/cultura/teatro/euforia-desazon-retrato-teatral-descarnado-sociedad-argentina-milei-fondo_129_11705308.html" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">elDiario.es →</a></cite>
             </blockquote>
@@ -4031,18 +4032,18 @@
   <style>
     .galeria-universo {
       background: #0C0C0C;
-      padding: clamp(80px, 10vw, 140px) 0;
+      padding: 10vw 0; padding: clamp(80px, 10vw, 140px) 0;
       overflow: hidden;
     }
     .galeria-header {
       text-align: center;
-      margin-bottom: clamp(48px, 6vw, 80px);
-      padding: 0 clamp(20px, 5vw, 80px);
+      margin-bottom: 6vw; margin-bottom: clamp(48px, 6vw, 80px);
+      padding: 0 5vw; padding: 0 clamp(20px, 5vw, 80px);
     }
     .galeria-overline {
       display: block;
       font-family: 'Inter', sans-serif;
-      font-size: clamp(10px, 1.2vw, 13px);
+      font-size: 1.2vw; font-size: clamp(10px, 1.2vw, 13px);
       letter-spacing: .18em;
       text-transform: uppercase;
       color: #E50914;
@@ -4050,7 +4051,7 @@
     }
     .galeria-titulo {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(2rem, 5vw, 4rem);
+      font-size: 5vw; font-size: clamp(2rem, 5vw, 4rem);
       font-weight: 900;
       text-transform: uppercase;
       color: #fff;
@@ -4062,11 +4063,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: clamp(4px, 0.6vw, 10px);
+      gap: 0.6vw; gap: clamp(4px, 0.6vw, 10px);
       padding: 0;
     }
     .galeria-thumb {
-      width: clamp(90px, 13vw, 200px);
+      width: 13vw; width: clamp(90px, 13vw, 200px);
       aspect-ratio: 3/4;
       overflow: hidden;
       border-radius: 4px;
@@ -4109,7 +4110,7 @@
     .g-lb-next  { right: 16px; top: 50%; transform: translateY(-50%); }
     .g-lb-count { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.5); font-size: .8rem; font-family: Inter, sans-serif; }
     @media (max-width: 600px) {
-      .galeria-thumb { width: clamp(80px, 28vw, 140px); }
+      .galeria-thumb { width: 28vw; width: clamp(80px, 28vw, 140px); }
       .g-lb-prev { left: 4px; } .g-lb-next { right: 4px; }
     }
     .galeria-mas-btn {
@@ -4120,7 +4121,7 @@
       border: 1.5px solid rgba(229,9,20,.6);
       color: #fff;
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(11px,1.2vw,13px);
+      font-size: 1.2vw; font-size: clamp(11px,1.2vw,13px);
       letter-spacing: .14em;
       text-transform: uppercase;
       cursor: pointer;
@@ -4256,7 +4257,7 @@
 
         <div>
           <p class="footer-brand-name">Talleres de Teatro</p>
-          <p class="footer-brand-sub">Escuela de teatro · Sebastián Mogordoy y Candelaria Sesín<br>Espacio La Mansión · Gràcia, Barcelona · desde 2010</p>
+          <p class="footer-brand-sub">Escuela de teatro · <a href="https://www.sebastianmogordoy.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Sebastián Mogordoy</a> y Candelaria Sesín<br>Espacio La Mansión · Gràcia, Barcelona · desde 2010</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/tallerdeteatro.mogordoy/" target="_blank" rel="noopener" aria-label="Instagram">
               <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -4318,8 +4319,8 @@
 
       <header style="margin-bottom: 40px;">
         <span class="overline">Galería</span>
-        <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,4vw,52px);text-transform:uppercase;letter-spacing:0.01em;margin-top:12px;line-height:1.05;">Nuestro universo <br /> en imágenes.</h2>
-        <p style="margin-top:20px;font-size:clamp(14px,1.4vw,18px);color:var(--g100);line-height:1.6;max-width:52ch;">A todos ❤️ los de hoy y los de siempre,<br>todos juntos, siempre es hoy.</p>
+        <h2 style="font-family:'Archivo Black',sans-serif;font-size:4vw; font-size:clamp(28px,4vw,52px);text-transform:uppercase;letter-spacing:0.01em;margin-top:12px;line-height:1.05;">Nuestro universo <br /> en imágenes.</h2>
+        <p style="margin-top:20px;font-size:1.4vw; font-size:clamp(14px,1.4vw,18px);color:var(--g100);line-height:1.6;max-width:52ch;">A todos ❤️ los de hoy y los de siempre,<br>todos juntos, siempre es hoy.</p>
       </header>
 
       <!-- Tabs -->

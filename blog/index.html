@@ -98,19 +98,19 @@
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
-    .nav-left { display: flex; align-items: center; gap: clamp(12px,1.8vw,24px); }
+    .nav-left { display: flex; align-items: center; gap: 1.8vw; gap: clamp(12px,1.8vw,24px); }
     .logo { display: flex; align-items: center; text-decoration: none; }
     .logo img { height: 32px; width: auto; display: block; }
     .nav-tagline {
       font-size: 9px; font-weight: 400;
       letter-spacing: 0.15em; text-transform: uppercase;
       color: rgba(255,255,255,0.7);
-      padding-left: clamp(12px,1.8vw,24px);
+      padding-left: 1.8vw; padding-left: clamp(12px,1.8vw,24px);
       border-left: 1px solid rgba(255,255,255,0.15);
     }
-    .nav-links { list-style: none; display: flex; align-items: center; gap: clamp(16px,2.2vw,32px); }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: 2.2vw; gap: clamp(16px,2.2vw,32px); }
     .nav-links a {
-      font-size: clamp(11px,1.1vw,13px); font-weight: 500;
+      font-size: 1.1vw; font-size: clamp(11px,1.1vw,13px); font-weight: 500;
       letter-spacing: 0.07em; text-transform: uppercase;
       color: var(--white); text-decoration: none;
       opacity: 0.72; transition: opacity .2s;
@@ -122,7 +122,7 @@
     .nav-ig a { color: var(--white); opacity: 0.6; transition: opacity .2s; }
     .nav-ig a:hover { opacity: 1; }
     .nav-ig svg { width: 20px; height: 20px; fill: currentColor; display: block; }
-    .lang-toggle { background:none; border:1px solid rgba(255,255,255,0.35); color:var(--white); font-size:11px; font-weight:700; letter-spacing:.09em; padding:3px 8px; border-radius:3px; cursor:pointer; opacity:0.7; transition:opacity .2s, border-color .2s; margin-left:clamp(6px,1vw,12px); flex-shrink:0; line-height:1; }
+    .lang-toggle { background:none; border:1px solid rgba(255,255,255,0.35); color:var(--white); font-size:11px; font-weight:700; letter-spacing:.09em; padding:3px 8px; border-radius:3px; cursor:pointer; opacity:0.7; transition:opacity .2s, border-color .2s; margin-left:1vw; margin-left:clamp(6px,1vw,12px); flex-shrink:0; line-height:1; }
     .lang-toggle:hover { opacity:1; border-color:rgba(255,255,255,0.7); }
 
     .hamburger {
@@ -140,7 +140,7 @@
     }
     .overline {
       display: inline-flex; align-items: center; gap: 10px;
-      font-size: clamp(11px,1.2vw,13px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(11px,1.2vw,13px); font-weight: 700;
       letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--gold);
     }
@@ -150,7 +150,7 @@
     }
     .blog-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(44px, 7vw, 96px);
+      font-size: 7vw; font-size: clamp(44px, 7vw, 96px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.03em; line-height: 0.88;
       color: var(--white);
@@ -158,7 +158,7 @@
     }
     .blog-title span { color: var(--accent); }
     .blog-subtitle {
-      font-size: clamp(16px,1.8vw,20px);
+      font-size: 1.8vw; font-size: clamp(16px,1.8vw,20px);
       font-weight: 300; line-height: 1.6;
       color: rgba(255,255,255,0.65);
       max-width: 52ch;
@@ -175,12 +175,12 @@
     }
     .blog-tab {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(11px, 1.1vw, 13px);
+      font-size: 1.1vw; font-size: clamp(11px, 1.1vw, 13px);
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--g300);
       padding: 1.2rem 0;
-      margin-right: clamp(24px, 3vw, 48px);
+      margin-right: 3vw; margin-right: clamp(24px, 3vw, 48px);
       border-bottom: 2px solid transparent;
       transition: color 0.2s ease, border-color 0.2s ease;
       text-decoration: none;
@@ -210,7 +210,7 @@
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: clamp(20px, 3vw, 40px);
+      gap: 3vw; gap: clamp(20px, 3vw, 40px);
     }
     @media (max-width: 960px) { .blog-grid { grid-template-columns: repeat(2,1fr); } }
     @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
@@ -249,7 +249,7 @@
     }
     .card-num {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(52px, 7vw, 80px);
+      font-size: 7vw; font-size: clamp(52px, 7vw, 80px);
       color: rgba(255,255,255,0.04);
       line-height: 1; letter-spacing: -0.04em;
       padding: 0 24px;
@@ -258,7 +258,7 @@
     }
     .card-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(18px, 2vw, 24px);
+      font-size: 2vw; font-size: clamp(18px, 2vw, 24px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; line-height: 1.05;
       color: var(--white);
@@ -266,7 +266,7 @@
       margin-top: -16px;
     }
     .card-excerpt {
-      font-size: clamp(13px, 1.3vw, 15px);
+      font-size: 1.3vw; font-size: clamp(13px, 1.3vw, 15px);
       font-weight: 300; line-height: 1.65;
       color: var(--g300);
       padding: 16px 24px 24px;
@@ -293,19 +293,19 @@
     }
     .blog-cta-text h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(28px,4vw,52px);
+      font-size: 4vw; font-size: clamp(28px,4vw,52px);
       text-transform: uppercase; letter-spacing: -0.02em;
       line-height: 0.95; color: var(--white);
     }
     .blog-cta-text p {
-      font-size: clamp(14px,1.5vw,17px); color: var(--g300);
+      font-size: 1.5vw; font-size: clamp(14px,1.5vw,17px); color: var(--g300);
       margin-top: 12px; max-width: 44ch;
     }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 12px;
       background: #facc15; color: #0c0c0c;
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(13px,1.3vw,15px); font-weight: 400;
+      font-size: 1.3vw; font-size: clamp(13px,1.3vw,15px); font-weight: 400;
       letter-spacing: 0.05em; text-transform: uppercase;
       text-decoration: none;
       padding: 18px 36px;
@@ -318,7 +318,7 @@
     /* ── FOOTER ── */
     .footer {
       border-top: 1px solid var(--g700);
-      padding: clamp(40px,5vw,64px) 0;
+      padding: 5vw 0; padding: clamp(40px,5vw,64px) 0;
     }
     .footer-inner {
       display: flex; align-items: center; justify-content: space-between;
@@ -364,7 +364,7 @@
     }
     .mobile-menu-nav a {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px,5vw,30px);
+      font-size: 5vw; font-size: clamp(22px,5vw,30px);
       text-transform: uppercase; letter-spacing: -0.01em;
       color: var(--white); text-decoration: none;
       padding: 10px 0;
@@ -464,7 +464,7 @@
     <div class="container">
       <span class="overline">Artículos sobre actuación, improvisación y entrenamiento</span>
       <h1 class="blog-title">Pensamos <br><span>el teatro.</span></h1>
-      <p class="blog-subtitle">Artículos sobre teatro, actuación e improvisación. Por Sebastián Mogordoy.</p>
+      <p class="blog-subtitle">Artículos sobre teatro, actuación e improvisación. Por <a href="https://www.sebastianmogordoy.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Sebastián Mogordoy</a>.</p>
     </div>
   </header>
 

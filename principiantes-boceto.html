@@ -97,7 +97,7 @@
 
     .overline {
       display: inline-flex; align-items: center; gap: 10px;
-      font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
       letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--gold);
     }
@@ -110,7 +110,7 @@
       display: inline-flex; align-items: center; gap: 12px;
       background: var(--accent); color: var(--white);
       font-family: 'Inter', sans-serif;
-      font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
+      font-size: 1.3vw; font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
       letter-spacing: 0.05em; text-transform: uppercase;
       text-decoration: none;
       padding: 20px 40px;
@@ -137,10 +137,10 @@
     }
     .nav-links {
       display: flex; align-items: center;
-      gap: clamp(16px, 2.5vw, 32px); list-style: none;
+      gap: 2.5vw; gap: clamp(16px, 2.5vw, 32px); list-style: none;
     }
     .nav-links a {
-      font-size: clamp(11px, 1vw, 13px); font-weight: 400;
+      font-size: 1vw; font-size: clamp(11px, 1vw, 13px); font-weight: 400;
       letter-spacing: 0.06em; text-transform: uppercase;
       color: var(--white); text-decoration: none; transition: opacity .2s;
     }
@@ -191,7 +191,7 @@
       position: absolute; top: calc(68px + 20px); left: var(--pad-x);
       z-index: 10;
       font-family: 'Inter', sans-serif;
-      font-size: clamp(8px, 0.75vw, 11px); font-weight: 400;
+      font-size: 0.75vw; font-size: clamp(8px, 0.75vw, 11px); font-weight: 400;
       letter-spacing: 0.22em; text-transform: uppercase;
       color: rgba(255,255,255,0.3);
     }
@@ -201,7 +201,7 @@
       position: absolute; top: calc(68px + 24px); right: var(--pad-x);
       z-index: 10;
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(80px, 14vw, 180px);
+      font-size: 14vw; font-size: clamp(80px, 14vw, 180px);
       line-height: 1; letter-spacing: -0.04em;
       color: rgba(255,255,255,0.05);
       pointer-events: none; user-select: none;
@@ -209,15 +209,15 @@
 
     .hero-body {
       position: relative; z-index: 10;
-      padding: 0 var(--pad-x) clamp(56px, 7vw, 96px);
+      padding: 0 var(--pad-x) 7vw; padding: 0 var(--pad-x) clamp(56px, 7vw, 96px);
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: clamp(24px, 4vw, 64px);
+      gap: 4vw; gap: clamp(24px, 4vw, 64px);
       align-items: end;
     }
 
     .hero-tag {
-      font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
+      font-size: 1.2vw; font-size: clamp(11px, 1.2vw, 14px); font-weight: 700;
       letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--accent); margin-bottom: 12px;
       display: flex; align-items: center; gap: 10px;
@@ -228,14 +228,14 @@
 
     .hero-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(56px, 11vw, 148px);
+      font-size: 11vw; font-size: clamp(56px, 11vw, 148px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.03em; line-height: 0.88;
       color: var(--white);
     }
     .hero-subtitle {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(18px, 2.5vw, 34px);
+      font-size: 2.5vw; font-size: clamp(18px, 2.5vw, 34px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.01em; line-height: 1;
       color: rgba(255,255,255,0.45);
@@ -252,7 +252,7 @@
       align-items: flex-end; gap: 6px; text-align: right;
     }
     .hero-meta-item {
-      font-size: clamp(11px, 1.1vw, 13px); font-weight: 400;
+      font-size: 1.1vw; font-size: clamp(11px, 1.1vw, 13px); font-weight: 400;
       letter-spacing: 0.05em; text-transform: uppercase;
       color: rgba(255,255,255,0.6);
     }
@@ -262,23 +262,23 @@
       .hero-body { grid-template-columns: 1fr; }
       .hero-right { align-items: flex-start; }
       .hero-meta { align-items: flex-start; text-align: left; }
-      .hero-num { font-size: clamp(80px, 30vw, 140px); }
+      .hero-num { font-size: 30vw; font-size: clamp(80px, 30vw, 140px); }
     }
 
     /* ─── INTRO / PARA QUIÉN ───────────────────── */
     .intro-section {
-      padding: clamp(72px, 9vw, 120px) 0;
+      padding: 9vw 0; padding: clamp(72px, 9vw, 120px) 0;
       background: var(--bg);
     }
     .intro-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 96px);
+      gap: 6vw; gap: clamp(40px, 6vw, 96px);
       align-items: center;
     }
     .intro-statement {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(28px, 4vw, 54px);
+      font-size: 4vw; font-size: clamp(28px, 4vw, 54px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; line-height: 0.95;
       color: var(--white); margin-top: 16px;
@@ -286,7 +286,7 @@
     .intro-statement .highlight { color: var(--accent); }
     .intro-right { display: flex; flex-direction: column; gap: 20px; }
     .intro-p {
-      font-size: clamp(15px, 1.6vw, 19px);
+      font-size: 1.6vw; font-size: clamp(15px, 1.6vw, 19px);
       font-weight: 300; line-height: 1.7;
       color: rgba(255,255,255,0.82);
     }
@@ -316,18 +316,18 @@
       );
     }
     .editorial-strip-caption {
-      position: absolute; bottom: clamp(20px, 3vw, 40px);
-      right: clamp(20px, 4vw, 56px);
+      position: absolute; bottom: 3vw; bottom: clamp(20px, 3vw, 40px);
+      right: 4vw; right: clamp(20px, 4vw, 56px);
       text-align: right;
     }
     .editorial-strip-caption p {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(16px, 2.2vw, 28px);
+      font-size: 2.2vw; font-size: clamp(16px, 2.2vw, 28px);
       text-transform: uppercase; letter-spacing: -0.01em;
       color: var(--white); line-height: 1.05;
     }
     .editorial-strip-caption span {
-      font-size: clamp(10px, 1vw, 13px); font-weight: 700;
+      font-size: 1vw; font-size: clamp(10px, 1vw, 13px); font-weight: 700;
       letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--accent);
     }
@@ -335,7 +335,7 @@
     /* ─── MANIFESTO ─────────────────────────────── */
     .manifesto-section {
       background: var(--bg);
-      padding: clamp(56px, 7vw, 96px) 0;
+      padding: 7vw 0; padding: clamp(56px, 7vw, 96px) 0;
       border-top: 1px solid rgba(255,255,255,0.05);
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
@@ -343,21 +343,21 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
-      column-gap: clamp(48px, 8vw, 120px);
+      column-gap: 8vw; column-gap: clamp(48px, 8vw, 120px);
     }
     .manifesto-line {
       display: flex; align-items: baseline; gap: 16px;
       padding: 18px 0;
       border-bottom: 1px solid rgba(255,255,255,0.06);
       font-family: 'Inter', sans-serif;
-      font-size: clamp(14px, 1.5vw, 17px);
+      font-size: 1.5vw; font-size: clamp(14px, 1.5vw, 17px);
       font-weight: 300; line-height: 1.5;
       color: rgba(255,255,255,0.78);
     }
     .manifesto-line::before {
       content: attr(data-n);
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(10px, 0.9vw, 12px);
+      font-size: 0.9vw; font-size: clamp(10px, 0.9vw, 12px);
       color: var(--accent);
       letter-spacing: 0.08em;
       flex-shrink: 0; min-width: 18px;
@@ -369,12 +369,12 @@
     /* ─── QUÉ PASA EN CADA CLASE ───────────────── */
     .proceso-section {
       background: var(--bg-2);
-      padding: clamp(72px, 9vw, 120px) 0;
+      padding: 9vw 0; padding: clamp(72px, 9vw, 120px) 0;
     }
-    .proceso-header { margin-bottom: clamp(48px, 6vw, 72px); }
+    .proceso-header { margin-bottom: 6vw; margin-bottom: clamp(48px, 6vw, 72px); }
     .proceso-h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(36px, 5vw, 68px);
+      font-size: 5vw; font-size: clamp(36px, 5vw, 68px);
       font-weight: 400; text-transform: uppercase;
       letter-spacing: -0.02em; line-height: 0.9;
       color: var(--white); margin-top: 14px; max-width: 18ch;
@@ -385,7 +385,7 @@
       gap: 0;
     }
     .proceso-item {
-      padding: clamp(28px, 3.5vw, 44px) clamp(20px, 3vw, 36px);
+      padding: 3.5vw 3vw; padding: clamp(28px, 3.5vw, 44px) clamp(20px, 3vw, 36px);
       border-top: 1px solid rgba(255,255,255,0.07);
       border-right: 1px solid rgba(255,255,255,0.07);
       display: flex; flex-direction: column; gap: 14px;
@@ -394,19 +394,19 @@
     .proceso-item:nth-child(n+4) { border-top: none; }
     .proceso-num {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(36px, 5vw, 56px);
+      font-size: 5vw; font-size: clamp(36px, 5vw, 56px);
       letter-spacing: -0.03em; line-height: 1;
       color: rgba(255,255,255,0.07);
     }
     .proceso-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(17px, 2vw, 24px);
+      font-size: 2vw; font-size: clamp(17px, 2vw, 24px);
       text-transform: uppercase; letter-spacing: -0.01em;
       color: var(--white); line-height: 1.05;
     }
     .proceso-title .acc { color: var(--accent); }
     .proceso-text {
-      font-size: clamp(14px, 1.4vw, 16px);
+      font-size: 1.4vw; font-size: clamp(14px, 1.4vw, 16px);
       font-weight: 300; line-height: 1.75;
       color: rgba(255,255,255,0.7);
     }
@@ -423,12 +423,12 @@
     /* ─── VIDEO ────────────────────────────────── */
     .video-section {
       background: var(--bg);
-      padding: clamp(72px, 9vw, 120px) 0;
+      padding: 9vw 0; padding: clamp(72px, 9vw, 120px) 0;
     }
     .video-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 80px);
+      gap: 6vw; gap: clamp(40px, 6vw, 80px);
       align-items: center;
     }
     .video-embed {
@@ -464,12 +464,12 @@
     .video-copy { display: flex; flex-direction: column; gap: 20px; }
     .video-h2 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(28px, 3.5vw, 48px);
+      font-size: 3.5vw; font-size: clamp(28px, 3.5vw, 48px);
       text-transform: uppercase; letter-spacing: -0.02em;
       line-height: 0.95; color: var(--white); margin-top: 14px;
     }
     .video-p {
-      font-size: clamp(15px, 1.5vw, 18px);
+      font-size: 1.5vw; font-size: clamp(15px, 1.5vw, 18px);
       font-weight: 300; line-height: 1.75;
       color: rgba(255,255,255,0.78);
     }
@@ -480,25 +480,25 @@
     /* ─── TESTIMONIOS (solo principiantes) ─────── */
     .testimonios-section {
       background: var(--bg-2);
-      padding: clamp(72px, 9vw, 120px) 0;
+      padding: 9vw 0; padding: clamp(72px, 9vw, 120px) 0;
       border-top: 1px solid var(--g700);
     }
     .testimonios-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px; margin-top: clamp(40px, 5vw, 64px);
+      gap: 2px; margin-top: 5vw; margin-top: clamp(40px, 5vw, 64px);
     }
     .testimonio-card {
       background: var(--bg);
       border: 1px solid var(--g700);
-      padding: clamp(24px, 3vw, 36px);
+      padding: 3vw; padding: clamp(24px, 3vw, 36px);
       display: flex; flex-direction: column; gap: 16px;
       transition: border-color .25s;
     }
     .testimonio-card:hover { border-color: var(--accent); }
     .testimonio-stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; }
     .testimonio-text {
-      font-size: clamp(15px, 1.5vw, 18px);
+      font-size: 1.5vw; font-size: clamp(15px, 1.5vw, 18px);
       font-weight: 300; line-height: 1.65;
       color: var(--white); flex: 1;
     }
@@ -520,23 +520,23 @@
     /* ─── INFO PRÁCTICA ─────────────────────────── */
     .info-section {
       background: var(--bg);
-      padding: clamp(72px, 9vw, 120px) 0;
+      padding: 9vw 0; padding: clamp(72px, 9vw, 120px) 0;
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .info-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0; margin-top: clamp(40px, 5vw, 64px);
+      gap: 0; margin-top: 5vw; margin-top: clamp(40px, 5vw, 64px);
     }
     .info-col {
-      padding: clamp(32px, 4vw, 56px);
+      padding: 4vw; padding: clamp(32px, 4vw, 56px);
       border: 1px solid rgba(255,255,255,0.07);
       display: flex; flex-direction: column; gap: 20px;
     }
     .info-col:first-child { border-right: none; }
     .info-col-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(20px, 2.5vw, 32px);
+      font-size: 2.5vw; font-size: clamp(20px, 2.5vw, 32px);
       text-transform: uppercase; letter-spacing: -0.01em;
       color: var(--white); line-height: 1;
     }
@@ -551,7 +551,7 @@
       color: var(--gold);
     }
     .info-value {
-      font-size: clamp(14px, 1.5vw, 17px);
+      font-size: 1.5vw; font-size: clamp(14px, 1.5vw, 17px);
       font-weight: 300; line-height: 1.5;
       color: rgba(255,255,255,0.85);
     }
@@ -569,20 +569,20 @@
     /* ─── CTA FINAL ─────────────────────────────── */
     .cta-section {
       background: var(--bg-2);
-      padding: clamp(80px, 10vw, 140px) 0;
+      padding: 10vw 0; padding: clamp(80px, 10vw, 140px) 0;
       border-top: 1px solid rgba(255,255,255,0.07);
       text-align: center;
     }
     .cta-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(40px, 7vw, 96px);
+      font-size: 7vw; font-size: clamp(40px, 7vw, 96px);
       text-transform: uppercase; letter-spacing: -0.03em;
       line-height: 0.9; color: var(--white);
       max-width: 18ch; margin: 16px auto 0;
     }
     .cta-title .acc { color: var(--accent); }
     .cta-sub {
-      font-size: clamp(15px, 1.6vw, 19px);
+      font-size: 1.6vw; font-size: clamp(15px, 1.6vw, 19px);
       font-weight: 300; line-height: 1.65;
       color: rgba(255,255,255,0.65);
       max-width: 52ch; margin: 24px auto 0;
@@ -590,13 +590,13 @@
     .cta-buttons {
       display: flex; align-items: center; justify-content: center;
       gap: 16px; flex-wrap: wrap;
-      margin-top: clamp(32px, 4vw, 48px);
+      margin-top: 4vw; margin-top: clamp(32px, 4vw, 48px);
     }
     .btn-ghost {
       display: inline-flex; align-items: center; gap: 12px;
       border: 1px solid rgba(255,255,255,0.3);
       color: var(--white);
-      font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
+      font-size: 1.3vw; font-size: clamp(13px, 1.3vw, 16px); font-weight: 700;
       letter-spacing: 0.05em; text-transform: uppercase;
       text-decoration: none; padding: 20px 40px;
       transition: border-color .2s, color .2s;
@@ -611,7 +611,7 @@
     /* ─── FOOTER MINIMAL ─────────────────────────── */
     .mini-footer {
       background: #080808;
-      padding: clamp(28px, 3vw, 40px) 0;
+      padding: 3vw 0; padding: clamp(28px, 3vw, 40px) 0;
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .mini-footer-inner {
@@ -860,7 +860,7 @@
   <section class="testimonios-section" aria-label="Qué dicen los alumnos">
     <div class="container">
       <span class="overline">Lo que dicen</span>
-      <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.9;color:var(--white);margin-top:14px;max-width:20ch;">
+      <h2 style="font-family:'Archivo Black',sans-serif;font-size:5vw; font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.9;color:var(--white);margin-top:14px;max-width:20ch;">
         Alumnos que llegaron<br>sin experiencia.
       </h2>
 
@@ -911,7 +911,7 @@
   <section class="info-section" aria-label="Información práctica del taller">
     <div class="container">
       <span class="overline">Info práctica</span>
-      <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.9;color:var(--white);margin-top:14px;">
+      <h2 style="font-family:'Archivo Black',sans-serif;font-size:5vw; font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.9;color:var(--white);margin-top:14px;">
         Todo lo que<br>necesitás saber.
       </h2>
 

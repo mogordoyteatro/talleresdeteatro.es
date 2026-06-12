@@ -98,7 +98,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 clamp(24px, 5vw, 72px);
+      padding: 0 5vw; padding: 0 clamp(24px, 5vw, 72px);
       height: 68px;
       margin-top: 44px;   /* altura de la vnav */
       border-bottom: 1px solid var(--g700);
@@ -117,7 +117,7 @@
 
     .nav-links {
       display: flex; align-items: center;
-      gap: clamp(16px, 2.5vw, 36px);
+      gap: 2.5vw; gap: clamp(16px, 2.5vw, 36px);
       list-style: none;
     }
     .nav-links a {
@@ -141,8 +141,8 @@
       flex: 1;
       display: grid;
       grid-template-rows: 1fr auto;
-      padding: clamp(40px, 6vw, 88px) clamp(24px, 5vw, 72px) clamp(48px, 7vw, 96px);
-      gap: clamp(32px, 4vw, 56px);
+      padding: 6vw 5vw 7vw; padding: clamp(40px, 6vw, 88px) clamp(24px, 5vw, 72px) clamp(48px, 7vw, 96px);
+      gap: 4vw; gap: clamp(32px, 4vw, 56px);
     }
 
     /* Título — el bloque principal */
@@ -166,7 +166,7 @@
     */
     .hero-h1 {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(60px, 11.5vw, 148px);
+      font-size: 11.5vw; font-size: clamp(60px, 11.5vw, 148px);
       font-weight: 400;          /* Archivo Black ya es el peso máximo */
       font-style: normal;        /* upright, no italic */
       line-height: 0.88;
@@ -185,7 +185,7 @@
     .hero-footer {
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: clamp(24px, 4vw, 64px);
+      gap: 4vw; gap: clamp(24px, 4vw, 64px);
       align-items: end;
     }
 
@@ -207,7 +207,7 @@
       margin-bottom: 4px;
     }
     .meta-line {
-      font-size: clamp(12px, 1.4vw, 14px); font-weight: 400;
+      font-size: 1.4vw; font-size: clamp(12px, 1.4vw, 14px); font-weight: 400;
       letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--g100);
       line-height: 1.5;
@@ -263,7 +263,7 @@
       background: var(--g800);
       border-top: 1px solid var(--g700);
       border-bottom: 1px solid var(--g700);
-      padding: 24px clamp(24px, 5vw, 72px);
+      padding: 24px 5vw; padding: 24px clamp(24px, 5vw, 72px);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -286,7 +286,7 @@
     /* ── Panel de notas ─────────────────────────────────────── */
     .notes {
       background: var(--g800);
-      padding: clamp(48px, 6vw, 80px) clamp(24px, 5vw, 72px);
+      padding: 6vw 5vw; padding: clamp(48px, 6vw, 80px) clamp(24px, 5vw, 72px);
       border-top: 1px solid var(--g700);
     }
     .notes-title {
@@ -298,7 +298,7 @@
     /* Muestra tipográfica */
     .type-demo {
       margin-bottom: 48px;
-      padding: 40px clamp(24px, 4vw, 56px);
+      padding: 40px 4vw; padding: 40px clamp(24px, 4vw, 56px);
       background: var(--bg);
       border: 1px solid var(--g700);
     }
@@ -308,7 +308,7 @@
     }
     .type-demo-sample {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(36px, 6vw, 72px);
+      font-size: 6vw; font-size: clamp(36px, 6vw, 72px);
       text-transform: uppercase;
       letter-spacing: -0.02em;
       line-height: 0.9;
@@ -380,7 +380,7 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-h1 { font-size: clamp(52px, 15vw, 88px); }
+      .hero-h1 { font-size: 15vw; font-size: clamp(52px, 15vw, 88px); }
     }
     @media (max-width: 480px) {
       .hero-nav { padding: 0 20px; }
