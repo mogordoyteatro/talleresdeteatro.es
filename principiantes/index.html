@@ -23,7 +23,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://talleresdeteatro.es/principiantes/" />
   <meta property="og:title" content="Clases de Teatro para Principiantes en Barcelona · talleresdeteatro.es" />
-  <meta property="og:description" content="Taller de teatro en Gràcia, Barcelona. Sin experiencia previa. Improvisación dirigida para adultos. Sebastián Mogordoy y Candelaria Sesín." />
+  <meta property="og:description" content="Taller de teatro en Gràcia, Barcelona. Sin experiencia previa. Improvisación dirigida para adultos. Sebastián Mogordoy." />
   <meta property="og:image" content="https://talleresdeteatro.es/imagenes_optimizadas/actores-taller-barcelona-0451.jpg" />
   <meta property="og:image:width" content="1400" />
   <meta property="og:image:height" content="788" />
@@ -33,7 +33,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Clases de Teatro para Principiantes en Barcelona | talleresdeteatro.es" />
-  <meta name="twitter:description" content="Taller de teatro en Gràcia, Barcelona. Improvisación dirigida para adultos sin experiencia previa. Coord. Sebastián Mogordoy y Candelaria Sesín. Primera clase sin cargo." />
+  <meta name="twitter:description" content="Taller de teatro en Gràcia, Barcelona. Improvisación dirigida para adultos sin experiencia previa. Coord. Sebastián Mogordoy. Primera clase sin cargo." />
   <meta name="twitter:image" content="https://talleresdeteatro.es/imagenes_optimizadas/actores-taller-barcelona-0451.jpg" />
 
   <!-- Schema Course -->
@@ -87,7 +87,7 @@
       },
       "instructor": {
         "@type": "Person",
-        "name": "Candelaria Sesín"
+        "name": "Sebastián Mogordoy"
       }
     },
     {
@@ -173,7 +173,7 @@
     "url": "https://talleresdeteatro.es",
     "telephone": "+34676694958",
     "email": "info@talleresdeteatro.com",
-    "description": "Talleres de teatro en Barcelona: principiantes, intermedios y avanzados. Improvisación dirigida, formación actoral, cuerpo y presencia escénica. En el barrio de Gràcia, Barcelona. Coord. Sebastián Mogordoy y Candelaria Sesín.",
+    "description": "Talleres de teatro en Barcelona: principiantes, intermedios y avanzados. Improvisación dirigida, formación actoral, cuerpo y presencia escénica. En el barrio de Gràcia, Barcelona. Coord. Sebastián Mogordoy.",
     "image": "https://talleresdeteatro.es/imagenes_optimizadas/actores-taller-barcelona-0451.jpg",
     "logo": "https://talleresdeteatro.es/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg",
     "address": {
@@ -1046,6 +1046,9 @@
       max-width: 52ch; margin-top: 20px;
     }
     .proceso-nota strong { color: var(--white); font-weight: 600; }
+    .proceso-cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px,2.5vw,44px); margin-top: 20px; }
+    .proceso-cols .proceso-nota { max-width: none; margin-top: 0; }
+    @media (max-width: 760px){ .proceso-cols { grid-template-columns: 1fr; gap: 16px; } }
     .proceso-h2 {
       font-family: 'Archivo Black', sans-serif;
       font-size: 5.5vw; font-size: clamp(38px, 5.5vw, 72px);
@@ -2361,7 +2364,6 @@
       <div class="hero-dir-artistica" aria-hidden="true">
         <span class="hero-dir-label">Estudio de teatro</span>
         <span class="hero-dir-name">Dir. Sebastián Mogordoy</span>
-        <span class="hero-dir-junto">junto a Candelaria Sesín</span>
       </div>
 
       <button class="hero-sound" id="soundBtn" aria-label="Activar o desactivar sonido del video">
@@ -2620,12 +2622,14 @@
         <span class="overline">El entrenamiento actoral</span>
         <h2 class="proceso-h2">Cada clase, <br><span class="acc">una aventura.</span></h2>
         <p class="proceso-nota">Contamos con una amplia selección de <strong>vestuario, objetos y luces</strong> para que la experiencia escénica sea completa <strong>desde el primer día</strong>.</p>
-        <p class="proceso-nota" style="margin-top:24px;">
+        <div class="proceso-cols">
+        <p class="proceso-nota">
           La metodología del taller se construye sobre tres ejes: <strong>el entrenamiento colectivo, la improvisación de escenas y la reflexión compartida</strong>. A partir de los potenciales individuales y grupales, trabajamos posibilitando una calidad de encuentro diferente con uno mismo y con los demás. Aquí empezarás a incorporar las herramientas necesarias para abordar este juego adulto que propone el teatro.
         </p>
-        <p class="proceso-nota" style="margin-top:16px;">
+        <p class="proceso-nota">
           El objetivo es <strong>fracturar lo real</strong> alterar el cotidiano, y dar el salto hacia ese otro lado donde todo puede pasar: el campo imaginario. Un espacio donde el cuerpo, la voz y la presencia se convierten en instrumentos de expresión y desde la primera sesión comiences a incorporar las herramientas que propone el quehacer teatral en un trabajo acumulativo y muy intenso de observación y toma de conciencia de la propia expresividad, siempre en contacto <strong>CON EL OTRO</strong>.
         </p>
+        </div>
 
         <!-- Separator editorial -->
         <div style="margin-top:6vw; margin-top:clamp(48px,6vw,80px);padding-top:4vw; padding-top:clamp(32px,4vw,56px);border-top:1px solid rgba(255,255,255,0.08);" aria-hidden="true">
@@ -2714,7 +2718,7 @@
           Tres horas por semana. Un espacio pensado para que algo real ocurra.
         </p>
         <p class="video-p">
-          Coord. <strong>Sebastián Mogordoy</strong> y <strong>Candelaria Sesín</strong><br>
+          Coord. <strong>Sebastián Mogordoy</strong><br>
           Espacio La Mansión · Gràcia, Barcelona
         </p>
       </div>
@@ -2864,7 +2868,7 @@
           <div class="info-row">
             <span class="info-label">Días y grupos</span>
             <span class="info-value">
-              <strong>Lunes · 19 a 22 h</strong> Coord. Candelaria Sesín.<br>
+              <strong>Lunes · 19 a 22 h</strong> Coord. Sebastián Mogordoy.<br>
               <span class="info-note">Sin vacantes. Inscripción abierta para septiembre.</span><br><br>
               <strong>Martes · 19 a 22 h</strong> Coord. Sebastián Mogordoy.<br>
               <span class="info-note">Inicio junio · Seminario junio y julio. Inscripción abierta.</span><br><br>
@@ -2882,7 +2886,7 @@
           </div>
           <div class="info-row">
             <span class="info-label">Coordinan</span>
-            <span class="info-value">Sebastián Mogordoy · Candelaria Sesín</span>
+            <span class="info-value">Sebastián Mogordoy</span>
           </div>
         </div>
 
@@ -3319,11 +3323,7 @@
               <img src="/imagenes_optimizadas/clase-teatro-intermedios-barcelona-ensayo-02.jpg" alt="Teatro intermedios Barcelona, ensayo de escena" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
-            <a href="https://www.instagram.com/p/DXiMLD-CMzh/" target="_blank" rel="noopener" class="ig-thumb">
-              <img src="/imagenes_optimizadas/candelaria-sesin-actriz-profesora-teatro-barcelona.jpg" alt="Candelaria Sesín, Actriz y Profesora Teatro" loading="lazy" width="1690" height="1204">
-              <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
-            </a>
-            <a href="https://www.instagram.com/reel/DYJ-So9uHAQ/" target="_blank" rel="noopener" class="ig-thumb">
+                        <a href="https://www.instagram.com/reel/DYJ-So9uHAQ/" target="_blank" rel="noopener" class="ig-thumb">
               <img src="/imagenes_optimizadas/clase-teatro-barcelona-junio-2023-sesion-final-025.jpg" alt="Presentación final alumnos, Escuela de Teatro" loading="lazy">
               <div class="ig-thumb-overlay"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
             </a>
@@ -3381,7 +3381,7 @@
             <div class="video-card">
               <div class="video-card-label">Presentación</div>
               <div class="video-embed-wrap">
-                <video controls preload="metadata" poster="/imagenes_optimizadas/sebastian-mogordoy-candelaria-sesin-profesores-teatro-barcelona.jpg">                </video>
+                <video controls preload="metadata" poster="/imagenes_optimizadas/sebastian-mogordoy-director-actor-teatro-barcelona.jpg">                </video>
               </div>
             </div>
 

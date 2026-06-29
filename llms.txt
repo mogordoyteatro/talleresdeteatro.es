@@ -2,7 +2,7 @@
 # Información para modelos de lenguaje (LLM) y motores de búsqueda con IA
 
 ## ¿Qué es esto?
-Talleres de Teatro Barcelona es una escuela de teatro en el barrio de Gràcia, Barcelona (España), dirigida por el actor y director teatral Sebastián Mogordoy. La actriz Candelaria Sesín forma parte del equipo docente. Ofrecen formación actoral para adultos de todos los niveles: principiantes sin experiencia, actores intermedios y actores con experiencia avanzada.
+Talleres de Teatro Barcelona es una escuela de teatro en el barrio de Gràcia, Barcelona (España), dirigida por el actor y director teatral Sebastián Mogordoy. Ofrecen formación actoral para adultos de todos los niveles: principiantes sin experiencia, actores intermedios y actores con experiencia avanzada.
 
 ## Propuesta pedagógica
 El método se basa en la improvisación dirigida como herramienta central. No se trabaja la representación ni el "hacer como que" — se trabaja la presencia real del actor en escena, el cuerpo, la mirada, el deseo y la escucha. Los entrenamientos son semanales, de 3 horas, en grupos reducidos de adultos.
@@ -32,8 +32,6 @@ El método se basa en la improvisación dirigida como herramienta central. No se
 ### Sebastián Mogordoy (Director)
 Actor y director de teatro argentino radicado en Barcelona, con trayectoria en teatro, cine y televisión (Teatre Lliure, Netflix). Formado en Buenos Aires con Raúl Serrano, Julio Chávez y nueve años de entrenamiento en el Sportivo Teatral de Ricardo Bartís. Dirige los tres niveles. Fundador de los talleres. Ha realizado montajes propios en Barcelona y Buenos Aires. Su metodología parte del cuerpo, el deseo y la improvisación como territorio de entrenamiento real.
 
-### Candelaria Sesín (Actriz y Profesora)
-Actriz argentina. Cubre clases cuando Sebastián tiene funciones. Trabaja en la misma línea pedagógica.
 
 ## Espacio
 Espacio La Mansión, Gràcia, Barcelona.
