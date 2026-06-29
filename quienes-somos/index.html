@@ -537,6 +537,7 @@
     ═══════════════════════════════════════════ */
     .editorial-full {
       position: relative; overflow: hidden;
+      width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
       height: 65vw; height: clamp(420px, 65vw, 820px);
       display: flex; align-items: flex-start; justify-content: flex-start;
     }
@@ -1341,14 +1342,10 @@
   <header>
     <section class="hero" aria-label="Quiénes somos, Talleres de Teatro Barcelona">
 
-      <picture>
-        <source media="(max-width: 768px)"
-                srcset="/imagenes_optimizadas/grupo-elenco-talleres-de-teatro-barcelona.jpg">
-        <img class="hero-img-bg"
-             src="/imagenes_optimizadas/VALENTIA.png"
-             alt="Sebastián Mogordoy, director de los Talleres de Teatro Barcelona"
-             width="1400" height="933" loading="eager" decoding="async">
-      </picture>
+      <img class="hero-img-bg"
+           src="/imagenes_optimizadas/grupo-elenco-talleres-de-teatro-barcelona.jpg"
+           alt="Elenco de los Talleres de Teatro Barcelona, dirección de Sebastián Mogordoy"
+           width="1920" height="1080" loading="eager" decoding="async">
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-accent-line" aria-hidden="true"></div>
       <div class="hero-fade" aria-hidden="true"></div>
@@ -1430,8 +1427,8 @@
 
   <!-- ═══ EDITORIAL FULL, TENEMOS EL TEATRO ═══════════════════════ -->
   <div class="editorial-full" role="img" aria-label="Tenemos el teatro, Talleres de Teatro Barcelona">
-    <img src="/imagenes_optimizadas/actuacion-teatro-barcelona-0207.jpg"
-         alt="Clases de teatro en Barcelona, Talleres de Teatro Mogordoy"
+    <img src="/imagenes_optimizadas/tenemos-el-teatro-talleres-de-teatro-barcelona.jpg"
+         alt="Escena de teatro, Talleres de Teatro Barcelona"
          loading="lazy" decoding="async">
     <div class="editorial-full-overlay"></div>
     <div class="editorial-full-text">
@@ -1512,7 +1509,7 @@
 
           <div class="persona-bio">
             <p>Actor, director y profesor de teatro argentino radicado en Barcelona. Formado junto a <strong>Ricardo Bartís</strong> en el Sportivo Teatral de Buenos Aires, referencia ineludible del teatro argentino contemporáneo. Sus quince años de docencia en Buenos Aires y Barcelona han construido un método de trabajo reconocido por la comunidad teatral.</p>
-            <p>Actualmente forma parte del elenco protagónico de <em>El Fill</em> de Jon Fosse, dirigida por <strong>Ferran Utzet</strong> estrenada en el <strong>Teatre Lliure</strong> de Barcelona. Protagonizó <em>Euforia y Desazón</em> de Sergio Boris, con temporada en el Festival Temporada Alta 2024, la <strong>Sala Beckett</strong> y los <strong>Teatros del Canal</strong> de Madrid. En cine, formó parte de la película <em>El profesor</em> producción de Netflix.</p>
+            <p>Recientemente formó parte del elenco protagónico de <em>El Fill</em> de Jon Fosse, dirigida por <strong>Ferran Utzet</strong>, estrenada en el <strong>Teatre Lliure</strong>. Sigue realizando funciones de <em>Euforia y Desazón</em>, dirigida por <strong>Sergio Boris</strong>, que se estrenó en el <strong>Festival Temporada Alta</strong>, en la <strong>Sala Beckett</strong> de Barcelona y en los <strong>Teatros del Canal</strong> de Madrid, y participó del <strong>Festival Internacional de Buenos Aires</strong>. Recientemente formó parte del elenco coprotagónico de la película <em>El profesor</em> para <strong>Netflix</strong>.</p>
 
           </div>
 
@@ -1642,7 +1639,7 @@
         <!-- ── Camila ── -->
         <div class="asistente-card">
           <div class="asistente-photo">
-            <img src="/imagenes_optimizadas/camila-granieri-actriz-docente-teatro-barcelona.png"
+            <img src="/imagenes_optimizadas/camila-granieri-actriz-docente-teatro-barcelona.jpg"
                  alt="Camila Granieri, actriz y docente de teatro en Barcelona"
                  loading="lazy" decoding="async">
           </div>
@@ -1684,7 +1681,7 @@
         <!-- ── Andrés ── -->
         <div class="asistente-card" id="andres">
           <div class="asistente-photo">
-            <img src="/imagenes_optimizadas/andres-rasdolsky-actor-docente-teatro-barcelona.png"
+            <img src="/imagenes_optimizadas/andres-rasdolsky-actor-docente-teatro-barcelona.jpg"
                  alt="Andrés Rasdolsky, actor y docente de teatro en Barcelona"
                  loading="lazy" decoding="async">
           </div>
@@ -1777,7 +1774,7 @@
         </div>
         <div class="espacio-dato">
           <span class="espacio-dato-label">Clases</span>
-          <span class="espacio-dato-val">Lunes · Martes · Miércoles · Jueves · 19–22 h</span>
+          <span class="espacio-dato-val">Lunes a viernes · 19–22 h (miércoles también 10–13 h)</span>
         </div>
       </div>
 

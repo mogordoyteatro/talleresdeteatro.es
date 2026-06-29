@@ -65,7 +65,7 @@
       "latitude": 41.3964,
       "longitude": 2.1787
     },
-    "openingHours": ["Mo 19:00-22:00", "Tu 19:00-22:00", "We 19:00-22:00", "Th 19:00-22:00"],
+    "openingHours": ["Mo 19:00-22:00", "Tu 19:00-22:00", "We 10:00-13:00", "We 19:00-22:00", "Th 19:00-22:00", "Fr 19:00-22:00"],
     "priceRange": "€€",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -236,7 +236,7 @@
         "name": "¿Cuándo empieza el próximo grupo de teatro en Barcelona?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Los grupos de principiantes abren en septiembre, enero y junio según la demanda. El próximo grupo arranca en junio 2026. Los niveles intermedios y avanzados tienen incorporación continua cuando hay plazas disponibles. Consúltanos por WhatsApp para saber el estado actual de cada grupo."
+          "text": "Los grupos de principiantes abren en septiembre, enero y junio según la demanda. El próximo grupo arranca en septiembre. Los niveles intermedios y avanzados tienen incorporación continua cuando hay plazas disponibles. Consúltanos por WhatsApp para saber el estado actual de cada grupo."
         }
       },
       {
@@ -1652,7 +1652,7 @@
     }
     .nosotros-bio{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:stretch;}
     .nosotros-bio-text{align-self:center;}
-    .nosotros-bio-foto{position:relative;min-height:clamp(360px,42vw,560px);overflow:hidden;}
+    .nosotros-bio-foto{position:relative;min-height:clamp(360px,42vw,560px);overflow:hidden;order:-1;}
     .nosotros-bio-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
     @media (max-width: 760px){ .nosotros-bio{grid-template-columns:1fr;} .nosotros-bio-foto{min-height:clamp(300px,75vw,420px);} }
     /* JUNTOS, misma familia y escala que el número */
@@ -1715,9 +1715,9 @@
     }
     .nosotros-15anos {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1.2fr;
       gap: 5vw; gap: clamp(32px, 5vw, 72px);
-      align-items: center;
+      align-items: stretch;
       border-top: 1px solid rgba(255,255,255,0.08);
       padding-top: 5vw; padding-top: clamp(40px, 5vw, 72px);
     }
@@ -1733,9 +1733,12 @@
     }
     .nosotros-15anos-foto {
       overflow: hidden;
+      position: relative;
+      min-height: clamp(320px, 36vw, 520px);
     }
     .nosotros-15anos-foto img {
-      width: 100%; height: auto;
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
       display: block;
       object-fit: cover;
     }
@@ -3216,10 +3219,10 @@
     <div class="levels-full">
 
       <!-- Banner: nuevo grupo, afiche editorial teatral -->
-      <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+informaci%C3%B3n+sobre+el+nuevo+grupo+de+Principiantes+que+empieza+en+junio+2026."
+      <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+informaci%C3%B3n+sobre+el+nuevo+grupo+de+Principiantes+que+empieza+en+septiembre."
          class="levels-announce"
          target="_blank" rel="noopener"
-         aria-label="Reservar plaza, nuevo grupo principiantes junio 2026">
+         aria-label="Reservar plaza, nuevo grupo principiantes septiembre">
 
         <!-- Foto cinemática de fondo -->
         <img class="levels-announce-bg"
@@ -3253,8 +3256,8 @@
                 <span class="cell-value">Sebastián Mogordoy</span>
               </div>
               <div class="levels-announce-cell">
-                <span class="cell-label">Día</span>
-                <span class="cell-value">Martes</span>
+                <span class="cell-label">Días</span>
+                <span class="cell-value">Lun · Mar · Jue</span>
               </div>
               <div class="levels-announce-cell">
                 <span class="cell-label">Horario</span>
@@ -3285,7 +3288,7 @@
               Para personas sin experiencia previa, o con ganas de volver a jugar. Lo más importante es pasarla bien, desconectar y descubrir el placer de actuar. Improvisación, cuerpo, escucha y primeras herramientas actorales para entrar en la ficción sin miedo.
             </p>
             <span class="level-card-coord-label">Coord. Sebastián Mogordoy</span>
-            <p class="level-card-schedule">Martes / Jueves &nbsp;·&nbsp; 19 a 22h</p>
+            <p class="level-card-schedule">Lunes / Martes / Jueves &nbsp;·&nbsp; 19 a 22h</p>
             <a href="/principiantes/"
                class="level-card-cta">
               Más info e inscripción, Principiantes →
@@ -3364,11 +3367,8 @@
               Exploraremos escenas y monólogos desde el cuerpo, el estado y las fuerzas invisibles que atraviesan cada situación. Texto, ritmo, sonoridad y conflicto como materia viva para actuar desde una presencia real y no desde la representación.
             </p>
             <span class="level-card-coord-label">Coord. Sebastián Mogordoy</span>
-            <p class="level-card-schedule">Lunes &nbsp;·&nbsp; 10 a 13h</p>
-            <p class="level-card-schedule" style="margin-top:4px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
-              <span>Lunes &nbsp;·&nbsp; 19 a 22h</span>
-              <span style="color:var(--accent);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;">Inicio sept.</span>
-            </p>
+            <p class="level-card-schedule">Miércoles &nbsp;·&nbsp; 10 a 13h &nbsp;|&nbsp; Viernes &nbsp;·&nbsp; 19 a 22h</p>
+            <p class="level-card-schedule" style="margin-top:4px;color:var(--accent);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;">Inicio septiembre</p>
             <a href="/avanzados/"
                class="level-card-cta">
               Más info e inscripción, Cuerpo al texto →
@@ -3410,7 +3410,6 @@
             ¿Quieres estudiar por primera vez? En esta primera etapa los participantes formarán parte de un espacio diferente a los de su vida cotidiana, con otras reglas y otras posibilidades, junto a un grupo de personas de distintas edades. La propuesta es trabajar con cada uno, desde el juego, trascendiendo a lo teatral. Que quieran darse permiso para volver a jugar, desinhibirse, perder el miedo a la exposición, dándole creencia a las situaciones de ficción y descubriendo la propia potencia expresiva. Que puedan "fracturar lo real" para alterar el cotidiano, soltando el "yo social" y dándole lugar a la escena de ficción, posibilitando un encuentro diferente con uno y los otros.<br><br>
             Un espacio para quienes desean comenzar a actuar o volver a conectar con el juego, la imaginación y la presencia. Trabajaremos improvisación, escucha, disponibilidad, cuerpo, vínculo y primeras herramientas actorales para entrar en la ficción desde la acción y no desde la idea. Exploraremos el entrenamiento como un territorio de libertad expresiva donde la escena aparece como experiencia viva, sensible y compartida.
           </p>
-          <p class="level-info-coord">Coord. Sebastián Mogordoy</p>
         </div>
 
         <!-- INTERMEDIOS -->
@@ -3427,7 +3426,6 @@
             Se asimila la técnica y se afianza la poética. La actividad pide mayor compromiso y comienza a desplegar mayor complejidad y profundidad en el encuentro con la actuación. Entrenaremos y crearemos escenas para presentar a fin de ciclo ante nuestros amigos y familiares.<br><br>
             Un espacio de profundización para actores, actrices y estudiantes avanzados, que ya tuvieron un recorrido previo y desean ampliar su entrenamiento. Investigaremos escena, conflicto, presencia, deseo, imaginario y construcción de materiales actorales desde una búsqueda técnica y poética. El trabajo estará orientado a desarrollar una mayor complejidad expresiva, fortaleciendo la relación entre cuerpo, actuación y mirada propia dentro de la escena.
           </p>
-          <p class="level-info-coord">Coord. Sebastián Mogordoy</p>
         </div>
 
         <!-- AVANZADOS -->
@@ -3445,7 +3443,6 @@
             Trabajaremos también sobre las dimensiones sonoras y musicales de la actuación: el ritmo interno de la escena, las velocidades, las pausas, las rupturas, la melodía de las frases, la respiración y la relación entre sonido y sentido.<br><br>
             La búsqueda será que cada actor pueda construir una relación orgánica y poética con el texto, alejándose de la representación ilustrativa para encontrar una actuación viva, presente y atravesada por verdaderas fuerzas escénicas.
           </p>
-          <p class="level-info-coord">Coord. Sebastián Mogordoy</p>
         </div>
 
       </div><!-- /levels-info-grid -->
@@ -3593,7 +3590,7 @@
         <div class="nosotros-bio-text">
           <p class="nosotros-card-role">Coord. General · Profesor</p>
           <h3 class="nosotros-card-name">Sebastián Mogordoy</h3>
-          <p class="nosotros-card-text">Actualmente forma parte del elenco protagónico de <em>El Fill</em> de Jon Fosse, dirigida por Ferran Utzet, estrenada en el Teatre Lliure. La obra participó del Festival Internacional de Buenos Aires y se estrenó en la Sala Beckett. Recientemente formó parte del elenco de la película <em>El profesor</em> producida por Netflix.</p>
+          <p class="nosotros-card-text">Recientemente formó parte del elenco protagónico de <em>El Fill</em> de Jon Fosse, dirigida por Ferran Utzet, estrenada en el Teatre Lliure. Sigue realizando funciones de <em>Euforia y Desazón</em>, dirigida por Sergio Boris, que se estrenó en el Festival Temporada Alta, en la Sala Beckett de Barcelona y en los Teatros del Canal de Madrid, y participó del Festival Internacional de Buenos Aires. Recientemente formó parte del elenco coprotagónico de la película <em>El profesor</em> para Netflix.</p>
           <a href="https://www.instagram.com/sebamogordoy/" target="_blank" rel="noopener" class="nosotros-card-ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg> @sebamogordoy</a>
           <a href="https://www.sebastianmogordoy.com" target="_blank" rel="noopener" class="nosotros-card-ig">↗&nbsp;sebastianmogordoy.com</a>
         </div>
@@ -3617,7 +3614,7 @@
 
       <!-- TENEMOS EL TEATRO, foto de fondo + texto encima -->
       <style>
-        .tenemos-section{position:relative;margin-top:clamp(48px,6vw,88px);min-height:clamp(440px,62vh,680px);display:flex;align-items:center;overflow:hidden;border-top:1px solid rgba(255,255,255,0.08);}
+        .tenemos-section{position:relative;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);margin-top:clamp(48px,6vw,88px);min-height:clamp(440px,62vh,680px);display:flex;align-items:center;overflow:hidden;border-top:1px solid rgba(255,255,255,0.08);}
         .tenemos-section .tenemos-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
         .tenemos-section .tenemos-ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,12,12,0.94) 0%,rgba(12,12,12,0.82) 42%,rgba(12,12,12,0.30) 100%);}
         .tenemos-section .tenemos-content{position:relative;max-width:780px;padding:clamp(28px,5vw,72px);}
@@ -3791,7 +3788,7 @@
         <details class="faq-item">
           <summary class="faq-question">¿Cuándo empieza el próximo grupo? ¿Se puede unir uno en cualquier momento?</summary>
           <div class="faq-answer">
-            <p>Los grupos de principiantes abren en septiembre, enero y junio según la demanda. El próximo grupo arranca en junio 2026. Los niveles intermedios y avanzados tienen incorporación continua cuando hay plazas disponibles. Consúltanos por WhatsApp para saber el estado actual de cada grupo.</p>
+            <p>Los grupos de principiantes abren en septiembre, enero y junio según la demanda. El próximo grupo arranca en septiembre. Los niveles intermedios y avanzados tienen incorporación continua cuando hay plazas disponibles. Consúltanos por WhatsApp para saber el estado actual de cada grupo.</p>
           </div>
         </details>
 
@@ -3921,8 +3918,8 @@
             <div class="ubicacion-dato">
               <span class="ubicacion-dato-icon">Clases</span>
               <span class="ubicacion-dato-text">
-                Lunes · Martes · Miércoles · Jueves<br>
-                19:00, 22:00 h
+                Lunes a viernes · 19:00 – 22:00 h<br>
+                (miércoles también 10:00 – 13:00 h)
               </span>
             </div>
           </div>
