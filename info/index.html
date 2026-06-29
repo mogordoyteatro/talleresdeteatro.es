@@ -231,6 +231,18 @@
     .taller-pnota  { font-size: 12px; color: var(--g300); margin-bottom: 20px; }
 
     .taller-prueba { font-size: 15px; font-weight: 700; color: #4fc27e; margin-bottom: 20px; }
+    .taller-col { display: flex; flex-direction: column; }
+    .taller-col .taller-cta { margin-top: auto; }
+    .promo-box { background:#1a7a3f; border-radius:6px; padding:18px 20px; margin-bottom:20px; min-height: clamp(250px,24vw,290px); box-sizing:border-box; }
+    .promo-tag { font-size:9px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.75); margin-bottom:10px; }
+    .promo-titulo { font-family:'Archivo Black',sans-serif; font-size:clamp(18px,2vw,24px); text-transform:uppercase; line-height:1.05; color:#fff; margin-bottom:14px; }
+    .promo-dias { display:flex; flex-direction:column; gap:4px; }
+    .promo-dia { font-size:13px; color:rgba(255,255,255,0.9); line-height:1.5; }
+    .promo-dia strong { color:#fff; }
+    .promo-coord { font-size:12px; color:rgba(255,255,255,0.82); margin-top:12px; font-weight:600; }
+    .promo-cta { display:inline-flex; align-items:center; gap:6px; margin-top:16px; background:#fff; color:#000; font-weight:700; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; border-radius:3px; text-decoration:none; transition:opacity .2s; }
+    .promo-cta:hover { opacity:0.88; }
+    .taller-quote { font-size:14px; color:var(--g100); line-height:1.65; margin-bottom:20px; font-style:italic; font-family:Georgia,'Times New Roman',serif; }
 
     .taller-cta {
       display: inline-flex; align-items: center; gap: 6px;
@@ -707,72 +719,43 @@
         <h3 class="taller-nombre">La creación del artificio</h3>
         <p class="taller-tipo">Iniciación · Formación y entrenamiento</p>
 
-        <!-- NUEVO GRUPO destacado -->
-        <div class="nuevo-bloque">
-          <p class="nuevo-bloque-tag">✦ Martes de julio, inscripción abierta</p>
-          <p class="nuevo-bloque-titulo">Martes · Julio</p>
-          <div class="nuevo-bloque-det">
-            <strong>Martes · 19:00 a 22:00 hs</strong><br>
-            Puedes apuntarte para los martes de julio o para el ciclo de septiembre.<br>
-            Coordinado por <strong>Sebastián Mogordoy</strong>
+        <div class="promo-box">
+          <p class="promo-tag">✦ Inscripción abierta</p>
+          <p class="promo-titulo">Martes / Jul o Sep</p>
+          <div class="promo-dias">
+            <p class="promo-dia"><strong>Martes</strong> · 19:00 – 22:00 h</p>
+            <p class="promo-dia"><strong>Jueves</strong> · 19:00 – 22:00 h</p>
           </div>
-          <a class="nuevo-bloque-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20grupo%20de%20principiantes%20los%20martes%20de%20julio" target="_blank" rel="noopener">
-            Me apunto →
-          </a>
+          <p class="promo-coord">Coord. Sebastián Mogordoy</p>
+          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20de%20principiantes" target="_blank" rel="noopener">¡Apúntate! →</a>
         </div>
-
-        <!-- Grupos actuales sin vacantes -->
-        <div class="grupos-list">
-          <div class="grupo-row">
-            <span class="grupo-dia">Martes</span>
-            <span class="grupo-hora">19:00 – 22:00 · Sebastián Mogordoy</span>
-            <span class="badge badge-open">Inscripción abierta</span>
-          </div>
-          <div class="grupo-row">
-            <span class="grupo-dia">Jueves</span>
-            <span class="grupo-hora">19:00 – 22:00 · Sebastián Mogordoy</span>
-            <span class="badge badge-sinvac">Sin vacantes</span>
-          </div>
-        </div>
-        <p class="sept-nota">→ Inscripción abierta para septiembre en todos los grupos · Y los martes de julio</p>
 
         <p class="taller-precio">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
         <p class="taller-pnota">Sin matrícula · Primera clase sin cargo</p>
-        <p class="taller-prueba">✓ Primera clase gratuita, escríbenos y te reservamos lugar</p>
-        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20de%20principiantes" target="_blank" rel="noopener">Consultar →</a>
+        <p class="taller-quote">"El comienzo: volver a jugar, perder el miedo a la exposición y descubrir la propia potencia expresiva. No hace falta haber actuado nunca."</p>
+        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
       </div>
 
-      <!-- COL 2: CON EXPERIENCIA -->
+      <!-- COL 2: INSCRIBIR LO PROPIO -->
       <div class="taller-col">
         <p class="taller-nivel">Intermedios / Avanzados</p>
         <h3 class="taller-nombre">Inscribir lo propio</h3>
         <p class="taller-tipo">Entrenamiento y creación</p>
 
-        <!-- BLOQUE SEPTIEMBRE -->
-        <div style="background:#1a7a3f;padding:18px 20px;border-radius:4px;margin-bottom:20px;min-height:clamp(260px,26vw,300px);box-sizing:border-box;">
-          <p style="font-size:9px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,215,0,0.8);margin-bottom:8px;">✦ Inscripción abierta</p>
-          <p style="font-family:'Archivo Black',sans-serif;font-size:2vw; font-size:clamp(16px,2vw,20px);text-transform:uppercase;line-height:1.1;margin-bottom:10px;color:var(--white);">Septiembre</p>
-          <div style="font-size:13px;color:rgba(255,255,255,0.88);line-height:1.6;">
-            Inscripción abierta para el nuevo ciclo de septiembre.
+        <div class="promo-box">
+          <p class="promo-tag">✦ Inscripción abierta</p>
+          <p class="promo-titulo">Mié / Sep</p>
+          <div class="promo-dias">
+            <p class="promo-dia"><strong>Miércoles</strong> · 19:00 – 22:00 h</p>
           </div>
-          <a style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:var(--white);color:#000;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none;transition:opacity 0.2s;" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20con%20experiencia%20para%20septiembre" target="_blank" rel="noopener" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Me apunto para septiembre →</a>
+          <p class="promo-coord">Coord. Sebastián Mogordoy</p>
+          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20Inscribir%20lo%20propio" target="_blank" rel="noopener">¡Apúntate! →</a>
         </div>
 
-        <div class="grupos-list">
-          <div class="grupo-row">
-            <span class="grupo-dia">Miércoles</span>
-            <span class="grupo-hora">19:00 – 22:00 · Sebastián Mogordoy</span>
-            <span class="badge badge-sinvac">Sin vacantes</span>
-          </div>
-        </div>
-
-        <p class="taller-precio" style="margin-top:8px;">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
+        <p class="taller-precio">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
         <p class="taller-pnota">Sin matrícula · Primera clase sin cargo</p>
-
-        <p style="font-size:14px;color:var(--g100);line-height:1.65;margin-bottom:20px;font-style:italic;font-family:Georgia,'Times New Roman',serif;">"El momento en que comienzas a comprender y dominar tus propias fuerzas. A hacerte cargo de tu poética. Creamos escenas para presentar al final del ciclo."</p>
-
-        <p class="taller-prueba">✓ Primera clase gratuita · Escríbenos para reservar</p>
-        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20con%20experiencia%20para%20septiembre" target="_blank" rel="noopener">Reservar para septiembre →</a>
+        <p class="taller-quote">"El momento en que comienzas a comprender y dominar tus propias fuerzas. A hacerte cargo de tu poética. Creamos escenas para presentar al final del ciclo."</p>
+        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
       </div>
 
       <!-- COL 3: CUERPO AL TEXTO -->
@@ -781,42 +764,26 @@
         <h3 class="taller-nombre">Cuerpo al texto</h3>
         <p class="taller-tipo">Entrenamiento y escenas de texto</p>
 
-        <!-- BLOQUE NUEVO CURSO SEPTIEMBRE -->
-        <div style="background:#1a7a3f;padding:18px 20px;border-radius:4px;margin-bottom:20px;min-height:clamp(260px,26vw,300px);box-sizing:border-box;">
-          <p style="font-size:9px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,215,0,0.8);margin-bottom:8px;">✦ Nuevo curso, Inscripción abierta</p>
-          <p style="font-family:'Archivo Black',sans-serif;font-size:2vw; font-size:clamp(16px,2vw,20px);text-transform:uppercase;line-height:1.1;margin-bottom:10px;color:var(--white);">Comienza en Septiembre</p>
-          <div style="font-size:13px;color:rgba(255,255,255,0.88);line-height:1.6;">
-            Coord. <strong style="color:var(--white);">Sebastián Mogordoy</strong><br>
-            Plazas limitadas · Primera clase sin cargo.
+        <div class="promo-box">
+          <p class="promo-tag">✦ Inscripción abierta</p>
+          <p class="promo-titulo">Lun / Sep</p>
+          <div class="promo-dias">
+            <p class="promo-dia"><strong>Lunes</strong> · 10:00 – 13:00 h</p>
+            <p class="promo-dia"><strong>Lunes</strong> · 19:00 – 22:00 h</p>
           </div>
-          <a style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:var(--white);color:#000;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none;transition:opacity 0.2s;" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20nuevo%20curso%20Cuerpo%20al%20Texto%20para%20septiembre" target="_blank" rel="noopener" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Me apunto para septiembre →</a>
+          <p class="promo-coord">Coord. Sebastián Mogordoy</p>
+          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20Cuerpo%20al%20texto" target="_blank" rel="noopener">¡Apúntate! →</a>
         </div>
 
-        <div class="grupos-list">
-          <div class="grupo-row">
-            <span class="grupo-dia">Lunes</span>
-            <span class="grupo-hora">10:00 – 13:00 h · Sebastián Mogordoy</span>
-            <span class="badge badge-open">Inscripción abierta</span>
-          </div>
-          <div class="grupo-row">
-            <span class="grupo-dia">Lunes</span>
-            <span class="grupo-hora">19:00 – 22:00 h · Sebastián Mogordoy</span>
-            <span class="badge badge-open">Inscripción abierta</span>
-          </div>
-        </div>
-
-        <p class="taller-precio" style="margin-top:16px;">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
+        <p class="taller-precio">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
         <p class="taller-pnota">Sin matrícula · Primera clase sin cargo</p>
-
-        <p style="font-size:14px;color:var(--g100);line-height:1.65;margin-bottom:20px;font-style:italic;font-family:Georgia,'Times New Roman',serif;">"Las palabras salen de un cuerpo. Trabajo con escenas de texto, monólogos y la lógica de la situación dramática. Para actores con formación."</p>
-
-        <p class="taller-prueba">✓ Primera clase gratuita · Plazas limitadas</p>
-        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20nuevo%20curso%20Cuerpo%20al%20Texto%20para%20septiembre" target="_blank" rel="noopener">Apuntarme para septiembre →</a>
+        <p class="taller-quote">"Las palabras salen de un cuerpo. Trabajo con escenas de texto, monólogos y la lógica de la situación dramática. Para actores con formación."</p>
+        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
       </div>
 
     </div>
 
-    <!-- ─── DESCRIPCIONES DESPLEGABLES ─── -->
+        <!-- ─── DESCRIPCIONES DESPLEGABLES ─── -->
     <div class="descripciones">
 
       <details class="desc-item">
@@ -973,30 +940,7 @@
   </div>
 </section>
 
-<div class="divider"></div>
 
-<!-- ─── DIRECTORES ─── -->
-<section class="section" id="nosotros">
-  <div class="inner">
-    <p class="overline">Quiénes somos</p>
-    <h2 class="section-title">Los directores</h2>
-    <p class="section-lead">Empezamos en Buenos Aires en 2010, seguimos en Barcelona desde 2020. 15 años de entrenamiento y enseñanza.</p>
-
-    <div class="directores-grid">
-      <div class="director-card">
-        <img class="director-img"
-          src="/imagenes_optimizadas/sebastian-mogordoy-director-actor-teatro-barcelona.jpg"
-          alt="Sebastián Mogordoy, Director Talleres de Teatro Barcelona"
-          onerror="this.style.background='#1e1e1e';this.style.minHeight='170px';this.removeAttribute('src');">
-        <div>
-          <p class="director-rol">Director</p>
-          <h3 class="director-nombre">Sebastián Mogordoy</h3>
-          <p class="director-bio">Actor, director y profesor de teatro. <strong>15 años dirigiendo talleres</strong> formado con Ricardo Bartís en Sportivo Teatral, Buenos Aires.<br><br>TV: <strong>El Profesor (Netflix, 2026)</strong>. Teatro: <em>El fil</em> <em>Euforia y Desazón</em>. Cine y series: proyectos en desarrollo.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <div class="divider"></div>
 
