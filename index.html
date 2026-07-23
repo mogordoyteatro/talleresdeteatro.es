@@ -25,7 +25,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://talleresdeteatro.es/" />
   <meta property="og:title" content="Talleres de Teatro Barcelona · Escuela y entrenamiento actoral · Gràcia" />
-  <meta property="og:description" content="Escuela de teatro en Barcelona dirigida por Sebastián Mogordoy (Teatre Lliure, Netflix). Formación para principiantes y entrenamiento para actores profesionales y estudiantes avanzados. Improvisación dirigida. 92 reseñas ★★★★★ en Google. Clase de prueba gratis." />
+  <meta property="og:description" content="Escuela de teatro en Barcelona dirigida por Sebastián Mogordoy (Teatre Lliure, Netflix). Formación para principiantes y entrenamiento para actores profesionales y estudiantes avanzados. Improvisación dirigida. 93 reseñas ★★★★★ en Google. Clase de prueba gratis." />
   <meta property="og:image" content="https://talleresdeteatro.es/imagenes_optimizadas/sebastian-mogordoy-director-actor-teatro-barcelona.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -36,7 +36,7 @@
   <!-- ═══ TWITTER CARD ══════════════════════════════════════════ -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Talleres de Teatro Barcelona · Sebastián Mogordoy (Teatre Lliure / Netflix)" />
-  <meta name="twitter:description" content="Escuela de teatro en Barcelona. Principiantes. Entrenamiento y creación para actores profesionales y avanzados. Improvisación dirigida. 92 reseñas 5★." />
+  <meta name="twitter:description" content="Escuela de teatro en Barcelona. Principiantes. Entrenamiento y creación para actores profesionales y avanzados. Improvisación dirigida. 93 reseñas 5★." />
   <meta name="twitter:image" content="https://talleresdeteatro.es/imagenes_optimizadas/sebastian-mogordoy-director-actor-teatro-barcelona.jpg" />
 
   <!-- ═══ SCHEMA MARKUP, LocalBusiness ═══════════════════════ -->
@@ -70,7 +70,7 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
-      "reviewCount": "92",
+      "reviewCount": "93",
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -1383,6 +1383,144 @@
       .levels-info-grid { grid-template-columns: 1fr; }
       .level-info-col { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
       .level-info-col:last-child { border-bottom: none; }
+    }
+
+    /* ── 4 columnas de talleres · subgrid (filas alineadas entre columnas) ── */
+    .levels-columns {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 0;
+      row-gap: 14px;
+      margin: 0 2.5vw; margin: 0 clamp(12px, 2.5vw, 40px);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .level-col {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 8;
+      row-gap: 14px;
+      padding: 2.2vw; padding: clamp(20px, 2.2vw, 32px);
+      background: var(--g800);
+      border-right: 1px solid rgba(255,255,255,0.06);
+    }
+    .level-col:last-child { border-right: none; }
+    .level-col-img-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 0;
+      padding-bottom: 62%;
+      margin: calc(-1 * clamp(20px, 2.2vw, 32px));
+      margin-bottom: 0;
+    }
+    .level-col-num {
+      position: absolute;
+      top: 14px; left: 14px;
+      z-index: 2;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 11px; letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+    .level-col-img-wrap img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      display: block;
+      transition: transform .5s ease;
+    }
+    .level-col:hover .level-col-img-wrap img { transform: scale(1.04); }
+    .level-col-subtitle {
+      font-size: clamp(11px, 1vw, 13px);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0;
+    }
+    .level-col-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: clamp(22px, 1.9vw, 30px);
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      color: var(--white);
+      margin: 0;
+      align-self: end;
+    }
+    .level-col-intro {
+      font-size: clamp(14px, 1.15vw, 16px);
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--white);
+      margin: 0;
+    }
+    .level-col-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .level-col-schedule {
+      font-size: clamp(12px, 1.1vw, 14px);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--white);
+    }
+    .level-col-coord {
+      font-size: clamp(11px, 1vw, 12px);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .level-col-start {
+      font-size: clamp(11px, 1vw, 12px);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .level-col-start.is-verde { color: #4ade80; }
+    .level-col-start.is-abierta { color: var(--white); }
+    /* Desplegable de descripción larga */
+    .level-col-details {
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .level-col-details > summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      padding: 12px 0;
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .level-col-details > summary::-webkit-details-marker { display: none; }
+    .level-col-details .dets-arrow { display: inline-block; transition: transform .2s; }
+    .level-col-details[open] .dets-arrow { transform: rotate(180deg); }
+    .level-col-details-body {
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 2px 0 6px;
+      font-size: clamp(13px, 1.05vw, 15px);
+      font-weight: 300; line-height: 1.65;
+      color: var(--white);
+    }
+    .level-col-details-body p { margin: 0; }
+    .level-col .level-card-cta { align-self: stretch; }
+
+    @media (max-width: 980px) {
+      .levels-columns { grid-template-columns: repeat(2, 1fr); }
+      .level-col:nth-child(2n) { border-right: none; }
+    }
+    @media (max-width: 620px) {
+      .levels-columns { grid-template-columns: 1fr; margin: 0; row-gap: 0; }
+      .level-col {
+        display: flex; flex-direction: column; gap: 14px;
+        grid-row: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+      .level-col-title { align-self: stretch; text-align: left; }
     }
 
     /* ── Texto filosófico + metodología unificados ── */
@@ -2972,7 +3110,7 @@
             <div class="hero-social">
               <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
               <div class="social-txt">
-                <strong>5.0 · 92 reseñas</strong><br>en Google
+                <strong>5.0 · 93 reseñas</strong><br>en Google
               </div>
             </div>
           </div>
@@ -2998,7 +3136,7 @@
                alt="Google"
                style="height:3.5vw; height:clamp(28px,3.5vw,44px);width:auto;display:block;margin-bottom:12px;opacity:0.95;">
           <h2 class="reviews-h2">
-            <span class="accent-num">5</span> <span class="reviews-stars-emoji">⭐⭐⭐⭐⭐</span> <br /> 92 reseñas <br /> en Google
+            <span class="accent-num">5</span> <span class="reviews-stars-emoji">⭐⭐⭐⭐⭐</span> <br /> 93 reseñas <br /> en Google
           </h2>
         </div>
         <div class="reviews-header-right">
@@ -3012,9 +3150,9 @@
             class="link-all"
             target="_blank"
             rel="noopener"
-            aria-label="Ver las 92 reseñas en Google (abre en nueva pestaña)"
+            aria-label="Ver todas las reseñas en Google (abre en nueva pestaña)"
           >
-            Ver las 92 reseñas <span class="arrow">→</span>
+            Ver todas las reseñas <span class="arrow">→</span>
           </a>
         </div>
       </header>
@@ -3177,7 +3315,7 @@
         <div class="reviews-google-badge" aria-hidden="true">
           <span class="badge-stars">★★★★★</span>
           <span class="badge-txt">
-            <strong>5 / 5</strong> · 92 reseñas · Google
+            <strong>5 / 5</strong> · 93 reseñas · Google
           </span>
         </div>
         <a href="https://g.page/r/CX93gWqk-bhkEBE/review"
@@ -3272,248 +3410,157 @@
         </div>
       </a>
 
-      <!-- Grid de 3 cards -->
-      <div class="levels-grid">
+      <!-- ── 4 columnas: un taller por columna ── -->
+      <div class="levels-columns">
 
-        <!-- Card 01, Principiantes -->
-        <article class="level-card" id="principiantes">
-          <div class="level-card-img-wrap">
-            <span class="level-card-num">01</span>
+        <!-- Columna 01 · Principiantes -->
+        <article class="level-col" id="principiantes">
+          <div class="level-col-img-wrap">
+            <span class="level-col-num">01</span>
             <img src="imagenes_optimizadas/principiantes-clase-2025.jpg"
-                 alt="Primer taller de teatro para principiantes, Espacio La Mansión, Gràcia"
+                 alt="Taller de teatro para principiantes, Espacio La Mansión, Gràcia, Barcelona"
                  loading="lazy" width="2000" height="1125">
           </div>
-          <div class="level-card-body">
-            <p class="level-card-subtitle">La creación del artificio. Formación.</p>
-            <h3 class="level-card-title">Principiantes</h3>
-            <p class="level-card-text">
-              Para personas sin experiencia previa, o con ganas de volver a jugar. Lo más importante es pasarla bien, desconectar y descubrir el placer de actuar. Improvisación, cuerpo, escucha y primeras herramientas actorales para entrar en la ficción sin miedo.
-            </p>
-            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;">
-              <span class="level-card-coord-label">Coord. Sebastián Mogordoy</span>
-              <span style="color:var(--accent);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;">Inicio septiembre</span>
-            </div>
-            <p class="level-card-schedule">Martes &nbsp;·&nbsp; 19 a 22h</p>
-            <a href="/principiantes/"
-               class="level-card-cta">
-              Más info e inscripción →
-            </a>
-            <!-- Mobile: video + descripción desplegable -->
-            <div class="level-card-mobile-extra">
-              <div class="level-card-mobile-video" data-vid="rKMlLob3r1w">
-                <img src="/imagenes_optimizadas/principiantes-clase-2025-web.jpg"
-                     alt="Taller principiantes, Barcelona" loading="lazy" width="1400" height="788">
-                <div class="play-icon">
-                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
-              <details class="level-card-details">
-                <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
-                <div class="level-card-details-body">
-                  <p>¿Quieres estudiar por primera vez? En esta primera etapa los participantes formarán parte de un espacio diferente a los de su vida cotidiana, con otras reglas y otras posibilidades, junto a un grupo de personas de distintas edades.</p>
-                  <p>Un espacio para quienes desean comenzar a actuar o volver a conectar con el juego, la imaginación y la presencia. Trabajaremos improvisación, escucha, disponibilidad, cuerpo, vínculo y primeras herramientas actorales para entrar en la ficción desde la acción y no desde la idea.</p>
-                </div>
-              </details>
-            </div>
+          <p class="level-col-subtitle">Formación · Principiantes</p>
+          <h3 class="level-col-title">La creación del artificio</h3>
+          <p class="level-col-intro">
+            Para personas sin experiencia previa, con ganas de volver a jugar, expresarse y divertirse haciendo teatro. Por medio de la improvisación dirigida.
+          </p>
+          <div class="level-col-meta">
+            <span class="level-col-schedule">Martes &nbsp;·&nbsp; 19 a 22h</span>
+            <span class="level-col-coord">Coord. Sebastián Mogordoy</span>
+            <span class="level-col-start is-verde">Inicio septiembre</span>
+            <span class="level-col-start is-abierta">Inscripción abierta</span>
           </div>
-        </article>
-
-        <!-- Card 02, Intermedios -->
-        <article class="level-card" id="intermedios">
-          <div class="level-card-img-wrap">
-            <span class="level-card-num">02</span>
-            <img src="imagenes_optimizadas/intermedios-clase-2025.jpg"
-                 alt="Entrenamiento actoral para actores con experiencia, Barcelona"
-                 loading="lazy" width="5472" height="3648">
-          </div>
-          <div class="level-card-body">
-            <p class="level-card-subtitle">Inscribir lo propio. Entrenamiento.</p>
-            <h3 class="level-card-title">Intermedios</h3>
-            <p class="level-card-text">
-              Para quienes ya tienen experiencia y quieren profundizar y entrenar actuación. Personaje, presencia, deseo, conflicto y poética personal.
-            </p>
-            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;">
-              <span class="level-card-coord-label">Coord. Sebastián Mogordoy</span>
-              <span style="color:var(--accent);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;">Inicio septiembre</span>
-            </div>
-            <p class="level-card-schedule">Jueves &nbsp;·&nbsp; 19 a 22h</p>
-            <a href="/intermedios/"
-               class="level-card-cta">
-              Más info e inscripción →
-            </a>
-            <div class="level-card-mobile-extra">
-              <div class="level-card-mobile-video" data-vid="RnRlFAWvrxM">
-                <img src="https://img.youtube.com/vi/RnRlFAWvrxM/hqdefault.jpg"
-                     alt="Taller con experiencia, Barcelona" loading="lazy" width="480" height="360">
-                <div class="play-icon">
-                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
-              <details class="level-card-details">
-                <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
-                <div class="level-card-details-body">
-                  <p>Trabajaremos para que los participantes dominen técnicamente su herramienta y puedan comprenderse como una fuerza poética, un cuerpo dispuesto, entrenado, vibrante, que en el momento de actuar pone en juego todos sus sentidos.</p>
-                  <p>Un espacio de profundización para actores y actrices que ya tuvieron un recorrido previo y desean ampliar su entrenamiento. Investigaremos escena, conflicto, presencia, deseo, imaginario y construcción de materiales actorales.</p>
-                </div>
-              </details>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 03, Avanzados: El ser mirado -->
-        <article class="level-card" id="avanzados">
-          <div class="level-card-img-wrap">
-            <span class="level-card-num">03</span>
-            <img src="imagenes_optimizadas/actuacion-teatro-barcelona-0624.jpg"
-                 alt="El ser mirado, laboratorio de entrenamiento para actores avanzados, Barcelona"
-                 loading="lazy" width="5472" height="3648">
-          </div>
-          <div class="level-card-body">
-            <p class="level-card-subtitle">El ser mirado. Laboratorio.</p>
-            <h3 class="level-card-title">Avanzados</h3>
-            <p class="level-card-text">
-              Laboratorio de investigación técnica y desarrollo de la poética. El actor como fuerza generadora de teatralidad: un cuerpo dispuesto, entrenado, vibrante, que pone en juego todos sus sentidos. La actuación, por delante del relato.
-            </p>
-            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;">
-              <span class="level-card-coord-label">Coord. Sebastián Mogordoy</span>
-              <span style="color:var(--accent);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;">Inscripción abierta</span>
-            </div>
-            <p class="level-card-schedule">Miércoles &nbsp;·&nbsp; 19 a 22h</p>
-            <a href="/avanzados/"
-               class="level-card-cta">
-              Más info e inscripción →
-            </a>
-            <div class="level-card-mobile-extra">
-              <div class="level-card-mobile-video" data-vid="xI459ry1J4I">
-                <img src="https://img.youtube.com/vi/xI459ry1J4I/hqdefault.jpg"
-                     alt="El ser mirado, entrenamiento avanzado, Barcelona" loading="lazy" width="480" height="360">
-                <div class="play-icon">
-                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
-              <details class="level-card-details">
-                <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
-                <div class="level-card-details-body">
-                  <p>Investigamos el teatro, la actuación, la teatralidad y su poética como lenguaje, desde la improvisación dirigida. El entrenamiento busca trascender los límites de la representación y potenciar la poética personal de los participantes.</p>
-                  <p>Un actor o actriz debe aportar pensamiento y opinión y, cuando actúa, convertirse en un objeto convocante de mirada. La actuación, por delante del relato. El relato como excusa para afirmar el ser. El ser, mirado.</p>
-                </div>
-              </details>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 04, Cuerpo al texto -->
-        <article class="level-card" id="cuerpo-al-texto">
-          <div class="level-card-img-wrap">
-            <span class="level-card-num">04</span>
-            <img src="imagenes_optimizadas/avanzados-clase-2025.jpg"
-                 alt="Cuerpo al texto, trabajo sobre escena y monólogo, Barcelona"
-                 loading="lazy" width="5472" height="3648">
-          </div>
-          <div class="level-card-body">
-            <p class="level-card-subtitle">Escenas de texto, Monólogos</p>
-            <h3 class="level-card-title">Cuerpo al texto</h3>
-            <p class="level-card-text">
-              Exploraremos escenas y monólogos desde el cuerpo, el estado y las fuerzas invisibles que atraviesan cada situación. Texto, ritmo, sonoridad y conflicto como materia viva para actuar desde una presencia real y no desde la representación.
-            </p>
-            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;">
-              <span class="level-card-coord-label">Coord. Sebastián Mogordoy</span>
-              <span style="color:var(--accent);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;">Inscripción abierta</span>
-            </div>
-            <p class="level-card-schedule">Lunes &nbsp;·&nbsp; 19 a 22h</p>
-            <a href="/cuerpo-al-texto/"
-               class="level-card-cta">
-              Más info e inscripción →
-            </a>
-            <div class="level-card-mobile-extra">
-              <div class="level-card-mobile-video" data-vid="4An61DJr39w">
-                <img src="https://img.youtube.com/vi/4An61DJr39w/hqdefault.jpg"
-                     alt="Cuerpo al texto, Barcelona" loading="lazy" width="480" height="360">
-                <div class="play-icon">
-                  <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
-              <details class="level-card-details">
-                <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
-                <div class="level-card-details-body">
-                  <p>El trabajo sobre escenas de texto y monólogos estará centrado en comprender que actuar un texto no significa "decir bien" unas palabras, sino descubrir qué fuerzas lo producen.</p>
-                  <p>Nos interesa entender que las palabras salen de un cuerpo atravesado por un estado, afectado, vibrando, deseando, resistiendo. El texto será abordado como materia viva: acción, impulso, respiración y comportamiento.</p>
-                </div>
-              </details>
-            </div>
-          </div>
-        </article>
-
-      </div><!-- /levels-grid -->
-
-      <!-- ── Info expandida: video + texto por nivel ── -->
-      <div class="levels-info-grid">
-
-        <!-- PRINCIPIANTES -->
-        <div class="level-info-col" id="info-principiantes">
           <div class="level-info-video" data-vid="rKMlLob3r1w">
-            <img src="/imagenes_optimizadas/principiantes-clase-2025-web.jpg"
-                 alt="Proceso creativo, grupo de principiantes en escena, Barcelona" loading="lazy" width="1400" height="788">
+            <img src="https://img.youtube.com/vi/rKMlLob3r1w/hqdefault.jpg"
+                 alt="Taller de teatro para principiantes, Barcelona" loading="lazy" width="480" height="360">
             <div class="play-icon">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
-          <p class="level-info-text">
-            ¿Quieres estudiar por primera vez? En esta primera etapa los participantes formarán parte de un espacio diferente a los de su vida cotidiana, con otras reglas y otras posibilidades, junto a un grupo de personas de distintas edades. La propuesta es trabajar con cada uno, desde el juego, trascendiendo a lo teatral. Que quieran darse permiso para volver a jugar, desinhibirse, perder el miedo a la exposición, dándole creencia a las situaciones de ficción y descubriendo la propia potencia expresiva. Que puedan "fracturar lo real" para alterar el cotidiano, soltando el "yo social" y dándole lugar a la escena de ficción, posibilitando un encuentro diferente con uno y los otros.<br><br>
-            Un espacio para quienes desean comenzar a actuar o volver a conectar con el juego, la imaginación y la presencia. Trabajaremos improvisación, escucha, disponibilidad, cuerpo, vínculo y primeras herramientas actorales para entrar en la ficción desde la acción y no desde la idea. Exploraremos el entrenamiento como un territorio de libertad expresiva donde la escena aparece como experiencia viva, sensible y compartida.
-          </p>
-        </div>
-
-        <!-- INTERMEDIOS -->
-        <div class="level-info-col" id="info-intermedios">
-          <div class="level-info-video" data-vid="RnRlFAWvrxM">
-            <img src="https://img.youtube.com/vi/RnRlFAWvrxM/hqdefault.jpg"
-                 alt="Investigación actoral, entrenamiento intermedios, Talleres de Teatro Barcelona" loading="lazy" width="480" height="360">
-            <div class="play-icon">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <details class="level-col-details">
+            <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
+            <div class="level-col-details-body">
+              <p>¿Quieres estudiar por primera vez? En esta primera etapa los participantes formarán parte de un espacio diferente a los de su vida cotidiana, con otras reglas y otras posibilidades, junto a un grupo de personas de distintas edades. La propuesta es trabajar con cada uno, desde el juego, trascendiendo a lo teatral. Que quieran darse permiso para volver a jugar, desinhibirse, perder el miedo a la exposición, dándole creencia a las situaciones de ficción y descubriendo la propia potencia expresiva. Que puedan "fracturar lo real" para alterar el cotidiano, soltando el "yo social" y dándole lugar a la escena de ficción, posibilitando un encuentro diferente con uno y los otros.</p>
+              <p>Un espacio para quienes desean comenzar a actuar o volver a conectar con el juego, la imaginación y la presencia. Trabajaremos improvisación, escucha, disponibilidad, cuerpo, vínculo y primeras herramientas actorales para entrar en la ficción desde la acción y no desde la idea. Exploraremos el entrenamiento como un territorio de libertad expresiva donde la escena aparece como experiencia viva, sensible y compartida.</p>
             </div>
-          </div>
-          <p class="level-info-text">
-            Trabajaremos para que los participantes dominen técnicamente su herramienta y que puedan comprenderse,más que como la idea de un personaje, como una fuerza poética, un cuerpo dispuesto, entrenado, vibrante, que en el momento de actuar pone en juego todos sus sentidos y logra manejar tanto la percepción multidireccional como la radiación de su propia energía, por medio de la improvisación dirigida.<br><br>
-            Se asimila la técnica y se afianza la poética. La actividad pide mayor compromiso y comienza a desplegar mayor complejidad y profundidad en el encuentro con la actuación. Entrenaremos y crearemos escenas para presentar a fin de ciclo ante nuestros amigos y familiares.<br><br>
-            Un espacio de profundización para actores, actrices y estudiantes avanzados, que ya tuvieron un recorrido previo y desean ampliar su entrenamiento. Investigaremos escena, conflicto, presencia, deseo, imaginario y construcción de materiales actorales desde una búsqueda técnica y poética. El trabajo estará orientado a desarrollar una mayor complejidad expresiva, fortaleciendo la relación entre cuerpo, actuación y mirada propia dentro de la escena.
-          </p>
-        </div>
+          </details>
+          <a href="/principiantes/" class="level-card-cta">Más info e inscripción →</a>
+        </article>
 
-        <!-- AVANZADOS: EL SER MIRADO -->
-        <div class="level-info-col" id="info-avanzados">
-          <div class="level-info-video" data-vid="xI459ry1J4I">
-            <img src="https://img.youtube.com/vi/xI459ry1J4I/hqdefault.jpg"
-                 alt="El ser mirado, laboratorio de entrenamiento avanzado, Barcelona" loading="lazy" width="480" height="360">
-            <div class="play-icon">
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </div>
+        <!-- Columna 02 · Intermedios -->
+        <article class="level-col" id="intermedios">
+          <div class="level-col-img-wrap">
+            <span class="level-col-num">02</span>
+            <img src="imagenes_optimizadas/intermedios-clase-2025.jpg"
+                 alt="Entrenamiento actoral para actores con experiencia, Inscribir lo propio, Barcelona"
+                 loading="lazy" width="5472" height="3648">
           </div>
-          <p class="level-info-text">
-            Investigamos el teatro, la actuación, la teatralidad y su poética como lenguaje, desde la improvisación dirigida. Comprendemos a la actuación como la principal fuerza generadora de teatralidad, que en combinación con otras disciplinas artísticas genera el acontecimiento teatral. A través del entrenamiento buscamos generar herramientas para trascender los límites de la representación y comprender y potenciar la poética personal de los participantes.<br><br>
-            Trabajaremos para que los participantes dominen técnicamente su herramienta y puedan comprenderse, más que como la idea de un personaje, como una fuerza poética: un cuerpo dispuesto, entrenado, vibrante, que en el momento de actuar pone en juego todos sus sentidos y logra manejar tanto la percepción multidireccional como la radiación de su propia energía.<br><br>
-            Creemos que un actor o actriz debe aportar pensamiento y opinión y, cuando actúa, convertirse en un objeto convocante de mirada, multiplicando y dándole profundidad al relato. La actuación, por delante del relato. El suceso, como relato. El relato como excusa para afirmar el ser. El ser, mirado. El material creado en este laboratorio se presenta en funciones reales dentro del ciclo La tiranía del deseo.
+          <p class="level-col-subtitle">Formación y Entrenamiento · Intermedios y Principiantes +</p>
+          <h3 class="level-col-title">Inscribir lo propio</h3>
+          <p class="level-col-intro">
+            Para quienes ya tienen algo de experiencia y quieren profundizar y entrenar actuación. (Y si no tienes experiencia y eres valiente y no puedes los lunes, ¡también te puedes sumar a este grupo!)
           </p>
-        </div>
-
-        <!-- CUERPO AL TEXTO -->
-        <div class="level-info-col" id="info-cuerpo-al-texto">
+          <div class="level-col-meta">
+            <span class="level-col-schedule">Jueves &nbsp;·&nbsp; 19 a 22h</span>
+            <span class="level-col-coord">Coord. Sebastián Mogordoy</span>
+            <span class="level-col-start is-verde">Inicio septiembre</span>
+            <span class="level-col-start is-abierta">Inscripción abierta</span>
+          </div>
           <div class="level-info-video" data-vid="4An61DJr39w">
             <img src="https://img.youtube.com/vi/4An61DJr39w/hqdefault.jpg"
-                 alt="Cuerpo al texto, trabajo sobre texto y actuación, Barcelona" loading="lazy" width="480" height="360">
+                 alt="Taller de teatro intermedios, Inscribir lo propio, Barcelona" loading="lazy" width="480" height="360">
             <div class="play-icon">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
-          <p class="level-info-text">
-            El trabajo sobre escenas de texto y monólogos estará centrado en comprender que actuar un texto no significa "decir bien" unas palabras, sino descubrir qué fuerzas lo producen. Analizaremos las tensiones que organizan cada situación, investigando cómo muchas veces la verdadera lógica de la escena no coincide con la lógica racional del texto escrito. La actuación aparece justamente en esa fricción.<br><br>
-            Nos interesa entender que las palabras no salen solamente de una idea, sino de un cuerpo atravesado por un estado. Un cuerpo afectado, vibrando, deseando, resistiendo, manipulando, huyendo, necesitando algo del otro. El texto será abordado entonces como materia viva: acción, impulso, respiración y comportamiento.<br><br>
-            Trabajaremos también sobre las dimensiones sonoras y musicales de la actuación: el ritmo interno de la escena, las velocidades, las pausas, las rupturas, la melodía de las frases, la respiración y la relación entre sonido y sentido.<br><br>
-            La búsqueda será que cada actor pueda construir una relación orgánica y poética con el texto, alejándose de la representación ilustrativa para encontrar una actuación viva, presente y atravesada por verdaderas fuerzas escénicas.
-          </p>
-        </div>
+          <details class="level-col-details">
+            <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
+            <div class="level-col-details-body">
+              <p>En este taller entramos en una etapa de formación un poco más profunda. Ya experimentaste el hecho de actuar; ahora el objetivo es asimilar la técnica y afianzar tu poética personal. Seguiremos abordando el teatro como un juego apasionante y divertido, pero exploraremos el encuentro con la actuación en situaciones de mayor complejidad y compromiso.</p>
+              <p>Vamos a dejar atrás la simple representación para que tu cuerpo opine en escena. Entrenaremos el "aquí y ahora", el conflicto y el deseo, para culminar creando escenas que presentaremos a fin de ciclo ante amigos y familiares.</p>
+            </div>
+          </details>
+          <a href="/intermedios/" class="level-card-cta">Más info e inscripción →</a>
+        </article>
 
-      </div><!-- /levels-info-grid -->
+        <!-- Columna 03 · Avanzados -->
+        <article class="level-col" id="avanzados">
+          <div class="level-col-img-wrap">
+            <span class="level-col-num">03</span>
+            <img src="imagenes_optimizadas/clase-teatro-barcelona-0593.jpg"
+                 alt="El ser mirado, laboratorio de entrenamiento para actores avanzados, Barcelona"
+                 loading="lazy" width="1400" height="788">
+          </div>
+          <p class="level-col-subtitle">Entrenamiento y creación · Con experiencia</p>
+          <h3 class="level-col-title">El ser mirado</h3>
+          <p class="level-col-intro">
+            Laboratorio de investigación técnica y desarrollo de la poética. El actor como fuerza generadora de teatralidad: un cuerpo dispuesto, entrenado, vibrante, que pone en juego todos sus sentidos. La actuación, por delante del relato.
+          </p>
+          <div class="level-col-meta">
+            <span class="level-col-schedule">Miércoles &nbsp;·&nbsp; 19 a 22h</span>
+            <span class="level-col-coord">Coord. Sebastián Mogordoy</span>
+            <span class="level-col-start is-verde">Inicio septiembre</span>
+            <span class="level-col-start is-abierta">Inscripción abierta</span>
+          </div>
+          <div class="level-info-video" data-vid="RnRlFAWvrxM">
+            <img src="https://img.youtube.com/vi/RnRlFAWvrxM/hqdefault.jpg"
+                 alt="El ser mirado, laboratorio de entrenamiento actoral avanzado, Barcelona" loading="lazy" width="480" height="360">
+            <div class="play-icon">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <details class="level-col-details">
+            <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
+            <div class="level-col-details-body">
+              <p>Trabajaremos para que los participantes dominen técnicamente su herramienta y que puedan comprenderse, más que como la idea de un personaje, como una fuerza poética, un cuerpo dispuesto, entrenado, vibrante, que en el momento de actuar pone en juego todos sus sentidos y logra manejar tanto la percepción multidireccional como la radiación de su propia energía, por medio de la improvisación dirigida.</p>
+              <p>Se asimila la técnica y se afianza la poética. La actividad pide mayor compromiso y comienza a desplegar mayor complejidad y profundidad en el encuentro con la actuación. Entrenaremos y crearemos escenas para presentar a fin de ciclo ante nuestros amigos y familiares.</p>
+              <p>Un espacio de profundización para actores, actrices y estudiantes avanzados, que ya tuvieron un recorrido previo y desean ampliar su entrenamiento. Investigaremos escena, conflicto, presencia, deseo, imaginario y construcción de materiales actorales desde una búsqueda técnica y poética. El trabajo estará orientado a desarrollar una mayor complejidad expresiva, fortaleciendo la relación entre cuerpo, actuación y mirada propia dentro de la escena.</p>
+            </div>
+          </details>
+          <a href="/avanzados/" class="level-card-cta">Más info e inscripción →</a>
+        </article>
+
+        <!-- Columna 04 · Cuerpo al texto -->
+        <article class="level-col" id="cuerpo-al-texto">
+          <div class="level-col-img-wrap">
+            <span class="level-col-num">04</span>
+            <img src="imagenes_optimizadas/avanzados-clase-2025.jpg"
+                 alt="Cuerpo al texto, trabajo sobre escena y monólogo para actores, Barcelona"
+                 loading="lazy" width="5472" height="3648">
+          </div>
+          <p class="level-col-subtitle">Avanzados · Escenas de texto · Monólogos</p>
+          <h3 class="level-col-title">Cuerpo al texto</h3>
+          <p class="level-col-intro">
+            Exploraremos escenas y monólogos desde el cuerpo, el estado y las fuerzas invisibles que atraviesan cada situación. Texto, ritmo, sonoridad y conflicto como materia viva para actuar desde una presencia real y no desde la representación.
+          </p>
+          <div class="level-col-meta">
+            <span class="level-col-schedule">Lunes &nbsp;·&nbsp; 19 a 22h</span>
+            <span class="level-col-coord">Coord. Sebastián Mogordoy</span>
+            <span class="level-col-start is-verde">Inicio septiembre</span>
+            <span class="level-col-start is-abierta">Inscripción abierta</span>
+          </div>
+          <div class="level-info-video" data-vid="xI459ry1J4I">
+            <img src="https://img.youtube.com/vi/xI459ry1J4I/hqdefault.jpg"
+                 alt="Cuerpo al texto, trabajo sobre escena y monólogo, Barcelona" loading="lazy" width="480" height="360">
+            <div class="play-icon">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <details class="level-col-details">
+            <summary>Leer descripción completa <span class="dets-arrow">↓</span></summary>
+            <div class="level-col-details-body">
+              <p>El trabajo sobre escenas de texto y monólogos estará centrado en comprender que actuar un texto no significa "decir bien" unas palabras, sino descubrir qué fuerzas lo producen. Analizaremos las tensiones que organizan cada situación, investigando cómo muchas veces la verdadera lógica de la escena no coincide con la lógica racional del texto escrito. La actuación aparece justamente en esa fricción.</p>
+              <p>Nos interesa entender que las palabras no salen solamente de una idea, sino de un cuerpo atravesado por un estado. Un cuerpo afectado, vibrando, deseando, resistiendo, manipulando, huyendo, necesitando algo del otro. El texto será abordado entonces como materia viva: acción, impulso, respiración y comportamiento.</p>
+              <p>Trabajaremos también sobre las dimensiones sonoras y musicales de la actuación: el ritmo interno de la escena, las velocidades, las pausas, las rupturas, la melodía de las frases, la respiración y la relación entre sonido y sentido.</p>
+              <p>La búsqueda será que cada actor pueda construir una relación orgánica y poética con el texto, alejándose de la representación ilustrativa para encontrar una actuación viva, presente y atravesada por verdaderas fuerzas escénicas.</p>
+            </div>
+          </details>
+          <a href="/cuerpo-al-texto/" class="level-card-cta">Más info e inscripción →</a>
+        </article>
+
+      </div><!-- /levels-columns -->
 
       <!-- ── Banner cierre ── -->
       <div class="levels-closing-banner">
@@ -4806,6 +4853,24 @@
         facade.style.cursor = 'default';
       });
     });
+    // ─────────────────────────────────────────────────────────────────
+
+    // ─── Desplegables de talleres: sincronizados en escritorio, ──────
+    //     independientes en móvil (≤620px) ──────────────────────────────
+    (function () {
+      const items = document.querySelectorAll('.levels-columns .level-col-details');
+      if (!items.length) return;
+      let syncing = false;
+      items.forEach(function (d) {
+        d.addEventListener('toggle', function () {
+          if (syncing) return;
+          if (window.innerWidth <= 620) return; // móvil: cada columna independiente
+          syncing = true;
+          items.forEach(function (o) { if (o !== d) o.open = d.open; });
+          syncing = false;
+        });
+      });
+    })();
     // ─────────────────────────────────────────────────────────────────
 
     // ─── Lightbox para fotos ─────────────────────────────────────────
