@@ -2,9 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Información sobre los Talleres de Teatro Barcelona, horarios, precios, niveles y metodología. Dir. Sebastián Mogordoy · Gràcia, Barcelona." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Información Talleres 2025/26 — Talleres de Teatro Barcelona · Sebastián Mogordoy</title>
-  <meta name="robots" content="noindex, nofollow" />
+  <title>Información Talleres 2026/27, Talleres de Teatro Barcelona · Sebastián Mogordoy</title>
+  <link rel="canonical" href="https://talleresdeteatro.es/info/" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -53,6 +55,8 @@
     .nav-logo span:first-child { font-family: 'Archivo Black', sans-serif; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); }
     .nav-logo span:last-child  { font-size: 11px; color: var(--g300); letter-spacing: 0.04em; }
     .nav-buttons { display: flex; gap: 10px; align-items: center; }
+    .lang-toggle { background:none; border:1px solid rgba(255,255,255,0.35); color:var(--white); font-size:11px; font-weight:700; letter-spacing:.09em; padding:3px 8px; border-radius:3px; cursor:pointer; opacity:0.7; transition:opacity .2s, border-color .2s; line-height:1; }
+    .lang-toggle:hover { opacity:1; border-color:rgba(255,255,255,0.7); }
 
     .btn-wa-sm {
       display: inline-flex; align-items: center; gap: 7px;
@@ -149,7 +153,7 @@
     /* 3 columnas */
     .talleres-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2px;
     }
     @media (max-width: 1000px) { .talleres-grid { grid-template-columns: 1fr; } }
@@ -167,12 +171,14 @@
     .taller-nombre { font-family: 'Archivo Black', sans-serif; font-size: 2vw; font-size: clamp(16px, 2vw, 22px); text-transform: uppercase; line-height: 1.1; margin-bottom: 6px; }
     .taller-tipo { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--g300); margin-bottom: 24px; }
 
-    /* NUEVO GRUPO — bloque destacado */
+    /* NUEVO GRUPO, bloque destacado */
     .nuevo-bloque {
       background: #1a7a3f;
       padding: 18px 20px;
       border-radius: 4px;
       margin-bottom: 20px;
+      min-height: clamp(260px,26vw,300px);
+      box-sizing: border-box;
     }
     .nuevo-bloque-tag {
       font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
@@ -217,14 +223,26 @@
     .badge-sinvac { background: rgba(255,255,255,0.06); color: var(--g300); border: 1px solid rgba(255,255,255,0.1); }
     .badge-sept   { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.25); }
     .badge-nuevo  { background: var(--accent); color: var(--white); }
-    .badge-open   { background: rgba(229,9,20,0.12); color: var(--accent); border: 1px solid rgba(229,9,20,0.3); }
+    .badge-open   { background: rgba(255,215,0,0.14); color: var(--gold); border: 1px solid rgba(255,215,0,0.35); }
 
     .sept-nota { font-size: 12px; color: var(--gold); font-weight: 600; margin-bottom: 20px; letter-spacing: 0.03em; }
 
     .taller-precio { font-family: 'Archivo Black', sans-serif; font-size: 24px; margin-bottom: 4px; }
     .taller-pnota  { font-size: 12px; color: var(--g300); margin-bottom: 20px; }
 
-    .taller-prueba { font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 20px; }
+    .taller-prueba { font-size: 15px; font-weight: 700; color: #4fc27e; margin-bottom: 20px; }
+    .taller-col { display: flex; flex-direction: column; }
+    .taller-col .taller-cta { margin-top: auto; }
+    .promo-box { background:#1a7a3f; border-radius:6px; padding:18px 20px; margin-bottom:20px; min-height: clamp(290px,26vw,330px); box-sizing:border-box; display:flex; flex-direction:column; }
+    .promo-tag { font-size:9px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:rgba(255,255,255,0.75); margin-bottom:10px; }
+    .promo-titulo { font-family:'Archivo Black',sans-serif; font-size:clamp(18px,2vw,24px); text-transform:uppercase; line-height:1.05; color:#fff; margin-bottom:14px; }
+    .promo-dias { display:flex; flex-direction:column; gap:4px; }
+    .promo-dia { font-size:13px; color:rgba(255,255,255,0.9); line-height:1.5; }
+    .promo-dia strong { color:#fff; }
+    .promo-coord { font-size:12px; color:rgba(255,255,255,0.82); margin-top:12px; font-weight:600; }
+    .promo-cta { display:inline-flex; align-items:center; gap:6px; margin-top:auto; align-self:flex-end; background:#fff; color:#000; font-weight:700; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; padding:10px 20px; border-radius:3px; text-decoration:none; transition:opacity .2s; }
+    .promo-cta:hover { opacity:0.88; }
+    .taller-quote { font-size:14px; color:var(--g100); line-height:1.65; margin-bottom:20px; font-style:italic; font-family:Georgia,'Times New Roman',serif; }
 
     .taller-cta {
       display: inline-flex; align-items: center; gap: 6px;
@@ -308,7 +326,7 @@
 
     .info3-ins p { font-size: 14px; color: var(--g100); line-height: 1.75; margin-bottom: 14px; }
     .info3-ins strong { color: var(--white); }
-    .highlight-gold { background: rgba(255,215,0,0.07); border-left: 3px solid var(--gold); padding: 12px 16px; margin-bottom: 14px; }
+    .highlight-gold { background: rgba(26,122,63,0.22); border-left: 3px solid #1a7a3f; padding: 12px 16px; margin-bottom: 14px; }
     .highlight-gold p { margin-bottom: 0 !important; font-weight: 600; }
 
     /* ─── DIRECTORES ─── */
@@ -434,14 +452,155 @@
     @media (max-width: 600px) {
       .nav-buttons .btn-wa-sm { display: none; }
     }
+  
+    /* ══════════════════════════════════════════════
+       MOBILE MENU OVERLAY
+    ══════════════════════════════════════════════ */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #0c0c0c;
+      z-index: 9999;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .mobile-menu.is-open { display: flex; }
+    .mobile-menu-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-shrink: 0;
+    }
+    .mobile-menu-header .logo img { height: 28px; width: auto; display: block; }
+    .mobile-menu-close {
+      background: none; border: none; cursor: pointer; padding: 8px; color: white; line-height: 0;
+    }
+    .mobile-menu-close svg { display: block; }
+    .mobile-menu-nav {
+      display: flex; flex-direction: column;
+      padding: 28px 28px 20px;
+      gap: 0;
+      flex: 1;
+    }
+    .mobile-menu-nav a {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 9vw; font-size: clamp(26px, 9vw, 40px);
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: color 0.15s;
+      letter-spacing: -0.01em;
+    }
+    .mobile-menu-nav a:hover { color: #E50914; }
+    .mobile-menu-nav a.mm-cta {
+      color: #facc15;
+      margin-top: 20px;
+      border-bottom: none;
+      font-size: 7vw; font-size: clamp(22px, 7vw, 34px);
+    }
+    .mobile-menu-footer {
+      padding: 20px 28px;
+      flex-shrink: 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .mobile-menu-footer a {
+      color: rgba(255,255,255,0.4); font-size: 12px; text-decoration: none;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+
+    
+    @media (max-width: 768px) {
+      .btn-primary, .btn-ghost {
+        width: 100%; max-width: 320px; justify-content: center;
+      }
+      .hero-cta-block { gap: 10px; flex-direction: column; align-items: flex-start; }
+      .levels-announce-cta, .level-card-cta { width: auto; }
+    }
+    @media (max-width: 480px) {
+      .hero-h1 { font-size: 16vw; font-size: clamp(46px, 16vw, 80px); }
+    }
+    
+    /* ══ GLOBAL MOBILE: botones full-width + texto centrado ══════════ */
+    @media (max-width: 768px) {
+      /* Botones ocupan todo el ancho con margen implícito del container */
+      .btn-primary, .btn-ghost, .btn-outline {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: center !important;
+      }
+      /* Texto alineado a la izquierda, consistente en mobile */
+      h1, h2, h3, h4, h5, h6,
+      p, .overline, .eyebrow,
+      .section-lead, .section-eyebrow,
+      .intro-body p,
+      .proceso-header > p,
+      .proceso-header > .overline,
+      .cta-eyebrow, .cta-title,
+      .hero-overline, .hero-tag, .hero-tagline,
+      .level-card-title, .nivel-title,
+      .section-title, .section-subtitle { text-align: left !important; }
+    }
+
+    /* ══ MOBILE FINAL: todo alineado a la izquierda ═══════════════════ */
+    @media (max-width: 768px) {
+      h1, h2, h3, h4, h5, h6,
+      p, li, .overline, .eyebrow, .label,
+      .section-lead, .section-eyebrow, .section-subtitle,
+      .hero-overline, .hero-tag, .hero-tagline, .hero-label,
+      .intro-text, .intro-lead, .intro-body,
+      .nivel-tag, .nivel-title, .nivel-desc,
+      .proceso-header, .proceso-h2, .proceso-nota,
+      .cta-eyebrow, .cta-title, .cta-body,
+      .faq-q, .faq-a,
+      .testimonio-text, .testimonio-name,
+      .info-label, .info-value,
+      .banda-title, .banda-subtitle, .banda-p { text-align: left !important; }
+    }
+
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://talleresdeteatro.es/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Información",
+        "item": "https://talleresdeteatro.es/info/"
+      }
+    ]
+  }
+  </script>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://talleresdeteatro.es/info/" />
+  <meta property="og:title" content="Información Talleres 2026/27 · Talleres de Teatro Barcelona" />
+  <meta property="og:description" content="Todo sobre los talleres de teatro en Barcelona: horarios, precios, metodología y cómo inscribirse. Primera clase gratis." />
+  <meta property="og:image" content="https://talleresdeteatro.es/imagenes_optimizadas/TALLER_DE_TEATRO_MOGORDOY.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Información Talleres 2026/27 · Talleres de Teatro Barcelona" />
+  <meta name="twitter:description" content="Todo sobre los talleres de teatro en Barcelona: horarios, precios, metodología y cómo inscribirse. Primera clase gratis." />
+  <link rel="alternate" hreflang="es-ES" href="https://talleresdeteatro.es/info/" />
+  <link rel="alternate" hreflang="x-default" href="https://talleresdeteatro.es/info/" />
 </head>
 <body>
 
 <!-- ─── NAV ─── -->
 <nav class="info-nav">
   <a class="nav-logo" href="/" style="flex-direction:row;align-items:center;">
-    <img src="imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg"
+    <img src="/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg" loading="eager"
       alt="Talleres de Teatro Barcelona"
       style="height:38px;width:auto;display:block;object-fit:contain;"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -451,6 +610,7 @@
     </span>
   </a>
   <div class="nav-buttons">
+    <button class="lang-toggle" aria-label="Canviar a català">CA</button>
     <a class="btn-wa-sm" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20gustaría%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.815 11.815 0 0012.05 0zm0 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/></svg>
       WhatsApp
@@ -458,18 +618,47 @@
     <a class="btn-yellow" href="mailto:info@talleresdeteatro.com">Escríbenos</a>
   </div>
 </nav>
+      <!-- ══ MOBILE MENU OVERLAY ══ -->
+      <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menú de navegación" id="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="/" class="logo" aria-label="Inicio">
+            <img src="/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg" loading="eager"
+                 alt="talleresdeteatro.es" width="160" height="28" />
+          </a>
+          <button class="mobile-menu-close" aria-label="Cerrar menú" id="mobile-menu-close">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="mobile-menu-nav" aria-label="Menú principal">
+          <a href="/">Bienvenidos</a>
+          <a href="/principiantes/">Principiantes</a>
+          <a href="/intermedios/">Intermedios</a>
+          <a href="/avanzados/">Avanzados</a>
+          <a href="/cuerpo-al-texto/">Cuerpo al texto</a>
+          <a href="/quienes-somos/">Nosotros</a>
+          <a href="/blog/">Lecturas</a>
+          <a href="/contacto/" class="mm-cta">Escríbenos →</a>
+        </nav>
+        <div class="mobile-menu-footer">
+          <a href="https://www.instagram.com/tallerdeteatro.mogordoy/" target="_blank" rel="noopener">
+            @tallerdeteatro.mogordoy
+          </a>
+        </div>
+      </div>
 
 <!-- ─── HERO ─── -->
 <section class="hero" id="inicio">
   <video autoplay muted loop playsinline
     style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;">
-    <source src="hero-taller.mp4" type="video/mp4">
+    <source src="/hero-taller.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay">
   <div class="hero-content">
-    <p class="hero-season">✦ Temporada 2025 / 26</p>
-    <h1 class="hero-title">Talleres<br>de Teatro</h1>
-    <p class="hero-sub">Barcelona · Gracia. Principiantes, intermedios y avanzados. Primera clase sin cargo, siempre. Sin matrícula de inscripción.</p>
+    <p class="hero-season">✦ Temporada 2026 / 27</p>
+    <h1 class="hero-title">Talleres <br /> de Teatro</h1>
+    <p class="hero-sub">Barcelona · Gràcia. Principiantes, intermedios, avanzados y Cuerpo al texto. Primera clase sin cargo, siempre. Sin matrícula de inscripción.</p>
     <div class="hero-actions">
       <a class="btn-hero-wa" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20gustaría%20apuntarme%20a%20un%20taller" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.815 11.815 0 0012.05 0zm0 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/></svg>
@@ -501,12 +690,13 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.815 11.815 0 0012.05 0zm0 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/></svg>
       Enviarme por WhatsApp
     </a>
-    <a href="talleres-informacion-2025-26.pdf" download
+    <a href="/talleres-informacion-2026-27.pdf" download
       style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,215,0,0.08);color:var(--gold);font-family:'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.05em;padding:7px 14px;border:1px solid rgba(255,215,0,0.35);border-radius:3px;cursor:pointer;text-decoration:none;transition:all 0.2s;"
       onmouseover="this.style.background='rgba(255,215,0,0.16)';this.style.borderColor='rgba(255,215,0,0.7)'" onmouseout="this.style.background='rgba(255,215,0,0.08)';this.style.borderColor='rgba(255,215,0,0.35)'">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Descargar PDF completo
     </a>
+    
     <button onclick="window.print()"
       style="display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--g300);font-family:'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.05em;padding:7px 14px;border:1px solid var(--g700);border-radius:3px;cursor:pointer;transition:color 0.2s,border-color 0.2s;"
       onmouseover="this.style.color='white';this.style.borderColor='white'" onmouseout="this.style.color='var(--g300)';this.style.borderColor='var(--g700)'">
@@ -519,137 +709,110 @@
 <!-- ─── TALLERES ─── -->
 <section class="section" id="talleres">
   <div class="inner">
-    <p class="overline">Temporada 2025 / 26</p>
+    <p class="overline">Temporada 2026 / 27</p>
     <h2 class="section-title">Los talleres</h2>
-    <p class="section-lead">Puedes comenzar en cualquier momento. Todos los grupos hacen muestra al final del ciclo.</p>
+    <p class="section-lead">Puedes comenzar en cualquier momento.<br>Todos los grupos hacen muestra o clase abierta al público al final del ciclo.</p>
 
     <div class="talleres-grid">
 
       <!-- COL 1: PRINCIPIANTES -->
       <div class="taller-col">
-        <p class="taller-nivel">Nivel 1 · Principiantes</p>
+        <p class="taller-nivel">Principiantes</p>
         <h3 class="taller-nombre">La creación del artificio</h3>
-        <p class="taller-tipo">Iniciación teatral</p>
+        <p class="taller-tipo">Iniciación · Formación y entrenamiento</p>
 
-        <!-- NUEVO GRUPO destacado -->
-        <div class="nuevo-bloque">
-          <p class="nuevo-bloque-tag">✦ Nuevo grupo — Inscripción abierta</p>
-          <p class="nuevo-bloque-titulo">Martes · Junio y Julio</p>
-          <div class="nuevo-bloque-det">
-            <strong>Martes · 19:00 a 22:00 hs</strong><br>
-            Duración: Junio y Julio (8 encuentros)<br>
-            Coordinado por <strong>Sebastián Mogordoy</strong><br>
-            Inicio: primer martes de junio
+        <div class="promo-box">
+          <p class="promo-tag">✦ Inscripción abierta</p>
+          <p class="promo-titulo">Temporada 2026/27</p>
+          <div class="promo-dias">
+            <p class="promo-dia"><strong>Martes</strong> · 19:00 – 22:00 h</p>
           </div>
-          <a class="nuevo-bloque-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20nuevo%20grupo%20de%20principiantes%20los%20martes" target="_blank" rel="noopener">
-            Me apunto →
-          </a>
+          <p class="promo-coord">Coord. Sebastián Mogordoy</p>
+          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20de%20principiantes" target="_blank" rel="noopener">¡Apúntate! →</a>
         </div>
-
-        <!-- Grupos actuales sin vacantes -->
-        <div class="grupos-list">
-          <div class="grupo-row">
-            <span class="grupo-dia">Lunes</span>
-            <span class="grupo-hora">19:00 – 22:00 · Candelaria Sesín</span>
-            <span class="badge badge-sinvac">Sin vacantes</span>
-          </div>
-          <div class="grupo-row">
-            <span class="grupo-dia">Jueves</span>
-            <span class="grupo-hora">19:00 – 22:00 · Sebastián Mogordoy</span>
-            <span class="badge badge-sinvac">Sin vacantes</span>
-          </div>
-        </div>
-        <p class="sept-nota">→ Inscripción abierta para septiembre en Lunes y Jueves</p>
 
         <p class="taller-precio">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
         <p class="taller-pnota">Sin matrícula · Primera clase sin cargo</p>
-        <p class="taller-prueba">✓ Primera clase gratuita — escríbenos y te reservamos lugar</p>
-        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20de%20principiantes" target="_blank" rel="noopener">Consultar →</a>
+        <p class="taller-quote">"El comienzo: volver a jugar, perder el miedo a la exposición y descubrir la propia potencia expresiva. No hace falta haber actuado nunca."</p>
+        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
       </div>
 
-      <!-- COL 2: CON EXPERIENCIA -->
+      <!-- COL 2: INSCRIBIR LO PROPIO -->
       <div class="taller-col">
-        <p class="taller-nivel">Nivel 2 · Intermedios</p>
+        <p class="taller-nivel">Intermedios</p>
         <h3 class="taller-nombre">Inscribir lo propio</h3>
-        <p class="taller-tipo">Con experiencia · Formación y entrenamiento</p>
+        <p class="taller-tipo">Entrenamiento y creación</p>
 
-        <!-- BLOQUE SEPTIEMBRE -->
-        <div style="background:#4a3800;padding:18px 20px;border-radius:4px;margin-bottom:20px;">
-          <p style="font-size:9px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,215,0,0.8);margin-bottom:8px;">✦ Inscripción abierta</p>
-          <p style="font-family:'Archivo Black',sans-serif;font-size:2vw; font-size:clamp(16px,2vw,20px);text-transform:uppercase;line-height:1.1;margin-bottom:10px;color:var(--white);">Septiembre</p>
-          <div style="font-size:13px;color:rgba(255,255,255,0.88);line-height:1.6;">
-            Grupo actual <strong style="color:var(--white);">sin vacantes</strong>.<br>
-            Inscripción abierta para el nuevo ciclo de septiembre.
+        <div class="promo-box">
+          <p class="promo-tag">✦ Inscripción abierta</p>
+          <p class="promo-titulo">Temporada 2026/27</p>
+          <div class="promo-dias">
+            <p class="promo-dia"><strong>Jueves</strong> · 19:00 – 22:00 h</p>
           </div>
-          <a style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:var(--white);color:#000;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none;transition:opacity 0.2s;" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20con%20experiencia%20para%20septiembre" target="_blank" rel="noopener" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Me apunto para septiembre →</a>
+          <p class="promo-coord">Coord. Sebastián Mogordoy</p>
+          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20Inscribir%20lo%20propio" target="_blank" rel="noopener">¡Apúntate! →</a>
         </div>
 
-        <div class="grupos-list">
-          <div class="grupo-row">
-            <span class="grupo-dia">Miércoles</span>
-            <span class="grupo-hora">19:00 – 22:00 · Sebastián Mogordoy · Candelaria Sesín</span>
-            <span class="badge badge-sinvac">Sin vacantes</span>
-          </div>
-        </div>
-
-        <p class="taller-precio" style="margin-top:8px;">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
+        <p class="taller-precio">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
         <p class="taller-pnota">Sin matrícula · Primera clase sin cargo</p>
+        <p class="taller-quote">"El momento en que comienzas a comprender y dominar tus propias fuerzas. A hacerte cargo de tu poética. Creamos escenas para presentar al final del ciclo."</p>
+        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
+      </div>
 
-        <p style="font-size:14px;color:var(--g100);line-height:1.65;margin-bottom:20px;font-style:italic;font-family:Georgia,'Times New Roman',serif;">"El momento en que comienzas a comprender y dominar tus propias fuerzas. A hacerte cargo de tu poética. Creamos escenas para presentar al final del ciclo."</p>
+      <!-- COL: AVANZADOS, EL SER MIRADO -->
+      <div class="taller-col">
+        <p class="taller-nivel">Avanzados</p>
+        <h3 class="taller-nombre">El ser mirado</h3>
+        <p class="taller-tipo">Laboratorio de entrenamiento e investigación</p>
 
-        <p class="taller-prueba">✓ Primera clase gratuita · Escríbenos para reservar</p>
-        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20con%20experiencia%20para%20septiembre" target="_blank" rel="noopener">Reservar para septiembre →</a>
+        <div class="promo-box">
+          <p class="promo-tag">✦ Inscripción abierta</p>
+          <p class="promo-titulo">Temporada 2026/27</p>
+          <div class="promo-dias">
+            <p class="promo-dia"><strong>Miércoles</strong> · 19:00 – 22:00 h</p>
+          </div>
+          <p class="promo-coord">Coord. Sebastián Mogordoy</p>
+          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20curso%20Avanzados%20El%20ser%20mirado" target="_blank" rel="noopener">¡Apúntate! →</a>
+        </div>
+
+        <p class="taller-precio">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
+        <p class="taller-pnota">Sin matrícula · Primera clase sin cargo</p>
+        <p class="taller-quote">"Laboratorio de investigación técnica y desarrollo de la poética. La actuación, por delante del relato. Incorporación por entrevista."</p>
+        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
       </div>
 
       <!-- COL 3: CUERPO AL TEXTO -->
       <div class="taller-col">
-        <p class="taller-nivel">Nivel 3 · Avanzados</p>
+        <p class="taller-nivel">Actores con formación</p>
         <h3 class="taller-nombre">Cuerpo al texto</h3>
-        <p class="taller-tipo">Nuevo curso · Escenas de texto y monólogos</p>
+        <p class="taller-tipo">Entrenamiento y escenas de texto</p>
 
-        <!-- BLOQUE NUEVO CURSO SEPTIEMBRE -->
-        <div style="background:#4a3800;padding:18px 20px;border-radius:4px;margin-bottom:20px;">
-          <p style="font-size:9px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,215,0,0.8);margin-bottom:8px;">✦ Nuevo curso — Inscripción abierta</p>
-          <p style="font-family:'Archivo Black',sans-serif;font-size:2vw; font-size:clamp(16px,2vw,20px);text-transform:uppercase;line-height:1.1;margin-bottom:10px;color:var(--white);">Comienza en Septiembre</p>
-          <div style="font-size:13px;color:rgba(255,255,255,0.88);line-height:1.6;">
-            Coord. <strong style="color:var(--white);">Sebastián Mogordoy</strong><br>
-            Plazas limitadas · Primera clase sin cargo.
+        <div class="promo-box">
+          <p class="promo-tag">✦ Inscripción abierta</p>
+          <p class="promo-titulo">Temporada 2026/27</p>
+          <div class="promo-dias">
+            <p class="promo-dia"><strong>Lunes</strong> · 19:00 – 22:00 h</p>
           </div>
-          <a style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:var(--white);color:#000;font-weight:700;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;padding:9px 18px;border-radius:3px;text-decoration:none;transition:opacity 0.2s;" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20nuevo%20curso%20Cuerpo%20al%20Texto%20para%20septiembre" target="_blank" rel="noopener" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Me apunto para septiembre →</a>
+          <p class="promo-coord">Coord. Sebastián Mogordoy</p>
+          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20Cuerpo%20al%20texto" target="_blank" rel="noopener">¡Apúntate! →</a>
         </div>
 
-        <div class="grupos-list">
-          <div class="grupo-row">
-            <span class="grupo-dia">Lunes</span>
-            <span class="grupo-hora">10:00 – 13:00 h o 19:00 – 22:00 h · Sebastián Mogordoy</span>
-            <span class="badge badge-open">Inscripción abierta</span>
-          </div>
-          <div class="grupo-row">
-            <span class="grupo-dia">Martes</span>
-            <span class="grupo-hora">19:00 – 22:00 h · Sebastián Mogordoy</span>
-            <span class="badge badge-open">Inscripción abierta</span>
-          </div>
-        </div>
-
-        <p class="taller-precio" style="margin-top:16px;">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
+        <p class="taller-precio">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
         <p class="taller-pnota">Sin matrícula · Primera clase sin cargo</p>
-
-        <p style="font-size:14px;color:var(--g100);line-height:1.65;margin-bottom:20px;font-style:italic;font-family:Georgia,'Times New Roman',serif;">"Las palabras salen de un cuerpo. Trabajo con escenas de texto, monólogos y la lógica de la situación dramática. Para actores con formación."</p>
-
-        <p class="taller-prueba">✓ Primera clase gratuita · Plazas limitadas</p>
-        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20nuevo%20curso%20Cuerpo%20al%20Texto%20para%20septiembre" target="_blank" rel="noopener">Apuntarme para septiembre →</a>
+        <p class="taller-quote">"Las palabras salen de un cuerpo. Trabajo con escenas de texto, monólogos y la lógica de la situación dramática. Para actores con formación."</p>
+        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
       </div>
 
     </div>
 
-    <!-- ─── DESCRIPCIONES DESPLEGABLES ─── -->
+        <!-- ─── DESCRIPCIONES DESPLEGABLES ─── -->
     <div class="descripciones">
 
       <details class="desc-item">
         <summary>
           <div class="summary-left">
-            <span class="summary-nivel">Nivel 1</span>
-            <span class="summary-nombre">La creación del artificio — Iniciación principiantes</span>
+            <span class="summary-nivel">Principiantes</span>
+            <span class="summary-nombre">La creación del artificio, Iniciación principiantes</span>
           </div>
           <div class="summary-arrow">
             <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
@@ -663,6 +826,10 @@
             <p>Los participantes encontrarán un espacio de expresión, diversión, trabajo físico, desarrollo del campo imaginario, formación actoral y construcción social. <strong>Al fin de ciclo abrimos una clase y actuamos con público por primera vez.</strong></p>
           </div>
           <div class="desc-aside">
+            <div class="desc-aside-item">
+              <p class="desc-aside-label">Cuándo</p>
+              <p class="desc-aside-val">Martes · 19:00 – 22:00 h. Coord. Sebastián Mogordoy.</p>
+            </div>
             <div class="desc-aside-item">
               <p class="desc-aside-label">Para quién</p>
               <p class="desc-aside-val">Personas sin experiencia previa. No hace falta haber actuado nunca.</p>
@@ -686,8 +853,8 @@
       <details class="desc-item">
         <summary>
           <div class="summary-left">
-            <span class="summary-nivel">Nivel 2</span>
-            <span class="summary-nombre">Inscribir lo propio — Con experiencia</span>
+            <span class="summary-nivel">Intermedios</span>
+            <span class="summary-nombre">Inscribir lo propio</span>
           </div>
           <div class="summary-arrow">
             <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
@@ -701,16 +868,16 @@
           </div>
           <div class="desc-aside">
             <div class="desc-aside-item">
-              <p class="desc-aside-label">Para quién</p>
-              <p class="desc-aside-val">Actores y estudiantes con experiencia previa. También actores profesionales que buscan entrenamiento continuo.</p>
+              <p class="desc-aside-label">Cuándo</p>
+              <p class="desc-aside-val">Jueves · 19:00 – 22:00 h. Coord. Sebastián Mogordoy.</p>
             </div>
             <div class="desc-aside-item">
-              <p class="desc-aside-label">Cuando</p>
-              <p class="desc-aside-val">Miércoles 19:00 – 22:00 hs. Coord. Sebastián Mogordoy y Candelaria Sesín.</p>
+              <p class="desc-aside-label">Para quién</p>
+              <p class="desc-aside-val">Actores y estudiantes con experiencia previa.</p>
             </div>
             <div class="desc-aside-item">
               <p class="desc-aside-label">Al final</p>
-              <p class="desc-aside-val">Muestra de escenas ante amigos y familiares al fin de ciclo.</p>
+              <p class="desc-aside-val">Creación de escenas y presentación al público.</p>
             </div>
             <div class="desc-aside-item">
               <p class="desc-aside-label">Precio</p>
@@ -723,8 +890,45 @@
       <details class="desc-item">
         <summary>
           <div class="summary-left">
-            <span class="summary-nivel">Nivel 3</span>
-            <span class="summary-nombre">Cuerpo al texto — Escenas y monólogos (Nuevo)</span>
+            <span class="summary-nivel">Avanzados</span>
+            <span class="summary-nombre">El ser mirado</span>
+          </div>
+          <div class="summary-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </summary>
+        <div class="desc-body">
+          <div class="desc-text">
+            <p>Laboratorio de investigación técnica y desarrollo de la poética. Entrenamos actuar. Investigamos el teatro, la actuación, la teatralidad y su poética como lenguaje, desde la improvisación dirigida.</p>
+            <p>Comprendemos a la actuación como la principal fuerza generadora de teatralidad. A través del entrenamiento buscamos generar herramientas para trascender los límites de la representación y comprender y potenciar la poética personal de los participantes.</p>
+            <p>Trabajaremos para que los participantes dominen técnicamente su herramienta y puedan comprenderse, más que como la idea de un personaje, como una fuerza poética: un cuerpo dispuesto, entrenado, vibrante. <strong>El material creado se presenta en funciones reales dentro del ciclo La tiranía del deseo.</strong></p>
+          </div>
+          <div class="desc-aside">
+            <div class="desc-aside-item">
+              <p class="desc-aside-label">Cuándo</p>
+              <p class="desc-aside-val">Miércoles · 19:00 – 22:00 h. Coord. Sebastián Mogordoy.</p>
+            </div>
+            <div class="desc-aside-item">
+              <p class="desc-aside-label">Para quién</p>
+              <p class="desc-aside-val">Actores, actrices y estudiantes avanzados. Incorporación por entrevista.</p>
+            </div>
+            <div class="desc-aside-item">
+              <p class="desc-aside-label">Al final</p>
+              <p class="desc-aside-val">Funciones reales en el ciclo La tiranía del deseo.</p>
+            </div>
+            <div class="desc-aside-item">
+              <p class="desc-aside-label">Precio</p>
+              <p class="desc-aside-val">€100 / mes · Sin matrícula · Primera clase sin cargo</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="desc-item">
+        <summary>
+          <div class="summary-left">
+            <span class="summary-nivel">Actores con formación</span>
+            <span class="summary-nombre">Cuerpo al texto</span>
           </div>
           <div class="summary-arrow">
             <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
@@ -738,12 +942,12 @@
           </div>
           <div class="desc-aside">
             <div class="desc-aside-item">
-              <p class="desc-aside-label">Para quién</p>
-              <p class="desc-aside-val">Actores con formación académica o independiente. Vienes de otra formación o ya pasaste por nuestros talleres.</p>
+              <p class="desc-aside-label">Cuándo</p>
+              <p class="desc-aside-val">Lunes · 19:00 – 22:00 h. Coord. Sebastián Mogordoy.</p>
             </div>
             <div class="desc-aside-item">
-              <p class="desc-aside-label">Cuando</p>
-              <p class="desc-aside-val">Miércoles 19:00 – 22:00 hs. Coord. Sebastián Mogordoy. Comienza en septiembre.</p>
+              <p class="desc-aside-label">Para quién</p>
+              <p class="desc-aside-val">Actores con formación académica o independiente. Vienes de otra formación o ya pasaste por nuestros talleres.</p>
             </div>
             <div class="desc-aside-item">
               <p class="desc-aside-label">Precio</p>
@@ -777,7 +981,7 @@
         <h2 class="info3-title">¿Dónde?</h2>
         <div class="info3-adr">
           <strong>Espacio La Mansión</strong>
-          <p>Carrer de Roger de Flor, 253<br>Local 2 y 3, Gracia<br>08025 Barcelona</p>
+          <p>Carrer de Roger de Flor, 253<br>Local 2 y 3, Gràcia<br>08025 Barcelona</p>
           <p style="font-size:13px;color:var(--g300);">Metro: <strong style="color:var(--g100);">Verdaguer</strong> (L4/L5)<br>o <strong style="color:var(--g100);">Sagrada Família</strong> (L2/L5)</p>
         </div>
       </div>
@@ -795,49 +999,15 @@
   </div>
 </section>
 
-<div class="divider"></div>
 
-<!-- ─── DIRECTORES ─── -->
-<section class="section" id="nosotros">
-  <div class="inner">
-    <p class="overline">Quiénes somos</p>
-    <h2 class="section-title">Los directores</h2>
-    <p class="section-lead">Empezamos en Buenos Aires en 2010, seguimos en Barcelona desde 2020. 15 años de entrenamiento y enseñanza.</p>
-
-    <div class="directores-grid">
-      <div class="director-card">
-        <img class="director-img"
-          src="imagenes_optimizadas/sebastian-mogordoy-director-actor-teatro-barcelona.jpg"
-          alt="Sebastián Mogordoy — Director Talleres de Teatro Barcelona"
-          onerror="this.style.background='#1e1e1e';this.style.minHeight='170px';this.removeAttribute('src');">
-        <div>
-          <p class="director-rol">Director</p>
-          <h3 class="director-nombre">Sebastián Mogordoy</h3>
-          <p class="director-bio">Actor y director. <strong>15 años dirigiendo talleres</strong>, formado con Ricardo Bartís en Sportivo Teatral, Buenos Aires.<br><br>TV: <strong>El Profesor (Netflix, 2026)</strong>. Teatro: <em>El fil</em>, <em>Euforia y Desazón</em>. Cine y series: proyectos en desarrollo.</p>
-        </div>
-      </div>
-      <div class="director-card">
-        <img class="director-img"
-          src="imagenes_optimizadas/candelaria-sesin-actriz-profesora-teatro-barcelona.jpg"
-          alt="Candelaria Sesín — Directora Talleres de Teatro Barcelona"
-          onerror="this.style.background='#1e1e1e';this.style.minHeight='170px';this.removeAttribute('src');">
-        <div>
-          <p class="director-rol">Directora</p>
-          <h3 class="director-nombre">Candelaria Sesín</h3>
-          <p class="director-bio">Actriz y pedagoga teatral. <strong>Codirectora de los talleres.</strong> Formada en el IUNA — Instituto Universitario Nacional del Arte, Buenos Aires.<br><br>Extensa trayectoria en teatro independiente. Coordina muestras y producciones del estudio.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <div class="divider"></div>
 
 <!-- ─── FOTO MUESTRA ─── -->
 <section style="padding:0;overflow:hidden;max-height:75vh;display:flex;align-items:center;">
   <img
-    src="imagenes_optimizadas/taller-teatro-gracia-barcelona-1094.jpg"
-    alt="Muestra de fin de ciclo — Talleres de Teatro Barcelona"
+    src="/imagenes_optimizadas/taller-teatro-gracia-barcelona-1094.jpg"
+    alt="Muestra de fin de ciclo, Talleres de Teatro Barcelona"
     style="width:100%;object-fit:cover;object-position:center top;display:block;max-height:75vh;"
     loading="lazy">
 </section>
@@ -849,12 +1019,12 @@
 <section class="section section-alt" id="resenas">
   <div class="inner">
     <p class="overline">Lo que dicen nuestros alumnos</p>
-    <h2 class="section-title">88 reseñas en Google</h2>
+    <h2 class="section-title">92 reseñas en Google</h2>
     <div class="reviews-agg">
       <div class="reviews-score">5.0</div>
       <div>
         <div class="reviews-stars">★★★★★</div>
-        <div class="reviews-count">88 reseñas verificadas · Media 5 estrellas</div>
+        <div class="reviews-count">92 reseñas verificadas · Media 5 estrellas</div>
       </div>
     </div>
     <div class="reviews-grid">
@@ -862,16 +1032,6 @@
         <div class="review-stars-sm">★★★★★</div>
         <p class="review-text">"Las clases de Sebastián son una experiencia única. Desde el primer día te sientes en un espacio seguro para explorar, equivocarte y crecer."</p>
         <div class="review-author"><div class="review-av">M</div><div><div class="review-name">María G.</div><div class="review-src">Google</div></div></div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars-sm">★★★★★</div>
-        <p class="review-text">"Llevo dos años en el taller y sigo aprendiendo. La metodología de Seba y Cande es profunda pero accesible. Un espacio de crecimiento real."</p>
-        <div class="review-author"><div class="review-av">J</div><div><div class="review-name">Javier R.</div><div class="review-src">Google</div></div></div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars-sm">★★★★★</div>
-        <p class="review-text">"Vine sin ninguna experiencia. Candelaria crea un ambiente increíble donde todo el mundo puede dar lo mejor de sí. Lo recomiendo sin dudar."</p>
-        <div class="review-author"><div class="review-av">A</div><div><div class="review-name">Ana P.</div><div class="review-src">Google</div></div></div>
       </div>
       <div class="review-card">
         <div class="review-stars-sm">★★★★★</div>
@@ -888,6 +1048,16 @@
         <p class="review-text">"Empecé en principiantes y ya voy por el taller avanzado. Un camino de transformación real, no solo como actor sino en mi manera de estar en el mundo."</p>
         <div class="review-author"><div class="review-av">D</div><div><div class="review-name">Diego S.</div><div class="review-src">Google</div></div></div>
       </div>
+      <div class="review-card">
+        <div class="review-stars-sm">★★★★★</div>
+        <p class="review-text">"Este espacio es realmente inspirador. Cada semana espero con entusiasmo el momento de volver, porque allí se vive un mar de emociones y se respira autenticidad."</p>
+        <div class="review-author"><div class="review-av">S</div><div><div class="review-name">Sedona S.</div><div class="review-src">Google</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars-sm">★★★★★</div>
+        <p class="review-text">"Mucha empatía, diversión y al final ves lo que fuiste aprendiendo. Hay vestuario, decorados y accesorios para usar en cada clase. Está organizado con amor y profesionalismo."</p>
+        <div class="review-author"><div class="review-av">A</div><div><div class="review-name">Ali</div><div class="review-src">Google</div></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -903,7 +1073,7 @@
         <p class="consulta-p">Puedes escribirnos y hacernos <strong>cualquier consulta o apuntarte en nuestros talleres</strong>.</p>
         <p class="consulta-p">Puedes hacer una clase de prueba <strong>sin cargo cuando quieras.</strong></p>
         <p class="consulta-p"><strong>Escríbenos</strong> por WhatsApp al <strong>+34 676 69 49 58</strong> o envíanos un email a <strong>info@talleresdeteatro.com</strong></p>
-        <p class="consulta-p"><em>Si no recibes respuesta, revisa el SPAM — contestamos siempre.</em></p>
+        <p class="consulta-p"><em>Si no recibes respuesta, revisa el SPAM, contestamos siempre.</em></p>
         <p class="consulta-p" style="margin-top:6px;">Y si nunca has actuado y te da un poco de vértigo, si lo nuevo te hace latir el corazón, escríbenos y ven: <strong>vas por el camino correcto.</strong></p>
         <div class="consulta-btns">
           <a class="btn-big-wa" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20gustaría%20apuntarme%20a%20un%20taller" target="_blank" rel="noopener">
@@ -943,10 +1113,10 @@
             <select id="f-nivel"
               style="width:100%;background:var(--bg-3);border:1px solid var(--g700);color:var(--white);font-family:'Inter',sans-serif;font-size:14px;padding:13px 14px;border-radius:4px;outline:none;">
               <option value="">Selecciona un taller</option>
-              <option value="Nuevo grupo Martes (Principiantes - Junio/Julio)">Nuevo grupo · Martes · Principiantes (Junio/Julio)</option>
-              <option value="Principiantes - Septiembre">Principiantes · Lunes o Jueves (Septiembre)</option>
-              <option value="Con experiencia - Septiembre">Con experiencia · Miércoles (Septiembre)</option>
-              <option value="Cuerpo al texto - Septiembre">Cuerpo al texto · Nuevo curso (Septiembre)</option>
+              <option value="Principiantes">Principiantes · Martes</option>
+              <option value="Intermedios">Intermedios · Jueves</option>
+              <option value="Avanzados">Avanzados · El ser mirado · Miércoles</option>
+              <option value="Cuerpo al texto">Cuerpo al texto · Lunes</option>
               <option value="No lo sé todavía, necesito orientación">No lo sé todavía, necesito orientación</option>
             </select>
           </div>
@@ -975,7 +1145,7 @@
   <div class="inner mapa-header">
     <p class="overline">Dónde encontrarnos</p>
     <h2 class="section-title">Espacio La Mansión</h2>
-    <p style="font-size:15px;color:var(--g100);">Carrer de Roger de Flor, 253, Local 2 y 3, Gracia, 08025 Barcelona</p>
+    <p style="font-size:15px;color:var(--g100);">Carrer de Roger de Flor, 253, Local 2 y 3, Gràcia, 08025 Barcelona</p>
   </div>
   <div class="inner">
     <iframe
@@ -983,7 +1153,7 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.666434772456!2d2.1641315767850844!3d41.40304987129801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a349a67d3c45%3A0xb2fb31647f5d9316!2sCoworking%20Creativo%20-%20La%20Mansion!5e0!3m2!1ses-419!2ses!4v1740831137765!5m2!1ses-419!2ses"
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-      title="Espacio La Mansión — Talleres de Teatro Barcelona">
+      title="Espacio La Mansión, Talleres de Teatro Barcelona">
     </iframe>
   </div>
 </section>
@@ -996,7 +1166,7 @@
   <div style="position:absolute;inset:0;background:rgba(8,8,8,0.78);"></div>
   <div class="cta-final-inner" style="position:relative;z-index:2;">
     <p class="cta-final-overline">Te esperamos</p>
-    <h2 class="cta-final-title">Ven a una clase de prueba.<br>Sin cargo.</h2>
+    <h2 class="cta-final-title">Ven a una clase de prueba. <br /> Sin cargo.</h2>
     <p class="cta-final-sub">Sin matrícula, sin compromiso. Escríbenos, te contamos el día que mejor te viene y te reservamos el lugar.</p>
     <div class="cta-final-actions">
       <a class="btn-final-wa" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20gustaría%20reservar%20una%20clase%20de%20prueba" target="_blank" rel="noopener">
@@ -1010,17 +1180,18 @@
 <!-- ─── FOOTER ─── -->
 <footer class="footer">
   <div class="footer-logo">Talleres de Teatro Barcelona</div>
-  <p class="footer-sub">Dir. Sebastián Mogordoy y Candelaria Sesín · Espacio La Mansión · Gracia</p>
+  <p class="footer-sub">Dir. <a href="https://www.sebastianmogordoy.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Sebastián Mogordoy</a> · Espacio La Mansión · Gràcia</p>
   <div class="footer-links">
     <a href="/">Inicio</a>
     <a href="/principiantes/">Principiantes</a>
     <a href="/intermedios/">Con experiencia</a>
     <a href="/avanzados/">Avanzados</a>
+    <a href="/cuerpo-al-texto/">Cuerpo al texto</a>
     <a href="/quienes-somos/">Nosotros</a>
     <a href="/contacto/">Contacto</a>
     <a href="https://www.instagram.com/tallerdeteatro.mogordoy/" target="_blank" rel="noopener">Instagram</a>
   </div>
-  <p class="footer-copy">© 2025 talleresdeteatro.es — Información privada · Temporada 2025/26</p>
+  <p class="footer-copy">© 2026 talleresdeteatro.es, Información privada · Temporada 2026/27</p>
 </footer>
 
 <script>
@@ -1041,7 +1212,7 @@
     const nivel   = document.getElementById('f-nivel').value;
     const mensaje = document.getElementById('f-mensaje').value;
 
-    const subject = encodeURIComponent('Consulta talleres de teatro — ' + nombre + ' ' + apellido);
+    const subject = encodeURIComponent('Consulta talleres de teatro, ' + nombre + ' ' + apellido);
     const body = encodeURIComponent(
       'Hola,\n\nMe llamo ' + nombre + ' ' + apellido + '.\n' +
       'Mi email: ' + email + '\n' +
@@ -1053,5 +1224,35 @@
   }
 </script>
 
+  <script>
+
+    // ── Mobile menu ────────────────────────────────
+    (function() {
+      const ham    = document.querySelector('.hamburger');
+      const menu   = document.getElementById('mobile-menu');
+      const close  = document.getElementById('mobile-menu-close');
+      if (!ham || !menu) return;
+
+      function openMenu() {
+        menu.classList.add('is-open');
+        ham.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        menu.classList.remove('is-open');
+        ham.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      ham.addEventListener('click', openMenu);
+      if (close) close.addEventListener('click', closeMenu);
+      // cerrar al tocar un enlace
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      // cerrar con Escape
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+    })();
+    // ── Fin mobile menu ─────────────────────────────
+
+  </script>
+  <script defer src="/lang.js"></script>
 </body>
 </html>

@@ -30,6 +30,7 @@ Disallow: /lang.source.js
 # ── PDFs (accesibles pero sin indexar como páginas) ────────────────
 Disallow: /taller-bienvenida.pdf
 Disallow: /talleres-informacion-2025-26.pdf
+Disallow: /talleres-informacion-2026-27.pdf
 Disallow: /la-creacion-del-artificio.pdf
 Disallow: /la-creacion-del-artificio-programa.pdf
 

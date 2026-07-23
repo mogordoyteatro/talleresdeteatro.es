@@ -990,8 +990,9 @@
     <ul class="nav-links" role="list">
       <li><a href="/">Bienvenidos</a></li>
       <li class="nav-level"><a href="/principiantes/">Principiantes</a></li>
-      <li class="nav-level"><a href="/intermedios/">Con experiencia</a></li>
-      <li class="nav-level"><a href="/avanzados/">Cuerpo al texto</a></li>
+      <li class="nav-level"><a href="/intermedios/">Intermedios</a></li>
+      <li class="nav-level"><a href="/avanzados/">Avanzados</a></li>
+      <li class="nav-level"><a href="/cuerpo-al-texto/">Cuerpo al texto</a></li>
       <li><a href="/quienes-somos/">Nosotros</a></li>
       <li class="nav-has-dropdown">
         <a href="/#galeria">Fotos &amp; Videos <span class="nav-chevron">&#9662;</span></a>
@@ -1033,8 +1034,9 @@
         <nav class="mobile-menu-nav" aria-label="Menú principal">
           <a href="/">Bienvenidos</a>
           <a href="/principiantes/">Principiantes</a>
-          <a href="/intermedios/">Con experiencia</a>
-          <a href="/avanzados/">Cuerpo al texto</a>
+          <a href="/intermedios/">Intermedios</a>
+          <a href="/avanzados/">Avanzados</a>
+          <a href="/cuerpo-al-texto/">Cuerpo al texto</a>
           <a href="/quienes-somos/">Nosotros</a>
           <a href="/quienes-somos/#fotos">Fotos &amp; Videos</a>
           <a href="/blog/">Lecturas</a>
@@ -1137,8 +1139,9 @@
           <select id="nivel" name="nivel" required>
             <option value="" disabled selected>Selecciona un taller</option>
             <option value="principiantes">Principiantes, sin experiencia previa</option>
-            <option value="intermedios">Con experiencia, algo de recorrido</option>
-            <option value="avanzados">Cuerpo al texto, actores formados</option>
+            <option value="intermedios">Intermedios, con recorrido teatral</option>
+            <option value="avanzados">Avanzados, El ser mirado, laboratorio</option>
+            <option value="cuerpo-al-texto">Cuerpo al texto, actores con formación</option>
             <option value="no-se">No sé todavía, necesito orientarme</option>
           </select>
         </div>
@@ -1257,7 +1260,7 @@
           </div>
           <div>
             <p class="location-detail-label">Horario de clases</p>
-            <p class="location-detail-value">Lunes a viernes · 19:00 a 22:00 h<br>(miércoles también 10:00 a 13:00 h)</p>
+            <p class="location-detail-value">Lunes a jueves · 19:00 a 22:00 h</p>
             <p class="location-detail-note">Cada clase dura 3 horas · Una vez por semana</p>
           </div>
         </div>
@@ -1273,19 +1276,24 @@
           </thead>
           <tbody>
             <tr>
-              <td class="sch-nivel">Principiantes</td>
-              <td class="sch-dia">Lun / Mar / Jue</td>
+              <td class="sch-nivel">Cuerpo al texto</td>
+              <td class="sch-dia">Lunes</td>
               <td class="sch-hora">19–22h</td>
             </tr>
             <tr>
-              <td class="sch-nivel">Con experiencia</td>
+              <td class="sch-nivel">Principiantes</td>
+              <td class="sch-dia">Martes</td>
+              <td class="sch-hora">19–22h</td>
+            </tr>
+            <tr>
+              <td class="sch-nivel">Avanzados · El ser mirado</td>
               <td class="sch-dia">Miércoles</td>
               <td class="sch-hora">19–22h</td>
             </tr>
             <tr>
-              <td class="sch-nivel">Cuerpo al texto</td>
-              <td class="sch-dia">Mié / Vie</td>
-              <td class="sch-hora">10–13 / 19–22h</td>
+              <td class="sch-nivel">Intermedios</td>
+              <td class="sch-dia">Jueves</td>
+              <td class="sch-hora">19–22h</td>
             </tr>
           </tbody>
         </table>
@@ -1351,8 +1359,9 @@
         <p class="footer-col-title">Talleres</p>
         <ul class="footer-links">
           <li><a href="/principiantes/">Principiantes</a></li>
-          <li><a href="/intermedios/">Con experiencia</a></li>
-          <li><a href="/avanzados/">Cuerpo al texto</a></li>
+          <li><a href="/intermedios/">Intermedios</a></li>
+          <li><a href="/avanzados/">Avanzados</a></li>
+          <li><a href="/cuerpo-al-texto/">Cuerpo al texto</a></li>
         </ul>
       </div>
       <div>
@@ -1366,7 +1375,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2025 Talleres de Teatro Barcelona · talleresdeteatro.es</p>
+      <p class="footer-copy">© 2026 Talleres de Teatro Barcelona · talleresdeteatro.es</p>
       <p class="footer-copy">Espacio La Mansión · Gràcia, Barcelona</p>
     </div>
   </footer>
@@ -1452,8 +1461,9 @@
         const msg = form.querySelector('#mensaje').value.trim();
         const nivelTexts = {
           'principiantes': 'Principiantes',
-          'intermedios': 'Con experiencia',
-          'avanzados': 'Cuerpo al texto',
+          'intermedios': 'Intermedios',
+          'avanzados': 'Avanzados, El ser mirado',
+          'cuerpo-al-texto': 'Cuerpo al texto',
           'no-se': 'No sé todavía'
         };
         const waText = encodeURIComponent(
