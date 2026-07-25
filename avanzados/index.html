@@ -1518,16 +1518,18 @@
 
   <!-- ═══ HERO ══════════════════════════════════════════════════ -->
   <!--
-    VIDEO HERO: usa el archivo "somos-relato.mp4" (el mismo del hero de Intermedios).
+    HERO: imagen de fondo "hero_el_ser_mirado" optimizada desde imagenes_originales.
   -->
   <header>
     <section class="hero" aria-label="Curso avanzado de teatro El ser mirado, Barcelona">
 
-      <video class="hero-video" id="heroVideo"
-             autoplay muted loop playsinline
-             aria-hidden="true" preload="metadata">
-        <source src="/somos-relato.mp4" type="video/mp4">
-      </video>
+      <img class="hero-video"
+           src="/imagenes_optimizadas/hero-el-ser-mirado-curso-avanzado-teatro-barcelona.jpg"
+           alt=""
+           aria-hidden="true"
+           loading="eager"
+           fetchpriority="high"
+      >
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-accent-line" aria-hidden="true"></div>
       <div class="hero-fade" aria-hidden="true"></div>
@@ -1715,35 +1717,54 @@
 
       <div class="video-embed" id="videoEmbed">
         <div class="yt-facade" id="ytFacade">
-          <img src="https://i.ytimg.com/vi/LJ93odUhcX4/maxresdefault.jpg"
-               alt="La tiranía del deseo, ciclo de escenas creadas en El ser mirado"
-               loading="lazy" width="1280" height="720">
+          <img src="/imagenes_optimizadas/la-tirania-del-deseo-ciclo-teatro-barcelona.jpg"
+               onerror="this.src='https://img.youtube.com/vi/Blt-U1pwTeE/hqdefault.jpg'"
+               alt="La tiranía del deseo, ciclo de teatro, Talleres de Teatro Mogordoy Barcelona"
+               loading="lazy" decoding="async" width="1018" height="1200">
           <div class="yt-play">
             <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
           </div>
         </div>
         <iframe
-          title="La tiranía del deseo, ciclo de escenas creadas en El ser mirado, Talleres de Teatro Barcelona"
+          title="La tiranía del deseo, ciclo de teatro, talleresdeteatro.es"
           src=""
-          data-src="https://www.youtube.com/embed/xI459ry1J4I?autoplay=1&rel=0"
+          data-src="https://www.youtube.com/embed/Blt-U1pwTeE?autoplay=1&rel=0"
           allowfullscreen allow="autoplay; encrypted-media">
         </iframe>
       </div>
 
       <div class="video-copy">
         <span class="overline">Ciclo de teatro</span>
-        <h2 class="video-h2">La tiranía <br /> del <br /> <span class="acc">deseo.</span></h2>
+        <h2 class="video-h2" style="color:#D6248F;">La tiranía <br /> del <br /> deseo.</h2>
         <p class="video-body">
-          Ciclo de teatro de escenas creadas en el laboratorio. Los participantes desarrollan escenas propias y materiales actorales para construir <strong>un ciclo de funciones reales</strong>: a lo largo del año investigamos situaciones, vínculos, imaginarios y conflictos hasta convertirlos en escenas vivas capaces de sostenerse frente al público.
+          El deseo es una fuerza poderosa, una potencia animal que surge desde lo más profundo, como una bestia que se despierta y se pone en movimiento, revelando las pulsiones más profundas y verdaderas. Pero ¿qué pasa si se descontrola? ¿Qué ocurre cuando ese deseo, atrapado por la cola, se libera, se encapricha y lo domina todo? ¿Hasta dónde es capaz de llegar? A lo largo de estas escenas, cuatro historias donde los impulsos desbordados llevan a nuestros personajes a transformarlo todo sin que importen las consecuencias, <strong>gobernados por las leyes de este tirano y caprichoso rey.</strong>
         </p>
         <p class="video-body">
-          El objetivo es entrenar actuando, pero también atravesar el proceso completo de creación: ensayo, reescritura, montaje y función. Ya presentamos funciones en espacios como Badabadoc, con <strong>público real y programación teatral.</strong>
+          Este espacio propone que los participantes desarrollen escenas propias y materiales actorales para construir un ciclo de funciones reales. A lo largo del año investigamos situaciones, vínculos, imaginarios y conflictos hasta convertirlos en escenas vivas capaces de sostenerse frente al público.
         </p>
-        <p class="video-coord">Coordinación: Sebastián Mogordoy</p>
-        <a href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola%2C+quiero+info+sobre+el+curso+Avanzados+El+Ser+Mirado."
-           class="btn-primary" target="_blank" rel="noopener" style="align-self:flex-start; margin-top:8px;">
-          Consultar vacantes <span class="arrow">→</span>
-        </a>
+        <p class="video-body">
+          El objetivo es entrenar actuando, pero también atravesar el proceso completo de creación: ensayo, reescritura, montaje y función. Ya presentamos funciones en espacios como Badabadoc, dentro del ciclo <em>La tiranía del deseo</em> compartiendo materiales creados en el entrenamiento con público real y programación teatral.
+        </p>
+        <p class="video-body">
+          Dirección: <strong>Sebastián Mogordoy</strong><br>
+          Espacio La Mansión · Gràcia, Barcelona
+        </p>
+        <div style="margin-top:24px;padding-top:24px;border-top:1px solid var(--g700);">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--g300);display:block;margin-bottom:16px;">Última edición · Actuación y Creación</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;">
+            <span style="font-size:1.3vw; font-size:clamp(14px,1.3vw,16px);color:var(--white);line-height:2;">Ayelén Ormaechea</span>
+            <span style="font-size:1.3vw; font-size:clamp(14px,1.3vw,16px);color:var(--white);line-height:2;">Maria Pouza</span>
+            <span style="font-size:1.3vw; font-size:clamp(14px,1.3vw,16px);color:var(--white);line-height:2;">Camila Granieri</span>
+            <span style="font-size:1.3vw; font-size:clamp(14px,1.3vw,16px);color:var(--white);line-height:2;">Natalia Alonso</span>
+            <span style="font-size:1.3vw; font-size:clamp(14px,1.3vw,16px);color:var(--white);line-height:2;">Ornela Calvieri</span>
+            <span style="font-size:1.3vw; font-size:clamp(14px,1.3vw,16px);color:var(--white);line-height:2;">Julián Luque</span>
+            <span style="font-size:1.3vw; font-size:clamp(14px,1.3vw,16px);color:var(--white);line-height:2;">Sabrina Cassia</span>
+          </div>
+          <img src="/imagenes_optimizadas/logo-badabadoc-sala-teatro-barcelona.png"
+               alt="La Badabadoc, sala de teatro en Barcelona"
+               loading="lazy" decoding="async" width="354" height="444"
+               style="width:64px; height:auto; margin-top:20px; opacity:0.85;">
+        </div>
       </div>
 
     </div>
