@@ -1173,83 +1173,32 @@
       .video-copy { padding: 6vw var(--pad-x); padding: clamp(32px, 6vw, 56px) var(--pad-x); }
     }
 
-    /* ─── TESTIMONIOS ────────────────────────────── */
-    .testimonios-section {
-      background: var(--bg-2);
-      padding: var(--pad-y) 0;
-    }
-    .testimonios-h2 {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 5.5vw; font-size: clamp(38px, 5.5vw, 72px);
-      text-transform: uppercase; letter-spacing: -0.025em;
-      line-height: 0.88; color: var(--white);
-      margin-top: 16px; max-width: 22ch;
-    }
-
-    /* Featured testimonial */
-    .testimonio-featured {
-      margin-top: 5vw; margin-top: clamp(40px, 5vw, 72px);
-      padding: 4vw 5vw; padding: clamp(32px, 4vw, 56px) clamp(28px, 5vw, 64px);
-      background: var(--bg-3);
-      border-left: 3px solid var(--accent);
-      position: relative;
-    }
-    .testimonio-featured::before {
-      content: '\201C';
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 12vw; font-size: clamp(80px, 12vw, 140px);
-      line-height: 0.8;
-      color: rgba(229,9,20,0.12);
-      position: absolute; top: 20px; left: 3vw; left: clamp(20px, 3vw, 40px);
-      pointer-events: none; user-select: none;
-    }
-    .testimonio-featured-text {
-      font-family: 'Archivo Black', sans-serif;
-      font-size: 2.4vw; font-size: clamp(18px, 2.4vw, 32px);
-      font-weight: 400;
-      letter-spacing: -0.01em; line-height: 1.3;
-      color: var(--white);
-      position: relative; z-index: 1;
-      max-width: 60ch;
-    }
-    .testimonio-featured-name {
-      display: block; margin-top: 20px;
-      font-size: 1.1vw; font-size: clamp(11px, 1.1vw, 13px); font-weight: 700;
-      letter-spacing: 0.09em; text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    /* Grid testimonios */
-    .testimonios-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,0.05);
-      margin-top: 1px;
-    }
-    .testimonio-card {
-      background: var(--bg-2);
-      padding: 3.5vw 3vw; padding: clamp(28px, 3.5vw, 48px) clamp(24px, 3vw, 40px);
-      display: flex; flex-direction: column; gap: 14px;
-    }
-    .testimonio-stars {
-      color: var(--gold);
-      font-size: 13px; letter-spacing: 2px;
-    }
-    .testimonio-text {
-      font-size: 1.45vw; font-size: clamp(14px, 1.45vw, 17px);
-      font-weight: 300; line-height: 1.72;
-      color: rgba(255,255,255,0.92);
-      flex: 1;
-    }
-    .testimonio-name {
-      font-size: 1vw; font-size: clamp(10px, 1vw, 12px); font-weight: 700;
-      letter-spacing: 0.09em; text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding-top: 12px;
-    }
-    @media (max-width: 640px) { .testimonios-grid { grid-template-columns: 1fr; } }
+    /* ─── TESTIMONIOS EN VIDEO ────────────────────── */
+    .test-section{background:#0C0C0C;padding:9vw 0; padding:clamp(72px,9vw,120px) 0;border-top:1px solid rgba(255,255,255,0.07);}
+    .test-section .container{max-width:none;padding:0 clamp(20px,3vw,56px);}
+    .test-header{width:fit-content;margin:0 auto clamp(36px,5vw,64px);}
+    .test-overline{display:block;font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;}
+    .test-h2{font-family:'Archivo Black',sans-serif;font-size:4.5vw; font-size:clamp(32px,4.5vw,60px);text-transform:uppercase;letter-spacing:-0.03em;line-height:0.93;color:#fff;margin:0;}
+    .test-h2 .acc{color:var(--accent);}
+    .test-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2vw; gap:clamp(8px,1.2vw,14px);}
+    @media(max-width:900px){.test-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:500px){.test-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:420px){.test-grid{grid-template-columns:1fr;}}
+    .test-card{position:relative;aspect-ratio:9/16;background:#111;overflow:hidden;cursor:pointer;border:1px solid rgba(255,255,255,0.07);transition:border-color .2s;}
+    .test-card:hover{border-color:rgba(255,255,255,0.25);}
+    .test-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+    .test-card:hover img{transform:scale(1.04);}
+    .test-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 50%);}
+    .test-card-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+    .test-card-play svg{width:36px;height:36px;opacity:0.9;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.5));}
+    .test-card-label{position:absolute;bottom:12px;left:12px;right:12px;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
+    /* Modal de reel */
+    .reel-modal{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+    .reel-modal.open{opacity:1;pointer-events:all;}
+    .reel-modal-inner{position:relative;width:min(400px,90vw);max-height:90vh;}
+    .reel-modal-close{position:absolute;top:-44px;right:0;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1;padding:8px;}
+    .reel-modal-embed{width:100%;min-height:500px;background:#111;display:flex;align-items:center;justify-content:center;}
+    .reel-modal-embed .instagram-media{margin:0 !important;min-width:0 !important;width:100% !important;}
 
     /* ─── REELS INSTAGRAM ───────────────────────── */
     .reels-section {
@@ -2701,21 +2650,21 @@
   <!--
     ⚠️ VIDEO: Si aparece error de reproducción (código 150/151/152), verificar en
     YouTube Studio → seleccionar el video → Derechos de autor → Licencia y distribución
-    → activar "Permitir inserción". El video ID activo es _DD2o8RWFzI.
+    → activar "Permitir inserción". El video ID activo es rKMlLob3r1w.
   -->
   <section class="video-section" aria-label="Video del taller de principiantes en Barcelona">
     <div class="video-inner">
 
       <div class="video-embed" id="videoWrap">
-        <div class="yt-facade" data-ytid="7QhxzpAznME">
-          <img src="https://img.youtube.com/vi/7QhxzpAznME/maxresdefault.jpg"
+        <div class="yt-facade" data-ytid="rKMlLob3r1w">
+          <img src="https://img.youtube.com/vi/rKMlLob3r1w/maxresdefault.jpg"
                alt="Video clase de teatro principiantes Barcelona, Talleres de Teatro Mogordoy"
                loading="lazy" decoding="async" width="1280" height="720">
           <div class="yt-play">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           </div>
         </div>
-        <iframe loading="lazy" data-src="https://www.youtube.com/embed/7QhxzpAznME?autoplay=1"
+        <iframe loading="lazy" data-src="https://www.youtube.com/embed/rKMlLob3r1w?autoplay=1"
                 title="Taller de teatro para principiantes en Barcelona, talleresdeteatro.es"
                 allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
@@ -2736,52 +2685,116 @@
   </section>
 
 
-  <!-- ═══ TESTIMONIOS ══════════════════════════════════════════ -->
-  <section class="testimonios-section" aria-label="Reseñas de alumnos del taller de principiantes">
+  <!-- ═══ TESTIMONIOS EN VIDEO ═════════════════════════════════ -->
+  <section class="test-section" aria-label="Testimonios en video de alumnos del taller de principiantes">
     <div class="container">
-      <span class="overline">Lo que dicen</span>
-      <h2 class="testimonios-h2">
-        Llegaron sin <br /> experiencia.
-      </h2>
+      <header class="test-header">
+        <span class="test-overline">Testimonios</span>
+        <h2 class="test-h2">Lo que dicen quienes ya <span class="acc">estuvieron.</span></h2>
+      </header>
+      <div class="test-grid">
 
-      <!-- Featured -->
-      <div class="testimonio-featured">
-        <p class="testimonio-featured-text">
-          Llegué sin experiencia y con mucho miedo. Desde la primera clase sentí que podía probar, equivocarme y descubrir algo propio. No es solo una clase de teatro: es un espacio para animarse a partes de uno mismo que la rutina suele apagar.
-        </p>
-        <span class="testimonio-featured-name">★★★★★, Laura M. · Principiantes, Barcelona</span>
-      </div>
-
-      <!-- Grid 2x2 -->
-      <div class="testimonios-grid">
-
-        <div class="testimonio-card">
-          <div class="testimonio-stars">★★★★★</div>
-          <p class="testimonio-text">Buscaba un taller para perder la vergüenza y terminé encontrando mucho más. El trabajo con el cuerpo, la improvisación y el grupo te llevan a lugares que no esperabas. Seba crea un ambiente único.</p>
-          <span class="testimonio-name">Marc P. · Principiante · Barcelona</span>
+        <div class="test-card" data-reel="DPv_SNDAePH" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="/imagenes_optimizadas/actuacion-teatro-barcelona-0007.jpg"
+               alt="Testimonio alumno, actuación en taller de teatro Barcelona" loading="lazy" width="933" height="1400">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
         </div>
 
-        <div class="testimonio-card">
-          <div class="testimonio-stars">★★★★★</div>
-          <p class="testimonio-text">Nunca imaginé que podría subirme a un escenario y disfrutarlo. Recomiendo esta experiencia a cualquier persona que sienta algo al imaginarse actuando, ese cosquilleo no miente.</p>
-          <span class="testimonio-name">Clara R. · Principiante · Barcelona</span>
+        <div class="test-card" data-reel="DOxzpJUjYm2" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="/imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0003.jpg"
+               alt="Testimonio alumno, entrenamiento actoral Barcelona" loading="lazy">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
         </div>
 
-        <div class="testimonio-card">
-          <div class="testimonio-stars">★★★★★</div>
-          <p class="testimonio-text">No tenía ni idea de teatro y me animé. Desde la primera clase entendí que no se trata de actuar "bien", sino de estar presente y ser honesta. Algo de eso se me quedó también afuera del taller.</p>
-          <span class="testimonio-name">Marta L. · Primer año · Gràcia</span>
+        <div class="test-card" data-reel="C_grhGuIM2p" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="/imagenes_optimizadas/clase-teatro-barcelona-0369.jpg"
+               alt="Testimonio alumno, clase de teatro Barcelona" loading="lazy" width="788" height="1400">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
         </div>
 
-        <div class="testimonio-card">
-          <div class="testimonio-stars">★★★★★</div>
-          <p class="testimonio-text">Hay algo muy especial en la forma en que se construye el grupo. Cada clase abre una puerta distinta: al juego, a la imaginación, al cuerpo, a la escena. No esperaba que fuera tan transformador.</p>
-          <span class="testimonio-name">Ana G. · Alumna primer año · Barcelona</span>
+        <div class="test-card" data-reel="C_p9zgyI2T1" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="/imagenes_optimizadas/ensayo-teatro-barcelona-0386.jpg"
+               alt="Testimonio alumno, ensayo teatral Barcelona" loading="lazy" width="788" height="1400">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
+        </div>
+
+        <div class="test-card" data-reel="C_hua2-ofvq" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="/imagenes_optimizadas/actores-taller-barcelona-0475.jpg"
+               alt="Testimonio alumno, actores taller teatro Barcelona" loading="lazy" width="1400" height="1400">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
+        </div>
+
+        <div class="test-card" data-reel="DO8QpM9DaEA" role="button" tabindex="0" aria-label="Ver testimonio en video">
+          <img src="/imagenes_optimizadas/actuacion-teatro-barcelona-0055.jpg"
+               alt="Testimonio alumno, actuación teatro Barcelona" loading="lazy" width="933" height="1400">
+          <div class="test-card-overlay"></div>
+          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
+          <span class="test-card-label">Testimonio</span>
         </div>
 
       </div>
     </div>
   </section>
+
+  <!-- Modal de reel -->
+  <div class="reel-modal" id="reelModal" role="dialog" aria-modal="true" aria-label="Ver reel">
+    <div class="reel-modal-inner">
+      <button class="reel-modal-close" id="reelModalClose" aria-label="Cerrar">×</button>
+      <div class="reel-modal-embed" id="reelModalEmbed"></div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var modal   = document.getElementById('reelModal');
+    var embed   = document.getElementById('reelModalEmbed');
+    var btnClose= document.getElementById('reelModalClose');
+    var igLoaded= false;
+
+    function loadIgScript(){
+      if(igLoaded) return;
+      igLoaded = true;
+      var s = document.createElement('script');
+      s.src = '//www.instagram.com/embed.js';
+      s.async = true;
+      document.body.appendChild(s);
+    }
+
+    function openReel(shortcode){
+      embed.innerHTML = '<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/'+shortcode+'/?utm_source=ig_embed" data-instgrm-version="14" style="background:#111;border:0;border-radius:0;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;"></blockquote>';
+      loadIgScript();
+      if(window.instgrm) window.instgrm.Embeds.process();
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(){
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(function(){ embed.innerHTML = ''; }, 300);
+    }
+
+    document.querySelectorAll('.test-card').forEach(function(card){
+      function activate(){ openReel(card.dataset.reel); }
+      card.addEventListener('click', activate);
+      card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' ') activate(); });
+    });
+
+    btnClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+  })();
+  </script>
 
 
   <!-- ═══ REELS INSTAGRAM ═════════════════════════════════════ -->
@@ -2877,7 +2890,7 @@
           <div class="info-row">
             <span class="info-label">Días y grupos</span>
             <span class="info-value">
-              <strong>Martes · 19 a 22 h</strong><br>
+              <strong>Principiantes · Martes · 19 a 22 h</strong><br>
               <strong>Principiantes+ · Jueves · 19 a 22 h</strong><br>
               <span class="info-note">Temporada 2026/27 · Inscripción abierta.</span>
             </span>
@@ -3000,143 +3013,7 @@
   </section>
 
 
-  <!-- ═══ TESTIMONIOS, REELS DE ALUMNOS ══════════════════════ -->
-  <style>
-    .test-section{background:#0C0C0C;padding:9vw 0; padding:clamp(72px,9vw,120px) 0;border-top:1px solid rgba(255,255,255,0.07);}
-    .test-header{margin-bottom:5vw; margin-bottom:clamp(36px,5vw,64px);}
-    .test-overline{display:block;font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;}
-    .test-h2{font-family:'Archivo Black',sans-serif;font-size:4.5vw; font-size:clamp(32px,4.5vw,60px);text-transform:uppercase;letter-spacing:-0.03em;line-height:0.93;color:#fff;margin:0;}
-    .test-h2 .acc{color:#E50914;}
-    .test-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2vw; gap:clamp(8px,1.2vw,14px);}
-    @media(max-width:900px){.test-grid{grid-template-columns:repeat(3,1fr);}}
-    @media(max-width:500px){.test-grid{grid-template-columns:1fr 1fr;}}
-    @media(max-width:420px){.test-grid{grid-template-columns:1fr;}}
-    .test-card{position:relative;aspect-ratio:9/16;background:#111;overflow:hidden;cursor:pointer;border:1px solid rgba(255,255,255,0.07);transition:border-color .2s;}
-    .test-card:hover{border-color:rgba(255,255,255,0.25);}
-    .test-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
-    .test-card:hover img{transform:scale(1.04);}
-    .test-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 50%);}
-    .test-card-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
-    .test-card-play svg{width:36px;height:36px;opacity:0.9;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.5));}
-    .test-card-label{position:absolute;bottom:12px;left:12px;right:12px;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.7);}
-    /* Modal */
-    .reel-modal{position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
-    .reel-modal.open{opacity:1;pointer-events:all;}
-    .reel-modal-inner{position:relative;width:min(400px,90vw);max-height:90vh;}
-    .reel-modal-close{position:absolute;top:-44px;right:0;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1;padding:8px;}
-    .reel-modal-embed{width:100%;min-height:500px;background:#111;display:flex;align-items:center;justify-content:center;}
-    .reel-modal-embed .instagram-media{margin:0 !important;min-width:0 !important;width:100% !important;}
-  </style>
 
-  <section class="test-section">
-    <div class="container">
-      <header class="test-header">
-        <span class="test-overline">Testimonios</span>
-        <h2 class="test-h2">Lo que dicen<br>quienes ya<br><span class="acc">estuvieron.</span></h2>
-      </header>
-      <div class="test-grid">
-
-        <div class="test-card" data-reel="DPv_SNDAePH" role="button" tabindex="0" aria-label="Ver testimonio en video">
-          <img src="../imagenes_optimizadas/actuacion-teatro-barcelona-0007.jpg"
-               alt="Testimonio alumno, actuación en taller de teatro Barcelona" loading="lazy" width="933" height="1400">
-          <div class="test-card-overlay"></div>
-          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
-          <span class="test-card-label">Testimonio</span>
-        </div>
-
-        <div class="test-card" data-reel="DOxzpJUjYm2" role="button" tabindex="0" aria-label="Ver testimonio en video">
-          <img src="../imagenes_optimizadas/entrenamiento-actoral-teatro-barcelona-0003.jpg"
-               alt="Testimonio alumno, entrenamiento actoral Barcelona" loading="lazy">
-          <div class="test-card-overlay"></div>
-          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
-          <span class="test-card-label">Testimonio</span>
-        </div>
-
-        <div class="test-card" data-reel="C_grhGuIM2p" role="button" tabindex="0" aria-label="Ver testimonio en video">
-          <img src="../imagenes_optimizadas/clase-teatro-barcelona-0369.jpg"
-               alt="Testimonio alumno, clase de teatro Barcelona" loading="lazy" width="788" height="1400">
-          <div class="test-card-overlay"></div>
-          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
-          <span class="test-card-label">Testimonio</span>
-        </div>
-
-        <div class="test-card" data-reel="C_p9zgyI2T1" role="button" tabindex="0" aria-label="Ver testimonio en video">
-          <img src="../imagenes_optimizadas/ensayo-teatro-barcelona-0386.jpg"
-               alt="Testimonio alumno, ensayo teatral Barcelona" loading="lazy" width="788" height="1400">
-          <div class="test-card-overlay"></div>
-          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
-          <span class="test-card-label">Testimonio</span>
-        </div>
-
-        <div class="test-card" data-reel="C_hua2-ofvq" role="button" tabindex="0" aria-label="Ver testimonio en video">
-          <img src="../imagenes_optimizadas/actores-taller-barcelona-0475.jpg"
-               alt="Testimonio alumno, actores taller teatro Barcelona" loading="lazy" width="1400" height="1400">
-          <div class="test-card-overlay"></div>
-          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
-          <span class="test-card-label">Testimonio</span>
-        </div>
-
-        <div class="test-card" data-reel="DO8QpM9DaEA" role="button" tabindex="0" aria-label="Ver testimonio en video">
-          <img src="../imagenes_optimizadas/actuacion-teatro-barcelona-0055.jpg"
-               alt="Testimonio alumno, actuación teatro Barcelona" loading="lazy" width="933" height="1400">
-          <div class="test-card-overlay"></div>
-          <div class="test-card-play"><svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="39" stroke="white" stroke-width="1.5"/><path d="M32 26l24 14-24 14V26z" fill="white"/></svg></div>
-          <span class="test-card-label">Testimonio</span>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Modal de reel -->
-  <div class="reel-modal" id="reelModal" role="dialog" aria-modal="true" aria-label="Ver reel">
-    <div class="reel-modal-inner">
-      <button class="reel-modal-close" id="reelModalClose" aria-label="Cerrar">×</button>
-      <div class="reel-modal-embed" id="reelModalEmbed"></div>
-    </div>
-  </div>
-
-  <script>
-  (function(){
-    var modal   = document.getElementById('reelModal');
-    var embed   = document.getElementById('reelModalEmbed');
-    var btnClose= document.getElementById('reelModalClose');
-    var igLoaded= false;
-
-    function loadIgScript(){
-      if(igLoaded) return;
-      igLoaded = true;
-      var s = document.createElement('script');
-      s.src = '//www.instagram.com/embed.js';
-      s.async = true;
-      document.body.appendChild(s);
-    }
-
-    function openReel(shortcode){
-      embed.innerHTML = '<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/'+shortcode+'/?utm_source=ig_embed" data-instgrm-version="14" style="background:#111;border:0;border-radius:0;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;"></blockquote>';
-      loadIgScript();
-      if(window.instgrm) window.instgrm.Embeds.process();
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal(){
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-      setTimeout(function(){ embed.innerHTML = ''; }, 300);
-    }
-
-    document.querySelectorAll('.test-card').forEach(function(card){
-      function activate(){ openReel(card.dataset.reel); }
-      card.addEventListener('click', activate);
-      card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' ') activate(); });
-    });
-
-    btnClose.addEventListener('click', closeModal);
-    modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
-    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
-  })();
-  </script>
 
   <!-- ═══ FAQ ══════════════════════════════════════════════════ -->
   <section class="faq-section" aria-label="Preguntas frecuentes, taller de teatro para principiantes Barcelona">
