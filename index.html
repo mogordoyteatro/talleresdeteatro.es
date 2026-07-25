@@ -1794,11 +1794,32 @@
     @media (max-width: 600px) {
       .nosotros-portraits { grid-template-columns: 1fr; }
     }
-    .nosotros-bio{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:stretch;}
-    .nosotros-bio-text{align-self:center;}
-    .nosotros-bio-foto{position:relative;min-height:clamp(360px,42vw,560px);overflow:hidden;order:-1;}
+    /* Bio Sebastián: foto a sangre a la izquierda + texto centrado sobre negro */
+    .nosotros-bio{display:grid;grid-template-columns:41% 1fr;align-items:stretch;min-height:clamp(520px,52vw,900px);}
+    .nosotros-bio-foto{position:relative;overflow:hidden;}
     .nosotros-bio-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
-    @media (max-width: 760px){ .nosotros-bio{grid-template-columns:1fr;} .nosotros-bio-foto{min-height:clamp(300px,75vw,420px);} }
+    .nosotros-bio-text{
+      align-self:center;justify-self:start;
+      max-width:820px;
+      padding:clamp(48px,6vw,96px) var(--pad-x);
+      padding-left:clamp(40px,7vw,120px);
+    }
+    .nosotros-bio .nosotros-card-role{margin-bottom:10px;}
+    .nosotros-bio .nosotros-card-name{
+      font-size:4vw; font-size:clamp(28px,4vw,54px);
+      margin-bottom:18px;
+    }
+    .nosotros-bio .nosotros-card-text{
+      font-size:1.5vw; font-size:clamp(15px,1.5vw,18px);
+      line-height:1.8;color:var(--g100);
+      margin-bottom:22px;
+    }
+    .nosotros-bio-links{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;}
+    @media (max-width: 760px){
+      .nosotros-bio{grid-template-columns:1fr;min-height:auto;}
+      .nosotros-bio-foto{position:relative;min-height:clamp(320px,95vw,460px);}
+      .nosotros-bio-text{padding:clamp(40px,10vw,64px) var(--pad-x);max-width:none;}
+    }
     /* JUNTOS, misma familia y escala que el número */
     .nosotros-juntos {
       font-family: 'Archivo Black', sans-serif;
@@ -1812,8 +1833,8 @@
     }
 
     .nosotros-section {
-      background: var(--bg-2);
-      padding: 7vw 0; padding: clamp(56px, 7vw, 96px) 0;
+      background: #0c0c0c;
+      padding: 0;
     }
     .nosotros-header {
       margin-bottom: 5vw; margin-bottom: clamp(40px, 5vw, 60px);
@@ -3737,29 +3758,24 @@
     </div>
   </section>
 
-  <section class="nosotros-section" id="nosotros">
-    <div class="container">
+  <section class="nosotros-section" id="nosotros" aria-label="Quiénes somos: Sebastián Mogordoy">
 
-      <!-- Overline -->
-      <header class="nosotros-header">
-        <span class="overline">Quiénes somos</span>
-      </header>
-
-      <!-- Bio Sebastián, texto + foto al lado -->
-      <div class="nosotros-bio">
-        <div class="nosotros-bio-text">
-          <p class="nosotros-card-role">Coord. General · Profesor</p>
-          <h3 class="nosotros-card-name">Sebastián Mogordoy</h3>
-          <p class="nosotros-card-text">Recientemente formó parte del elenco protagónico de <em>El Fill</em> de Jon Fosse, dirigida por Ferran Utzet, estrenada en el Teatre Lliure. Realizó funciones de <em>Euforia y Desazón</em>, dirigida por Sergio Boris, que se estrenó en el Festival Temporada Alta, en la Sala Beckett de Barcelona y en los Teatros del Canal de Madrid, y participó del Festival Internacional de Buenos Aires. Recientemente formó parte del elenco coprotagónico de la película <em>El profesor</em> para Netflix.</p>
+    <!-- Bio Sebastián: foto a sangre + texto sobre negro (referencia perfil) -->
+    <div class="nosotros-bio">
+      <div class="nosotros-bio-foto">
+        <img src="imagenes_optimizadas/sebastian-mogordoy-perfil-actor-profesor-teatro-barcelona.jpg" alt="Sebastián Mogordoy, actor, director y profesor de teatro en Barcelona" loading="lazy" decoding="async" width="1200" height="1399">
+      </div>
+      <div class="nosotros-bio-text">
+        <p class="nosotros-card-role">Coord. General · Profesor</p>
+        <h3 class="nosotros-card-name">Sebastián Mogordoy</h3>
+        <p class="nosotros-card-text">Recientemente formó parte del elenco protagónico de <em>El Fill</em> de Jon Fosse, dirigida por Ferran Utzet, estrenada en el Teatre Lliure. Realizó funciones de <em>Euforia y Desazón</em>, dirigida por Sergio Boris, que se estrenó en el Festival Temporada Alta, en la Sala Beckett de Barcelona y en los Teatros del Canal de Madrid, y participó del Festival Internacional de Buenos Aires. Recientemente formó parte del elenco coprotagónico de la película <em>El profesor</em> para Netflix.</p>
+        <div class="nosotros-bio-links">
           <a href="https://www.instagram.com/sebamogordoy/" target="_blank" rel="noopener" class="nosotros-card-ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg> @sebamogordoy</a>
           <a href="https://www.sebastianmogordoy.com" target="_blank" rel="noopener" class="nosotros-card-ig">↗&nbsp;sebastianmogordoy.com</a>
         </div>
-        <div class="nosotros-bio-foto">
-          <img src="imagenes_optimizadas/sebastian-mogordoy-director-actor-teatro-barcelona.jpg" alt="Sebastián Mogordoy, actor, director y profesor de teatro en Barcelona" loading="lazy" decoding="async">
-        </div>
       </div>
-
     </div>
+
   </section>
 
 
