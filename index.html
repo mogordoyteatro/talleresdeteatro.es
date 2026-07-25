@@ -1890,9 +1890,6 @@
       .nosotros-15anos { grid-template-columns: 1fr; }
       .nosotros-15anos-foto { order: -1; }
     }
-    @media (max-width: 760px) {
-      .mirada-grid { grid-template-columns: 1fr !important; }
-    }
 
     /* ═══════════════════════════════════════════
        BLOQUE, COMUNIDAD / CTA, rediseño editorial
@@ -3630,25 +3627,69 @@
          loading="lazy" width="1920" height="1080">
   </div>
 
-  <!-- Texto filosófico, diseño editorial -->
-  <section style="background:var(--bg-2); padding:10vw 0; padding:clamp(72px,10vw,140px) 0;">
+  <!-- Texto filosófico — foto a todo el ancho como fondo -->
+  <style>
+    .mirada-hero{
+      position:relative;
+      display:flex;align-items:center;
+      min-height:clamp(560px,80vh,880px);
+      background:#080808 url("imagenes_optimizadas/15-anos-haciendo-teatro-talleres-barcelona.jpg") center right / cover no-repeat;
+      overflow:hidden;
+    }
+    .mirada-hero::before{
+      content:"";position:absolute;inset:0;z-index:1;
+      background:linear-gradient(90deg,
+        rgba(8,8,8,0.97) 0%,
+        rgba(8,8,8,0.90) 26%,
+        rgba(8,8,8,0.60) 52%,
+        rgba(8,8,8,0.18) 78%,
+        rgba(8,8,8,0.05) 100%);
+    }
+    .mirada-hero .container{position:relative;z-index:2;width:100%;}
+    .mirada-hero-inner{
+      max-width:660px;
+      padding:clamp(56px,8vw,120px) 0;
+    }
+    .mirada-hero h2{
+      font-family:'Archivo Black',sans-serif;
+      font-size:clamp(40px,6vw,84px);
+      text-transform:uppercase;letter-spacing:-0.03em;line-height:0.9;
+      color:var(--white);margin:18px 0 28px;
+    }
+    .mirada-hero h2 span{color:var(--accent);}
+    .mirada-hero p{margin:0;}
+    .mirada-hero .mirada-lead{
+      font-size:clamp(15px,1.55vw,20px);
+      line-height:1.55;letter-spacing:0.01em;
+      text-transform:uppercase;font-weight:500;
+      color:rgba(255,255,255,0.94);
+      margin-bottom:clamp(18px,2vw,26px);
+    }
+    .mirada-hero .mirada-small{
+      font-size:clamp(13px,1.15vw,15px);
+      line-height:1.6;letter-spacing:0.02em;
+      text-transform:uppercase;font-weight:500;
+      color:rgba(255,255,255,0.66);
+    }
+    @media (max-width:760px){
+      .mirada-hero{
+        min-height:auto;
+        background-position:center;
+      }
+      .mirada-hero::before{
+        background:linear-gradient(180deg,rgba(8,8,8,0.86) 0%,rgba(8,8,8,0.92) 100%);
+      }
+      .mirada-hero-inner{max-width:none;padding:clamp(56px,15vw,96px) 0;}
+    }
+  </style>
+  <section class="mirada-hero" aria-label="Nuestra mirada: el teatro como un superjuego">
     <div class="container">
-      <div class="mirada-grid" style="display:grid;grid-template-columns:1fr 1.6fr 1.3fr;gap:clamp(28px,4vw,72px);align-items:stretch;">
-        <div>
-          <span class="overline" style="margin-bottom:20px;display:block;">Nuestra mirada</span>
-          <h2 style="font-family:'Archivo Black',sans-serif;font-size:5vw; font-size:clamp(36px,5vw,68px);text-transform:uppercase;letter-spacing:-0.03em;line-height:0.9;color:var(--white);">El teatro <br /> como un <br><span style="color:var(--accent);">superjuego.</span></h2>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:2vw; gap:clamp(16px,2vw,24px);padding-top:4px;">
-          <p style="font-size:1.6vw; font-size:clamp(16px,1.6vw,20px);line-height:1.65;color:var(--g100);font-weight:300;">Actuar es un acto consciente, técnico, poético, lúdico y expresivo. No transmitimos contenidos: te acompañamos en tu proceso creativo.</p>
-          <p style="font-size:1.6vw; font-size:clamp(16px,1.6vw,20px);line-height:1.65;color:var(--g100);font-weight:300;">El teatro es el territorio donde puedes ser todo eso que no eres. Un superjuego que te invita a descubrir una nueva forma de habitar el mundo, de estar con otros, de arriesgar.</p>
-          <p style="font-size:1.2vw; font-size:clamp(13px,1.2vw,15px);line-height:1.7;color:var(--g300);font-weight:300;">Si buscas clases de teatro en Barcelona que te permitan explorar tu creatividad, conectar con tu cuerpo y transformar tu potencial expresivo, has llegado al lugar indicado.</p>
-        </div>
-        <div class="mirada-foto" style="align-self:stretch;min-height:100%;overflow:hidden;">
-          <img src="imagenes_optimizadas/15-anos-haciendo-teatro-talleres-barcelona.jpg"
-               alt="15 años haciendo teatro, Talleres de Teatro Barcelona"
-               loading="lazy" width="1920" height="1280"
-               style="width:100%;height:100%;object-fit:cover;display:block;">
-        </div>
+      <div class="mirada-hero-inner">
+        <span class="overline">Nuestra mirada</span>
+        <h2>El teatro <br /> como un <br><span>superjuego.</span></h2>
+        <p class="mirada-lead">Actuar es un acto consciente, técnico, poético, lúdico y expresivo. No transmitimos contenidos: te acompañamos en tu proceso creativo.</p>
+        <p class="mirada-lead">El teatro es el territorio donde puedes ser todo eso que no eres. Un superjuego que te invita a descubrir una nueva forma de habitar el mundo, de estar con otros, de arriesgar.</p>
+        <p class="mirada-small">Si buscas clases de teatro en Barcelona que te permitan explorar tu creatividad, conectar con tu cuerpo y transformar tu potencial expresivo, has llegado al lugar indicado.</p>
       </div>
     </div>
   </section>
