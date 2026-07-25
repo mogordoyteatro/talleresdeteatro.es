@@ -581,6 +581,13 @@
       color: rgba(255,255,255,0.8);
     }
     .intro-p strong { color: var(--white); font-weight: 500; }
+    /* Bloque final a ancho completo de página */
+    .intro-wide {
+      display: flex; flex-direction: column; gap: 28px;
+      padding: 0 clamp(20px, 3vw, 56px);
+      margin-top: clamp(40px, 5vw, 72px);
+    }
+    .intro-wide .intro-p { max-width: none; }
     .intro-pullquote {
       border-left: 3px solid var(--accent);
       padding-left: 20px;
@@ -1611,22 +1618,25 @@
             <span class="intro-break-text">Es el momento de tomar<br>conciencia de las<br>propias fuerzas.</span>
           </div>
 
-          <p class="intro-p">
-            El primer paso es que los participantes puedan reconocer y apropiarse de su poética, de lo que narra su imagen y su potencia particular, para llevar al máximo su capacidad expresiva. Comprender qué es lo que actúan, para qué producen lo que producen y cómo llevan adelante su trabajo. Imprimir su <strong>opinión personal</strong> sobre los asuntos que actúan, investigando su propio universo asociativo.
-          </p>
-          <p class="intro-p">
-            Trabajaremos para que los participantes dominen técnicamente su herramienta y puedan comprenderse, más que como la idea de un personaje, como <strong>una fuerza poética</strong>: un cuerpo dispuesto, entrenado, vibrante, que en el momento de actuar pone en juego todos sus sentidos y logra manejar tanto la percepción multidireccional como la radiación de su propia energía.
-          </p>
-
-          <div class="intro-kw">
-            <span class="intro-kw-tag">Improvisación dirigida</span>
-            <span class="intro-kw-tag">Laboratorio</span>
-            <span class="intro-kw-tag">Poética personal</span>
-            <span class="intro-kw-tag">Teatralidad</span>
-            <span class="intro-kw-tag">Barcelona · Gràcia</span>
-          </div>
         </div>
 
+      </div>
+    </div>
+
+    <!-- Cierre a ancho completo de página -->
+    <div class="intro-wide">
+      <p class="intro-p">
+        El primer paso es que los participantes puedan reconocer y apropiarse de su poética, de lo que narra su imagen y su potencia particular, para llevar al máximo su capacidad expresiva. Comprender qué es lo que actúan, para qué producen lo que producen y cómo llevan adelante su trabajo. Imprimir su <strong>opinión personal</strong> sobre los asuntos que actúan, investigando su propio universo asociativo.
+      </p>
+      <p class="intro-p">
+        Trabajaremos para que los participantes dominen técnicamente su herramienta y puedan comprenderse, más que como la idea de un personaje, como <strong>una fuerza poética</strong>: un cuerpo dispuesto, entrenado, vibrante, que en el momento de actuar pone en juego todos sus sentidos y logra manejar tanto la percepción multidireccional como la radiación de su propia energía.
+      </p>
+      <div class="intro-kw">
+        <span class="intro-kw-tag">Improvisación dirigida</span>
+        <span class="intro-kw-tag">Laboratorio</span>
+        <span class="intro-kw-tag">Poética personal</span>
+        <span class="intro-kw-tag">Teatralidad</span>
+        <span class="intro-kw-tag">Barcelona · Gràcia</span>
       </div>
     </div>
   </section>
@@ -1715,27 +1725,22 @@
   <section class="video-section" aria-label="Video del ciclo La tiranía del deseo">
     <div class="video-inner">
 
-      <div class="video-embed" id="videoEmbed">
-        <div class="yt-facade" id="ytFacade">
-          <img src="/imagenes_optimizadas/la-tirania-del-deseo-ciclo-teatro-barcelona.jpg"
-               onerror="this.src='https://img.youtube.com/vi/Blt-U1pwTeE/hqdefault.jpg'"
-               alt="La tiranía del deseo, ciclo de teatro, Talleres de Teatro Mogordoy Barcelona"
-               loading="lazy" decoding="async" width="1018" height="1200">
-          <div class="yt-play">
-            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
-          </div>
-        </div>
-        <iframe
-          title="La tiranía del deseo, ciclo de teatro, talleresdeteatro.es"
-          src=""
-          data-src="https://www.youtube.com/embed/Blt-U1pwTeE?autoplay=1&rel=0"
-          allowfullscreen allow="autoplay; encrypted-media">
-        </iframe>
+      <div class="video-embed">
+        <video autoplay muted loop playsinline preload="metadata"
+               aria-label="La tiranía del deseo, ciclo de teatro, Talleres de Teatro Mogordoy Barcelona"
+               style="display:block;width:100%;height:100%;object-fit:cover;">
+          <source src="/la-tirania-del-deseo-video.mp4" type="video/mp4">
+        </video>
       </div>
 
       <div class="video-copy">
         <span class="overline">Ciclo de teatro</span>
         <h2 class="video-h2" style="color:#D6248F;">La tiranía <br /> del <br /> deseo.</h2>
+        <a href="https://www.youtube.com/watch?v=Blt-U1pwTeE"
+           target="_blank" rel="noopener" class="btn-primary"
+           style="align-self:flex-start;margin:4px 0 8px;">
+          Ver La tiranía del deseo <span class="arrow">→</span>
+        </a>
         <p class="video-body">
           El deseo es una fuerza poderosa, una potencia animal que surge desde lo más profundo, como una bestia que se despierta y se pone en movimiento, revelando las pulsiones más profundas y verdaderas. Pero ¿qué pasa si se descontrola? ¿Qué ocurre cuando ese deseo, atrapado por la cola, se libera, se encapricha y lo domina todo? ¿Hasta dónde es capaz de llegar? A lo largo de estas escenas, cuatro historias donde los impulsos desbordados llevan a nuestros personajes a transformarlo todo sin que importen las consecuencias, <strong>gobernados por las leyes de este tirano y caprichoso rey.</strong>
         </p>
@@ -1775,7 +1780,7 @@
   <section class="testimonios-section" aria-label="Lo que dicen de los talleres">
     <div class="container">
       <span class="overline">Lo que dicen</span>
-      <h2 class="testimonios-h2">Quienes <br /> ya trabajaron.</h2>
+      <h2 class="testimonios-h2">Entrenaron <br /> con nosotros.</h2>
 
       <div class="testimonio-featured">
         <div class="testimonio-quote-mark" aria-hidden="true">"</div>

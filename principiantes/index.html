@@ -670,6 +670,12 @@
       overflow: hidden;
       line-height: 0;
     }
+    /* Escritorio: el video estira hasta la base de las etiquetas (fondo de la fila) */
+    @media (min-width: 901px) {
+      .intro-grid { align-items: stretch; }
+      .intro-video-col { position: static; display: flex; flex-direction: column; }
+      .intro-video-wrap { flex: 1; }
+    }
     .intro-video-player {
       display: block;
       width: 100%;
