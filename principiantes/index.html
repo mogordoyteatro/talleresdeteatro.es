@@ -648,10 +648,15 @@
       padding: var(--pad-y) 0;
       background: var(--bg);
     }
+    /* Ancho completo: video pegado a la izquierda y texto llegando cerca del borde derecho */
+    .intro-section .container {
+      max-width: none;
+      padding: 0 clamp(20px, 3vw, 56px);
+    }
     .intro-grid {
       display: grid;
-      grid-template-columns: 300px 5fr 7fr;
-      gap: 4vw; gap: clamp(28px, 4vw, 72px);
+      grid-template-columns: clamp(280px, 22vw, 400px) 4fr 7fr;
+      gap: 3.2vw; gap: clamp(24px, 3.2vw, 60px);
       align-items: start;
     }
     /* ─── Columna de video en sección intro ─── */
