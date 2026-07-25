@@ -619,6 +619,13 @@
       color: rgba(255,255,255,0.8);
     }
     .intro-p strong { color: var(--white); font-weight: 500; }
+    /* Bloque final a ancho completo de página */
+    .intro-wide {
+      display: flex; flex-direction: column; gap: 28px;
+      padding: 0 clamp(20px, 3vw, 56px);
+      margin-top: clamp(40px, 5vw, 72px);
+    }
+    .intro-wide .intro-p { max-width: none; }
     .intro-pullquote {
       border-left: 3px solid var(--accent);
       padding-left: 20px;
@@ -1723,8 +1730,8 @@
 
   <!-- ═══ HERO ══════════════════════════════════════════════════ -->
   <!--
-    VIDEO HERO: colocar el archivo "somos-relato.mp4" en la misma carpeta que este HTML.
-    El archivo fue optimizado desde "somos relato112.mp4" (subido por el usuario).
+    VIDEO HERO: usa "somos-relato33.mp4", optimizado desde "somos relato33.mp4"
+    (1080p 120MB → 960x540 CRF27, 7MB). El anterior somos-relato.mp4 pasó al hero de Avanzados.
   -->
   <header>
     <section class="hero" aria-label="Taller de Teatro con Experiencia en Barcelona, Inscribir lo propio">
@@ -1732,7 +1739,7 @@
       <video class="hero-video" id="heroVideo"
              autoplay muted loop playsinline
              aria-hidden="true" preload="metadata">
-        <source src="/somos-relato.mp4" type="video/mp4">
+        <source src="/somos-relato33.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-accent-line" aria-hidden="true"></div>
@@ -1815,23 +1822,25 @@
           <div class="intro-break">
             <span class="intro-break-text">Es el momento en el que<br>se empieza a comprender<br>y dominar las propias fuerzas.</span>
           </div>
-
-          <p class="intro-p">
-            Los participantes comienzan a hacerse cargo de su poética personal y de sus decisiones de actuación. A reconocer su imagen, su potencia particular, y a llevar su capacidad expresiva al máximo.
-          </p>
-          <p class="intro-p">
-            Los grupos mezclan trayectorias: actores de formación académica, personas que llevan años en talleres, gente del teatro independiente. <strong>Esa diversidad es parte constitutiva del trabajo colectivo.</strong> Si ya tienes un recorrido sólido y buscas un laboratorio de investigación, mira el curso de Avanzados, <a href="/avanzados/" style="color:var(--accent); text-decoration:underline; text-underline-offset:3px;">El ser mirado</a>. Y si estás dando tus primeros pasos en escena, puedes ver el <a href="/principiantes/" style="color:var(--accent); text-decoration:underline; text-underline-offset:3px;">taller de principiantes</a>.
-          </p>
-
-          <div class="intro-kw">
-            <span class="intro-kw-tag">Improvisación avanzada</span>
-            <span class="intro-kw-tag">Creación de escenas</span>
-            <span class="intro-kw-tag">Poética personal</span>
-            <span class="intro-kw-tag">Gràcia, Barcelona</span>
-            <span class="intro-kw-tag">Adultos con experiencia</span>
-          </div>
         </div>
 
+      </div>
+    </div>
+
+    <!-- Cierre a ancho completo de página -->
+    <div class="intro-wide">
+      <p class="intro-p">
+        Los participantes comienzan a hacerse cargo de su poética personal y de sus decisiones de actuación. A reconocer su imagen, su potencia particular, y a llevar su capacidad expresiva al máximo.
+      </p>
+      <p class="intro-p">
+        Los grupos mezclan trayectorias: actores de formación académica, personas que llevan años en talleres, gente del teatro independiente. <strong>Esa diversidad es parte constitutiva del trabajo colectivo.</strong> Si ya tienes un recorrido sólido y buscas un laboratorio de investigación, mira el curso de Avanzados, <a href="/avanzados/" style="color:var(--accent); text-decoration:underline; text-underline-offset:3px;">El ser mirado</a>. Y si estás dando tus primeros pasos en escena, puedes ver el <a href="/principiantes/" style="color:var(--accent); text-decoration:underline; text-underline-offset:3px;">taller de principiantes</a>.
+      </p>
+      <div class="intro-kw">
+        <span class="intro-kw-tag">Improvisación avanzada</span>
+        <span class="intro-kw-tag">Creación de escenas</span>
+        <span class="intro-kw-tag">Poética personal</span>
+        <span class="intro-kw-tag">Gràcia, Barcelona</span>
+        <span class="intro-kw-tag">Adultos con experiencia</span>
       </div>
     </div>
   </section>

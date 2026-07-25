@@ -1518,19 +1518,16 @@
 
   <!-- ═══ HERO ══════════════════════════════════════════════════ -->
   <!--
-    VIDEO HERO: colocar el archivo "tal vez soñar reel2.mp4" en la misma carpeta que este HTML.
-    El video arranca desde el segundo 16 (fragment #t=16).
+    VIDEO HERO: usa el archivo "somos-relato.mp4" (el mismo del hero de Intermedios).
   -->
   <header>
     <section class="hero" aria-label="Curso avanzado de teatro El ser mirado, Barcelona">
 
-      <img class="hero-video"
-           src="/imagenes_optimizadas/actuacion-teatro-barcelona-0680.jpg"
-           alt=""
-           aria-hidden="true"
-           loading="eager"
-           fetchpriority="high"
-      >
+      <video class="hero-video" id="heroVideo"
+             autoplay muted loop playsinline
+             aria-hidden="true" preload="metadata">
+        <source src="/somos-relato.mp4" type="video/mp4">
+      </video>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-accent-line" aria-hidden="true"></div>
       <div class="hero-fade" aria-hidden="true"></div>
