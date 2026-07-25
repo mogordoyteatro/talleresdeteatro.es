@@ -1241,7 +1241,9 @@
       color: #000;
       background: var(--gold);
       padding: 8px 18px;
-      white-space: nowrap;
+      white-space: normal;
+      line-height: 1.4;
+      max-width: 100%;
       align-self: flex-start;
       margin-top: 8px;
     }
@@ -1404,6 +1406,8 @@
       border-right: 1px solid rgba(255,255,255,0.06);
     }
     .level-col:last-child { border-right: none; }
+    /* Fondos alternados: 1 y 3 normal, 2 y 4 un poco más oscuros */
+    .level-col:nth-child(2), .level-col:nth-child(4) { background: #0f0f0f; }
     .level-col-img-wrap {
       position: relative;
       overflow: hidden;
@@ -1430,21 +1434,23 @@
     }
     .level-col:hover .level-col-img-wrap img { transform: scale(1.04); }
     .level-col-subtitle {
-      font-size: clamp(11px, 1vw, 13px);
+      font-size: clamp(12px, 1.2vw, 15px);
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
+      line-height: 1.3;
       text-transform: uppercase;
       color: var(--gold);
       margin: 0;
     }
     .level-col-title {
       font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(22px, 1.9vw, 30px);
-      line-height: 1.0;
-      letter-spacing: -0.01em;
+      font-size: clamp(14px, 1.45vw, 21px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
       color: var(--white);
       margin: 0;
       align-self: end;
+      white-space: nowrap;
     }
     .level-col-intro {
       font-size: clamp(14px, 1.15vw, 16px);
@@ -1520,7 +1526,7 @@
         border-right: none;
         border-bottom: 1px solid rgba(255,255,255,0.06);
       }
-      .level-col-title { align-self: stretch; text-align: left; }
+      .level-col-title { align-self: stretch; text-align: left; white-space: normal; font-size: clamp(22px, 6vw, 30px); }
     }
 
     /* ── Texto filosófico + metodología unificados ── */
@@ -3382,9 +3388,9 @@
           <div class="levels-announce-top">
             <div class="levels-announce-panel">
               <div class="levels-announce-tag">Nuevos grupos</div>
-              <div class="levels-announce-title">Principiantes</div>
+              <div class="levels-announce-title">Inicio septiembre</div>
               <!-- Badge bajo el título -->
-              <div class="levels-announce-badge">La creación del artificio · Puedes apuntarte.</div>
+              <div class="levels-announce-badge">Cursos de matrícula abierta. Puedes comenzar cuando quieras.</div>
             </div>
           </div>
 
@@ -3394,14 +3400,6 @@
               <div class="levels-announce-cell">
                 <span class="cell-label">Coord.</span>
                 <span class="cell-value">Sebastián Mogordoy</span>
-              </div>
-              <div class="levels-announce-cell">
-                <span class="cell-label">Días</span>
-                <span class="cell-value">Martes</span>
-              </div>
-              <div class="levels-announce-cell">
-                <span class="cell-label">Horario</span>
-                <span class="cell-value">19 a 22h</span>
               </div>
             </div>
             <span class="levels-announce-cta">¡Apúntate!</span>
@@ -3421,13 +3419,13 @@
                  alt="Taller de teatro para principiantes, Espacio La Mansión, Gràcia, Barcelona"
                  loading="lazy" width="2000" height="1125">
           </div>
-          <p class="level-col-subtitle">Formación · Principiantes</p>
+          <p class="level-col-subtitle">Formación<br>Principiantes</p>
           <h3 class="level-col-title">La creación del artificio</h3>
           <p class="level-col-intro">
             Para personas sin experiencia previa, con ganas de volver a jugar, expresarse y divertirse haciendo teatro. Por medio de la improvisación dirigida.
           </p>
           <div class="level-col-meta">
-            <span class="level-col-schedule">Martes &nbsp;·&nbsp; 19 a 22h</span>
+            <span class="level-col-schedule">Martes - Jueves &nbsp;·&nbsp; 19 a 22h</span>
             <span class="level-col-coord">Coord. Sebastián Mogordoy</span>
             <span class="level-col-start is-verde">Inicio septiembre</span>
             <span class="level-col-start is-abierta">Inscripción abierta</span>
@@ -3457,7 +3455,7 @@
                  alt="Entrenamiento actoral para actores con experiencia, Inscribir lo propio, Barcelona"
                  loading="lazy" width="5472" height="3648">
           </div>
-          <p class="level-col-subtitle">Formación y Entrenamiento · Intermedios y Principiantes +</p>
+          <p class="level-col-subtitle">Formación y Entrenamiento<br>Intermedios y Principiantes +</p>
           <h3 class="level-col-title">Inscribir lo propio</h3>
           <p class="level-col-intro">
             Para quienes ya tienen algo de experiencia y quieren profundizar y entrenar actuación. (Y si no tienes experiencia y eres valiente y no puedes los lunes, ¡también te puedes sumar a este grupo!)
@@ -3493,7 +3491,7 @@
                  alt="El ser mirado, laboratorio de entrenamiento para actores avanzados, Barcelona"
                  loading="lazy" width="1400" height="788">
           </div>
-          <p class="level-col-subtitle">Entrenamiento y creación · Con experiencia</p>
+          <p class="level-col-subtitle">Entrenamiento y creación<br>Con experiencia</p>
           <h3 class="level-col-title">El ser mirado</h3>
           <p class="level-col-intro">
             Laboratorio de investigación técnica y desarrollo de la poética. El actor como fuerza generadora de teatralidad: un cuerpo dispuesto, entrenado, vibrante, que pone en juego todos sus sentidos. La actuación, por delante del relato.
@@ -3530,7 +3528,7 @@
                  alt="Cuerpo al texto, trabajo sobre escena y monólogo para actores, Barcelona"
                  loading="lazy" width="5472" height="3648">
           </div>
-          <p class="level-col-subtitle">Avanzados · Escenas de texto · Monólogos</p>
+          <p class="level-col-subtitle">Escenas de texto · Monólogos<br>Avanzados</p>
           <h3 class="level-col-title">Cuerpo al texto</h3>
           <p class="level-col-intro">
             Exploraremos escenas y monólogos desde el cuerpo, el estado y las fuerzas invisibles que atraviesan cada situación. Texto, ritmo, sonoridad y conflicto como materia viva para actuar desde una presencia real y no desde la representación.
