@@ -3146,215 +3146,80 @@
   </header>
 
 
+  <!-- Texto filosófico — foto a todo el ancho como fondo -->
+  <style>
+    .mirada-hero{
+      position:relative;
+      display:flex;align-items:center;
+      min-height:clamp(560px,80vh,880px);
+      background:#080808 url("imagenes_optimizadas/15-anos-haciendo-teatro-talleres-barcelona.jpg") center right / cover no-repeat;
+      overflow:hidden;
+    }
+    .mirada-hero::before{
+      content:"";position:absolute;inset:0;z-index:1;
+      background:linear-gradient(90deg,
+        rgba(8,8,8,0.97) 0%,
+        rgba(8,8,8,0.90) 26%,
+        rgba(8,8,8,0.60) 52%,
+        rgba(8,8,8,0.18) 78%,
+        rgba(8,8,8,0.05) 100%);
+    }
+    .mirada-hero .container{position:relative;z-index:2;width:100%;}
+    .mirada-hero-inner{
+      max-width:660px;
+      padding:clamp(56px,8vw,120px) 0;
+    }
+    .mirada-hero h2{
+      font-family:'Archivo Black',sans-serif;
+      font-size:clamp(40px,6vw,84px);
+      text-transform:uppercase;letter-spacing:-0.03em;line-height:0.9;
+      color:var(--white);margin:18px 0 28px;
+    }
+    .mirada-hero h2 span{color:var(--accent);}
+    .mirada-hero p{margin:0;}
+    .mirada-hero .mirada-lead{
+      font-size:clamp(15px,1.55vw,20px);
+      line-height:1.55;letter-spacing:0.01em;
+      text-transform:uppercase;font-weight:500;
+      color:rgba(255,255,255,0.94);
+      margin-bottom:clamp(18px,2vw,26px);
+    }
+    .mirada-hero .mirada-small{
+      font-size:clamp(13px,1.15vw,15px);
+      line-height:1.6;letter-spacing:0.02em;
+      text-transform:uppercase;font-weight:500;
+      color:rgba(255,255,255,0.66);
+    }
+    @media (max-width:760px){
+      .mirada-hero{
+        min-height:auto;
+        background-position:center;
+      }
+      .mirada-hero::before{
+        background:linear-gradient(180deg,rgba(8,8,8,0.86) 0%,rgba(8,8,8,0.92) 100%);
+      }
+      .mirada-hero-inner{max-width:none;padding:clamp(56px,15vw,96px) 0;}
+    }
+  </style>
+  <section class="mirada-hero" aria-label="Nuestra mirada: el teatro como un superjuego">
+    <div class="container">
+      <div class="mirada-hero-inner">
+        <span class="overline">Nuestra mirada</span>
+        <h2>El teatro <br /> como un <br><span>superjuego.</span></h2>
+        <p class="mirada-lead">Actuar es un acto consciente, técnico, poético, lúdico y expresivo. No transmitimos contenidos: te acompañamos en tu proceso creativo.</p>
+        <p class="mirada-lead">El teatro es el territorio donde puedes ser todo eso que no eres. Un superjuego que te invita a descubrir una nueva forma de habitar el mundo, de estar con otros, de arriesgar.</p>
+        <p class="mirada-small">Si buscas clases de teatro en Barcelona que te permitan explorar tu creatividad, conectar con tu cuerpo y transformar tu potencial expresivo, has llegado al lugar indicado.</p>
+      </div>
+    </div>
+  </section>
+
+
 
 
   <!-- ═══════════════════════════════════════════
        BLOQUE 02, PRUEBA SOCIAL
   ═══════════════════════════════════════════ -->
-  <section class="reviews" id="resenas" aria-label="Reseñas de alumnos">
-    <div class="container">
 
-      <!-- Cabecera del bloque -->
-      <header class="reviews-header">
-        <div class="reviews-header-left">
-          <span class="overline">Reseñas de alumnos</span>
-          <img loading="lazy" src="imagenes_optimizadas/Google_2015_logo.webp"
-               alt="Google"
-               style="height:3.5vw; height:clamp(28px,3.5vw,44px);width:auto;display:block;margin-bottom:12px;opacity:0.95;">
-          <h2 class="reviews-h2">
-            <span class="accent-num">5</span> <span class="reviews-stars-emoji">⭐⭐⭐⭐⭐</span> <br /> 93 reseñas <br /> en Google
-          </h2>
-        </div>
-        <div class="reviews-header-right">
-          <p class="reviews-subtitle">
-            ¡Gracias a nuestros alumnos por sus reseñas en Google! Y por la confianza, las risas, los abrazos y todo lo que vivimos… tanto en la realidad, como en la ficción.<br><br>
-            Personas que llegaron por primera vez al teatro y actores con experiencia comparten un mismo espacio de entrenamiento, juego y creación. Clases de teatro en Barcelona para todos los niveles.<br><br>
-            ¡Viva el teatro!
-          </p>
-          <a
-            href="https://www.google.com/search?q=Talleres+de+Teatro+Sebasti%C3%A1n+Mogordoy+Barcelona+rese%C3%B1as"
-            class="link-all"
-            target="_blank"
-            rel="noopener"
-            aria-label="Ver todas las reseñas en Google (abre en nueva pestaña)"
-          >
-            Ver todas las reseñas <span class="arrow">→</span>
-          </a>
-        </div>
-      </header>
-
-      <!-- Carrusel de reseñas -->
-      <div class="reviews-carousel-wrap" id="reviewsCarousel">
-        <!-- Flecha anterior -->
-        <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Reseña anterior" disabled>
-          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-        </button>
-
-        <!-- Track de cards -->
-        <div class="reviews-track-outer">
-          <div class="reviews-track" id="reviewsTrack" role="list">
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">LM</div>
-                <div class="card-info"><span class="card-name">Laura M.</span><span class="card-tag">Principiante</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Llegué sin experiencia y con mucho miedo. Desde la primera clase sentí que podía probar, equivocarme y descubrir algo propio. No es solo una clase de teatro: es un espacio para animarse.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">MP</div>
-                <div class="card-info"><span class="card-name">Marc P.</span><span class="card-tag">Principiante</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Buscaba un taller para perder la vergüenza y terminé encontrando mucho más. El trabajo con el cuerpo, la improvisación y el grupo te llevan a lugares que no esperabas.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">VR</div>
-                <div class="card-info"><span class="card-name">Valeria R.</span><span class="card-tag">Actriz</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Como actriz necesitaba un espacio donde entrenar de verdad. El taller tiene una mirada muy concreta sobre el cuerpo, el conflicto y la escena. Hay técnica, riesgo y mucha libertad.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">NS</div>
-                <div class="card-info"><span class="card-name">Nico S.</span><span class="card-tag">Actor</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Es un entrenamiento exigente y muy vivo. No se trabaja desde fórmulas, sino desde el presente, la escucha y el deseo. Un lugar muy valioso para seguir investigando como actor.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">AG</div>
-                <div class="card-info"><span class="card-name">Ana G.</span><span class="card-tag">Alumna</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Hay algo muy especial en la forma en que se construye el grupo. Cada clase abre una puerta distinta: al juego, a la imaginación, al cuerpo y a la escena.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">VG</div>
-                <div class="card-info"><span class="card-name">Valentina G.</span><span class="card-tag">Alumna</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">La escuela es un lugar hermoso, con una energía muy especial. La gente es increíble y se genera un ambiente de mucha conexión y creatividad. Cada clase tiene algo mágico, siempre salgo feliz y con ganas de más. Me encanta este espacio y lo recomiendo muchísimo.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">JL</div>
-                <div class="card-info"><span class="card-name">Jorge L.</span><span class="card-tag">Intermedio</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Llevo dos años en el taller y sigo aprendiendo cosas nuevas cada semana. La metodología es única: parte del cuerpo y llega a lugares que la mente sola no alcanza.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">SB</div>
-                <div class="card-info"><span class="card-name">Sofía B.</span><span class="card-tag">Actriz</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Vine desde Argentina buscando un espacio serio de entrenamiento en Barcelona. Este taller superó todas mis expectativas. Es riguroso, vivo y completamente entregado al teatro.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">DM</div>
-                <div class="card-info"><span class="card-name">David M.</span><span class="card-tag">Principiante</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Llegué solo queriendo probar algo nuevo y me enganchó completamente. Cada clase es diferente, sorprendente. El grupo que se forma es increíble.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">IR</div>
-                <div class="card-info"><span class="card-name">Irene R.</span><span class="card-tag">Alumna</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Un espacio donde realmente te sientes libre de explorar. Lo que aprendo aquí lo llevo a todos los aspectos de mi vida: la presencia, la escucha, la autenticidad.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">PT</div>
-                <div class="card-info"><span class="card-name">Pablo T.</span><span class="card-tag">Actor</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Vengo de formación académica y acá encontré algo que los conservatorios no dan: el riesgo real, la escena viva, el trabajo desde el deseo. Un entrenamiento imprescindible.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">ML</div>
-                <div class="card-info"><span class="card-name">Marta L.</span><span class="card-tag">Principiante</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">No tenía ni idea de teatro y me animé. Desde la primera clase entendí que no se trata de actuar "bien", sino de estar presente y ser honesta. Transformador.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">RV</div>
-                <div class="card-info"><span class="card-name">Rodrigo V.</span><span class="card-tag">Intermedio</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Sebastián tiene una mirada muy singular sobre la actuación. Te enseña a desnudarte de los clichés y a encontrar algo propio. Tres años después sigo aprendiendo.</p>
-            </article>
-
-            <article class="review-card" role="listitem">
-              <div class="card-head">
-                <div class="card-avatar" aria-hidden="true">MP</div>
-                <div class="card-info"><span class="card-name">Matías P.</span><span class="card-tag">Alumno</span></div>
-              </div>
-              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
-              <p class="card-text">Un grandioso espacio para jugar y aprender a dejarse llevar por todas las máscaras que uno tiene debajo de la piel. Las clases son muy divertidas y desafiantes y la gente con la que compartes las clases y los profesores es de lo mejor.</p>
-            </article>
-
-          </div>
-        </div>
-
-        <!-- Flecha siguiente -->
-        <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Siguiente reseña">
-          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-        </button>
-
-        <!-- Indicadores dot -->
-        <div class="carousel-dots" id="carouselDots" aria-hidden="true"></div>
-      </div>
-
-      <!-- Pie del bloque: nota SEO local + badge -->
-      <footer class="reviews-footer">
-        <p class="reviews-local-note">
-          <strong>Clases de teatro presenciales en Gràcia, Barcelona</strong>
-          · Principiantes, actores con experiencia y Cuerpo al texto
-        </p>
-        <div class="reviews-google-badge" aria-hidden="true">
-          <span class="badge-stars">★★★★★</span>
-          <span class="badge-txt">
-            <strong>5 / 5</strong> · 93 reseñas · Google
-          </span>
-        </div>
-        <a href="https://g.page/r/CX93gWqk-bhkEBE/review"
-           target="_blank" rel="noopener"
-           style="display:inline-block;margin-top:18px;padding:11px 24px;border:1px solid rgba(255,255,255,0.25);color:var(--white);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s;"
-           onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'"
-           onmouseout="this.style.borderColor='rgba(255,255,255,0.25)';this.style.color='var(--white)'">
-          ¿Ya entrenaste con nosotros? Dejá tu reseña en Google →
-        </a>
-      </footer>
-
-    </div>
-  </section>
 
 
   <!-- ═══════════════════════════════════════════
@@ -3588,6 +3453,218 @@
              onerror="this.style.display='none'" width="2400" height="1600">
       </div>
 
+    </div><!-- /levels-full -->
+  </section>
+
+
+  <section class="reviews" id="resenas" aria-label="Reseñas de alumnos">
+    <div class="container">
+
+      <!-- Cabecera del bloque -->
+      <header class="reviews-header">
+        <div class="reviews-header-left">
+          <span class="overline">Reseñas de alumnos</span>
+          <img loading="lazy" src="imagenes_optimizadas/Google_2015_logo.webp"
+               alt="Google"
+               style="height:3.5vw; height:clamp(28px,3.5vw,44px);width:auto;display:block;margin-bottom:12px;opacity:0.95;">
+          <h2 class="reviews-h2">
+            <span class="accent-num">5</span> <span class="reviews-stars-emoji">⭐⭐⭐⭐⭐</span> <br /> 93 reseñas <br /> en Google
+          </h2>
+        </div>
+        <div class="reviews-header-right">
+          <p class="reviews-subtitle">
+            ¡Gracias a nuestros alumnos por sus reseñas en Google! Y por la confianza, las risas, los abrazos y todo lo que vivimos… tanto en la realidad, como en la ficción.<br><br>
+            Personas que llegaron por primera vez al teatro y actores con experiencia comparten un mismo espacio de entrenamiento, juego y creación. Clases de teatro en Barcelona para todos los niveles.<br><br>
+            ¡Viva el teatro!
+          </p>
+          <a
+            href="https://www.google.com/search?q=Talleres+de+Teatro+Sebasti%C3%A1n+Mogordoy+Barcelona+rese%C3%B1as"
+            class="link-all"
+            target="_blank"
+            rel="noopener"
+            aria-label="Ver todas las reseñas en Google (abre en nueva pestaña)"
+          >
+            Ver todas las reseñas <span class="arrow">→</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Carrusel de reseñas -->
+      <div class="reviews-carousel-wrap" id="reviewsCarousel">
+        <!-- Flecha anterior -->
+        <button class="carousel-btn carousel-btn-prev" id="carouselPrev" aria-label="Reseña anterior" disabled>
+          <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+
+        <!-- Track de cards -->
+        <div class="reviews-track-outer">
+          <div class="reviews-track" id="reviewsTrack" role="list">
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">LM</div>
+                <div class="card-info"><span class="card-name">Laura M.</span><span class="card-tag">Principiante</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Llegué sin experiencia y con mucho miedo. Desde la primera clase sentí que podía probar, equivocarme y descubrir algo propio. No es solo una clase de teatro: es un espacio para animarse.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">MP</div>
+                <div class="card-info"><span class="card-name">Marc P.</span><span class="card-tag">Principiante</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Buscaba un taller para perder la vergüenza y terminé encontrando mucho más. El trabajo con el cuerpo, la improvisación y el grupo te llevan a lugares que no esperabas.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">VR</div>
+                <div class="card-info"><span class="card-name">Valeria R.</span><span class="card-tag">Actriz</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Como actriz necesitaba un espacio donde entrenar de verdad. El taller tiene una mirada muy concreta sobre el cuerpo, el conflicto y la escena. Hay técnica, riesgo y mucha libertad.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">NS</div>
+                <div class="card-info"><span class="card-name">Nico S.</span><span class="card-tag">Actor</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Es un entrenamiento exigente y muy vivo. No se trabaja desde fórmulas, sino desde el presente, la escucha y el deseo. Un lugar muy valioso para seguir investigando como actor.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">AG</div>
+                <div class="card-info"><span class="card-name">Ana G.</span><span class="card-tag">Alumna</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Hay algo muy especial en la forma en que se construye el grupo. Cada clase abre una puerta distinta: al juego, a la imaginación, al cuerpo y a la escena.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">VG</div>
+                <div class="card-info"><span class="card-name">Valentina G.</span><span class="card-tag">Alumna</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">La escuela es un lugar hermoso, con una energía muy especial. La gente es increíble y se genera un ambiente de mucha conexión y creatividad. Cada clase tiene algo mágico, siempre salgo feliz y con ganas de más. Me encanta este espacio y lo recomiendo muchísimo.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">JL</div>
+                <div class="card-info"><span class="card-name">Jorge L.</span><span class="card-tag">Intermedio</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Llevo dos años en el taller y sigo aprendiendo cosas nuevas cada semana. La metodología es única: parte del cuerpo y llega a lugares que la mente sola no alcanza.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">SB</div>
+                <div class="card-info"><span class="card-name">Sofía B.</span><span class="card-tag">Actriz</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Vine desde Argentina buscando un espacio serio de entrenamiento en Barcelona. Este taller superó todas mis expectativas. Es riguroso, vivo y completamente entregado al teatro.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">DM</div>
+                <div class="card-info"><span class="card-name">David M.</span><span class="card-tag">Principiante</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Llegué solo queriendo probar algo nuevo y me enganchó completamente. Cada clase es diferente, sorprendente. El grupo que se forma es increíble.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">IR</div>
+                <div class="card-info"><span class="card-name">Irene R.</span><span class="card-tag">Alumna</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Un espacio donde realmente te sientes libre de explorar. Lo que aprendo aquí lo llevo a todos los aspectos de mi vida: la presencia, la escucha, la autenticidad.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">PT</div>
+                <div class="card-info"><span class="card-name">Pablo T.</span><span class="card-tag">Actor</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Vengo de formación académica y acá encontré algo que los conservatorios no dan: el riesgo real, la escena viva, el trabajo desde el deseo. Un entrenamiento imprescindible.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">ML</div>
+                <div class="card-info"><span class="card-name">Marta L.</span><span class="card-tag">Principiante</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">No tenía ni idea de teatro y me animé. Desde la primera clase entendí que no se trata de actuar "bien", sino de estar presente y ser honesta. Transformador.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">RV</div>
+                <div class="card-info"><span class="card-name">Rodrigo V.</span><span class="card-tag">Intermedio</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Sebastián tiene una mirada muy singular sobre la actuación. Te enseña a desnudarte de los clichés y a encontrar algo propio. Tres años después sigo aprendiendo.</p>
+            </article>
+
+            <article class="review-card" role="listitem">
+              <div class="card-head">
+                <div class="card-avatar" aria-hidden="true">MP</div>
+                <div class="card-info"><span class="card-name">Matías P.</span><span class="card-tag">Alumno</span></div>
+              </div>
+              <div class="card-stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              <p class="card-text">Un grandioso espacio para jugar y aprender a dejarse llevar por todas las máscaras que uno tiene debajo de la piel. Las clases son muy divertidas y desafiantes y la gente con la que compartes las clases y los profesores es de lo mejor.</p>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Flecha siguiente -->
+        <button class="carousel-btn carousel-btn-next" id="carouselNext" aria-label="Siguiente reseña">
+          <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+
+        <!-- Indicadores dot -->
+        <div class="carousel-dots" id="carouselDots" aria-hidden="true"></div>
+      </div>
+
+      <!-- Pie del bloque: nota SEO local + badge -->
+      <footer class="reviews-footer">
+        <p class="reviews-local-note">
+          <strong>Clases de teatro presenciales en Gràcia, Barcelona</strong>
+          · Principiantes, actores con experiencia y Cuerpo al texto
+        </p>
+        <div class="reviews-google-badge" aria-hidden="true">
+          <span class="badge-stars">★★★★★</span>
+          <span class="badge-txt">
+            <strong>5 / 5</strong> · 93 reseñas · Google
+          </span>
+        </div>
+        <a href="https://g.page/r/CX93gWqk-bhkEBE/review"
+           target="_blank" rel="noopener"
+           style="display:inline-block;margin-top:18px;padding:11px 24px;border:1px solid rgba(255,255,255,0.25);color:var(--white);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s;"
+           onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'"
+           onmouseout="this.style.borderColor='rgba(255,255,255,0.25)';this.style.color='var(--white)'">
+          ¿Ya entrenaste con nosotros? Dejá tu reseña en Google →
+        </a>
+      </footer>
+
+    </div>
+  </section>
+
+
+  <section class="levels-section" aria-label="Metodología de los talleres de teatro">
+    <div class="levels-full">
       <!-- ── Texto filosófico + Metodología (bloque unificado) ── -->
       <div class="levels-philosophy">
 
@@ -3650,72 +3727,28 @@
          loading="lazy" width="1920" height="1080">
   </div>
 
-  <!-- Texto filosófico — foto a todo el ancho como fondo -->
-  <style>
-    .mirada-hero{
-      position:relative;
-      display:flex;align-items:center;
-      min-height:clamp(560px,80vh,880px);
-      background:#080808 url("imagenes_optimizadas/15-anos-haciendo-teatro-talleres-barcelona.jpg") center right / cover no-repeat;
-      overflow:hidden;
-    }
-    .mirada-hero::before{
-      content:"";position:absolute;inset:0;z-index:1;
-      background:linear-gradient(90deg,
-        rgba(8,8,8,0.97) 0%,
-        rgba(8,8,8,0.90) 26%,
-        rgba(8,8,8,0.60) 52%,
-        rgba(8,8,8,0.18) 78%,
-        rgba(8,8,8,0.05) 100%);
-    }
-    .mirada-hero .container{position:relative;z-index:2;width:100%;}
-    .mirada-hero-inner{
-      max-width:660px;
-      padding:clamp(56px,8vw,120px) 0;
-    }
-    .mirada-hero h2{
-      font-family:'Archivo Black',sans-serif;
-      font-size:clamp(40px,6vw,84px);
-      text-transform:uppercase;letter-spacing:-0.03em;line-height:0.9;
-      color:var(--white);margin:18px 0 28px;
-    }
-    .mirada-hero h2 span{color:var(--accent);}
-    .mirada-hero p{margin:0;}
-    .mirada-hero .mirada-lead{
-      font-size:clamp(15px,1.55vw,20px);
-      line-height:1.55;letter-spacing:0.01em;
-      text-transform:uppercase;font-weight:500;
-      color:rgba(255,255,255,0.94);
-      margin-bottom:clamp(18px,2vw,26px);
-    }
-    .mirada-hero .mirada-small{
-      font-size:clamp(13px,1.15vw,15px);
-      line-height:1.6;letter-spacing:0.02em;
-      text-transform:uppercase;font-weight:500;
-      color:rgba(255,255,255,0.66);
-    }
-    @media (max-width:760px){
-      .mirada-hero{
-        min-height:auto;
-        background-position:center;
-      }
-      .mirada-hero::before{
-        background:linear-gradient(180deg,rgba(8,8,8,0.86) 0%,rgba(8,8,8,0.92) 100%);
-      }
-      .mirada-hero-inner{max-width:none;padding:clamp(56px,15vw,96px) 0;}
-    }
-  </style>
-  <section class="mirada-hero" aria-label="Nuestra mirada: el teatro como un superjuego">
-    <div class="container">
-      <div class="mirada-hero-inner">
-        <span class="overline">Nuestra mirada</span>
-        <h2>El teatro <br /> como un <br><span>superjuego.</span></h2>
-        <p class="mirada-lead">Actuar es un acto consciente, técnico, poético, lúdico y expresivo. No transmitimos contenidos: te acompañamos en tu proceso creativo.</p>
-        <p class="mirada-lead">El teatro es el territorio donde puedes ser todo eso que no eres. Un superjuego que te invita a descubrir una nueva forma de habitar el mundo, de estar con otros, de arriesgar.</p>
-        <p class="mirada-small">Si buscas clases de teatro en Barcelona que te permitan explorar tu creatividad, conectar con tu cuerpo y transformar tu potencial expresivo, has llegado al lugar indicado.</p>
+
+
+  <section class="nosotros-section" id="nosotros" aria-label="Quiénes somos: Sebastián Mogordoy">
+
+    <!-- Bio Sebastián: foto a sangre + texto sobre negro (referencia perfil) -->
+    <div class="nosotros-bio">
+      <div class="nosotros-bio-foto">
+        <img src="imagenes_optimizadas/sebastian-mogordoy-perfil-actor-profesor-teatro-barcelona.jpg" alt="Sebastián Mogordoy, actor, director y profesor de teatro en Barcelona" loading="lazy" decoding="async" width="1200" height="1399">
+      </div>
+      <div class="nosotros-bio-text">
+        <p class="nosotros-card-role">Director · Profesor</p>
+        <h3 class="nosotros-card-name">Sebastián Mogordoy</h3>
+        <p class="nosotros-card-text">Recientemente formó parte del elenco protagónico de <em>El Fill</em> de Jon Fosse, dirigida por Ferran Utzet, estrenada en el Teatre Lliure. Realizó funciones de <em>Euforia y Desazón</em>, dirigida por Sergio Boris, que se estrenó en el Festival Temporada Alta, en la Sala Beckett de Barcelona y en los Teatros del Canal de Madrid, y participó del Festival Internacional de Buenos Aires. Recientemente formó parte del elenco coprotagónico de la película <em>El profesor</em> para Netflix.</p>
+        <div class="nosotros-bio-links">
+          <a href="https://www.instagram.com/sebamogordoy/" target="_blank" rel="noopener" class="nosotros-card-ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg> @sebamogordoy</a>
+          <a href="https://www.sebastianmogordoy.com" target="_blank" rel="noopener" class="nosotros-card-ig">↗&nbsp;sebastianmogordoy.com</a>
+        </div>
       </div>
     </div>
+
   </section>
+
 
   <!-- ═══════════════════════════════════════════
        BLOQUE, LECTURAS Y CUESTIONARIOS
@@ -3760,25 +3793,7 @@
     </div>
   </section>
 
-  <section class="nosotros-section" id="nosotros" aria-label="Quiénes somos: Sebastián Mogordoy">
 
-    <!-- Bio Sebastián: foto a sangre + texto sobre negro (referencia perfil) -->
-    <div class="nosotros-bio">
-      <div class="nosotros-bio-foto">
-        <img src="imagenes_optimizadas/sebastian-mogordoy-perfil-actor-profesor-teatro-barcelona.jpg" alt="Sebastián Mogordoy, actor, director y profesor de teatro en Barcelona" loading="lazy" decoding="async" width="1200" height="1399">
-      </div>
-      <div class="nosotros-bio-text">
-        <p class="nosotros-card-role">Director · Profesor</p>
-        <h3 class="nosotros-card-name">Sebastián Mogordoy</h3>
-        <p class="nosotros-card-text">Recientemente formó parte del elenco protagónico de <em>El Fill</em> de Jon Fosse, dirigida por Ferran Utzet, estrenada en el Teatre Lliure. Realizó funciones de <em>Euforia y Desazón</em>, dirigida por Sergio Boris, que se estrenó en el Festival Temporada Alta, en la Sala Beckett de Barcelona y en los Teatros del Canal de Madrid, y participó del Festival Internacional de Buenos Aires. Recientemente formó parte del elenco coprotagónico de la película <em>El profesor</em> para Netflix.</p>
-        <div class="nosotros-bio-links">
-          <a href="https://www.instagram.com/sebamogordoy/" target="_blank" rel="noopener" class="nosotros-card-ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg> @sebamogordoy</a>
-          <a href="https://www.sebastianmogordoy.com" target="_blank" rel="noopener" class="nosotros-card-ig">↗&nbsp;sebastianmogordoy.com</a>
-        </div>
-      </div>
-    </div>
-
-  </section>
 
 
   <!-- ═══════════════════════════════════════════
