@@ -1454,7 +1454,7 @@
     }
     .info-row-horario .info-value strong, .info-row-horario .info-note { color: var(--gold); }
     @media (max-width: 720px) {
-      .info-grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: minmax(0, 1fr); } .info-col { min-width: 0; }
       .info-col:first-child { border-bottom: 1px solid rgba(255,255,255,0.06); }
     }
 

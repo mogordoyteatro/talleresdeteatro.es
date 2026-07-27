@@ -1055,7 +1055,7 @@
       margin-top: 36px;
     }
     @media (max-width: 760px) {
-      .info-grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: minmax(0, 1fr); } .info-col { min-width: 0; }
       .info-ctas { flex-direction: column; }
       .info-ctas .btn-primary, .info-ctas .btn-ghost { width: 100%; justify-content: center; }
     }
