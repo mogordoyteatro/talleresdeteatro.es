@@ -8,24 +8,12 @@ Disallow: /wp-admin/
 Disallow: /wp-includes/
 
 # ── Archivos legacy / prototipos — nunca indexar ──────────────────
-Disallow: /index-v2.html
-Disallow: /05-hero-prototipo-paletas.html
-Disallow: /06-home-completo.html
-Disallow: /07-home-seo.html
-Disallow: /con-experiencia-v2.html
-Disallow: /contacto-html.html
-Disallow: /cuerpo-al-texto-v1.html
-Disallow: /nosotros-v2.html
-Disallow: /principiantes-boceto.html
-Disallow: /principiantes-v2.html
+# (prototipos borrados del servidor el 27-07-2026)
 Disallow: /info.html
 
 # ── Archivos de datos / scripts ────────────────────────────────────
 Disallow: /galeria-fotos.json
 Disallow: /galeria-universo.json
-Disallow: /lang.js
-Disallow: /lang.min.js
-Disallow: /lang.source.js
 
 # ── PDFs (accesibles pero sin indexar como páginas) ────────────────
 Disallow: /taller-bienvenida.pdf

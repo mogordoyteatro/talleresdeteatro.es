@@ -65,7 +65,15 @@
       "latitude": 41.3964,
       "longitude": 2.1787
     },
-    "openingHours": ["Mo 19:00-22:00", "Tu 19:00-22:00", "We 10:00-13:00", "We 19:00-22:00", "Th 19:00-22:00", "Fr 19:00-22:00"],
+    "openingHours": ["Mo 19:00-22:00", "Tu 19:00-22:00", "We 19:00-22:00", "Th 19:00-22:00"],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "19:00",
+        "closes": "22:00"
+      }
+    ],
     "priceRange": "€€",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -75,14 +83,20 @@
       "worstRating": "1"
     },
     "sameAs": [
-      "https://www.instagram.com/tallerdeteatro.mogordoy/"
+      "https://www.instagram.com/tallerdeteatro.mogordoy/",
+      "https://g.page/r/CX93gWqk-bhkEBE"
     ],
     "founder": [
       {
         "@type": "Person",
         "name": "Sebastián Mogordoy",
         "jobTitle": "Director y Profesor de Teatro",
-        "sameAs": "https://www.instagram.com/sebamogordoy/"
+        "sameAs": [
+          "https://www.instagram.com/sebamogordoy/",
+          "https://www.sebastianmogordoy.com/",
+          "https://www.imdb.com/name/nm3361869/",
+          "https://es.wikipedia.org/wiki/Sebasti%C3%A1n_Mogordoy"
+        ]
       }
     ]
   }
@@ -260,7 +274,7 @@
         "name": "¿Cuánto cuesta el taller de teatro?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "La cuota mensual incluye todos los encuentros del mes. No se cobra matrícula de inscripción. La primera clase es siempre gratuita y sin compromiso. Escríbenos para saber la cuota actualizada."
+          "text": "La cuota es de 100 € al mes e incluye todos los encuentros del mes. No se cobra matrícula y la primera clase es siempre gratuita. Si no llegas a pagar el total, escríbenos y te contamos las opciones de becas y medias becas."
         }
       },
       {
@@ -2899,19 +2913,19 @@
   </style>
 
   <script>
-  // Activar tab correcto si la URL trae hash #galeria-instagram/fotos/videos
+  // Activar tab correcto con hash #galeria-instagram/fotos/videos (al cargar y al navegar)
   (function() {
-    var hash = window.location.hash;
     var tabMap = { '#galeria-instagram': 'instagram', '#galeria-fotos': 'fotos', '#galeria-videos': 'videos' };
-    var tabId = tabMap[hash];
-    if (tabId) {
-      window.addEventListener('DOMContentLoaded', function() {
-        var tab = document.querySelector('[data-tab="' + tabId + '"]');
-        if (tab) tab.click();
-        var section = document.getElementById('galeria');
-        if (section) section.scrollIntoView({ behavior: 'smooth' });
-      });
+    function goToTab() {
+      var tabId = tabMap[window.location.hash];
+      if (!tabId) return;
+      var tab = document.querySelector('[data-tab="' + tabId + '"]');
+      if (tab) tab.click();
+      var section = document.getElementById('galeria');
+      if (section) section.scrollIntoView({ behavior: 'smooth' });
     }
+    window.addEventListener('DOMContentLoaded', goToTab);
+    window.addEventListener('hashchange', goToTab);
   })();
   </script>
   <script type="application/ld+json">
@@ -2928,7 +2942,6 @@
   }
   </script>
   <link rel="alternate" hreflang="es-ES" href="https://talleresdeteatro.es/" />
-  <link rel="alternate" hreflang="ca-ES" href="https://talleresdeteatro.es/?lang=ca" />
   <link rel="alternate" hreflang="x-default" href="https://talleresdeteatro.es/" />
   <script type="application/ld+json">
   {
@@ -3245,7 +3258,7 @@
         <!-- Foto cinemática de fondo -->
         <img class="levels-announce-bg"
              src="imagenes_optimizadas/clase-teatro-barcelona-bn-movimiento.jpg"
-             alt=""
+             alt="Alumnos en movimiento durante una clase de teatro en Barcelona, foto en blanco y negro"
              aria-hidden="true"
              loading="eager"
              onerror="this.src='imagenes_optimizadas/clases-de-teatro-barcelona-principiantes-intermedios-avanzados.jpg'; this.onerror=null;">
@@ -3642,7 +3655,7 @@
            style="display:inline-block;margin-top:18px;padding:11px 24px;border:1px solid rgba(255,255,255,0.25);color:var(--white);font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:border-color .2s,color .2s;"
            onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'"
            onmouseout="this.style.borderColor='rgba(255,255,255,0.25)';this.style.color='var(--white)'">
-          ¿Ya entrenaste con nosotros? Dejá tu reseña en Google →
+          ¿Ya entrenaste con nosotros? Deja tu reseña en Google →
         </a>
       </footer>
 
@@ -3771,8 +3784,8 @@
         <!-- Cuestionarios -->
         <a href="/cuestionario/" style="display:block;text-decoration:none;border:1px solid rgba(255,255,255,0.1);padding:3.5vw; padding:clamp(28px,3.5vw,48px);transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <span style="display:block;font-size:11px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--g300);margin-bottom:20px;">Cuestionarios</span>
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:3vw; font-size:clamp(24px,3vw,40px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-bottom:16px;">Ponelo<br>a prueba.</h3>
-          <p style="font-size:1.2vw; font-size:clamp(13px,1.2vw,15px);line-height:1.7;color:var(--g300);font-weight:300;margin-bottom:24px;">Preguntas sobre los conceptos del entrenamiento: presencia, imagen, cuerpo, improvisación. Para saber qué sabés, y qué todavía no.</p>
+          <h3 style="font-family:'Archivo Black',sans-serif;font-size:3vw; font-size:clamp(24px,3vw,40px);text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;color:var(--white);margin-bottom:16px;">Ponlo<br>a prueba.</h3>
+          <p style="font-size:1.2vw; font-size:clamp(13px,1.2vw,15px);line-height:1.7;color:var(--g300);font-weight:300;margin-bottom:24px;">Preguntas sobre los conceptos del entrenamiento: presencia, imagen, cuerpo, improvisación. Para saber qué sabes, y qué todavía no.</p>
           <span style="font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);">Ir a cuestionarios →</span>
         </a>
 
@@ -3800,7 +3813,7 @@
       <div>
         <span class="overline">Únete</span>
         <h2 class="comunidad-h2">Más allá <br /> de la ficción.</h2>
-        <p class="comunidad-text">Barcelona es una ciudad vibrante, llena de personas de diversas edades, costumbres y nacionalidades. Cultivamos un espacio de creación, encuentro real, expresión y construcción social. Además de desarrollar tu trabajo actoral, conocés gente, compartís y creás con tus compañeros. Las clases se transforman en una experiencia acumulativa de risas, logros y amistades.</p>
+        <p class="comunidad-text">Barcelona es una ciudad vibrante, llena de personas de diversas edades, costumbres y nacionalidades. Cultivamos un espacio de creación, encuentro real, expresión y construcción social. Además de desarrollar tu trabajo actoral, conoces gente, compartes y creas con tus compañeros. Las clases se transforman en una experiencia acumulativa de risas, logros y amistades.</p>
       </div>
 
       <div class="comunidad-cta-block">
@@ -3953,7 +3966,7 @@
         <details class="faq-item">
           <summary class="faq-question">¿Cuánto cuesta el taller?</summary>
           <div class="faq-answer">
-            <p>La cuota mensual incluye todos los encuentros del mes. Escríbenos para saber el detalle de precios actualizados y las opciones disponibles. La primera clase es siempre gratuita.</p>
+            <p>La cuota es de 100 € al mes e incluye todos los encuentros del mes. No se cobra matrícula y la primera clase es siempre gratuita. Si no llegas a pagar el total, escríbenos y te contamos las opciones de becas y medias becas.</p>
           </div>
         </details>
 
@@ -4254,7 +4267,7 @@
     <button class="g-lb-btn g-lb-close" id="gLbClose" aria-label="Cerrar">✕</button>
     <button class="g-lb-btn g-lb-prev"  id="gLbPrev"  aria-label="Anterior">←</button>
     <button class="g-lb-btn g-lb-next"  id="gLbNext"  aria-label="Siguiente">→</button>
-    <div class="g-lightbox-img-wrap"><img loading="lazy" id="gLbImg" alt="" /></div>
+    <div class="g-lightbox-img-wrap"><img loading="lazy" id="gLbImg" alt="Foto ampliada de la galería de Talleres de Teatro Barcelona" /></div>
     <p class="g-lb-count" id="gLbCount"></p>
   </div>
 
@@ -4387,7 +4400,6 @@
             <li><a href="/intermedios/">Intermedios</a></li>
             <li><a href="/avanzados/">Avanzados</a></li>
             <li><a href="/cuerpo-al-texto/">Cuerpo al texto</a></li>
-            <li><a href="/la-tirania-del-deseo-ciclo-de-teatro/">Ciclo La Tiranía del Deseo</a></li>
           </ul>
         </div>
 
@@ -4395,6 +4407,8 @@
           <p class="footer-nav-title">Más info</p>
           <ul class="footer-nav-list">
             <li><a href="#nosotros">Quiénes somos</a></li>
+            <li><a href="/info/">Información, horarios y precios 2026/27</a></li>
+            <li><a href="/la-tirania-del-deseo-ciclo-de-teatro/">Ciclo La Tiranía del Deseo</a></li>
             <li><a href="#galeria">Fotos</a></li>
             <li><a href="#galeria">Videos</a></li>
             <li><a href="/contacto/">Escríbenos</a></li>
