@@ -392,7 +392,7 @@
     .nav-links .nav-active a { font-weight: 700; color: var(--gold) !important; }
     .nav-links .nav-level a { color: rgba(255,255,255,0.85); }
     .nav-links .nav-level a:hover { opacity: 0.8; }
-    .nav-links .nav-cta a { color: var(--accent); font-weight: 700; }
+    .nav-links .nav-cta a { color: #25D366; font-weight: 700; }
     .nav-ig {
       display: flex; align-items: center;
       margin-left: 1.2vw; margin-left: clamp(8px, 1.2vw, 16px); flex-shrink: 0;
@@ -1601,7 +1601,7 @@
       margin-top: 16px;
       font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent); text-decoration: none;
+      color: #25D366; text-decoration: none;
       transition: gap .2s;
     }
     .ubicacion-link:hover { gap: 12px; }
@@ -1835,7 +1835,7 @@
       border-radius: 2px;
       transition: background .2s, border-color .2s;
     }
-    .galeria-mas-btn:hover { background: rgba(229,9,20,.15); border-color: #E50914; }
+    .galeria-mas-btn:hover { background: rgba(37,211,102,.15); border-color: #25D366; }
     .galeria-mas-btn:disabled { opacity: 0; pointer-events: none; }
 
     /* ─── LIGHTBOX ──────────────────────────────── */
@@ -2060,7 +2060,7 @@
       transition: color 0.15s;
       letter-spacing: -0.01em;
     }
-    .mobile-menu-nav a:hover { color: #E50914; }
+    .mobile-menu-nav a:hover { color: #25D366; }
     .mobile-menu-nav a.mm-cta {
       color: #facc15;
       margin-top: 20px;
@@ -2310,10 +2310,10 @@
   <header>
     <section class="hero" aria-label="Taller de Teatro Principiantes, Clases de teatro en Barcelona sin experiencia previa">
 
-      <video class="hero-video" autoplay muted loop playsinline
-             poster="/imagenes_optimizadas/hero-principiantes-poster.jpg"
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline
+             poster="/imagenes_optimizadas/hero-principiantes-poster-2026.jpg"
              aria-hidden="true" preload="metadata">
-        <source src="/imagenes_optimizadas/hero-principiantes-2025.mp4" type="video/mp4">
+        <source src="/imagenes_optimizadas/hero-principiantes-2026.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-accent-line" aria-hidden="true"></div>
@@ -3450,28 +3450,24 @@
   </a>
 
   <script>
-    // Música ambient, audio nativo
-    (function () {{
+    // Sonido del video del hero (audio propio del video)
+    (function () {
       var btn = document.getElementById('soundBtn');
-      if (!btn) return;
-      var audio = new Audio('/audio/principiantes-cancion.mp3');
-      audio.loop = true;
-      audio.volume = 0.55;
-      var playing = false;
-      btn.addEventListener('click', function () {{
-        if (!playing) {{
-          audio.play();
-          playing = true;
+      var video = document.getElementById('heroVideo');
+      if (!btn || !video) return;
+      btn.addEventListener('click', function () {
+        if (video.muted) {
+          video.muted = false;
+          video.volume = 1;
           btn.classList.add('is-unmuted');
-          btn.setAttribute('aria-label', 'Pausar música');
-        }} else {{
-          audio.pause();
-          playing = false;
+          btn.setAttribute('aria-label', 'Silenciar video');
+        } else {
+          video.muted = true;
           btn.classList.remove('is-unmuted');
-          btn.setAttribute('aria-label', 'Reproducir música');
-        }}
-      }});
-    }})();
+          btn.setAttribute('aria-label', 'Activar sonido del video');
+        }
+      });
+    })();
 
     // Botón mute/unmute video "Hacemos Teatro"
     const hacerSoundBtn = document.getElementById('hacerSoundBtn');
