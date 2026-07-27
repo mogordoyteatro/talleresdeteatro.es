@@ -1215,7 +1215,11 @@
       .banda-title, .banda-subtitle, .banda-p { text-align: left !important; }
     }
 
-  </style>
+  
+    /* ─── Parallax franjas de foto ─── */
+    .px-parallax img { transform: scale(1.15); will-change: transform; }
+    @media (prefers-reduced-motion: reduce) { .px-parallax img { transform: none !important; } }
+</style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */
@@ -1770,7 +1774,7 @@
 
   <!-- ═══ PALOMA ═════════════════════════════════════════════════════ -->
   <section class="paloma-section" aria-label="Actriz de teatro, Talleres de Teatro Barcelona">
-    <div class="paloma-wrap">
+    <div class="paloma-wrap px-parallax">
       <img src="/imagenes_optimizadas/actuacion-teatro-barcelona-0568.jpg"
            alt="Actriz en entrenamiento teatral, Talleres de Teatro Gràcia Barcelona"
            loading="lazy"
@@ -2015,5 +2019,30 @@
 
   </script>
   <script defer src="/lang.js"></script>
+
+  <script>
+  // Parallax suave en franjas de foto
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var imgs = [].slice.call(document.querySelectorAll('.px-parallax img'));
+    if (!imgs.length) return;
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight;
+      imgs.forEach(function (img) {
+        var r = img.parentElement.getBoundingClientRect();
+        if (r.bottom < -100 || r.top > vh + 100) return;
+        var p = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+        var max = r.height * 0.075;
+        img.style.transform = 'scale(1.15) translateY(' + (p * max).toFixed(1) + 'px)';
+      });
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

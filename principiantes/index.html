@@ -1107,7 +1107,7 @@
 
     /* ─── VIDEO ────────────────────────────────── */
     .video-section {
-      background: var(--bg);
+      background: #2b2b2b;
       min-height: 82vh;
       display: flex; align-items: stretch;
     }
@@ -2134,7 +2134,11 @@
       .banda-title, .banda-subtitle, .banda-p { text-align: left !important; }
     }
 
-  </style>
+  
+    /* ─── Parallax franjas de foto ─── */
+    .px-parallax img { transform: scale(1.15); will-change: transform; }
+    @media (prefers-reduced-motion: reduce) { .px-parallax img { transform: none !important; } }
+</style>
 
   <style>
     /* ── Mobile optimization ────────────────────────────── */
@@ -2343,7 +2347,7 @@
           <p class="hero-tag">La creación del artificio.</p>
           <div class="hero-title">Iniciación.</div>
           <div class="hero-title">Principiantes</div>
-          <p class="hero-tagline">Para personas con ganas de expresarse,<br>aprender y divertirse, haciendo teatro.</p>
+          <p class="hero-tagline">Para personas con ganas de expresarse, aprender y divertirse, haciendo teatro.</p>
         </div>
 
         <div class="hero-right fade-in-2">
@@ -2442,7 +2446,7 @@
 
 
   <!-- ═══ STRIP IMAGEN INTERMEDIA ══════════════════════════════ -->
-  <div class="mid-strip" role="img" aria-label="Entrenamiento actoral en Barcelona, Talleres de Teatro Mogordoy">
+  <div class="mid-strip px-parallax" role="img" aria-label="Entrenamiento actoral en Barcelona, Talleres de Teatro Mogordoy">
     <img src="/imagenes_optimizadas/clase-teatro-barcelona-principiantes-grupo-fin-de-ano.jpg"
          alt="Grupo de principiantes en clase de teatro, Talleres de Teatro Barcelona"
          width="1400" height="1050" loading="lazy" decoding="async">
@@ -2506,7 +2510,7 @@
 
 
   <!-- ═══ FOTO EDITORIAL ════════════════════════════════════════ -->
-  <div class="editorial-strip" role="img" aria-label="Cuerpos en escena, Talleres de Teatro Barcelona">
+  <div class="editorial-strip px-parallax" role="img" aria-label="Cuerpos en escena, Talleres de Teatro Barcelona">
     <img src="/imagenes_optimizadas/CUERPOS.jpg"
          alt="Cuerpos en escena, Taller de teatro principiantes Barcelona"
          loading="lazy" decoding="async" width="2000" height="1051">
@@ -2977,7 +2981,7 @@
 
 
   <!-- ═══ FOTO FULL BLEED ═══════════════════════════════════════ -->
-  <div class="mid-strip" role="img" aria-label="Clase de teatro para principiantes en Barcelona">
+  <div class="mid-strip px-parallax" role="img" aria-label="Clase de teatro para principiantes en Barcelona">
     <img src="/imagenes_optimizadas/teatro-principiantes-barcelona-0524.jpg"
          alt="Clase de teatro para principiantes, Talleres de Teatro Barcelona"
          width="1400" height="788" loading="lazy" decoding="async">
@@ -3857,6 +3861,31 @@
         if (!video.muted && video.paused) video.play().catch(function(){});
       });
     }
+  })();
+  </script>
+
+  <script>
+  // Parallax suave en franjas de foto
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var imgs = [].slice.call(document.querySelectorAll('.px-parallax img'));
+    if (!imgs.length) return;
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight;
+      imgs.forEach(function (img) {
+        var r = img.parentElement.getBoundingClientRect();
+        if (r.bottom < -100 || r.top > vh + 100) return;
+        var p = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+        var max = r.height * 0.075;
+        img.style.transform = 'scale(1.15) translateY(' + (p * max).toFixed(1) + 'px)';
+      });
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
   })();
   </script>
 </body>
