@@ -866,7 +866,7 @@
     .editorial-strip img {
       width: 100%; height: 100%; object-fit: cover;
       object-position: center 35%;
-      filter: contrast(1.05) saturate(0.95) brightness(1.05);
+      filter: contrast(1.1) saturate(0.78) brightness(0.88);
       display: block;
     }
     .editorial-strip-overlay {
@@ -895,6 +895,16 @@
     }
     /* Mobile: separar del borde y subtítulo amarillo */
     @media (max-width: 768px) {
+      /* En móvil el texto salta a la izquierda, donde el degradado lateral no
+         llega: se cambia por uno de abajo hacia arriba para que se lea. */
+      .editorial-strip-overlay {
+        background: linear-gradient(
+          to top,
+          rgba(0,0,0,0.78) 0%,
+          rgba(0,0,0,0.30) 42%,
+          rgba(0,0,0,0.0) 72%
+        );
+      }
       .editorial-strip-caption {
         right: auto;
         left: 5vw; left: clamp(20px, 5vw, 40px);
@@ -2510,9 +2520,9 @@
 
 
   <!-- ═══ FOTO EDITORIAL ════════════════════════════════════════ -->
-  <div class="editorial-strip px-parallax" role="img" aria-label="Muestra del taller de teatro en Barcelona, escena con linternas">
-    <img src="/imagenes_optimizadas/clase-abierta-taller-teatro-barcelona-linternas.jpg"
-         alt="Alumnos en escena con linternas durante una muestra del taller de teatro, Espacio La Mansión, Gràcia, Barcelona"
+  <div class="editorial-strip px-parallax" role="img" aria-label="Saludo final de una muestra del taller de teatro en Barcelona">
+    <img src="/imagenes_optimizadas/muestra-taller-teatro-barcelona-abrazos-flores.jpg"
+         alt="Abrazos y flores al terminar la muestra del taller de teatro, Espacio La Mansión, Gràcia, Barcelona"
          loading="lazy" decoding="async" width="1600" height="1066">
     <div class="editorial-strip-overlay"></div>
     <div class="editorial-strip-caption">
