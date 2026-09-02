@@ -1276,6 +1276,15 @@
       padding: 1.6vw 2.2vw; padding: clamp(14px, 1.6vw, 22px) clamp(18px, 2.2vw, 32px);
       border-right: 1px solid rgba(255,255,255,0.18);
     }
+    /* Celda destacada: crece hasta el botón amarillo y con texto mayor */
+    .levels-announce-cell.is-wide {
+      flex: 1 0 auto;
+      justify-content: center;
+    }
+    .levels-announce-cell.is-wide .cell-value {
+      font-size: 1.9vw; font-size: clamp(13px, 1.9vw, 26px);
+      line-height: 1.08;
+    }
     .cell-label {
       font-size: 0.85vw; font-size: clamp(9px, 0.85vw, 11px);
       font-weight: 700;
@@ -1707,6 +1716,12 @@
       }
       .levels-announce-cells {
         flex-wrap: wrap;
+      }
+      /* En pantallas muy estrechas la celda ancha puede encoger y partir el
+         texto en vez de desbordarse. */
+      .levels-announce-cell.is-wide {
+        flex: 1 1 auto;
+        min-width: 0;
       }
       .levels-announce-cta {
         justify-content: center;
@@ -3287,7 +3302,7 @@
                 <span class="cell-label">Coord.</span>
                 <span class="cell-value">Sebastián Mogordoy</span>
               </div>
-              <div class="levels-announce-cell">
+              <div class="levels-announce-cell is-wide">
                 <span class="cell-value">Aún puedes comenzar.<br>¡Haz una clase de prueba gratis!</span>
               </div>
             </div>
