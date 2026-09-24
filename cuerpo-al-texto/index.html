@@ -900,7 +900,7 @@
       color: var(--gold); margin-top: 4px;
     }
     @media (max-width: 900px) {
-      .video-inner { grid-template-columns: 1fr; }
+      .video-inner { grid-template-columns: minmax(0, 1fr); }
       .video-embed { min-height: 56vw; }
       .video-embed::after { right: 0; top: auto; bottom: 0; left: 0; width: auto; height: 3px; }
     }

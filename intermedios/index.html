@@ -924,7 +924,7 @@
     }
     @media (max-width: 768px) {
       .video-section { min-height: auto; }
-      .video-inner { grid-template-columns: 1fr; }
+      .video-inner { grid-template-columns: minmax(0, 1fr); }
       .video-embed { min-height: 56vw; }
       .video-copy { padding: 6vw var(--pad-x); padding: clamp(32px, 6vw, 56px) var(--pad-x); }
     }
