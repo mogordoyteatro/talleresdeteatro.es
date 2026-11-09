@@ -150,10 +150,10 @@
     .section-title { font-family: 'Archivo Black', sans-serif; font-size: 4vw; font-size: clamp(26px, 4vw, 50px); text-transform: uppercase; line-height: 1.05; margin-bottom: 14px; }
     .section-lead { font-size: 1.6vw; font-size: clamp(14px, 1.6vw, 17px); color: var(--g100); line-height: 1.65; max-width: 700px; margin-bottom: 52px; }
 
-    /* 3 columnas */
+    /* 3 columnas (una por taller) */
     .talleres-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2px;
     }
     @media (max-width: 1000px) { .talleres-grid { grid-template-columns: 1fr; } }
@@ -655,7 +655,6 @@
           <a href="/principiantes/">Principiantes</a>
           <a href="/intermedios/">Intermedios</a>
           <a href="/avanzados/">Avanzados</a>
-          <a href="/cuerpo-al-texto/">Cuerpo al texto</a>
           <a href="/quienes-somos/">Nosotros</a>
           <a href="/blog/">Lecturas</a>
           <a href="/contacto/" class="mm-cta">Escríbenos →</a>
@@ -677,7 +676,7 @@
   <div class="hero-content">
     <p class="hero-season">✦ Temporada 2026 / 27</p>
     <h1 class="hero-title">Información, horarios <br /> y precios 2026/27</h1>
-    <p class="hero-sub">Barcelona · Gràcia. Principiantes, intermedios, avanzados y Cuerpo al texto. Primera clase sin cargo, siempre. Sin matrícula de inscripción.</p>
+    <p class="hero-sub">Barcelona · Gràcia. Principiantes, intermedios y avanzados (Cuerpo al texto). Primera clase sin cargo, siempre. Sin matrícula de inscripción.</p>
     <div class="hero-actions">
       <a class="btn-hero-wa" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20gustaría%20apuntarme%20a%20un%20taller" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413A11.815 11.815 0 0012.05 0zm0 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z"/></svg>
@@ -746,6 +745,7 @@
           <div class="promo-dias">
             <p class="promo-dia"><strong>Martes</strong><span class="promo-hora">19:00 – 22:00 h</span></p>
             <p class="promo-dia">Principiantes+ · <strong>Jueves</strong><span class="promo-hora">19:00 – 22:00 h</span></p>
+            <p class="promo-dia">Nuevo grupo · <strong>Miércoles</strong><span class="promo-hora">desde enero · 19:00 – 22:00 h</span></p>
           </div>
           <p class="promo-coord"><span class="promo-coord-label">Coord.</span>Sebastián Mogordoy</p>
           <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20de%20principiantes" target="_blank" rel="noopener">¡Apúntate! →</a>
@@ -779,33 +779,11 @@
         <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
       </div>
 
-      <!-- COL: AVANZADOS, EL SER MIRADO -->
+      <!-- COL 3: AVANZADOS, CUERPO AL TEXTO (lunes; fusiona El ser mirado + Cuerpo al texto) -->
       <div class="taller-col">
         <p class="taller-nivel">Avanzados</p>
-        <h3 class="taller-nombre">El ser mirado</h3>
-        <p class="taller-tipo">Laboratorio de entrenamiento e investigación</p>
-
-        <div class="promo-box">
-          <p class="promo-tag">✦ Inscripción abierta</p>
-          <p class="promo-titulo">Temporada 2026/27</p>
-          <div class="promo-dias">
-            <p class="promo-dia"><strong>Miércoles</strong><span class="promo-hora">19:00 – 22:00 h</span></p>
-          </div>
-          <p class="promo-coord"><span class="promo-coord-label">Coord.</span>Sebastián Mogordoy</p>
-          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20curso%20Avanzados%20El%20ser%20mirado" target="_blank" rel="noopener">¡Apúntate! →</a>
-        </div>
-
-        <p class="taller-precio">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
-        <p class="taller-pnota">Sin matrícula · Primera clase sin cargo</p>
-        <p class="taller-quote">"Laboratorio de investigación técnica y desarrollo de la poética. La actuación, por delante del relato. Incorporación por entrevista."</p>
-        <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
-      </div>
-
-      <!-- COL 3: CUERPO AL TEXTO -->
-      <div class="taller-col">
-        <p class="taller-nivel">Actores con formación</p>
         <h3 class="taller-nombre">Cuerpo al texto</h3>
-        <p class="taller-tipo">Entrenamiento y escenas de texto</p>
+        <p class="taller-tipo">Entrenamiento actoral</p>
 
         <div class="promo-box">
           <p class="promo-tag">✦ Inscripción abierta</p>
@@ -814,12 +792,12 @@
             <p class="promo-dia"><strong>Lunes</strong><span class="promo-hora">19:00 – 22:00 h</span></p>
           </div>
           <p class="promo-coord"><span class="promo-coord-label">Coord.</span>Sebastián Mogordoy</p>
-          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20Cuerpo%20al%20texto" target="_blank" rel="noopener">¡Apúntate! →</a>
+          <a class="promo-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20me%20interesa%20el%20taller%20Cuerpo%20al%20texto%20(avanzados,%20lunes)" target="_blank" rel="noopener">¡Apúntate! →</a>
         </div>
 
         <p class="taller-precio">€100 <span style="font-size:13px;font-weight:400;font-family:'Inter',sans-serif;color:var(--g300);">/ mes</span></p>
         <p class="taller-pnota">Sin matrícula · Primera clase sin cargo</p>
-        <p class="taller-quote">"Las palabras salen de un cuerpo. Trabajo con escenas de texto, monólogos y la lógica de la situación dramática. Para actores con formación."</p>
+        <p class="taller-quote">"Entrenamiento actoral desde la improvisación dirigida: creamos escenas y trabajamos textos teatrales, de cine y monólogos. Las palabras salen de un cuerpo. Incorporación por entrevista."</p>
         <a class="taller-cta" href="https://api.whatsapp.com/send/?phone=34676694958&text=Hola,%20quiero%20más%20información%20sobre%20los%20talleres" target="_blank" rel="noopener">Más información →</a>
       </div>
 
@@ -848,7 +826,7 @@
           <div class="desc-aside">
             <div class="desc-aside-item">
               <p class="desc-aside-label">Cuándo</p>
-              <p class="desc-aside-val">Martes · 19:00 – 22:00 h. Principiantes+ · Jueves · 19:00 – 22:00 h. Coord. Sebastián Mogordoy.</p>
+              <p class="desc-aside-val">Martes · 19:00 – 22:00 h. Principiantes+ · Jueves · 19:00 – 22:00 h. Nuevo grupo · Miércoles · 19:00 – 22:00 h, desde enero. Coord. Sebastián Mogordoy.</p>
             </div>
             <div class="desc-aside-item">
               <p class="desc-aside-label">Para quién</p>
@@ -911,7 +889,7 @@
         <summary>
           <div class="summary-left">
             <span class="summary-nivel">Avanzados</span>
-            <span class="summary-nombre">El ser mirado</span>
+            <span class="summary-nombre">Cuerpo al texto · Entrenamiento actoral</span>
           </div>
           <div class="summary-arrow">
             <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
@@ -919,46 +897,9 @@
         </summary>
         <div class="desc-body">
           <div class="desc-text">
-            <p>Laboratorio de investigación técnica y desarrollo de la poética. Entrenamos actuar. Investigamos el teatro, la actuación, la teatralidad y su poética como lenguaje, desde la improvisación dirigida.</p>
-            <p>Comprendemos a la actuación como la principal fuerza generadora de teatralidad. A través del entrenamiento buscamos generar herramientas para trascender los límites de la representación y comprender y potenciar la poética personal de los participantes.</p>
-            <p>Trabajaremos para que los participantes dominen técnicamente su herramienta y puedan comprenderse, más que como la idea de un personaje, como una fuerza poética: un cuerpo dispuesto, entrenado, vibrante. <strong>El material creado se presenta en funciones reales dentro del ciclo La tiranía del deseo.</strong></p>
-          </div>
-          <div class="desc-aside">
-            <div class="desc-aside-item">
-              <p class="desc-aside-label">Cuándo</p>
-              <p class="desc-aside-val">Miércoles · 19:00 – 22:00 h. Coord. Sebastián Mogordoy.</p>
-            </div>
-            <div class="desc-aside-item">
-              <p class="desc-aside-label">Para quién</p>
-              <p class="desc-aside-val">Actores, actrices y estudiantes avanzados. Incorporación por entrevista.</p>
-            </div>
-            <div class="desc-aside-item">
-              <p class="desc-aside-label">Al final</p>
-              <p class="desc-aside-val">Funciones reales en el ciclo La tiranía del deseo.</p>
-            </div>
-            <div class="desc-aside-item">
-              <p class="desc-aside-label">Precio</p>
-              <p class="desc-aside-val">€100 / mes · Sin matrícula · Primera clase sin cargo</p>
-            </div>
-          </div>
-        </div>
-      </details>
-
-      <details class="desc-item">
-        <summary>
-          <div class="summary-left">
-            <span class="summary-nivel">Actores con formación</span>
-            <span class="summary-nombre">Cuerpo al texto</span>
-          </div>
-          <div class="summary-arrow">
-            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-        </summary>
-        <div class="desc-body">
-          <div class="desc-text">
-            <p>Nuevo curso para actores con formación que quieren trabajar específicamente con texto dramático. Escenas, monólogos, lógica de la situación, relación del cuerpo con la palabra.</p>
-            <p>Las palabras salen de un cuerpo. El texto no se recita, se actúa desde adentro. El objetivo es que el actor sea capaz de habitar el texto con presencia real, no ilustrarlo.</p>
-            <p>El entrenamiento busca que el actor comprenda la relación entre el cuerpo, el deseo y la palabra, <strong>produciendo material propio para presentar durante el año, no solo en una muestra final.</strong></p>
+            <p>Los lunes realizamos un entrenamiento actoral desde la improvisación dirigida: creamos escenas y trabajamos textos teatrales, de cine y monólogos. Comprendemos a la actuación como la principal fuerza generadora de teatralidad.</p>
+            <p>Trabajaremos para que los participantes dominen técnicamente su herramienta y puedan comprenderse, más que como la idea de un personaje, como una fuerza poética: un cuerpo dispuesto, entrenado, vibrante.</p>
+            <p>Las palabras salen de un cuerpo. El texto no se recita, se actúa desde la situación y las fuerzas en juego. <strong>El material creado se presenta en funciones reales dentro del ciclo La tiranía del deseo.</strong></p>
           </div>
           <div class="desc-aside">
             <div class="desc-aside-item">
@@ -967,7 +908,11 @@
             </div>
             <div class="desc-aside-item">
               <p class="desc-aside-label">Para quién</p>
-              <p class="desc-aside-val">Actores con formación académica o independiente. Vienes de otra formación o ya pasaste por nuestros talleres.</p>
+              <p class="desc-aside-val">Actores, actrices y estudiantes avanzados, con formación académica o independiente. Incorporación por entrevista.</p>
+            </div>
+            <div class="desc-aside-item">
+              <p class="desc-aside-label">Al final</p>
+              <p class="desc-aside-val">Funciones reales en el ciclo La tiranía del deseo.</p>
             </div>
             <div class="desc-aside-item">
               <p class="desc-aside-label">Precio</p>
@@ -1134,10 +1079,10 @@
               style="width:100%;background:var(--bg-3);border:1px solid var(--g700);color:var(--white);font-family:'Inter',sans-serif;font-size:14px;padding:13px 14px;border-radius:4px;outline:none;">
               <option value="">Selecciona un taller</option>
               <option value="Principiantes">Principiantes · Martes</option>
+              <option value="Principiantes miércoles (enero)">Principiantes · Miércoles · Nuevo grupo desde enero</option>
               <option value="Principiantes+">Principiantes+ · Jueves</option>
               <option value="Intermedios">Intermedios · Jueves</option>
-              <option value="Avanzados">Avanzados · El ser mirado · Miércoles</option>
-              <option value="Cuerpo al texto">Cuerpo al texto · Lunes</option>
+              <option value="Avanzados · Cuerpo al texto">Avanzados · Cuerpo al texto · Lunes</option>
               <option value="No lo sé todavía, necesito orientación">No lo sé todavía, necesito orientación</option>
             </select>
           </div>
@@ -1207,7 +1152,6 @@
     <a href="/principiantes/">Principiantes</a>
     <a href="/intermedios/">Con experiencia</a>
     <a href="/avanzados/">Avanzados</a>
-    <a href="/cuerpo-al-texto/">Cuerpo al texto</a>
     <a href="/quienes-somos/">Nosotros</a>
     <a href="/contacto/">Contacto</a>
     <a href="https://www.instagram.com/tallerdeteatro.mogordoy/" target="_blank" rel="noopener">Instagram</a>
