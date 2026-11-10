@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Calendario de clases 2026/27 de Talleres de Teatro Barcelona: lunes, martes y jueves, festivos y vacaciones de Navidad.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+<link rel="canonical" href="https://talleresdeteatro.es/alumnos/calendario/">
+<title>Calendario de clases 2026/27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: una columna editorial; cuadro resumen arriba, después los 11 meses en grilla. Tema único oscuro (identidad de la escuela). */
+:root {
+  --bg:#0E0D0D; --surface:#181616; --line:#2B2727; --fg:#F4F1F0; --muted:#A39A98;
+  --red:#E50914; --gold:#FFD700; --low:#5A1E20; --lowfg:#FFB3B5;
+  --display:'Archivo Black', 'Arial Black', Impact, sans-serif; --body:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-block:48px 64px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));display:flex;flex-direction:column;gap:44px}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(34px,7vw,64px);line-height:.98;margin:0 0 18px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--red)}
+.lead{max-width:62ch;color:var(--muted);font-size:17px;font-weight:300;margin:0}
+.lead b{color:var(--fg);font-weight:500}
+h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(22px,3.4vw,30px);margin:0 0 16px;text-wrap:balance}
+.tbl{overflow-x:auto;border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-variant-numeric:tabular-nums}
+thead th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:center;padding:14px 10px;border-bottom:1px solid var(--line);vertical-align:bottom}
+thead th b{display:block;font-family:var(--display);font-weight:400;font-size:17px;letter-spacing:.02em;color:var(--fg);margin-bottom:2px}
+thead th:first-child{text-align:left}
+tbody th{text-align:left;font-weight:500;padding:9px 14px;white-space:nowrap}
+td{text-align:center;padding:7px 10px}
+tbody tr+tr{border-top:1px solid var(--line)}
+.yr{color:var(--muted);font-weight:400}
+.chip{display:inline-grid;place-items:center;width:38px;height:30px;font-weight:600;font-size:16px}
+.c4{background:var(--surface);color:var(--fg)}
+.c5{background:var(--gold);color:#111}
+.c3{background:var(--low);color:var(--lowfg)}
+tr.tot td,tr.tot th{border-top:2px solid var(--fg);font-weight:600;padding-block:14px}
+tr.avg td{font-family:var(--display);font-size:22px;color:var(--gold)}
+tr.avg th{font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;color:var(--muted);font-size:13px}
+.legend span{display:flex;align-items:center;gap:8px}
+.legend i{display:inline-block;width:16px;height:16px}
+.dec{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;border-left:4px solid var(--red);background:var(--surface);padding:26px 28px}
+.dec p{margin:0 0 10px;max-width:60ch}
+.dec ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.dec li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px;font-variant-numeric:tabular-nums}
+.dec li span:first-child{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.mc{border:1px solid var(--line);padding:16px 16px 14px;display:flex;flex-direction:column;gap:8px}
+.mc h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:16px;margin:0 0 4px;letter-spacing:.02em}
+.ln{display:grid;grid-template-columns:34px minmax(0,1fr) 22px;align-items:center;gap:8px;font-variant-numeric:tabular-nums}
+.wd{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.ds{display:flex;flex-wrap:wrap;gap:5px}
+.d{min-width:26px;padding:2px 0;text-align:center;font-size:13px;background:var(--surface)}
+.d.rec{background:transparent;color:var(--gold);outline:1px solid var(--gold);padding-inline:4px}
+.d.off{background:transparent;color:var(--red);text-decoration:line-through;outline:1px dashed var(--low)}
+.nn{text-align:right;font-weight:600}
+.why{margin:4px 0 0;padding:8px 0 0;border-top:1px solid var(--line);list-style:none;font-size:12.5px;color:var(--muted);display:grid;gap:3px}
+.why b{color:var(--fg);font-weight:500}
+.foot{color:var(--muted);font-size:13px;max-width:72ch;border-top:1px solid var(--line);padding-top:18px}
+.foot p{margin:0 0 6px}
+@media (max-width:860px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dec{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.grid{grid-template-columns:minmax(0,1fr)}.dec{padding:20px 18px}}
+</style>
+<style>.topnav{display:flex;justify-content:space-between;align-items:center;padding:14px max(16px,5vw);border-bottom:1px solid var(--line)}.topnav .back{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none}.topnav .back:hover{color:var(--fg)}</style>
+</head>
+<body>
+<nav class="topnav"><a href="/"><img src="https://talleresdeteatro.es/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg" alt="Talleres de Teatro Barcelona" height="28" style="display:block;height:28px;width:auto;"></a><a href="/alumnos/" class="back">Espacio alumnos →</a></nav>
+<div class="wrap">
+<header>
+  <p class="eyebrow">Talleres de Teatro Barcelona · Temporada 2026/27</p>
+  <h1>Cuatro clases al mes, <em>de promedio.</em></h1>
+  <p class="lead">La cuota es la misma todos los meses: <b>100 €</b>. Hay meses con <b>5 clases</b>, porque tienen cinco semanas, y meses con <b>3</b>, por los festivos y las vacaciones de Navidad. Sumando toda la temporada, de septiembre a julio, cada grupo tiene de media <b>4 clases por mes</b>.</p>
+</header>
+<section aria-labelledby="t-resumen">
+  <h2 id="t-resumen">Clases por mes y por grupo</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Mes</th><th><b>Lunes</b>Avanzados</th><th><b>Martes</b>Principiantes</th><th><b>Jueves</b>Principiantes+ · Intermedios</th></tr></thead>
+    <tbody>
+<tr><th scope="row">Septiembre <span class="yr">2026</span></th><td><span class="chip c4">4</span></td><td><span class="chip c5">5</span></td><td><span class="chip c3">3</span></td></tr>
+<tr><th scope="row">Octubre <span class="yr">2026</span></th><td><span class="chip c3">3</span></td><td><span class="chip c4">4</span></td><td><span class="chip c5">5</span></td></tr>
+<tr><th scope="row">Noviembre <span class="yr">2026</span></th><td><span class="chip c5">5</span></td><td><span class="chip c4">4</span></td><td><span class="chip c4">4</span></td></tr>
+<tr><th scope="row">Diciembre <span class="yr">2026</span></th><td><span class="chip c3">3</span></td><td><span class="chip c3">3</span></td><td><span class="chip c3">3</span></td></tr>
+<tr><th scope="row">Enero <span class="yr">2027</span></th><td><span class="chip c3">3</span></td><td><span class="chip c3">3</span></td><td><span class="chip c4">4</span></td></tr>
+<tr><th scope="row">Febrero <span class="yr">2027</span></th><td><span class="chip c4">4</span></td><td><span class="chip c4">4</span></td><td><span class="chip c4">4</span></td></tr>
+<tr><th scope="row">Marzo <span class="yr">2027</span></th><td><span class="chip c4">4</span></td><td><span class="chip c5">5</span></td><td><span class="chip c4">4</span></td></tr>
+<tr><th scope="row">Abril <span class="yr">2027</span></th><td><span class="chip c5">5</span></td><td><span class="chip c4">4</span></td><td><span class="chip c5">5</span></td></tr>
+<tr><th scope="row">Mayo <span class="yr">2027</span></th><td><span class="chip c4">4</span></td><td><span class="chip c4">4</span></td><td><span class="chip c4">4</span></td></tr>
+<tr><th scope="row">Junio <span class="yr">2027</span></th><td><span class="chip c4">4</span></td><td><span class="chip c5">5</span></td><td><span class="chip c3">3</span></td></tr>
+<tr><th scope="row">Julio <span class="yr">2027</span></th><td><span class="chip c4">4</span></td><td><span class="chip c4">4</span></td><td><span class="chip c5">5</span></td></tr>
+<tr class="tot"><th scope="row">Total temporada</th><td>43 clases</td><td>45 clases</td><td>44 clases</td></tr>
+<tr class="avg"><th scope="row">Promedio por mes</th><td>3,9</td><td>4,1</td><td>4,0</td></tr>
+    </tbody>
+  </table></div>
+  <div class="legend"><span><i class="c5" style="background:var(--gold)"></i>5 clases (mes de cinco semanas)</span><span><i style="background:var(--surface);outline:1px solid var(--line)"></i>4 clases</span><span><i style="background:var(--low)"></i>3 clases (festivos o Navidad)</span></div>
+</section>
+<section class="dec" aria-labelledby="t-dic">
+  <div>
+    <h2 id="t-dic">¿Por qué se paga diciembre entero?</h2>
+    <p>En diciembre hay 3 clases por grupo porque paramos del 23 de diciembre al 6 de enero. Esa diferencia ya está compensada por los meses con 5 clases: septiembre, octubre, noviembre, marzo, abril, junio y julio, según el grupo.</p>
+    <p>Por eso la cuota no cambia de un mes a otro: pagas la temporada repartida en 11 cuotas iguales.</p>
+  </div>
+  <ul>
+    <li><span>Última clase de lunes</span><span>21 de diciembre</span></li>
+    <li><span>Última clase de martes</span><span>22 de diciembre</span></li>
+    <li><span>Última clase de jueves</span><span>17 de diciembre</span></li>
+    <li><span>Vuelta jueves</span><span>7 de enero</span></li>
+    <li><span>Vuelta lunes y martes</span><span>11 y 12 de enero</span></li>
+  </ul>
+</section>
+<section aria-labelledby="t-cal">
+  <h2 id="t-cal">Calendario completo</h2>
+  <div class="grid">
+<article class="mc"><h3>Septiembre <span class="yr">2026</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d">7</span> <span class="d">14</span> <span class="d">21</span> <span class="d">28</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">1</span> <span class="d">8</span> <span class="d">15</span> <span class="d">22</span> <span class="d">29</span></span><span class="nn">5</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">3</span> <span class="d">10</span> <span class="d">17</span> <span class="d off" title="La Mercè">24</span></span><span class="nn">3</span></div><ul class="why"><li><b>La Mercè:</b> sin clase el jueves 24</li></ul></article>
+<article class="mc"><h3>Octubre <span class="yr">2026</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d">5</span> <span class="d off" title="Fiesta Nacional">12</span> <span class="d">19</span> <span class="d">26</span></span><span class="nn">3</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">6</span> <span class="d">13</span> <span class="d">20</span> <span class="d">27</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">1</span> <span class="d">8</span> <span class="d">15</span> <span class="d">22</span> <span class="d">29</span></span><span class="nn">5</span></div><ul class="why"><li><b>Fiesta Nacional:</b> sin clase el lunes 12</li></ul></article>
+<article class="mc"><h3>Noviembre <span class="yr">2026</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d">2</span> <span class="d">9</span> <span class="d">16</span> <span class="d">23</span> <span class="d">30</span></span><span class="nn">5</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">3</span> <span class="d">10</span> <span class="d">17</span> <span class="d">24</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">5</span> <span class="d">12</span> <span class="d">19</span> <span class="d">26</span></span><span class="nn">4</span></div></article>
+<article class="mc"><h3>Diciembre <span class="yr">2026</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d">7</span> <span class="d">14</span> <span class="d">21</span> <span class="d off" title="Navidad">28</span></span><span class="nn">3</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">1</span> <span class="d off" title="La Inmaculada">8</span> <span class="d">15</span> <span class="d">22</span> <span class="d off" title="Navidad">29</span></span><span class="nn">3</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">3</span> <span class="d">10</span> <span class="d">17</span> <span class="d off" title="Navidad">24</span> <span class="d off" title="Navidad">31</span></span><span class="nn">3</span></div><ul class="why"><li><b>La Inmaculada:</b> sin clase el martes 8</li><li><b>Navidad:</b> sin clase el jueves 24, lunes 28, martes 29, jueves 31</li></ul></article>
+<article class="mc"><h3>Enero <span class="yr">2027</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d off" title="Navidad">4</span> <span class="d">11</span> <span class="d">18</span> <span class="d">25</span></span><span class="nn">3</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d off" title="Navidad">5</span> <span class="d">12</span> <span class="d">19</span> <span class="d">26</span></span><span class="nn">3</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">7</span> <span class="d">14</span> <span class="d">21</span> <span class="d">28</span></span><span class="nn">4</span></div><ul class="why"><li><b>Navidad:</b> sin clase el lunes 4, martes 5</li></ul></article>
+<article class="mc"><h3>Febrero <span class="yr">2027</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d">1</span> <span class="d">8</span> <span class="d">15</span> <span class="d">22</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">2</span> <span class="d">9</span> <span class="d">16</span> <span class="d">23</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">4</span> <span class="d">11</span> <span class="d">18</span> <span class="d">25</span></span><span class="nn">4</span></div></article>
+<article class="mc"><h3>Marzo <span class="yr">2027</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d">1</span> <span class="d">8</span> <span class="d">15</span> <span class="d">22</span> <span class="d off" title="Lunes de Pascua">29</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">2</span> <span class="d">9</span> <span class="d">16</span> <span class="d">23</span> <span class="d">30</span></span><span class="nn">5</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">4</span> <span class="d">11</span> <span class="d">18</span> <span class="d">25</span></span><span class="nn">4</span></div><ul class="why"><li><b>Lunes de Pascua:</b> sin clase el lunes 29</li></ul></article>
+<article class="mc"><h3>Abril <span class="yr">2027</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d rec" title="jueves 1 de abril: recuperación del Lunes de Pascua">J1</span> <span class="d">5</span> <span class="d">12</span> <span class="d">19</span> <span class="d">26</span></span><span class="nn">5</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">6</span> <span class="d">13</span> <span class="d">20</span> <span class="d">27</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">1</span> <span class="d">8</span> <span class="d">15</span> <span class="d">22</span> <span class="d">29</span></span><span class="nn">5</span></div><ul class="why"><li><b>Lunes:</b> clase de recuperación el jueves 1 de abril</li></ul></article>
+<article class="mc"><h3>Mayo <span class="yr">2027</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d">3</span> <span class="d">10</span> <span class="d off" title="Segunda Pascua">17</span> <span class="d">24</span> <span class="d">31</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">4</span> <span class="d">11</span> <span class="d">18</span> <span class="d">25</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">6</span> <span class="d">13</span> <span class="d">20</span> <span class="d">27</span></span><span class="nn">4</span></div><ul class="why"><li><b>Segunda Pascua:</b> sin clase el lunes 17</li></ul></article>
+<article class="mc"><h3>Junio <span class="yr">2027</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d">7</span> <span class="d">14</span> <span class="d">21</span> <span class="d">28</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">1</span> <span class="d">8</span> <span class="d">15</span> <span class="d">22</span> <span class="d">29</span></span><span class="nn">5</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">3</span> <span class="d">10</span> <span class="d">17</span> <span class="d off" title="Sant Joan">24</span></span><span class="nn">3</span></div><ul class="why"><li><b>Sant Joan:</b> sin clase el jueves 24</li></ul></article>
+<article class="mc"><h3>Julio <span class="yr">2027</span></h3><div class="ln"><span class="wd">Lun</span><span class="ds"><span class="d">5</span> <span class="d">12</span> <span class="d">19</span> <span class="d">26</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Mar</span><span class="ds"><span class="d">6</span> <span class="d">13</span> <span class="d">20</span> <span class="d">27</span></span><span class="nn">4</span></div><div class="ln"><span class="wd">Jue</span><span class="ds"><span class="d">1</span> <span class="d">8</span> <span class="d">15</span> <span class="d">22</span> <span class="d">29</span></span><span class="nn">5</span></div></article>
+  </div>
+</section>
+<footer class="foot">
+  <p>Días tachados: sin clase. Festivos de Barcelona que caen en día de taller: La Mercè (24 sep), Fiesta Nacional (12 oct), La Inmaculada (8 dic), Lunes de Pascua (29 mar), Segunda Pascua (17 may) y Sant Joan (24 jun). El grupo de los lunes recupera el Lunes de Pascua el <b>jueves 1 de abril</b> (marcado «J1»). Vacaciones de Navidad: del 23 de diciembre al 6 de enero.</p>
+  <p>Horario de todos los grupos: de 19 a 22 h · La Mansión, Roger de Flor 253, Gràcia.</p>
+</footer>
+</div>
+</body>
+</html>
