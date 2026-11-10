@@ -590,6 +590,8 @@
       display: flex; align-items: center; gap: 10px;
     }
     .hero-tag::after { content: ''; display: block; width: 22px; height: 1px; background: var(--gold); }
+    .hero-tag.hero-tag-nuevo { font-family: 'Archivo Black', sans-serif; font-weight: 400; font-size: 2.6vw; font-size: clamp(17px, 2.6vw, 34px); letter-spacing: 0.04em; line-height: 1.1; }
+    .hero-tag.hero-tag-nuevo::after { display: none; }
 
     .hero-title {
       font-family: 'Archivo Black', sans-serif;
@@ -613,7 +615,7 @@
       text-transform: uppercase;
       color: var(--white);
       margin-top: 20px;
-      max-width: 48ch;
+      max-width: none;
       line-height: 1.5;
     }
 
@@ -2352,7 +2354,7 @@
       <div class="hero-body">
 
         <div class="fade-in-1">
-          <p class="hero-tag">La creación del artificio.</p>
+          <p class="hero-tag hero-tag-nuevo">¡Nuevo grupo! ¡Comienza en enero!</p>
           <div class="hero-title">Iniciación.</div>
           <div class="hero-title">Principiantes</div>
           <p class="hero-tagline">Para personas con ganas de expresarse, aprender y divertirse, haciendo teatro.</p>
