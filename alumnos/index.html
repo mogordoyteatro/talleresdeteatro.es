@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+  <link rel="shortcut icon" href="/favicon.ico?v=2">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alumnos · Datos para la factura · Talleres de Teatro Barcelona</title>
+  <meta name="description" content="Espacio para alumnos de Talleres de Teatro Barcelona: deja tus datos de facturación y envía el comprobante de pago mensual." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://talleresdeteatro.es/alumnos/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0C0C0C; --surface: #161616; --surface-2: #1E1E1E; --border: #2A2A2A; --border-hover: #444;
+      --red: #E50914; --gold: #FFD700; --white: #FFFFFF; --gray: #888888; --gray-light: #CCCCCC;
+      --ok: #3DDC84;
+      --font-display: 'Archivo Black', sans-serif; --font-body: 'Inter', sans-serif;
+      --pad-x: clamp(16px, 5vw, 72px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--white); font-family: var(--font-body); min-height: 100vh; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; }
+    nav { position: fixed; top: 0; left: 0; right: 0; padding: 1rem var(--pad-x); display: flex; align-items: center; justify-content: space-between; z-index: 200; background: rgba(12,12,12,0.96); border-bottom: 1px solid var(--border); }
+    .nav-back { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); text-decoration: none; }
+    .nav-back:hover { color: var(--white); }
+    main { max-width: 680px; margin: 0 auto; padding: 120px var(--pad-x) 80px; }
+    .overline { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    h1 { font-family: var(--font-display); font-size: clamp(2rem, 7vw, 3.2rem); line-height: 1.02; text-transform: uppercase; margin-bottom: 18px; }
+    h1 span { color: var(--red); }
+    .intro { color: var(--gray-light); line-height: 1.6; font-weight: 300; margin-bottom: 36px; }
+    .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 28px; }
+    .tab { padding: 14px 10px; border: 1px solid var(--border); background: var(--surface); color: var(--gray-light); font: 600 0.78rem/1.2 var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 2px; }
+    .tab[aria-selected="true"] { background: var(--red); border-color: var(--red); color: var(--white); }
+    form { display: none; }
+    form.active { display: block; }
+    .field { margin-bottom: 18px; }
+    label { display: block; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.04em; color: var(--gray-light); margin-bottom: 7px; }
+    label .req { color: var(--red); }
+    .hint { font-size: 0.74rem; color: var(--gray); margin-top: 6px; line-height: 1.4; }
+    input[type=text], input[type=tel], input[type=email], select, textarea {
+      width: 100%; background: var(--surface); border: 1px solid var(--border); color: var(--white);
+      font: 400 1rem var(--font-body); padding: 13px 14px; border-radius: 2px; outline: none; -webkit-appearance: none; appearance: none;
+    }
+    select { background-image: linear-gradient(45deg, transparent 50%, var(--gray) 50%), linear-gradient(135deg, var(--gray) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
+    textarea { min-height: 90px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+    .file-box { border: 1px dashed var(--border-hover); background: var(--surface); padding: 18px; text-align: center; border-radius: 2px; cursor: pointer; color: var(--gray-light); font-size: 0.9rem; }
+    .file-box.has-file { border-color: var(--gold); color: var(--white); }
+    .file-box input { display: none; }
+    .check { display: flex; gap: 12px; align-items: flex-start; font-size: 0.82rem; color: var(--gray-light); line-height: 1.5; margin: 24px 0; }
+    .check input { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--red); flex-shrink: 0; }
+    .trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    button.send { width: 100%; background: var(--gold); color: #000; border: none; padding: 17px; font: 1rem var(--font-display); text-transform: uppercase; letter-spacing: 0.04em; cursor: pointer; border-radius: 2px; }
+    button.send:disabled { opacity: 0.55; cursor: wait; }
+    .msg { margin-top: 18px; padding: 14px 16px; border-radius: 2px; font-size: 0.9rem; line-height: 1.5; display: none; }
+    .msg.ok { display: block; background: rgba(61,220,132,0.12); border: 1px solid var(--ok); }
+    .msg.err { display: block; background: rgba(229,9,20,0.12); border: 1px solid var(--red); }
+    .privacy { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--border); font-size: 0.74rem; color: var(--gray); line-height: 1.6; }
+    .privacy strong { color: var(--gray-light); font-weight: 500; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo"><img src="https://talleresdeteatro.es/imagenes_optimizadas/logo-talleres-de-teatro-barcelona.jpg" alt="Talleres de Teatro Barcelona" height="28" style="display:block;height:28px;width:auto;"></a>
+    <a href="/" class="nav-back">← Inicio</a>
+  </nav>
+
+  <main>
+    <p class="overline">Espacio alumnos</p>
+    <h1>Tus datos para <span>la factura.</span></h1>
+    <p class="intro">Si te inscribiste en un taller, déjanos tus datos una sola vez para poder hacerte la factura cada mes. Y si quieres, puedes enviarnos aquí el comprobante del pago mensual.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-target="form-inscripcion">Mis datos</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="form-pago">Enviar comprobante</button>
+    </div>
+
+    <!-- ── INSCRIPCIÓN / DATOS ── -->
+    <form id="form-inscripcion" class="active" novalidate>
+      <input type="hidden" name="tipo" value="inscripcion">
+      <div class="trap" aria-hidden="true"><label>Web<input type="text" name="web" tabindex="-1" autocomplete="off"></label></div>
+      <div class="field">
+        <label for="i-nombre">Nombre y apellidos <span class="req">*</span></label>
+        <input type="text" id="i-nombre" name="nombre" autocomplete="name" required>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="i-dni">NIE / DNI / pasaporte <span class="req">*</span></label>
+          <input type="text" id="i-dni" name="dni" autocapitalize="characters" required>
+        </div>
+        <div class="field">
+          <label for="i-tel">Teléfono</label>
+          <input type="tel" id="i-tel" name="telefono" autocomplete="tel">
+        </div>
+      </div>
+      <div class="field">
+        <label for="i-dir">Dirección completa <span class="req">*</span></label>
+        <input type="text" id="i-dir" name="direccion" autocomplete="street-address" required>
+        <p class="hint">Calle, número, piso y puerta, código postal y ciudad. Ej.: Carrer de Verdi 12, 3º 2ª, 08012 Barcelona</p>
+      </div>
+      <div class="field">
+        <label for="i-taller">Taller <span class="req">*</span></label>
+        <select id="i-taller" name="taller" required>
+          <option value="">Elige tu taller</option>
+          <option>Principiantes · Martes</option>
+          <option>Principiantes+ · Jueves</option>
+          <option>Principiantes · Miércoles (desde enero 2027)</option>
+          <option>Intermedios · Jueves</option>
+          <option>Avanzados · Cuerpo al texto · Lunes</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="i-titular">¿El Bizum o la transferencia la hace otra persona?</label>
+        <input type="text" id="i-titular" name="titular" placeholder="Nombre y apellidos del titular de la cuenta">
+        <p class="hint">Déjalo vacío si pagas tú. Nos sirve para saber de quién es cada pago.</p>
+      </div>
+      <label class="check"><input type="checkbox" name="consentimiento" required> <span>Acepto que Talleres de Teatro Barcelona guarde estos datos para gestionar mi inscripción y emitir mis facturas, según la información de privacidad de abajo. <span class="req">*</span></span></label>
+      <button type="submit" class="send">Enviar mis datos</button>
+      <div class="msg" role="status"></div>
+    </form>
+
+    <!-- ── COMPROBANTE DE PAGO ── -->
+    <form id="form-pago" novalidate>
+      <input type="hidden" name="tipo" value="pago">
+      <div class="trap" aria-hidden="true"><label>Web<input type="text" name="web" tabindex="-1" autocomplete="off"></label></div>
+      <div class="field">
+        <label for="p-nombre">Nombre y apellidos del alumno <span class="req">*</span></label>
+        <input type="text" id="p-nombre" name="nombre" autocomplete="name" required>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="p-dni">NIE / DNI</label>
+          <input type="text" id="p-dni" name="dni" autocapitalize="characters">
+        </div>
+        <div class="field">
+          <label for="p-mes">Mes que pagas <span class="req">*</span></label>
+          <select id="p-mes" name="mes" required></select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="p-importe">Importe (€)</label>
+          <input type="text" id="p-importe" name="importe" inputmode="decimal" placeholder="100">
+        </div>
+        <div class="field">
+          <label for="p-titular">Titular del Bizum, si no eres tú</label>
+          <input type="text" id="p-titular" name="titular">
+        </div>
+      </div>
+      <div class="field">
+        <label>Comprobante (foto o PDF)</label>
+        <label class="file-box" id="file-box">
+          <input type="file" id="p-archivo" accept="image/*,application/pdf">
+          <span id="file-label">Toca para elegir la captura del Bizum o el PDF</span>
+        </label>
+        <p class="hint">Máximo 5 MB.</p>
+      </div>
+      <div class="field">
+        <label for="p-coment">Comentario</label>
+        <textarea id="p-coment" name="comentario" placeholder="Opcional"></textarea>
+      </div>
+      <button type="submit" class="send">Enviar comprobante</button>
+      <div class="msg" role="status"></div>
+    </form>
+
+    <div class="privacy">
+      <strong>Privacidad.</strong> Responsable: Sebastián Mogordoy (Talleres de Teatro Barcelona). Finalidad: gestionar tu inscripción y emitir las facturas de los talleres. Legitimación: tu consentimiento y la relación contractual. Los datos se guardan en una hoja de cálculo privada a la que solo accede el responsable, y no se ceden a terceros salvo obligación legal. Se conservan mientras seas alumno y durante los plazos que exige la normativa fiscal. Puedes pedir acceso, rectificación o supresión escribiendo a <a href="mailto:info@talleresdeteatro.com">info@talleresdeteatro.com</a>.
+    </div>
+  </main>
+
+  <script>
+  (function () {
+    'use strict';
+    // URL de la aplicación web de Google Apps Script (hoja "Facturación talleres (automática)")
+    var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyEPiYqGEAcq9lIFvF-_WlcGXNkXapvjq-RzkRV6tzbC6GWExqWjMG8KOfz8O1fobFF-Q/exec';
+
+    // Pestañas
+    var tabs = document.querySelectorAll('.tab');
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        tabs.forEach(function (x) { x.setAttribute('aria-selected', x === t ? 'true' : 'false'); });
+        document.querySelectorAll('form').forEach(function (f) { f.classList.toggle('active', f.id === t.dataset.target); });
+      });
+    });
+    if (location.hash === '#comprobante') tabs[1].click();
+
+    // Meses (anterior, actual y dos siguientes)
+    var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    var sel = document.getElementById('p-mes'), hoy = new Date();
+    for (var k = -1; k <= 2; k++) {
+      var d = new Date(hoy.getFullYear(), hoy.getMonth() + k, 1);
+      var o = document.createElement('option');
+      o.textContent = meses[d.getMonth()] + ' ' + d.getFullYear();
+      if (k === 0) o.selected = true;
+      sel.appendChild(o);
+    }
+
+    // Archivo: comprime imágenes grandes antes de enviar
+    var archivo = null;
+    var input = document.getElementById('p-archivo');
+    input.addEventListener('change', function () {
+      var f = input.files[0];
+      archivo = null;
+      if (!f) return;
+      document.getElementById('file-label').textContent = f.name;
+      document.getElementById('file-box').classList.add('has-file');
+      if (f.size > 5 * 1024 * 1024 && !/^image\//.test(f.type)) { alert('El archivo pesa más de 5 MB.'); input.value = ''; return; }
+      if (/^image\/(jpeg|png|webp)$/.test(f.type)) {
+        var img = new Image(), url = URL.createObjectURL(f);
+        img.onload = function () {
+          var max = 1600, s = Math.min(1, max / Math.max(img.width, img.height));
+          var c = document.createElement('canvas');
+          c.width = Math.round(img.width * s); c.height = Math.round(img.height * s);
+          c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+          archivo = { nombre: f.name.replace(/\.\w+$/, '') + '.jpg', tipo: 'image/jpeg', datos: c.toDataURL('image/jpeg', 0.82).split(',')[1] };
+          URL.revokeObjectURL(url);
+        };
+        img.src = url;
+      } else {
+        var r = new FileReader();
+        r.onload = function () { archivo = { nombre: f.name, tipo: f.type || 'application/pdf', datos: String(r.result).split(',')[1] }; };
+        r.readAsDataURL(f);
+      }
+    });
+
+    function enviar(form, extra) {
+      var msg = form.querySelector('.msg'), btn = form.querySelector('.send');
+      msg.className = 'msg'; msg.textContent = '';
+      var faltan = Array.prototype.filter.call(form.querySelectorAll('[required]'), function (el) {
+        return el.type === 'checkbox' ? !el.checked : !String(el.value).trim();
+      });
+      if (faltan.length) { msg.className = 'msg err'; msg.textContent = 'Completa los campos marcados con *.'; faltan[0].focus(); return; }
+      var datos = {};
+      new FormData(form).forEach(function (v, k) { datos[k] = v; });
+      if (datos.consentimiento) datos.consentimiento = true;
+      Object.assign(datos, extra || {});
+      btn.disabled = true;
+      fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(datos) })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.error || 'Error');
+          msg.className = 'msg ok';
+          msg.textContent = form.id === 'form-pago' ? '¡Gracias! Recibimos tu comprobante.' : '¡Gracias! Tus datos quedaron guardados.';
+          form.reset(); archivo = null;
+          var fl = document.getElementById('file-label'); if (fl) fl.textContent = 'Toca para elegir la captura del Bizum o el PDF';
+          var fb = document.getElementById('file-box'); if (fb) fb.classList.remove('has-file');
+        })
+        .catch(function () {
+          msg.className = 'msg err';
+          msg.innerHTML = 'No se pudo enviar. Prueba de nuevo o escríbenos a <a href="mailto:info@talleresdeteatro.com">info@talleresdeteatro.com</a>.';
+        })
+        .finally(function () { btn.disabled = false; });
+    }
+
+    document.getElementById('form-inscripcion').addEventListener('submit', function (e) { e.preventDefault(); enviar(this); });
+    document.getElementById('form-pago').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = input.files[0];
+      if (f && !archivo) { setTimeout(function () { document.getElementById('form-pago').requestSubmit(); }, 400); return; }
+      enviar(this, archivo ? { archivo: archivo } : {});
+    });
+  })();
+  </script>
+</body>
+</html>
