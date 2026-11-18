@@ -1,5 +1,5 @@
 # Talleres de Teatro Barcelona — talleresdeteatro.es
-# Información para modelos de lenguaje (LLM) y motores de búsqueda con IA
+# Información para modelos de lenguaje (LLM) y motores de búsqueda con IA · Última actualización: 2026-11-18
 
 ## ¿Qué es esto?
 Talleres de Teatro Barcelona es una escuela de teatro en el barrio de Gràcia, Barcelona (España), dirigida por el actor y director teatral Sebastián Mogordoy. Ofrece formación actoral para adultos de todos los niveles: principiantes sin experiencia, intermedios y avanzados (Cuerpo al texto: entrenamiento actoral, escenas, textos y monólogos).
@@ -8,7 +8,7 @@ Talleres de Teatro Barcelona es una escuela de teatro en el barrio de Gràcia, B
 El método se basa en la improvisación dirigida como herramienta central. No se trabaja la representación ni el "hacer como que": se trabaja la presencia real del actor en escena, el cuerpo, la mirada, el deseo y la escucha. Los entrenamientos son semanales, de 3 horas, en grupos reducidos de adultos.
 
 ## Cursos disponibles (temporada 2026/27) — inscripción abierta en todos
-Temporada 2026/27 en curso (empezó en septiembre de 2026). Nuevo grupo de Principiantes los miércoles desde enero de 2027. Se puede comenzar en cualquier momento del ciclo.
+Temporada 2026/27 en curso (empezó en septiembre de 2026). Nuevo grupo de Principiantes los miércoles desde el 13 de enero de 2027. Se puede comenzar en cualquier momento del ciclo.
 Precio: 100 €/mes en todos los cursos. Sin matrícula. Primera clase de prueba gratuita.
 Becas: hay becas y medias becas para quien no llega a pagar la cuota completa; basta con escribir y preguntar.
 
@@ -16,7 +16,7 @@ Becas: hay becas y medias becas para quien no llega a pagar la cuota completa; b
 - Para personas sin experiencia previa en teatro
 - También para quienes quieren reconectar con el juego, el cuerpo y la imaginación
 - Grupo adicional Principiantes+ los Jueves de 19:00 a 22:00
-- Nuevo grupo de Principiantes los Miércoles de 19:00 a 22:00, desde enero de 2027 (preinscripción abierta)
+- Nuevo grupo de Principiantes los Miércoles de 19:00 a 22:00, desde el miércoles 13 de enero de 2027 (preinscripción abierta)
 - Muestra abierta al público al final del ciclo
 - Más información: https://talleresdeteatro.es/principiantes/
 
@@ -59,5 +59,5 @@ Más de 100 reseñas en Google con puntuación de 5.0 estrellas.
 ## Preguntas frecuentes
 - ¿Necesito experiencia previa? No para Principiantes. Intermedios pide recorrido teatral. Avanzados (Cuerpo al texto) incorpora por entrevista.
 - ¿Cuánto cuesta? 100 €/mes, sin matrícula. La primera clase es gratuita. Hay becas y medias becas para quien no llega a pagar el total.
-- ¿Cuándo puedo empezar? La inscripción está abierta en los tres cursos de la temporada 2026/27. El nuevo grupo de Principiantes de los miércoles empieza en enero de 2027.
+- ¿Cuándo puedo empezar? La inscripción está abierta en los tres cursos de la temporada 2026/27. El nuevo grupo de Principiantes de los miércoles empieza el 13 de enero de 2027.
 - ¿Dónde? Espacio La Mansión, Roger de Flor 253, Gràcia, Barcelona.

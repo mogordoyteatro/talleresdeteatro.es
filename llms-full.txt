@@ -1,14 +1,15 @@
 # Talleres de Teatro Barcelona — talleresdeteatro.es — contenido completo
 # Versión extendida de llms.txt: texto íntegro de los tres cursos, la metodología y las preguntas frecuentes.
-# Escuela de teatro en Gràcia, Barcelona. Dir. Sebastián Mogordoy. Temporada 2026/27, inscripción abierta. Nuevo grupo de Principiantes los miércoles desde enero de 2027.
+# Escuela de teatro en Gràcia, Barcelona. Dir. Sebastián Mogordoy. Temporada 2026/27, inscripción abierta. Nuevo grupo de Principiantes los miércoles desde el 13 de enero de 2027.
 # Precio: 100 €/mes, sin matrícula, primera clase gratuita. Becas y medias becas disponibles para quien no llega a pagar el total.
+# Última actualización: 2026-11-18.
 
 ## Principiantes · La creación del artificio, Iniciación principiantes
 Para personas con ganas y entusiasmo de manifestarse, aprender y divertirse a través del teatro. La propuesta es trabajar con cada uno, desde el juego, trascendiendo a lo teatral.
 Que quieran darse permiso para volver a jugar, desinhibirse, perder el miedo a la exposición, dándole creencia a las situaciones de ficción y descubriendo la propia potencia expresiva.
 Que puedan "fracturar lo real" para alterar el cotidiano, corriéndose del "yo social" y dándole lugar a la escena, posibilitando un encuentro diferente con uno y los demás.
 Los participantes encontrarán un espacio de expresión, diversión, trabajo físico, desarrollo del campo imaginario, formación actoral y construcción social. Al fin de ciclo abrimos una clase y actuamos con público por primera vez.
-- Cuándo: Martes · 19:00 – 22:00 h. Principiantes+ · Jueves · 19:00 – 22:00 h. Nuevo grupo · Miércoles · 19:00 – 22:00 h, desde enero. Coord. Sebastián Mogordoy.
+- Cuándo: Martes · 19:00 – 22:00 h. Principiantes+ · Jueves · 19:00 – 22:00 h. Nuevo grupo · Miércoles · 19:00 – 22:00 h, desde el 13 de enero. Coord. Sebastián Mogordoy.
 - Para quién: Personas sin experiencia previa. No hace falta haber actuado nunca.
 - Duración: 3 horas semanales. Puedes comenzar en cualquier momento del proceso.
 - Al final: Muestra de fin de ciclo con público por primera vez.
@@ -37,7 +38,7 @@ Las palabras salen de un cuerpo. El texto no se recita, se actúa desde la situa
 
 ## Metodología
 Tres recorridos posibles para estudiar teatro en Barcelona: para quienes empiezan desde cero, para quienes quieren profundizar, y para actores que buscan entrenar, crear escenas y trabajar con textos.
-### La creación del artificio. — Formación · Principiantes — Martes - Jueves · 19 a 22h / Nuevo grupo · Miércoles · desde enero
+### La creación del artificio. — Formación · Principiantes — Martes - Jueves · 19 a 22h / Nuevo grupo · Miércoles · desde el 13 de enero
 Para personas sin experiencia previa, con ganas de volver a jugar, expresarse y divertirse haciendo teatro. Por medio de la improvisación dirigida.
 ¿Quieres estudiar por primera vez? En esta primera etapa los participantes formarán parte de un espacio diferente a los de su vida cotidiana, con otras reglas y otras posibilidades, junto a un grupo de personas de distintas edades. La propuesta es trabajar con cada uno, desde el juego, trascendiendo a lo teatral. Que quieran darse permiso para volver a jugar, desinhibirse, perder el miedo a la exposición, dándole creencia a las situaciones de ficción y descubriendo la propia potencia expresiva. Que puedan "fracturar lo real" para alterar el cotidiano, soltando el "yo social" y dándole lugar a la escena de ficción, posibilitando un encuentro diferente con uno y los otros.
 Un espacio para quienes desean comenzar a actuar o volver a conectar con el juego, la imaginación y la presencia. Trabajaremos improvisación, escucha, disponibilidad, cuerpo, vínculo y primeras herramientas actorales para entrar en la ficción desde la acción y no desde la idea. Exploraremos el entrenamiento como un territorio de libertad expresiva donde la escena aparece como experiencia viva, sensible y compartida.
@@ -62,7 +63,7 @@ Cada encuentro dura 3 horas. Combinamos entrenamiento físico y vocal, improvisa
 ### ¿Hay una clase de prueba gratuita?
 Sí. Ofrecemos una primera clase de prueba sin cargo para que puedas vivir la experiencia antes de comprometerte. Solo escríbenos por WhatsApp o email y te sumamos a la próxima sesión disponible.
 ### ¿Cuándo empieza el próximo grupo de teatro en Barcelona?
-Los grupos de principiantes abren en septiembre, enero y junio según la demanda. El próximo grupo nuevo de principiantes arranca en enero de 2027, los miércoles de 19 a 22 h (preinscripción abierta). Los niveles intermedios y avanzados tienen incorporación continua cuando hay plazas disponibles. Consúltanos por WhatsApp para saber el estado actual de cada grupo.
+Los grupos de principiantes abren en septiembre, enero y junio según la demanda. El próximo grupo nuevo de principiantes arranca el miércoles 13 de enero de 2027, los miércoles de 19 a 22 h (preinscripción abierta). Los niveles intermedios y avanzados tienen incorporación continua cuando hay plazas disponibles. Consúltanos por WhatsApp para saber el estado actual de cada grupo.
 ### ¿Dónde se realizan las clases de teatro?
 Las clases se realizan en el Espacio La Mansión, en Carrer de Roger de Flor, 253, Local 2 y 3, barrio de Gràcia, Barcelona (08025). Es un espacio amplio con escenario, vestuario, luces y todos los recursos necesarios para el entrenamiento actoral.
 ### ¿Qué edades participan en los talleres de teatro?
@@ -76,7 +77,7 @@ Es una escuela de teatro con estructura de tres cursos de formación continua. U
 ### ¿Dónde puedo estudiar teatro en Barcelona siendo actor profesional?
 Talleres de Teatro Barcelona ofrece un curso específico para actores con formación previa: Avanzados (Cuerpo al texto), los lunes de 19 a 22 h. Es un entrenamiento actoral desde la improvisación dirigida en el que se crean escenas y se trabajan textos teatrales, de cine y monólogos, con creación de material propio para el ciclo de funciones La tiranía del deseo. La incorporación es por entrevista.
 ### ¿Qué niveles ofrece la escuela de teatro?
-La escuela tiene tres cursos de formación actoral: Principiantes (La creación del artificio), para personas sin experiencia previa, los martes (y desde enero de 2027, un nuevo grupo los miércoles); Intermedios (Inscribir lo propio), los jueves, para quienes ya tienen recorrido teatral y quieren profundizar su lenguaje; y Avanzados (Cuerpo al texto), los lunes, un entrenamiento actoral con improvisación dirigida, creación de escenas y trabajo con textos teatrales, de cine y monólogos. Todos los cursos son presenciales, 3 horas semanales, en el Espacio La Mansión, Gràcia, Barcelona.
+La escuela tiene tres cursos de formación actoral: Principiantes (La creación del artificio), para personas sin experiencia previa, los martes (y desde el 13 de enero de 2027, un nuevo grupo los miércoles); Intermedios (Inscribir lo propio), los jueves, para quienes ya tienen recorrido teatral y quieren profundizar su lenguaje; y Avanzados (Cuerpo al texto), los lunes, un entrenamiento actoral con improvisación dirigida, creación de escenas y trabajo con textos teatrales, de cine y monólogos. Todos los cursos son presenciales, 3 horas semanales, en el Espacio La Mansión, Gràcia, Barcelona.
 ### ¿Tienen formación avanzada para actores con carrera profesional?
 Sí. El nivel Cuerpo al texto está diseñado para actores y actrices con trayectoria escénica que quieren seguir entrenando y profundizando su trabajo. Es un espacio de investigación continua: se entrena desde la improvisación dirigida, se crean escenas y se trabajan textos teatrales, de cine y monólogos, la voz y la construcción de una poética personal. El coordinador Sebastián Mogordoy trabaja actualmente en el Teatre Lliure y en producciones de Netflix, lo que garantiza un enfoque conectado con la práctica profesional real. La incorporación es por entrevista.
 ### ¿Cuál es la metodología de la escuela de teatro? ¿En qué tradición se basa?
