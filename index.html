@@ -1491,7 +1491,14 @@
       letter-spacing: 0.03em;
       color: var(--white);
     }
-    .level-col-schedule.level-col-nuevo { color: var(--gold); }
+    .level-col-schedule.level-col-nuevo {
+      display: block; align-self: stretch;
+      margin: 6px 0 4px; padding: 9px 12px;
+      background: var(--gold); color: #0C0C0C;
+      font-family: 'Archivo Black', sans-serif; font-weight: 400;
+      font-size: 14px; font-size: clamp(13px, 1.25vw, 17px);
+      letter-spacing: 0.03em; line-height: 1.2; text-transform: uppercase;
+    }
     .level-col-coord {
       font-size: clamp(11px, 1vw, 12px);
       font-weight: 700;
